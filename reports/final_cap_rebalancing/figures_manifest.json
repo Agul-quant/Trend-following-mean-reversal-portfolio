@@ -1,0 +1,100 @@
+{
+  "baseline_slippage_bps_each_way": 3,
+  "commission_bps_each_way": 1,
+  "curve_names": [
+    "Initial allocation; no rebalancing",
+    "Weekly corrections",
+    "Monthly corrections",
+    "QQQ buy-and-hold"
+  ],
+  "drawdown_includes_initial_capital": true,
+  "figures": {
+    "development": {
+      "curves": [
+        "Initial allocation; no rebalancing",
+        "Weekly corrections",
+        "Monthly corrections",
+        "QQQ buy-and-hold"
+      ],
+      "daily_observations": 1007,
+      "filename": "development_baseline.png",
+      "height_px": 1326,
+      "metadata_keys": [
+        "Software",
+        "dpi"
+      ],
+      "scored_period": [
+        "2017-01-01",
+        "2020-12-31"
+      ],
+      "sha256": "e8733ccb83152f6e3a6c9215c35e80c38931a6d41204bba7e52ca5c6d2dadc42",
+      "source_sha256": {
+        "QQQ_buy_and_hold": "a239a3821b86f5b266c386334cac5494f4efae7e00bc91d0b443d5dae6e31577",
+        "monthly": "73258188cd69a0523092d25643874095e4bff1db111eb820d2dfa39a4597ca16",
+        "none": "4b2c9aabb60a4b58df45a564ee57a59f35c4be46cde0a3181df05d946a9e5bdc",
+        "weekly": "73258188cd69a0523092d25643874095e4bff1db111eb820d2dfa39a4597ca16"
+      },
+      "stage": "development",
+      "width_px": 2040
+    },
+    "historical_OOS": {
+      "curves": [
+        "Initial allocation; no rebalancing",
+        "Weekly corrections",
+        "Monthly corrections",
+        "QQQ buy-and-hold"
+      ],
+      "daily_observations": 700,
+      "filename": "historical_OOS_baseline.png",
+      "height_px": 1326,
+      "metadata_keys": [
+        "Software",
+        "dpi"
+      ],
+      "scored_period": [
+        "2024-01-01",
+        "2026-10-15"
+      ],
+      "sha256": "3c953835c5c57beacf6bdda80132fa26db998738428b11dc52814ab29db34283",
+      "source_sha256": {
+        "QQQ_buy_and_hold": "a97ec5989af0361ce0d8856cc61a3d1febf0ae344ee59ce7d17119cce02f739e",
+        "monthly": "09f83c57453a68963bedf5ff9bb0c47cec1cfad608db05e65063dd58d5df3f3e",
+        "none": "44972ac222a5a3102f0cf5d4ba8b1e399bb32e2fd20688749c631d8cc1085424",
+        "weekly": "9f5eb26d721ef42f369813c0e074bdc9d1ce58780731f9341ca24bf8ad8fee80"
+      },
+      "stage": "historical_OOS",
+      "width_px": 2040
+    },
+    "validation": {
+      "curves": [
+        "Initial allocation; no rebalancing",
+        "Weekly corrections",
+        "Monthly corrections",
+        "QQQ buy-and-hold"
+      ],
+      "daily_observations": 753,
+      "filename": "validation_baseline.png",
+      "height_px": 1326,
+      "metadata_keys": [
+        "Software",
+        "dpi"
+      ],
+      "scored_period": [
+        "2021-01-01",
+        "2023-12-31"
+      ],
+      "sha256": "f26129311d9384ab74780147c65a3172a987718bd002262c32a85779488b3f1d",
+      "source_sha256": {
+        "QQQ_buy_and_hold": "48afbd6c9d1b2f1772d19b52a55769a9b659a9b1662dbec840281669883baaf3",
+        "monthly": "6284d85741a9685c1d082998cd1522e8231614e4c1687509c1d84ad1dac5c93e",
+        "none": "09486f53fd84e9e4f67b24a9d9f09cd27f9189747059b6867ac2360b3e6d547a",
+        "weekly": "6d3d7699526b0210a7208c3622fe7eca1a85e7d99ddceb6a5dd91b6c7768ce42"
+      },
+      "stage": "validation",
+      "width_px": 2040
+    }
+  },
+  "initial_capital_per_stage": 1000,
+  "numeric_daily_series_or_private_locators_embedded": false,
+  "schema": "final_cap_rebalancing_raster_figures_v1"
+}

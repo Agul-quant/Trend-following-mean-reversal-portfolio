@@ -1,60 +1,61 @@
 # Trend Following and Mean Reversion ETF Portfolios
 
-The **final basket contains no bond ETFs**: **GDX, FXI, QQQ, UNG and FDN**.
-The four retained portfolios are **Daily cap fit, Initial cap fit, Uncapped fit
-and Equal initial**. The removed cap variants and standalone Maximum CAGR
-portfolio are excluded from all active reports, charts and comparisons.
+The final basket is **GDX, FXI, QQQ, UNG and FDN**, with **no bond ETFs**.
+The current comparison contains **Weekly corrections**, **Monthly corrections**
+and the **Initial allocation / no-rebalancing benchmark**. Daily corrections
+have been removed from the active results and charts. The starting allocation
+is unchanged across frequencies, periods and costs; **nothing was refitted**.
 
 ## Current reports
 
-- [Report index](reports/final_no_bond_portfolios/README.md) and [all-period tables](reports/final_no_bond_portfolios/combined_report.md).
-- [Development — 2017–2020](reports/final_no_bond_portfolios/development.html).
-- [Validation — 2021–2023](reports/final_no_bond_portfolios/validation.html).
-- [Historical OOS — 2024–October 15, 2026](reports/final_no_bond_portfolios/historical_OOS.html).
+- [Report index and interpretation](reports/final_cap_rebalancing/README.md).
+- [Development, validation and historical OOS — all four costs](reports/final_cap_rebalancing/report.md).
+- [Full-precision aggregate results, alpha and betas](reports/final_cap_rebalancing/report.json).
+- [Performance CSV](reports/final_cap_rebalancing/performance.csv) and [matched QQQ/cash controls](reports/final_cap_rebalancing/controls.csv).
+- [Exact starting weights and policies](configs/final_cap_rebalancing.json) and [unchanged strategy definitions](configs/no_bond_selected_strategies.json).
 
-Each offline HTML includes **all four execution costs**, fresh-$1,000 accounts,
-matched QQQ/cash controls, equity and drawdown, QQQ-only and **joint-five-ETF**
-alpha/beta, daily capital-share diagnostics and strategy/portfolio correlations.
-See [full-precision aggregate JSON](reports/final_no_bond_portfolios/report.json),
-[exact saved weights](configs/final_no_bond_portfolios.json),
-[strategy definitions](configs/no_bond_selected_strategies.json) and
-[independent subset audit](reports/final_no_bond_portfolios/independent_audit.json).
+> **Retrospective research—not untouched portfolio OOS.** Strategies and initial
+> weights used the already examined 2024–October 15, 2026 history. Earlier-period
+> replay does not remove hindsight. The frequency removal is a literal subset of
+> completed, independently audited results: no new account simulation, optimizer,
+> price refresh, changed retained metrics or live trading.
 
-> **Retrospective research—not untouched portfolio OOS.** The retained weights
-> were fitted on the already examined **2024–October 15, 2026** history. Replaying
-> them in earlier periods does not remove hindsight. The removal is a literal
-> saved-result subset: **no refitting, account reruns or changed metrics**.
-> Numerical source fits are best-found, not globally certified; no live allocation
-> or trading is authorized.
+## Actual cap corrections—not historical cap fits
 
-## Four portfolio definitions
+- **Initial allocation / no rebalancing:** invest once in the five strategy
+  accounts; allow their capital shares to drift afterward.
+- **Weekly corrections:** check at the last actual trading session of each ISO
+  week, at **17:00 New York**. Only a sleeve above one-third queues a correction.
+- **Monthly corrections:** the same rule at the last actual trading session of
+  each calendar month. October 15 is not treated as an artificial month end.
 
-- **Daily cap fit:** each initial allocation and every fitted historical OOS daily
-  sleeve-capital share is at most one-third, across all four costs.
-- **Initial cap fit:** each starting allocation is at most one-third; **no later
-  enforcement**. Shares may subsequently drift above that value.
-- **Uncapped fit:** nonnegative initial weights summing to one, without the cap.
-- **Equal initial:** one-time **20%** allocation to each of the five strategies.
+Queued corrections execute at the **next jointly eligible native 30-minute bar
+open**, after corporate actions and normal strategy fills. If the breach has
+vanished, cancel the correction. Trim oversized accounts and redistribute the
+excess proportionally to the other accounts' **current capital**, recursively
+respecting the post-cost cap. Do **not** reset all original target weights.
+Long-signal recipients buy ETF shares; flat recipients retain cash. Partial
+orders do not change the underlying signal or restart its seven-check wait.
 
-**None rebalances.** Portfolio wealth is the sum of initial allocations multiplied
-by each saved strategy-account wealth path, including idle cash. This is not
-constant-weight return mixing. Cap checks do not create transfers or trades.
-Earlier-period concentration breaches remain visible; no historical cap is a
-future or intraday guarantee. BND is excluded from both allocations and joint
-passive-factor regressions, but the original modeled cash interest is unchanged.
+**This is not a continuous cap.** Between-check drift and overnight gaps can
+produce shares above one-third; the cap is enforced immediately after an executed
+correction, not at every daily close. It limits **strategy-account capital**
+(ETF plus cash), not ETF exposure or risk contribution. An execution may be a
+cash-only transfer and therefore create no paid ETF order.
 
-## Initial allocations
+## Unchanged initial allocation
 
-| Strategy sleeve | Daily cap fit | Initial cap fit | Uncapped fit | Equal initial |
-|---|---:|---:|---:|---:|
-| GDX | 24.5454% | 29.0513% | 29.0513% | 20.0000% |
-| FXI | 30.1404% | 27.9920% | 27.9920% | 20.0000% |
-| QQQ | 7.0341% | 6.3045% | 6.3045% | 20.0000% |
-| UNG | 27.7007% | 26.7293% | 26.7293% | 20.0000% |
-| FDN | 10.5794% | 9.9229% | 9.9229% | 20.0000% |
+| Strategy sleeve | Initial allocation |
+|---|---:|
+| GDX | 29.051308% |
+| FXI | 27.991974% |
+| QQQ | 6.304493% |
+| UNG | 26.729328% |
+| FDN | 9.922896% |
 
-Initial cap and Uncapped selected the same allocation; their curves overlap.
-The exact stored weights—not the rounded table—are used for every period and cost.
+Each period starts independently with **$1,000**, all sleeves initially in cash.
+Feature history is carried, not holdings, orders or confirmation streaks. The
+exact stored weights—not rounded table values—are used in every calculation.
 
 ## Baseline performance across all three periods
 
@@ -63,52 +64,55 @@ Baseline: **1-bp commission + 3-bp slippage each way**. Each cell is
 
 | Portfolio | Development 2017–2020 | Validation 2021–2023 | Historical OOS 2024–2026-10-15 |
 |---|---:|---:|---:|
-| Daily cap fit | 1.350 / 16.28% / -8.06% | 0.417 / 7.83% / -19.57% | 2.476 / 23.85% / -4.91% |
-| Initial cap fit | 1.295 / 16.14% / -8.48% | 0.419 / 7.77% / -19.24% | 2.487 / 24.57% / -4.67% |
-| Uncapped fit | 1.295 / 16.14% / -8.48% | 0.419 / 7.77% / -19.24% | 2.487 / 24.57% / -4.67% |
-| Equal initial | 1.504 / 19.59% / -7.39% | 0.524 / 8.53% / -15.67% | 2.213 / 23.39% / -5.04% |
+| Initial allocation; no rebalancing | 1.295 / 16.14% / -8.48% | 0.419 / 7.77% / -19.24% | 2.487 / 24.57% / -4.67% |
+| Weekly corrections | 1.295 / 16.14% / -8.48% | 0.470 / 8.32% / -17.54% | 2.514 / 24.60% / -4.67% |
+| Monthly corrections | 1.295 / 16.14% / -8.48% | 0.464 / 8.24% / -17.71% | 2.516 / 24.65% / -4.67% |
 | QQQ buy-and-hold | 1.063 / 28.39% / -28.56% | 0.387 / 9.84% / -35.12% | 0.996 / 23.93% / -22.77% |
 
-The reports include **1, 3, 10 and 25 bps slippage each way**, plus 1-bp commission.
-Cash is **3% nominal ACT/365 event-compounded**, not 3% APY. Cash-excess Sharpe is
-above the matched cash path, not above buy-and-hold; cash Sharpe is undefined.
+All reports retain **1, 3, 10 and 25 bps slippage each way**, plus 1-bp commission.
+Normal strategy, cap and terminal ETF orders pay these costs. Internal cash
+transfers and the inherited **fee-free dividend-reinvestment proxy** do not.
+Extra cap costs mean direct cap-order fees/slippage, not the difference in total
+portfolio returns or total costs versus the benchmark. Taxes and additional
+market impact are not modeled.
+
+Cash earns **3% nominal ACT/365 event-compounded**, not 3% APY. Cash-excess Sharpe
+is above the matched cash path, not above buy-and-hold; cash Sharpe is undefined.
 CAGR uses exact first-open-to-terminal elapsed time. Drawdown includes initial
 capital and daily valuations, not an intraday maximum.
 
-![Four final portfolios and passive QQQ: historical OOS equity and drawdown at baseline costs](reports/final_no_bond_portfolios/historical_OOS_baseline.png)
+![Weekly and Monthly corrections, no-rebalancing comparator and QQQ buy-and-hold: historical OOS baseline equity and drawdown](reports/final_cap_rebalancing/historical_OOS_baseline.png)
 
 ## Verify and reproduce
 
 ```bash
 python -m pip install -e '.[test,plots]'
 python -m pytest -q
+python scripts/verify_final_cap.py --report-dir reports/final_cap_rebalancing \
+  --config configs/final_cap_rebalancing.json
 python scripts/verify_project.py
-python scripts/verify_no_bond_portfolios.py --public-report reports/no_bond_portfolios/report.json
-python scripts/verify_final_no_bond.py --report reports/final_no_bond_portfolios/report.json \
-  --source-report reports/no_bond_portfolios/report.json
 ```
 
-The first verifier checks publication hashes and historical source archives; the
-second checks the complete archived no-bond comparison; the final verifier checks
-that every active weight, metric and correlation submatrix is an exact saved
-subset. No API key, market download or optimizer is needed. Regenerate current
-presentation from public aggregates without changing financial calculations:
+The portable checks verify published aggregate integrity, exact retained values,
+controls, configuration, tables and raster metadata; they are **not** new
+financial backtests. The detached subset receipt records the original source
+aggregate's hash and the frozen retained-value digest. Comparing directly with
+the unpublished original aggregate requires that private source.
 
-```bash
-python scripts/build_final_no_bond_reports.py --report reports/final_no_bond_portfolios/report.json \
-  --source-report reports/no_bond_portfolios/report.json \
-  --figures-dir reports/final_no_bond_portfolios --output-dir outputs/final_no_bond_reports
-```
-
-See [current methods](docs/final_no_bond_portfolios.md) and
-[data access](docs/data_sources.md). Exact path/fit reproduction needs privately
-supplied authenticated saved accounts; no underlying daily arrays are published.
+The costed canonical-event kernels are included with synthetic tests. Exact
+financial reproduction needs the privately retained authenticated inputs,
+causal signal/event primitives and saved accounts; they are not redistributed.
+See [current methods](docs/final_cap_rebalancing.md) and [data access](docs/data_sources.md).
 
 ## Preserved historical results
 
-- [Prior six-allocation no-bond comparison](docs/archived_six_portfolio_comparison.md): removed variants are historical only, not active models.
-- [Original four-portfolio class project](docs/archived_four_portfolio_snapshot.md) and [PDF/HTML/Word reports](final_reports/README.md): older six-sleeve results, not the current five-ETF final set.
-- [Original five-portfolio snapshot](docs/archived_five_portfolio_snapshot.md): includes the excluded Maximum CAGR comparison for provenance only.
+These links are **archives, not active portfolio definitions**. Their original
+wording, financial values, code and figures remain unchanged for provenance.
+
+- [Prior four static no-bond allocations](reports/final_no_bond_portfolios/README.md): Daily cap fit, Initial cap fit, Uncapped and Equal initial; **none rebalanced**. The old Daily cap fit is not the removed Daily correction policy.
+- [Earlier six-allocation no-bond comparison](docs/archived_six_portfolio_comparison.md): historical fitted caps, not the current Weekly/Monthly corrections.
+- [Original four-portfolio class project](docs/archived_four_portfolio_snapshot.md) and [PDF/HTML/Word reports](final_reports/README.md): older six-sleeve results.
+- [Original five-portfolio snapshot](docs/archived_five_portfolio_snapshot.md): the excluded Maximum CAGR comparison is historical only.
 
 All historical financial definitions, account outcomes and freezes remain
 unchanged. The separate corrected-split experiment remains inactive/private.
@@ -148,5 +152,5 @@ are retained privately and are **not downloadable from this repository**. GitHub
 contains code, definitions, aggregate results and raster charts. See the
 [complete dataset specification and access/reproduction notes](docs/data_sources.md)
 for fields, price adjustments, coverage limits and the private input requirement.
-The original reports cover four allocations across six selected strategy sleeves; the active final comparison excludes BND and covers four allocations across **five ETF strategy sleeves**.
+The original reports cover four allocations across six selected strategy sleeves. The active comparison excludes BND and contains two cap-correction policies plus the no-rebalancing comparator across **five ETF strategy sleeves**.
 The original 56-ETF screening universe is context, not a pooled 56-ETF portfolio.

@@ -1,0 +1,4574 @@
+{
+  "baseline_slippage_bps": 3,
+  "cap_fraction": 0.3333333333333333,
+  "commission_bps_each_way": 1,
+  "controls": [
+    {
+      "cagr": 0.28403135952688285,
+      "cash_excess_sharpe": 1.063111531731506,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.28559372098911306,
+      "observations": 1007,
+      "slippage_bps": 1.0,
+      "stage": "development",
+      "terminal_normalized_equity": 2.7151920018329583
+    },
+    {
+      "cagr": 0.28390281423727437,
+      "cash_excess_sharpe": 1.0626817009872407,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.28559372098911284,
+      "observations": 1007,
+      "slippage_bps": 3.0,
+      "stage": "development",
+      "terminal_normalized_equity": 2.7141061421715778
+    },
+    {
+      "cagr": 0.2834530068677923,
+      "cash_excess_sharpe": 1.061174864869549,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.28559372098911295,
+      "observations": 1007,
+      "slippage_bps": 10.0,
+      "stage": "development",
+      "terminal_normalized_equity": 2.7103090503976555
+    },
+    {
+      "cagr": 0.2824896618296755,
+      "cash_excess_sharpe": 1.0579333189230002,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.2855937209891126,
+      "observations": 1007,
+      "slippage_bps": 25.0,
+      "stage": "development",
+      "terminal_normalized_equity": 2.70219028110348
+    },
+    {
+      "cagr": 0.030452732055376686,
+      "cash_excess_sharpe": null,
+      "control": "cash",
+      "max_drawdown": 0.0,
+      "observations": 1007,
+      "slippage_bps": null,
+      "stage": "development",
+      "terminal_normalized_equity": 1.1273326040209972
+    },
+    {
+      "cagr": 0.09857721419897181,
+      "cash_excess_sharpe": 0.3878325276573543,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.3511955075769818,
+      "observations": 753,
+      "slippage_bps": 1.0,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.3239010632081587
+    },
+    {
+      "cagr": 0.09842998231459044,
+      "cash_excess_sharpe": 0.3872650760024479,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.35119550757698037,
+      "observations": 753,
+      "slippage_bps": 3.0,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.3233716086579015
+    },
+    {
+      "cagr": 0.0979148258758189,
+      "cash_excess_sharpe": 0.3852787467655331,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.3511955075769807,
+      "observations": 753,
+      "slippage_bps": 10.0,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.3215201838477197
+    },
+    {
+      "cagr": 0.09681172957133444,
+      "cash_excess_sharpe": 0.3810211614074125,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.3511955075769808,
+      "observations": 753,
+      "slippage_bps": 25.0,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.31756155134835
+    },
+    {
+      "cagr": 0.03045271078819467,
+      "cash_excess_sharpe": null,
+      "control": "cash",
+      "max_drawdown": 0.0,
+      "observations": 753,
+      "slippage_bps": null,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.0936571393976933
+    },
+    {
+      "cagr": 0.2394659127716421,
+      "cash_excess_sharpe": 0.9966565505749931,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.22770144166602646,
+      "observations": 700,
+      "slippage_bps": 1.0,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.819067605075386
+    },
+    {
+      "cagr": 0.2392880358092362,
+      "cash_excess_sharpe": 0.995946748547592,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.22770144166602646,
+      "observations": 700,
+      "slippage_bps": 3.0,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.8183401235078422
+    },
+    {
+      "cagr": 0.23866566718290794,
+      "cash_excess_sharpe": 0.9934586191916034,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.22770144166602602,
+      "observations": 700,
+      "slippage_bps": 10.0,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.8157962272991108
+    },
+    {
+      "cagr": 0.23733306868669257,
+      "cash_excess_sharpe": 0.9881071845061564,
+      "control": "QQQ_buy_and_hold",
+      "max_drawdown": -0.22770144166602635,
+      "observations": 700,
+      "slippage_bps": 25.0,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.8103569838842304
+    },
+    {
+      "cagr": 0.030452719956333807,
+      "cash_excess_sharpe": null,
+      "control": "cash",
+      "max_drawdown": 0.0,
+      "observations": 700,
+      "slippage_bps": null,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.0872008819805894
+    }
+  ],
+  "created_at_utc": "2026-10-19T20:50:21.825086+00:00",
+  "independent_audit_passed": true,
+  "initial_weights": {
+    "FDN": 0.0992289629872361,
+    "FXI": 0.2799197437112525,
+    "GDX": 0.2905130826010515,
+    "QQQ": 0.06304492619579012,
+    "UNG": 0.26729328450466966
+  },
+  "metrics": {
+    "cagr": "terminal portfolio wealth / initial portfolio wealth raised to reciprocal ACT/365 elapsed years, minus one",
+    "max_drawdown": "worst daily marked portfolio drawdown, including initial capital",
+    "sharpe": "sqrt(252)*mean(daily portfolio returns minus matched cash returns)/sample standard deviation of that excess",
+    "trades": "completed strategy round trips, including paid terminal exits; cap partial orders separately counted"
+  },
+  "optimized": false,
+  "original_frozen_sources_unchanged": true,
+  "periods": {
+    "development": [
+      "2017-01-01",
+      "2020-12-31"
+    ],
+    "historical_OOS": [
+      "2024-01-01",
+      "2026-10-15"
+    ],
+    "validation": [
+      "2021-01-01",
+      "2023-12-31"
+    ]
+  },
+  "rebalancing": true,
+  "removed_frequencies": [
+    "daily"
+  ],
+  "retained_frequencies": [
+    "none",
+    "weekly",
+    "monthly"
+  ],
+  "retained_source_payload_sha256": "6757f4c392301fb31089809aa5af96bdcd61dffe7b402263e18da5896f77fde9",
+  "retrospective": true,
+  "rows": [
+    {
+      "cagr": 0.1623644920190701,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.303024626244186,
+      "commission_paid": 2.190265989858688,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 21902.732099651712,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5199759504989923,
+        "alpha_annual_arithmetic": 0.07685141018776571,
+        "alpha_daily": 0.00030496591344351476,
+        "betas": [
+          0.10831484516843431,
+          0.10105802634449558,
+          0.03659283576002372,
+          0.03670093622019374,
+          0.08218017704009907
+        ],
+        "design_condition_number": 276.4002004821398,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5223617559140072
+      },
+      "max_daily_capital_share": 0.2943036933420098,
+      "max_daily_share_by_symbol": [
+        0.2904462733807135,
+        0.2798553706383874,
+        0.0895821928707105,
+        0.2943036933420098,
+        0.16170658940132876
+      ],
+      "max_drawdown": -0.0848238497400623,
+      "max_observed_common_open_share_before_cap": 0.30513250767567496,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29567447158661914,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2731339739977102,
+        "alpha_annual_arithmetic": 0.07169196391174212,
+        "alpha_daily": 0.00028449192028469095,
+        "betas": [
+          0.21601170515779863
+        ],
+        "design_condition_number": 68.28084163385742,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.27385650483866675
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.190273209965171,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8241781193359135,
+      "total_cost": 4.380539199823859,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.90273209965171,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.16139881245256493,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.2949583896743435,
+      "commission_paid": 2.1859968911144705,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 21860.18506092006,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5204759403589693,
+        "alpha_annual_arithmetic": 0.07603682355790443,
+        "alpha_daily": 0.0003017334268170811,
+        "betas": [
+          0.10824045121531362,
+          0.10103884911371558,
+          0.03662220511092928,
+          0.03670066249280421,
+          0.08227521194813306
+        ],
+        "design_condition_number": 276.4002846131919,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5228592607349187
+      },
+      "max_daily_capital_share": 0.29432261460360754,
+      "max_daily_share_by_symbol": [
+        0.29044994707442756,
+        0.2798589103736506,
+        0.08964190418546299,
+        0.29432261460360754,
+        0.16180969544569745
+      ],
+      "max_drawdown": -0.08484367721871744,
+      "max_observed_common_open_share_before_cap": 0.30514185653586273,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29575483520029094,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2736407187428562,
+        "alpha_annual_arithmetic": 0.07085464853702245,
+        "alpha_daily": 0.0002811692402262796,
+        "betas": [
+          0.21610442110214326
+        ],
+        "design_condition_number": 68.28092019861664,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.2743627458614022
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.558055518276017,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8181306277982572,
+      "total_cost": 8.744052409390488,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.86018506092006,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.15802737964069857,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.266637383651431,
+      "commission_paid": 2.1711464337773196,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 21712.179581343215,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5221943514549487,
+        "alpha_annual_arithmetic": 0.07318818916885557,
+        "alpha_daily": 0.00029042932209863323,
+        "betas": [
+          0.1079799878086509,
+          0.10097179840760061,
+          0.03672301755496097,
+          0.03669943159269265,
+          0.08260879455670876
+        ],
+        "design_condition_number": 276.4005781744924,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.524569131020282
+      },
+      "max_daily_capital_share": 0.2943880777558273,
+      "max_daily_share_by_symbol": [
+        0.2904627941725628,
+        0.2798712890121107,
+        0.08985107996977916,
+        0.2943880777558273,
+        0.16217041989573747
+      ],
+      "max_drawdown": -0.08491248837319076,
+      "max_observed_common_open_share_before_cap": 0.30517383371471535,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29603610386091395,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.27540167280785455,
+        "alpha_annual_arithmetic": 0.0679264266633577,
+        "alpha_daily": 0.00026954931215618133,
+        "betas": [
+          0.21642879416827251
+        ],
+        "design_condition_number": 68.28099578560168,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.27612194947504354
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 21.712179581343214,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7971350741974383,
+      "total_cost": 23.883326015120534,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.712179581343214,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.15084686134508307,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.2054991220127487,
+      "commission_paid": 2.1397965551268463,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 21399.72594690619,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5257084590967908,
+        "alpha_annual_arithmetic": 0.06709657265284016,
+        "alpha_daily": 0.00026625624068587366,
+        "betas": [
+          0.10742144826592319,
+          0.10082850301328629,
+          0.03692875492978996,
+          0.03669538424940917,
+          0.08332862588476803
+        ],
+        "design_condition_number": 276.40120250558925,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5280657729183773
+      },
+      "max_daily_capital_share": 0.29452437240714524,
+      "max_daily_share_by_symbol": [
+        0.2904902670679429,
+        0.27989776012922857,
+        0.09030028952532669,
+        0.29452437240714524,
+        0.16294262011643978
+      ],
+      "max_drawdown": -0.08505689175500109,
+      "max_observed_common_open_share_before_cap": 0.3052384659433479,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29663879417567357,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.27910631782756146,
+        "alpha_annual_arithmetic": 0.06166408493256885,
+        "alpha_daily": 0.0002446987497324161,
+        "betas": [
+          0.21712323902262265
+        ],
+        "design_condition_number": 68.2801158416365,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.2798229119450292
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 53.499314867265475,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7530247546248863,
+      "total_cost": 55.63911142239232,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.39972594690619,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.0790084826404478,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 0.4290088400454303,
+      "commission_paid": 2.087554406037449,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 128,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 20875.5630728505,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.38047219237857655,
+        "alpha_annual_arithmetic": 0.07847854107340108,
+        "alpha_daily": 0.00031142278203730585,
+        "betas": [
+          0.06202802428476205,
+          0.12391758128492286,
+          0.02350409591560182,
+          0.06528882161920521,
+          0.0424889072433605
+        ],
+        "design_condition_number": 215.0604082299845,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.3845913932271232
+      },
+      "max_daily_capital_share": 0.38197440389942244,
+      "max_daily_share_by_symbol": [
+        0.3236575301292264,
+        0.2943385355975127,
+        0.07954876142344058,
+        0.38197440389942244,
+        0.11285259266470582
+      ],
+      "max_drawdown": -0.19217306144434243,
+      "max_observed_common_open_share_before_cap": 0.38189031183485217,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.31820482330256494,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 1646,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.13890780874631203,
+        "alpha_annual_arithmetic": 0.035622322722005106,
+        "alpha_daily": 0.00014135842350002027,
+        "betas": [
+          0.19753799483490422
+        ],
+        "design_condition_number": 66.81706680563663,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.140052878149575
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.0875563072850496,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.254758010784436,
+      "total_cost": 4.175110713322498,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 20.875563072850497,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.07767825108036308,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 0.4191368672674612,
+      "commission_paid": 2.083089141851419,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 128,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 20830.948355696026,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3804261056777122,
+        "alpha_annual_arithmetic": 0.07727482447591173,
+        "alpha_daily": 0.0003066461288726656,
+        "betas": [
+          0.06199567579799539,
+          0.12395526520354297,
+          0.02369651813819089,
+          0.06535121588318861,
+          0.042239254843424015
+        ],
+        "design_condition_number": 215.05825263551318,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.3845456129537912
+      },
+      "max_daily_capital_share": 0.38235354544844874,
+      "max_daily_share_by_symbol": [
+        0.3233409418603521,
+        0.29432316854255813,
+        0.07960233492376069,
+        0.38235354544844874,
+        0.11283409498813535
+      ],
+      "max_drawdown": -0.19242484382205538,
+      "max_observed_common_open_share_before_cap": 0.38226933690840365,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.31816998726040807,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 1649,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.13876085872076072,
+        "alpha_annual_arithmetic": 0.034425684163798216,
+        "alpha_daily": 0.00013660985779285006,
+        "betas": [
+          0.19746332509454456
+        ],
+        "design_condition_number": 66.8151713161236,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.1399061235362915
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.249284506708807,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2501470583788064,
+      "total_cost": 8.332373648560225,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 20.830948355696027,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.07304116334102417,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 0.3846462216662477,
+      "commission_paid": 2.0675711401109518,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 129,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 20675.900033085065,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.380241709006912,
+        "alpha_annual_arithmetic": 0.07306722838814106,
+        "alpha_daily": 0.00028994931900055976,
+        "betas": [
+          0.06188290853099042,
+          0.12408611041617008,
+          0.024373773196137122,
+          0.06556956592610313,
+          0.04136320733185367
+        ],
+        "design_condition_number": 215.0504400109437,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.3843624423246852
+      },
+      "max_daily_capital_share": 0.3836793358141617,
+      "max_daily_share_by_symbol": [
+        0.32223348405894237,
+        0.2942690305048265,
+        0.07978984870970374,
+        0.3836793358141617,
+        0.11276940084605805
+      ],
+      "max_drawdown": -0.19330446518224842,
+      "max_observed_common_open_share_before_cap": 0.3835947201510424,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.31804767712733323,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 1666,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.13824055865188412,
+        "alpha_annual_arithmetic": 0.030243151323727187,
+        "alpha_daily": 0.00012001250525288566,
+        "betas": [
+          0.19720353054092252
+        ],
+        "design_condition_number": 66.80830020572243,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.13938651535580449
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 20.675900033085068,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2341617346327585,
+      "total_cost": 22.74347117319602,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 20.675900033085064,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.06320177340819932,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 0.3110801490780206,
+      "commission_paid": 2.034887944702088,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 129,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 20349.34496016722,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.37972782214550793,
+        "alpha_annual_arithmetic": 0.06407922052710206,
+        "alpha_daily": 0.0002542826211392939,
+        "betas": [
+          0.061643708179568144,
+          0.12436105248198068,
+          0.025844973054967316,
+          0.06603729332844613,
+          0.03947404127522745
+        ],
+        "design_condition_number": 215.03230008055328,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.3838519722642213
+      },
+      "max_daily_capital_share": 0.38651388610252246,
+      "max_daily_share_by_symbol": [
+        0.31986356480179284,
+        0.29415117190409934,
+        0.08019169110691228,
+        0.38651388610252246,
+        0.11263102004368646
+      ],
+      "max_drawdown": -0.1951808984565857,
+      "max_observed_common_open_share_before_cap": 0.3864284009522642,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.31778358069971097,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 1693,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.1370956723395227,
+        "alpha_annual_arithmetic": 0.02131036660159555,
+        "alpha_daily": 8.456494683172836e-05,
+        "betas": [
+          0.1966551080234181
+        ],
+        "design_condition_number": 66.79233979177135,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.13824315149864563
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 50.873362400418046,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2006940159138835,
+      "total_cost": 52.90825034512013,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 20.34934496016722,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.24708567257349756,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 2.498694962228568,
+      "commission_paid": 2.0958096022832846,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 134,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 20958.17266354244,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3015599227268566,
+        "alpha_annual_arithmetic": 0.14444794713042644,
+        "alpha_daily": 0.0005732061394064541,
+        "betas": [
+          0.04277560691145593,
+          0.03995617130154651,
+          0.08155504412635438,
+          0.009706411634488436,
+          0.05729133905406751
+        ],
+        "design_condition_number": 183.30069089588937,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.3065559175571366
+      },
+      "max_daily_capital_share": 0.386263347332703,
+      "max_daily_share_by_symbol": [
+        0.386263347332703,
+        0.29047156086034986,
+        0.06884842701214598,
+        0.2932093115621294,
+        0.10881560640009252
+      ],
+      "max_drawdown": -0.04664022278406388,
+      "max_observed_common_open_share_before_cap": 0.38734068877878003,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.252110863923164,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 1756,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.22034878834604732,
+        "alpha_annual_arithmetic": 0.15803688215426073,
+        "alpha_daily": 0.0006271304847391299,
+        "betas": [
+          0.17660738397661987
+        ],
+        "design_condition_number": 76.5657947646765,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.22146416919247647
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.095817266354244,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8504063897632248,
+      "total_cost": 4.191626868637528,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.958172663542438,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.24568449659339953,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 2.487217183121269,
+      "commission_paid": 2.091390182536004,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 134,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 20914.131308315715,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.30213119490945894,
+        "alpha_annual_arithmetic": 0.14336165349594793,
+        "alpha_daily": 0.0005688954503807458,
+        "betas": [
+          0.04275208103896101,
+          0.039975802343086134,
+          0.08153896790573753,
+          0.00969831738712975,
+          0.05724652428155191
+        ],
+        "design_condition_number": 183.30065521397333,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.3071231033865015
+      },
+      "max_daily_capital_share": 0.3856404939826291,
+      "max_daily_share_by_symbol": [
+        0.3856404939826291,
+        0.29045648149557807,
+        0.06887900086847754,
+        0.29330065060440663,
+        0.10880671862494212
+      ],
+      "max_drawdown": -0.046701205502941545,
+      "max_observed_common_open_share_before_cap": 0.3867167052244222,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.25214112064166827,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 1752,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2207561791546312,
+        "alpha_annual_arithmetic": 0.1569387681635148,
+        "alpha_daily": 0.0006227728895377571,
+        "betas": [
+          0.17654459058443586
+        ],
+        "design_condition_number": 76.56432118238122,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.22187097718159166
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.274239392494715,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8446178215941733,
+      "total_cost": 8.365629575030718,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.914131308315714,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.2408003301170778,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 2.446679121782881,
+      "commission_paid": 2.0760258670400296,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 133,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 20761.018522589213,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3041037722712787,
+        "alpha_annual_arithmetic": 0.13956545429831863,
+        "alpha_daily": 0.0005538311678504708,
+        "betas": [
+          0.042669931197499525,
+          0.04004561699336094,
+          0.08148441458566204,
+          0.009670480967846829,
+          0.057090685803006865
+        ],
+        "design_condition_number": 183.30052844695706,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.3090815707528861
+      },
+      "max_daily_capital_share": 0.3834626875779496,
+      "max_daily_share_by_symbol": [
+        0.3834626875779496,
+        0.29040371604606796,
+        0.06898605961170659,
+        0.2936196434171953,
+        0.10877514743565837
+      ],
+      "max_drawdown": -0.0469147241237321,
+      "max_observed_common_open_share_before_cap": 0.3845349205141133,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.25224692753241895,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 1736,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2221637578946144,
+        "alpha_annual_arithmetic": 0.15310118420161847,
+        "alpha_daily": 0.0006075443817524543,
+        "betas": [
+          0.1763286065119637
+        ],
+        "design_condition_number": 76.5587695266469,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.22327654221808424
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 20.76101852258921,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.824531059883746,
+      "total_cost": 22.83704438962924,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.761018522589215,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.23043794486735747,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 2.3579323450348877,
+      "commission_paid": 2.043637747142755,
+      "counters": {
+        "actualexec": 0,
+        "checks": 0,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 129,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "none",
+      "gross_raw_turnover": 20438.250251110047,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3081814216838351,
+        "alpha_annual_arithmetic": 0.13146130003907525,
+        "alpha_daily": 0.0005216718255518859,
+        "betas": [
+          0.04249492144207059,
+          0.04020096051516058,
+          0.08137641152628547,
+          0.009613400332050537,
+          0.05676205581399346
+        ],
+        "design_condition_number": 183.30024722928016,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.31313005243001646
+      },
+      "max_daily_capital_share": 0.37880770178350875,
+      "max_daily_share_by_symbol": [
+        0.37880770178350875,
+        0.29029071175648796,
+        0.06921573459503864,
+        0.2942995545585832,
+        0.1087050708122271
+      ],
+      "max_drawdown": -0.047372676309405004,
+      "max_observed_common_open_share_before_cap": 0.3798712934388149,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.25247317888331405,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 1683,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.22507815275905396,
+        "alpha_annual_arithmetic": 0.1449082790915837,
+        "alpha_daily": 0.0005750328535380306,
+        "betas": [
+          0.17588555415357254
+        ],
+        "design_condition_number": 76.54481521894915,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.22618676770503532
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 51.09562562777512,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.7823801391756893,
+      "total_cost": 53.139263374917874,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.438250251110045,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.1623644920190701,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.303024626244186,
+      "commission_paid": 2.190265989858688,
+      "counters": {
+        "actualexec": 0,
+        "checks": 209,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "weekly",
+      "gross_raw_turnover": 21902.732099651712,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5199759504989923,
+        "alpha_annual_arithmetic": 0.07685141018776571,
+        "alpha_daily": 0.00030496591344351476,
+        "betas": [
+          0.10831484516843431,
+          0.10105802634449558,
+          0.03659283576002372,
+          0.03670093622019374,
+          0.08218017704009907
+        ],
+        "design_condition_number": 276.4002004821398,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5223617559140072
+      },
+      "max_daily_capital_share": 0.2943036933420098,
+      "max_daily_share_by_symbol": [
+        0.2904462733807135,
+        0.2798553706383874,
+        0.0895821928707105,
+        0.2943036933420098,
+        0.16170658940132876
+      ],
+      "max_drawdown": -0.0848238497400623,
+      "max_observed_common_open_share_before_cap": 0.30513250767567496,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29567447158661914,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2731339739977102,
+        "alpha_annual_arithmetic": 0.07169196391174212,
+        "alpha_daily": 0.00028449192028469095,
+        "betas": [
+          0.21601170515779863
+        ],
+        "design_condition_number": 68.28084163385742,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.27385650483866675
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.190273209965171,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8241781193359135,
+      "total_cost": 4.380539199823859,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.90273209965171,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.1623644920190701,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.303024626244186,
+      "commission_paid": 2.190265989858688,
+      "counters": {
+        "actualexec": 0,
+        "checks": 48,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "monthly",
+      "gross_raw_turnover": 21902.732099651712,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5199759504989923,
+        "alpha_annual_arithmetic": 0.07685141018776571,
+        "alpha_daily": 0.00030496591344351476,
+        "betas": [
+          0.10831484516843431,
+          0.10105802634449558,
+          0.03659283576002372,
+          0.03670093622019374,
+          0.08218017704009907
+        ],
+        "design_condition_number": 276.4002004821398,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5223617559140072
+      },
+      "max_daily_capital_share": 0.2943036933420098,
+      "max_daily_share_by_symbol": [
+        0.2904462733807135,
+        0.2798553706383874,
+        0.0895821928707105,
+        0.2943036933420098,
+        0.16170658940132876
+      ],
+      "max_drawdown": -0.0848238497400623,
+      "max_observed_common_open_share_before_cap": 0.30513250767567496,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29567447158661914,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2731339739977102,
+        "alpha_annual_arithmetic": 0.07169196391174212,
+        "alpha_daily": 0.00028449192028469095,
+        "betas": [
+          0.21601170515779863
+        ],
+        "design_condition_number": 68.28084163385742,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.27385650483866675
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.190273209965171,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8241781193359135,
+      "total_cost": 4.380539199823859,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.90273209965171,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.16139881245256493,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.2949583896743435,
+      "commission_paid": 2.1859968911144705,
+      "counters": {
+        "actualexec": 0,
+        "checks": 209,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "weekly",
+      "gross_raw_turnover": 21860.18506092006,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5204759403589693,
+        "alpha_annual_arithmetic": 0.07603682355790443,
+        "alpha_daily": 0.0003017334268170811,
+        "betas": [
+          0.10824045121531362,
+          0.10103884911371558,
+          0.03662220511092928,
+          0.03670066249280421,
+          0.08227521194813306
+        ],
+        "design_condition_number": 276.4002846131919,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5228592607349187
+      },
+      "max_daily_capital_share": 0.29432261460360754,
+      "max_daily_share_by_symbol": [
+        0.29044994707442756,
+        0.2798589103736506,
+        0.08964190418546299,
+        0.29432261460360754,
+        0.16180969544569745
+      ],
+      "max_drawdown": -0.08484367721871744,
+      "max_observed_common_open_share_before_cap": 0.30514185653586273,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29575483520029094,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2736407187428562,
+        "alpha_annual_arithmetic": 0.07085464853702245,
+        "alpha_daily": 0.0002811692402262796,
+        "betas": [
+          0.21610442110214326
+        ],
+        "design_condition_number": 68.28092019861664,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.2743627458614022
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.558055518276017,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8181306277982572,
+      "total_cost": 8.744052409390488,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.86018506092006,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.16139881245256493,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.2949583896743435,
+      "commission_paid": 2.1859968911144705,
+      "counters": {
+        "actualexec": 0,
+        "checks": 48,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "monthly",
+      "gross_raw_turnover": 21860.18506092006,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5204759403589693,
+        "alpha_annual_arithmetic": 0.07603682355790443,
+        "alpha_daily": 0.0003017334268170811,
+        "betas": [
+          0.10824045121531362,
+          0.10103884911371558,
+          0.03662220511092928,
+          0.03670066249280421,
+          0.08227521194813306
+        ],
+        "design_condition_number": 276.4002846131919,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5228592607349187
+      },
+      "max_daily_capital_share": 0.29432261460360754,
+      "max_daily_share_by_symbol": [
+        0.29044994707442756,
+        0.2798589103736506,
+        0.08964190418546299,
+        0.29432261460360754,
+        0.16180969544569745
+      ],
+      "max_drawdown": -0.08484367721871744,
+      "max_observed_common_open_share_before_cap": 0.30514185653586273,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29575483520029094,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2736407187428562,
+        "alpha_annual_arithmetic": 0.07085464853702245,
+        "alpha_daily": 0.0002811692402262796,
+        "betas": [
+          0.21610442110214326
+        ],
+        "design_condition_number": 68.28092019861664,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.2743627458614022
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.558055518276017,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8181306277982572,
+      "total_cost": 8.744052409390488,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.86018506092006,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.15802737964069857,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.266637383651431,
+      "commission_paid": 2.1711464337773196,
+      "counters": {
+        "actualexec": 0,
+        "checks": 209,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "weekly",
+      "gross_raw_turnover": 21712.179581343215,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5221943514549487,
+        "alpha_annual_arithmetic": 0.07318818916885557,
+        "alpha_daily": 0.00029042932209863323,
+        "betas": [
+          0.1079799878086509,
+          0.10097179840760061,
+          0.03672301755496097,
+          0.03669943159269265,
+          0.08260879455670876
+        ],
+        "design_condition_number": 276.4005781744924,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.524569131020282
+      },
+      "max_daily_capital_share": 0.2943880777558273,
+      "max_daily_share_by_symbol": [
+        0.2904627941725628,
+        0.2798712890121107,
+        0.08985107996977916,
+        0.2943880777558273,
+        0.16217041989573747
+      ],
+      "max_drawdown": -0.08491248837319076,
+      "max_observed_common_open_share_before_cap": 0.30517383371471535,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29603610386091395,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.27540167280785455,
+        "alpha_annual_arithmetic": 0.0679264266633577,
+        "alpha_daily": 0.00026954931215618133,
+        "betas": [
+          0.21642879416827251
+        ],
+        "design_condition_number": 68.28099578560168,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.27612194947504354
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 21.712179581343214,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7971350741974383,
+      "total_cost": 23.883326015120534,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.712179581343214,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.15802737964069857,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.266637383651431,
+      "commission_paid": 2.1711464337773196,
+      "counters": {
+        "actualexec": 0,
+        "checks": 48,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "monthly",
+      "gross_raw_turnover": 21712.179581343215,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5221943514549487,
+        "alpha_annual_arithmetic": 0.07318818916885557,
+        "alpha_daily": 0.00029042932209863323,
+        "betas": [
+          0.1079799878086509,
+          0.10097179840760061,
+          0.03672301755496097,
+          0.03669943159269265,
+          0.08260879455670876
+        ],
+        "design_condition_number": 276.4005781744924,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.524569131020282
+      },
+      "max_daily_capital_share": 0.2943880777558273,
+      "max_daily_share_by_symbol": [
+        0.2904627941725628,
+        0.2798712890121107,
+        0.08985107996977916,
+        0.2943880777558273,
+        0.16217041989573747
+      ],
+      "max_drawdown": -0.08491248837319076,
+      "max_observed_common_open_share_before_cap": 0.30517383371471535,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29603610386091395,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.27540167280785455,
+        "alpha_annual_arithmetic": 0.0679264266633577,
+        "alpha_daily": 0.00026954931215618133,
+        "betas": [
+          0.21642879416827251
+        ],
+        "design_condition_number": 68.28099578560168,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.27612194947504354
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 21.712179581343214,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7971350741974383,
+      "total_cost": 23.883326015120534,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.712179581343214,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.15084686134508307,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.2054991220127487,
+      "commission_paid": 2.1397965551268463,
+      "counters": {
+        "actualexec": 0,
+        "checks": 209,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "weekly",
+      "gross_raw_turnover": 21399.72594690619,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5257084590967908,
+        "alpha_annual_arithmetic": 0.06709657265284016,
+        "alpha_daily": 0.00026625624068587366,
+        "betas": [
+          0.10742144826592319,
+          0.10082850301328629,
+          0.03692875492978996,
+          0.03669538424940917,
+          0.08332862588476803
+        ],
+        "design_condition_number": 276.40120250558925,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5280657729183773
+      },
+      "max_daily_capital_share": 0.29452437240714524,
+      "max_daily_share_by_symbol": [
+        0.2904902670679429,
+        0.27989776012922857,
+        0.09030028952532669,
+        0.29452437240714524,
+        0.16294262011643978
+      ],
+      "max_drawdown": -0.08505689175500109,
+      "max_observed_common_open_share_before_cap": 0.3052384659433479,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29663879417567357,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.27910631782756146,
+        "alpha_annual_arithmetic": 0.06166408493256885,
+        "alpha_daily": 0.0002446987497324161,
+        "betas": [
+          0.21712323902262265
+        ],
+        "design_condition_number": 68.2801158416365,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.2798229119450292
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 53.499314867265475,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7530247546248863,
+      "total_cost": 55.63911142239232,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.39972594690619,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.15084686134508307,
+      "cap_executions": 0,
+      "cash_excess_sharpe": 1.2054991220127487,
+      "commission_paid": 2.1397965551268463,
+      "counters": {
+        "actualexec": 0,
+        "checks": 48,
+        "dividend_reinvestments": 16,
+        "gapcancel": 0,
+        "intents_queued": 0,
+        "paid_rebalance_orders": 0,
+        "paid_strategy_entries": 38,
+        "paid_strategy_exits": 35,
+        "paid_terminal_exits": 3,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 35,
+        "terminal_round_trips": 3,
+        "terminalcancel": 0,
+        "triggers": 0
+      },
+      "daily_cap_breach_days": 0,
+      "extra_cap_commission": 0,
+      "extra_cap_slippage": 0,
+      "frequency": "monthly",
+      "gross_raw_turnover": 21399.72594690619,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.5257084590967908,
+        "alpha_annual_arithmetic": 0.06709657265284016,
+        "alpha_daily": 0.00026625624068587366,
+        "betas": [
+          0.10742144826592319,
+          0.10082850301328629,
+          0.03692875492978996,
+          0.03669538424940917,
+          0.08332862588476803
+        ],
+        "design_condition_number": 276.40120250558925,
+        "design_rank": 6,
+        "observations": 1007,
+        "r_squared": 0.5280657729183773
+      },
+      "max_daily_capital_share": 0.29452437240714524,
+      "max_daily_share_by_symbol": [
+        0.2904902670679429,
+        0.27989776012922857,
+        0.09030028952532669,
+        0.29452437240714524,
+        0.16294262011643978
+      ],
+      "max_drawdown": -0.08505689175500109,
+      "max_observed_common_open_share_before_cap": 0.3052384659433479,
+      "max_post_execution_capital_share": null,
+      "mean_etf_exposure": 0.29663879417567357,
+      "observations": 1007,
+      "observed_common_open_breaches_before_cap": 0,
+      "observed_common_open_count": 13031,
+      "paid_cap_orders": 0,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.27910631782756146,
+        "alpha_annual_arithmetic": 0.06166408493256885,
+        "alpha_daily": 0.0002446987497324161,
+        "betas": [
+          0.21712323902262265
+        ],
+        "design_condition_number": 68.2801158416365,
+        "design_rank": 2,
+        "observations": 1007,
+        "r_squared": 0.2798229119450292
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 53.499314867265475,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7530247546248863,
+      "total_cost": 55.63911142239232,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 6,
+          "strategy_exits": 5,
+          "strategy_round_trips": 5,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 12,
+          "strategy_round_trips": 12,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.39972594690619,
+      "years_act365": 3.9953767123287673
+    },
+    {
+      "cagr": 0.08448998544503694,
+      "cap_executions": 4,
+      "cash_excess_sharpe": 0.4802411281062463,
+      "commission_paid": 2.115169231441672,
+      "counters": {
+        "actualexec": 4,
+        "checks": 156,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 4,
+        "paid_rebalance_orders": 5,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 4
+      },
+      "daily_cap_breach_days": 20,
+      "extra_cap_commission": 0.004157199783559341,
+      "extra_cap_slippage": 0.004157281943840885,
+      "frequency": "weekly",
+      "gross_raw_turnover": 21151.713241930385,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.39608262104281944,
+        "alpha_annual_arithmetic": 0.08331131775660519,
+        "alpha_daily": 0.0003306004672881158,
+        "betas": [
+          0.06342654460345847,
+          0.12539099861674297,
+          0.022521238097290314,
+          0.061041610845074666,
+          0.04361338037255996
+        ],
+        "design_condition_number": 215.0604082299845,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.40009802914758796
+      },
+      "max_daily_capital_share": 0.3503447326373337,
+      "max_daily_share_by_symbol": [
+        0.3236575301292264,
+        0.2943385355975127,
+        0.07954876142344058,
+        0.3503447326373337,
+        0.11285259266470582
+      ],
+      "max_drawdown": -0.17527587012876678,
+      "max_observed_common_open_share_before_cap": 0.35376619554874567,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.3198638154223031,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 242,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 5,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.14875536574347203,
+        "alpha_annual_arithmetic": 0.04015614606561098,
+        "alpha_daily": 0.00015934978597464673,
+        "betas": [
+          0.1981069826061295
+        ],
+        "design_condition_number": 66.81706680563663,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.14988733999115356
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.1151713241930388,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2738777338103302,
+      "total_cost": 4.230340555634711,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.151713241930384,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.08374128233533074,
+      "cap_executions": 3,
+      "cash_excess_sharpe": 0.47380681981173856,
+      "commission_paid": 2.108896209891904,
+      "counters": {
+        "actualexec": 3,
+        "checks": 36,
+        "dividend_reinvestments": 11,
+        "gapcancel": 1,
+        "intents_queued": 4,
+        "paid_rebalance_orders": 1,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 4
+      },
+      "daily_cap_breach_days": 46,
+      "extra_cap_commission": 0.0001806858491072418,
+      "extra_cap_slippage": 0.00018066778232900892,
+      "frequency": "monthly",
+      "gross_raw_turnover": 21088.982763736745,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3946226403443359,
+        "alpha_annual_arithmetic": 0.08264687821849713,
+        "alpha_daily": 0.0003279638024543537,
+        "betas": [
+          0.06326686000008853,
+          0.12524127498537985,
+          0.02239618564886918,
+          0.06140426499712926,
+          0.04351641310237266
+        ],
+        "design_condition_number": 215.0604082299845,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.3986477557675784
+      },
+      "max_daily_capital_share": 0.3622276147696051,
+      "max_daily_share_by_symbol": [
+        0.3236575301292264,
+        0.2943385355975127,
+        0.07954876142344058,
+        0.3622276147696051,
+        0.11285259266470582
+      ],
+      "max_drawdown": -0.1769957064033848,
+      "max_observed_common_open_share_before_cap": 0.3621453226017561,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.31958895723008934,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 574,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 1,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.14766824144326285,
+        "alpha_annual_arithmetic": 0.03952536619198411,
+        "alpha_daily": 0.00015684669123803218,
+        "betas": [
+          0.19781707815596902
+        ],
+        "design_condition_number": 66.81706680563663,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.14880166133496064
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.1088982763736746,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2712548808971098,
+      "total_cost": 4.2177944862655785,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.088982763736745,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.08318757905860252,
+      "cap_executions": 4,
+      "cash_excess_sharpe": 0.47043263407969765,
+      "commission_paid": 2.1108605485525427,
+      "counters": {
+        "actualexec": 4,
+        "checks": 156,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 4,
+        "paid_rebalance_orders": 5,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 4
+      },
+      "daily_cap_breach_days": 20,
+      "extra_cap_commission": 0.0041776497980044935,
+      "extra_cap_slippage": 0.012533685208539256,
+      "frequency": "weekly",
+      "gross_raw_turnover": 21108.6682000939,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3962167725069826,
+        "alpha_annual_arithmetic": 0.08213856569030956,
+        "alpha_daily": 0.00032594668924726015,
+        "betas": [
+          0.06341090915601393,
+          0.12544718861305904,
+          0.022690639985337366,
+          0.0610582182108215,
+          0.04338553173147801
+        ],
+        "design_condition_number": 215.05825263551318,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.4002312886472288
+      },
+      "max_daily_capital_share": 0.3506426832277873,
+      "max_daily_share_by_symbol": [
+        0.3233409418603521,
+        0.29432316854255813,
+        0.07960233492376069,
+        0.3506426832277873,
+        0.11283409498813535
+      ],
+      "max_drawdown": -0.1753796002661009,
+      "max_observed_common_open_share_before_cap": 0.35387681174878277,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.319846823471105,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 242,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 5,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.148713686785522,
+        "alpha_annual_arithmetic": 0.03898546083505872,
+        "alpha_daily": 0.00015470420966293144,
+        "betas": [
+          0.19803970772520738
+        ],
+        "design_condition_number": 66.8151713161236,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.1498457164573498
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.33260046002817,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2693174619009941,
+      "total_cost": 8.443461008580712,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.1086682000939,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.08244208720197133,
+      "cap_executions": 3,
+      "cash_excess_sharpe": 0.4640441511804015,
+      "commission_paid": 2.104581997218677,
+      "counters": {
+        "actualexec": 3,
+        "checks": 36,
+        "dividend_reinvestments": 11,
+        "gapcancel": 1,
+        "intents_queued": 4,
+        "paid_rebalance_orders": 1,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 4
+      },
+      "daily_cap_breach_days": 46,
+      "extra_cap_commission": 0.00018174155964810346,
+      "extra_cap_slippage": 0.0005450611605961315,
+      "frequency": "monthly",
+      "gross_raw_turnover": 21045.88190007878,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.39477019426836435,
+        "alpha_annual_arithmetic": 0.08147685357215109,
+        "alpha_daily": 0.0003233208475085361,
+        "betas": [
+          0.06325122645963051,
+          0.1252993243200813,
+          0.022558885416116545,
+          0.06141863139453919,
+          0.04329270854383344
+        ],
+        "design_condition_number": 215.05825263551318,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.3987943286149843
+      },
+      "max_daily_capital_share": 0.3622399214547769,
+      "max_daily_share_by_symbol": [
+        0.3233409418603521,
+        0.29432316854255813,
+        0.07960233492376069,
+        0.3622399214547769,
+        0.11283409498813535
+      ],
+      "max_drawdown": -0.17709339760626963,
+      "max_observed_common_open_share_before_cap": 0.362157545285871,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.31957104811365605,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 577,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 1,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.14763183720828232,
+        "alpha_annual_arithmetic": 0.03835653741933915,
+        "alpha_daily": 0.0001522084818227744,
+        "betas": [
+          0.19774856591971496
+        ],
+        "design_condition_number": 66.8151713161236,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.148765305509867
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.313764570023634,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2667120733160144,
+      "total_cost": 8.41834656724231,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 21.04588190007878,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.07864534700142478,
+      "cap_executions": 4,
+      "cash_excess_sharpe": 0.4360946732113042,
+      "commission_paid": 2.095877908075073,
+      "counters": {
+        "actualexec": 4,
+        "checks": 156,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 4,
+        "paid_rebalance_orders": 5,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 4
+      },
+      "daily_cap_breach_days": 21,
+      "extra_cap_commission": 0.00424820900980594,
+      "extra_cap_slippage": 0.042490126029912784,
+      "frequency": "weekly",
+      "gross_raw_turnover": 20958.987340726035,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.39666100662841797,
+        "alpha_annual_arithmetic": 0.07803755116036712,
+        "alpha_daily": 0.00030967282206494887,
+        "betas": [
+          0.06335663557775499,
+          0.1256431088524595,
+          0.02328702119270698,
+          0.06111619901365021,
+          0.04258606948047797
+        ],
+        "design_condition_number": 215.0504400109437,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.4006725690843461
+      },
+      "max_daily_capital_share": 0.3516853732419269,
+      "max_daily_share_by_symbol": [
+        0.32223348405894237,
+        0.2942690305048265,
+        0.07978984870970374,
+        0.3516853732419269,
+        0.11276940084605805
+      ],
+      "max_drawdown": -0.17574263472388973,
+      "max_observed_common_open_share_before_cap": 0.35426297061114087,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.31978707550961455,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 252,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 5,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.14856031109890322,
+        "alpha_annual_arithmetic": 0.03489191269385713,
+        "alpha_daily": 0.00013845997100736955,
+        "betas": [
+          0.19780593093860097
+        ],
+        "design_condition_number": 66.80830020572243,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.14969254472776095
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 20.958987340726033,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2534981615242993,
+      "total_cost": 23.054865248801107,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 20.958987340726036,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.07791129690842435,
+      "cap_executions": 3,
+      "cash_excess_sharpe": 0.4298652515159347,
+      "commission_paid": 2.089581224252716,
+      "counters": {
+        "actualexec": 3,
+        "checks": 36,
+        "dividend_reinvestments": 11,
+        "gapcancel": 1,
+        "intents_queued": 4,
+        "paid_rebalance_orders": 1,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 4
+      },
+      "daily_cap_breach_days": 47,
+      "extra_cap_commission": 0.0001853773884893494,
+      "extra_cap_slippage": 0.0018519219629305635,
+      "frequency": "monthly",
+      "gross_raw_turnover": 20896.017896683024,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3952617230129042,
+        "alpha_annual_arithmetic": 0.07738561477607189,
+        "alpha_daily": 0.0003070857729209202,
+        "betas": [
+          0.06319700674568109,
+          0.1255017480165985,
+          0.023131865625675846,
+          0.06146876009784838,
+          0.042507770024259914
+        ],
+        "design_condition_number": 215.0504400109437,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.3992825892162758
+      },
+      "max_daily_capital_share": 0.3622821455779357,
+      "max_daily_share_by_symbol": [
+        0.32223348405894237,
+        0.2942690305048265,
+        0.07978984870970374,
+        0.3622821455779357,
+        0.11276940084605805
+      ],
+      "max_drawdown": -0.17743522697801561,
+      "max_observed_common_open_share_before_cap": 0.3621994756030359,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.3195081286844993,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 588,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 1,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.14749712600321152,
+        "alpha_annual_arithmetic": 0.03426971635051455,
+        "alpha_daily": 0.00013599093789886724,
+        "betas": [
+          0.19751055012006083
+        ],
+        "design_condition_number": 66.80830020572243,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.148630773442037
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 20.896017896683027,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2509540446023155,
+      "total_cost": 22.985599120935742,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 20.896017896683023,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.06899615932741399,
+      "cap_executions": 4,
+      "cash_excess_sharpe": 0.36249263962802336,
+      "commission_paid": 2.0642772559234177,
+      "counters": {
+        "actualexec": 4,
+        "checks": 156,
+        "dividend_reinvestments": 11,
+        "gapcancel": 1,
+        "intents_queued": 5,
+        "paid_rebalance_orders": 5,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 5
+      },
+      "daily_cap_breach_days": 23,
+      "extra_cap_commission": 0.004394174603829323,
+      "extra_cap_slippage": 0.10990276008147931,
+      "frequency": "weekly",
+      "gross_raw_turnover": 20643.28904162616,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3974805462711034,
+        "alpha_annual_arithmetic": 0.06926855706525903,
+        "alpha_daily": 0.0002748752264494406,
+        "betas": [
+          0.06324275995552064,
+          0.12605906070069006,
+          0.024583361130999515,
+          0.061239693288041505,
+          0.04086240877888489
+        ],
+        "design_condition_number": 215.03230008055328,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.4014866596602583
+      },
+      "max_daily_capital_share": 0.3539189400435995,
+      "max_daily_share_by_symbol": [
+        0.31986356480179284,
+        0.29511528054351505,
+        0.08019169110691228,
+        0.3539189400435995,
+        0.11263102004368646
+      ],
+      "max_drawdown": -0.17652046538866162,
+      "max_observed_common_open_share_before_cap": 0.35509914971393014,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.31965759299107643,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 270,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 5,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.14819285704000595,
+        "alpha_annual_arithmetic": 0.02614014265330172,
+        "alpha_daily": 0.00010373072481468936,
+        "betas": [
+          0.1973139371375913
+        ],
+        "design_condition_number": 66.79233979177135,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.14932557930458046
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 51.60822260406541,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2203289741613694,
+      "total_cost": 53.672499859988825,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 20.64328904162616,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.06828765895891142,
+      "cap_executions": 3,
+      "cash_excess_sharpe": 0.35659683570160305,
+      "commission_paid": 2.057947921575622,
+      "counters": {
+        "actualexec": 3,
+        "checks": 36,
+        "dividend_reinvestments": 11,
+        "gapcancel": 1,
+        "intents_queued": 4,
+        "paid_rebalance_orders": 1,
+        "paid_strategy_entries": 46,
+        "paid_strategy_exits": 42,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 42,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 4
+      },
+      "daily_cap_breach_days": 48,
+      "extra_cap_commission": 0.00019286457660461944,
+      "extra_cap_slippage": 0.004809590439017942,
+      "frequency": "monthly",
+      "gross_raw_turnover": 20579.989271231367,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3961845048341629,
+        "alpha_annual_arithmetic": 0.06863876154537762,
+        "alpha_daily": 0.00027237603787848264,
+        "betas": [
+          0.06308349217207894,
+          0.1259316149572953,
+          0.024378357479877655,
+          0.06157538160740588,
+          0.040815331034892155
+        ],
+        "design_condition_number": 215.03230008055328,
+        "design_rank": 6,
+        "observations": 753,
+        "r_squared": 0.40019923552010594
+      },
+      "max_daily_capital_share": 0.3623681697518591,
+      "max_daily_share_by_symbol": [
+        0.31986356480179284,
+        0.29415117190409934,
+        0.08019169110691228,
+        0.3623681697518591,
+        0.11263102004368646
+      ],
+      "max_drawdown": -0.17816726029869567,
+      "max_observed_common_open_share_before_cap": 0.36228487126894426,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.31937205270571833,
+      "observations": 753,
+      "observed_common_open_breaches_before_cap": 604,
+      "observed_common_open_count": 9765,
+      "paid_cap_orders": 1,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.1471706859576969,
+        "alpha_annual_arithmetic": 0.02553355289276156,
+        "alpha_daily": 0.00010132362259032365,
+        "betas": [
+          0.1970099506942738
+        ],
+        "design_condition_number": 66.79233979177135,
+        "design_rank": 2,
+        "observations": 753,
+        "r_squared": 0.14830476749232757
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 51.449973178078416,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2179167656035392,
+      "total_cost": 53.50792109965404,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 8,
+          "strategy_exits": 7,
+          "strategy_round_trips": 7,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 14,
+          "strategy_exits": 14,
+          "strategy_round_trips": 14,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 5,
+          "strategy_exits": 4,
+          "strategy_round_trips": 4,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        }
+      },
+      "turnover_fraction_of_initial": 20.579989271231366,
+      "years_act365": 2.984417808219178
+    },
+    {
+      "cagr": 0.24738474758322493,
+      "cap_executions": 5,
+      "cash_excess_sharpe": 2.5257907655301266,
+      "commission_paid": 2.0917477747725655,
+      "counters": {
+        "actualexec": 5,
+        "checks": 145,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 5,
+        "paid_rebalance_orders": 11,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 5
+      },
+      "daily_cap_breach_days": 17,
+      "extra_cap_commission": 0.007996969462850024,
+      "extra_cap_slippage": 0.007997224793810235,
+      "frequency": "weekly",
+      "gross_raw_turnover": 20917.55453690657,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.30610532315449945,
+        "alpha_annual_arithmetic": 0.14489910569774786,
+        "alpha_daily": 0.0005749964511815391,
+        "betas": [
+          0.041628569185905476,
+          0.04047409789229705,
+          0.08221469948272683,
+          0.009679309634752975,
+          0.05731067381733844
+        ],
+        "design_condition_number": 183.30069089588937,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.31106880439087636
+      },
+      "max_daily_capital_share": 0.3487514325413069,
+      "max_daily_share_by_symbol": [
+        0.3487514325413069,
+        0.29047156086034986,
+        0.06937438999388797,
+        0.2932093115621294,
+        0.10881560640009252
+      ],
+      "max_drawdown": -0.04664022278406388,
+      "max_observed_common_open_share_before_cap": 0.3625783513148335,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.25357235759372143,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 249,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 11,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2252209061481708,
+        "alpha_annual_arithmetic": 0.1581821199265876,
+        "alpha_daily": 0.0006277068251055063,
+        "betas": [
+          0.17678699707015322
+        ],
+        "design_condition_number": 76.5657947646765,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.22632931686898894
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.091755453690657,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.85164344115333,
+      "total_cost": 4.1835032284632225,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 4,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.917554536906568,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.24790333597392844,
+      "cap_executions": 3,
+      "cash_excess_sharpe": 2.5273150012034145,
+      "commission_paid": 2.094356876430956,
+      "counters": {
+        "actualexec": 3,
+        "checks": 33,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 3,
+        "paid_rebalance_orders": 8,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 3
+      },
+      "daily_cap_breach_days": 56,
+      "extra_cap_commission": 0.00517747262283534,
+      "extra_cap_slippage": 0.0051770414998820865,
+      "frequency": "monthly",
+      "gross_raw_turnover": 20943.645762269916,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3051135352037335,
+        "alpha_annual_arithmetic": 0.14528870272756467,
+        "alpha_daily": 0.0005765424711411297,
+        "betas": [
+          0.04179254797345479,
+          0.04046282787576391,
+          0.08241292375034869,
+          0.009683154297058561,
+          0.0568597284554193
+        ],
+        "design_condition_number": 183.30069089588937,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.31008411077452225
+      },
+      "max_daily_capital_share": 0.37267255158445783,
+      "max_daily_share_by_symbol": [
+        0.37267255158445783,
+        0.29047156086034986,
+        0.06907966080768174,
+        0.2932093115621294,
+        0.10881560640009252
+      ],
+      "max_drawdown": -0.04664022278406388,
+      "max_observed_common_open_share_before_cap": 0.37373506966563463,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.2532374032471236,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 745,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 8,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.22425786497572897,
+        "alpha_annual_arithmetic": 0.15862857687328208,
+        "alpha_daily": 0.0006294784796558812,
+        "betas": [
+          0.17669080932346534
+        ],
+        "design_condition_number": 76.5657947646765,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.22536765343785237
+      },
+      "slippage_bps": 1.0,
+      "slippage_paid": 2.094364576226992,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8537897131874617,
+      "total_cost": 4.188721452657948,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.943645762269917,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.2460031295586178,
+      "cap_executions": 5,
+      "cash_excess_sharpe": 2.513865020197733,
+      "commission_paid": 2.087581633408398,
+      "counters": {
+        "actualexec": 5,
+        "checks": 145,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 5,
+        "paid_rebalance_orders": 11,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 5
+      },
+      "daily_cap_breach_days": 17,
+      "extra_cap_commission": 0.007931741436259297,
+      "extra_cap_slippage": 0.023797542038868427,
+      "frequency": "weekly",
+      "gross_raw_turnover": 20876.046282373092,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.30660040378063713,
+        "alpha_annual_arithmetic": 0.14382219109232816,
+        "alpha_daily": 0.0005707229805251118,
+        "betas": [
+          0.04162598035221819,
+          0.04048805722872925,
+          0.08221983709207875,
+          0.009671612467745123,
+          0.05723879786763042
+        ],
+        "design_condition_number": 183.30065521397333,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.311560343667757
+      },
+      "max_daily_capital_share": 0.3487056313736518,
+      "max_daily_share_by_symbol": [
+        0.3487056313736518,
+        0.29045648149557807,
+        0.06942904093504296,
+        0.29330065060440663,
+        0.10880671862494212
+      ],
+      "max_drawdown": -0.046701205502941545,
+      "max_observed_common_open_share_before_cap": 0.3625318695231863,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.25358214160896897,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 249,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 11,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.22555709033693716,
+        "alpha_annual_arithmetic": 0.15709977667222155,
+        "alpha_daily": 0.0006234118121913553,
+        "betas": [
+          0.1767326133992897
+        ],
+        "design_condition_number": 76.56432118238122,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.22666502010755674
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.262813884711926,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8459331434275432,
+      "total_cost": 8.350395518120324,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 4,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.876046282373093,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.2465295588272618,
+      "cap_executions": 3,
+      "cash_excess_sharpe": 2.515505971746261,
+      "commission_paid": 2.0901083134555307,
+      "counters": {
+        "actualexec": 3,
+        "checks": 33,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 3,
+        "paid_rebalance_orders": 8,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 3
+      },
+      "daily_cap_breach_days": 56,
+      "extra_cap_commission": 0.005056959356896078,
+      "extra_cap_slippage": 0.01516696416053557,
+      "frequency": "monthly",
+      "gross_raw_turnover": 20901.31371918458,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3056189185390157,
+        "alpha_annual_arithmetic": 0.14421753295573345,
+        "alpha_daily": 0.0005722917974433867,
+        "betas": [
+          0.04178893577021925,
+          0.0404765631404843,
+          0.0824274163882133,
+          0.009674739575207602,
+          0.056784559278237084
+        ],
+        "design_condition_number": 183.30065521397333,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.31058587906448765
+      },
+      "max_daily_capital_share": 0.3725991657867431,
+      "max_daily_share_by_symbol": [
+        0.3725991657867431,
+        0.29045648149557807,
+        0.06915035017534095,
+        0.29330065060440663,
+        0.10880671862494212
+      ],
+      "max_drawdown": -0.046701205502941545,
+      "max_observed_common_open_share_before_cap": 0.3736611180860502,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.25325066121487816,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 743,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 8,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.22460806754154627,
+        "alpha_annual_arithmetic": 0.15755178142802814,
+        "alpha_daily": 0.0006252054818572545,
+        "betas": [
+          0.17664216222448376
+        ],
+        "design_condition_number": 76.56432118238122,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.22571735499856838
+      },
+      "slippage_bps": 3.0,
+      "slippage_paid": 6.270394115755375,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8481075688998434,
+      "total_cost": 8.360502429210905,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.901313719184582,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.24118535310341005,
+      "cap_executions": 5,
+      "cash_excess_sharpe": 2.471787093553783,
+      "commission_paid": 2.0730932233659782,
+      "counters": {
+        "actualexec": 5,
+        "checks": 145,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 5,
+        "paid_rebalance_orders": 11,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 5
+      },
+      "daily_cap_breach_days": 16,
+      "extra_cap_commission": 0.007705779120587941,
+      "extra_cap_slippage": 0.07708430070936866,
+      "frequency": "weekly",
+      "gross_raw_turnover": 20731.693866560538,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.30830466798809364,
+        "alpha_annual_arithmetic": 0.14005741864605456,
+        "alpha_daily": 0.0005557834073256134,
+        "betas": [
+          0.04161720348647742,
+          0.04053767481236951,
+          0.08223900541236982,
+          0.009645094590387895,
+          0.05698874992414336
+        ],
+        "design_condition_number": 183.30052844695706,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.3132524171441159
+      },
+      "max_daily_capital_share": 0.34854542127512966,
+      "max_daily_share_by_symbol": [
+        0.34854542127512966,
+        0.29040371604606796,
+        0.06962042701670484,
+        0.2936196434171953,
+        0.10877514743565837
+      ],
+      "max_drawdown": -0.0469147241237321,
+      "max_observed_common_open_share_before_cap": 0.36236927345382464,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.25361657082518646,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 247,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 11,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.22671348475818787,
+        "alpha_annual_arithmetic": 0.15331598972349156,
+        "alpha_daily": 0.00060839678461703,
+        "betas": [
+          0.1765458685993626
+        ],
+        "design_condition_number": 76.5587695266469,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.2278197601734121
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 20.731693866560537,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8261093983953935,
+      "total_cost": 22.804787089926513,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 4,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.731693866560537,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.2417397726846222,
+      "cap_executions": 3,
+      "cash_excess_sharpe": 2.4738473644962333,
+      "commission_paid": 2.0753353877200977,
+      "counters": {
+        "actualexec": 3,
+        "checks": 33,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 3,
+        "paid_rebalance_orders": 8,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 3
+      },
+      "daily_cap_breach_days": 56,
+      "extra_cap_commission": 0.004640199892904165,
+      "extra_cap_slippage": 0.04635721162222431,
+      "frequency": "monthly",
+      "gross_raw_turnover": 20754.117746663505,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3073593164162377,
+        "alpha_annual_arithmetic": 0.1404735410411101,
+        "alpha_daily": 0.0005574346866710718,
+        "betas": [
+          0.04177634857611147,
+          0.040525432198461456,
+          0.08247901766633041,
+          0.009645701230171048,
+          0.05652324436483875
+        ],
+        "design_condition_number": 183.30052844695706,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.3123138277437324
+      },
+      "max_daily_capital_share": 0.37234215005617993,
+      "max_daily_share_by_symbol": [
+        0.37234215005617993,
+        0.29040371604606796,
+        0.0693979760997458,
+        0.2936196434171953,
+        0.10877514743565837
+      ],
+      "max_drawdown": -0.0469147241237321,
+      "max_observed_common_open_share_before_cap": 0.373402120457039,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.2532972200808432,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 735,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 8,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.22581395219733413,
+        "alpha_annual_arithmetic": 0.15378801884754764,
+        "alpha_daily": 0.000610269916061697,
+        "betas": [
+          0.1764752832214063
+        ],
+        "design_condition_number": 76.5587695266469,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.226921514497481
+      },
+      "slippage_bps": 10.0,
+      "slippage_paid": 20.754117746663503,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.828383687973716,
+      "total_cost": 22.829453134383602,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.754117746663507,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.23095450488383462,
+      "cap_executions": 5,
+      "cash_excess_sharpe": 2.3798902524405317,
+      "commission_paid": 2.04252761778449,
+      "counters": {
+        "actualexec": 5,
+        "checks": 145,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 5,
+        "paid_rebalance_orders": 11,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 5
+      },
+      "daily_cap_breach_days": 16,
+      "extra_cap_commission": 0.007233608597700048,
+      "extra_cap_slippage": 0.1810156781584101,
+      "frequency": "weekly",
+      "gross_raw_turnover": 20427.154603304552,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.3117997548329309,
+        "alpha_annual_arithmetic": 0.13201322885801792,
+        "alpha_daily": 0.0005238620192778489,
+        "betas": [
+          0.04159989709109538,
+          0.04064796502906397,
+          0.08228625616124242,
+          0.009590475627396011,
+          0.05646088457841399
+        ],
+        "design_condition_number": 183.30024722928016,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.31672250336774543
+      },
+      "max_daily_capital_share": 0.3482026054798126,
+      "max_daily_share_by_symbol": [
+        0.3482026054798126,
+        0.29029071175648796,
+        0.07003110098280922,
+        0.2942995545585832,
+        0.1087050708122271
+      ],
+      "max_drawdown": -0.047372676309405004,
+      "max_observed_common_open_share_before_cap": 0.36202132507583556,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.2536913189410047,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 238,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 11,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.2290801884931013,
+        "alpha_annual_arithmetic": 0.14523098078722102,
+        "alpha_daily": 0.0005763134158223057,
+        "betas": [
+          0.17616449787382518
+        ],
+        "design_condition_number": 76.54481521894915,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.23018307806607263
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 51.06788650826138,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.7844663972600083,
+      "total_cost": 53.11041412604587,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 3,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 4,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.42715460330455,
+      "years_act365": 2.787043378995434
+    },
+    {
+      "cagr": 0.23150902307411747,
+      "cap_executions": 2,
+      "cash_excess_sharpe": 2.3831233455953407,
+      "commission_paid": 2.044061251766497,
+      "counters": {
+        "actualexec": 2,
+        "checks": 33,
+        "dividend_reinvestments": 11,
+        "gapcancel": 0,
+        "intents_queued": 2,
+        "paid_rebalance_orders": 5,
+        "paid_strategy_entries": 34,
+        "paid_strategy_exits": 30,
+        "paid_terminal_exits": 4,
+        "pending_checks_preserved": 0,
+        "strategy_round_trips": 30,
+        "terminal_round_trips": 4,
+        "terminalcancel": 0,
+        "triggers": 2
+      },
+      "daily_cap_breach_days": 52,
+      "extra_cap_commission": 0.004251942470836557,
+      "extra_cap_slippage": 0.10603347807572461,
+      "frequency": "monthly",
+      "gross_raw_turnover": 20442.496502623977,
+      "joint_five_etf_bh_regression": {
+        "adjusted_r_squared": 0.31103253277878506,
+        "alpha_annual_arithmetic": 0.13244405146184973,
+        "alpha_daily": 0.000525571632785118,
+        "betas": [
+          0.04171863017292403,
+          0.040615690553175154,
+          0.0824843440424333,
+          0.009589956112983359,
+          0.056093451920899574
+        ],
+        "design_condition_number": 183.30024722928016,
+        "design_rank": 6,
+        "observations": 700,
+        "r_squared": 0.3159607693111256
+      },
+      "max_daily_capital_share": 0.37179053663311595,
+      "max_daily_share_by_symbol": [
+        0.37179053663311595,
+        0.29029071175648796,
+        0.06992971140922072,
+        0.2942995545585832,
+        0.1087050708122271
+      ],
+      "max_drawdown": -0.047372676309405004,
+      "max_observed_common_open_share_before_cap": 0.3728462515031324,
+      "max_post_execution_capital_share": 0.3333333333333333,
+      "mean_etf_exposure": 0.2534011860180767,
+      "observations": 700,
+      "observed_common_open_breaches_before_cap": 684,
+      "observed_common_open_count": 9064,
+      "paid_cap_orders": 5,
+      "qqq_bh_regression": {
+        "adjusted_r_squared": 0.22838086981937522,
+        "alpha_annual_arithmetic": 0.14570245471294765,
+        "alpha_daily": 0.0005781843440989987,
+        "betas": [
+          0.17610285927045072
+        ],
+        "design_condition_number": 76.54481521894915,
+        "design_rank": 2,
+        "observations": 700,
+        "r_squared": 0.2294847598482459
+      },
+      "slippage_bps": 25.0,
+      "slippage_paid": 51.10624125655994,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.786707700877398,
+      "total_cost": 53.15030250832644,
+      "trade_counts_by_symbol": {
+        "FDN": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 9,
+          "strategy_exits": 8,
+          "strategy_round_trips": 8,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "FXI": {
+          "rebalance_partial_orders": 1,
+          "strategy_entries": 7,
+          "strategy_exits": 6,
+          "strategy_round_trips": 6,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "GDX": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 12,
+          "strategy_exits": 11,
+          "strategy_round_trips": 11,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "QQQ": {
+          "rebalance_partial_orders": 2,
+          "strategy_entries": 3,
+          "strategy_exits": 2,
+          "strategy_round_trips": 2,
+          "terminal_exits": 1,
+          "terminal_round_trips": 1
+        },
+        "UNG": {
+          "rebalance_partial_orders": 0,
+          "strategy_entries": 3,
+          "strategy_exits": 3,
+          "strategy_round_trips": 3,
+          "terminal_exits": 0,
+          "terminal_round_trips": 0
+        }
+      },
+      "turnover_fraction_of_initial": 20.442496502623978,
+      "years_act365": 2.787043378995434
+    }
+  ],
+  "schema": "final_actual_cap_rebalance_aggregate_report_v1",
+  "selection_method": "Exact saved aggregate subset; no refit, account run or metric recomputation",
+  "slippage_bps_each_way": [
+    1,
+    3,
+    10,
+    25
+  ],
+  "source_report_sha256": "2a940582ceac6b9a108e3a9baf9319ef26b1c74eff29bedddf66e3bfd3472171",
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN"
+  ],
+  "title": "Weekly and Monthly Cap-Triggered Rebalancing"
+}

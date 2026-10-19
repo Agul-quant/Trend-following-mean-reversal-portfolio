@@ -1,0 +1,127 @@
+{
+  "aggregate_only": true,
+  "daily_variant_results_in_active_comparison": false,
+  "exact_source_comparison": "Independently checked with the unpublished original aggregate before publication; portable checks verify pinned retained bytes/digests, not unavailable source equivalence",
+  "figures_visually_reviewed": true,
+  "files": [
+    {
+      "bytes": 851,
+      "path": "configs/final_cap_rebalancing.json",
+      "sha256": "89cbb81f7a13c4a97467798bf885fb0156d43f37a24e0a5e07f55dab03ed7dee"
+    },
+    {
+      "bytes": 2870,
+      "path": "configs/no_bond_selected_strategies.json",
+      "sha256": "2731bcb859b441e00b8619817f47426828458c0c4ee73ce185c61d4612db94ba"
+    },
+    {
+      "bytes": 5093,
+      "path": "docs/final_cap_rebalancing.md",
+      "sha256": "3d7fd033948a7093040d5535eb22f5144221a5dbaaae16325dbe5526e3a52452"
+    },
+    {
+      "bytes": 3610,
+      "path": "reports/final_cap_rebalancing/README.md",
+      "sha256": "dc1343d78822417056145d354cdedba7c3f94706240f6b289c18817255d14957"
+    },
+    {
+      "bytes": 1716,
+      "path": "reports/final_cap_rebalancing/controls.csv",
+      "sha256": "fc21791f62fd61689068cd3d382a55643be43c286885ea333251742b7e9795bd"
+    },
+    {
+      "bytes": 333921,
+      "path": "reports/final_cap_rebalancing/development_baseline.png",
+      "sha256": "e8733ccb83152f6e3a6c9215c35e80c38931a6d41204bba7e52ca5c6d2dadc42"
+    },
+    {
+      "bytes": 3324,
+      "path": "reports/final_cap_rebalancing/figures_manifest.json",
+      "sha256": "06434361dc6b0bdf072e3d479f5d196907ee10bee87a597423cbfbbfc8fa4c49"
+    },
+    {
+      "bytes": 323693,
+      "path": "reports/final_cap_rebalancing/historical_OOS_baseline.png",
+      "sha256": "3c953835c5c57beacf6bdda80132fa26db998738428b11dc52814ab29db34283"
+    },
+    {
+      "bytes": 12228,
+      "path": "reports/final_cap_rebalancing/performance.csv",
+      "sha256": "c3826aaf481461849adfa700fa8d77e0d6302decb3cae3b53c0e46ba41fd6edf"
+    },
+    {
+      "bytes": 148188,
+      "path": "reports/final_cap_rebalancing/report.json",
+      "sha256": "394c21a2497a4411a90b9c576a67abff5611a0de5de2726e3e889aa6c4e72630"
+    },
+    {
+      "bytes": 11345,
+      "path": "reports/final_cap_rebalancing/report.md",
+      "sha256": "37582877f07e40b0c6568215c5333db16ed75d29a188f9e5388d4d77639361de"
+    },
+    {
+      "bytes": 1464,
+      "path": "reports/final_cap_rebalancing/source_subset_audit.json",
+      "sha256": "4baf5c5d3c0a03fb36e266dfa799c92484df1456fd5f119c893fd427719cd54d"
+    },
+    {
+      "bytes": 403818,
+      "path": "reports/final_cap_rebalancing/validation_baseline.png",
+      "sha256": "f26129311d9384ab74780147c65a3172a987718bd002262c32a85779488b3f1d"
+    },
+    {
+      "bytes": 1582,
+      "path": "scripts/build_final_cap_reports.py",
+      "sha256": "37d29ca6e5e399cd60e83f4f1df1fd7db274a0043e68ecf2585fa77d8553796e"
+    },
+    {
+      "bytes": 2499,
+      "path": "scripts/verify_final_cap.py",
+      "sha256": "59f9b5c805f364ea4f0f48abfa7b0ecd309e22968ca789d533c40d44802e756b"
+    },
+    {
+      "bytes": 21831,
+      "path": "src/trend_portfolio/cap_event_engine.py",
+      "sha256": "eb3f08d63d2b2c73da203db9ec77f4ac04c7c851d8415ddf92c95b8fb988cf9d"
+    },
+    {
+      "bytes": 14162,
+      "path": "src/trend_portfolio/cap_rebalance.py",
+      "sha256": "8686fd647305a3e9efc485856313b7bfba2234fa5c73c0b12c34c2b6944a604f"
+    },
+    {
+      "bytes": 20816,
+      "path": "src/trend_portfolio/cap_subset.py",
+      "sha256": "87c0aeb841cb027e0ff2a9b2f9eb519b9fd3650bb4a8734ed31899f9b5a6c2f6"
+    },
+    {
+      "bytes": 14666,
+      "path": "tests/test_cap_event_engine.py",
+      "sha256": "03e4a0260c9ab9366ef2bff5a3f7a6073e20c4eb12d89bc0396a9c6633c1def8"
+    },
+    {
+      "bytes": 10060,
+      "path": "tests/test_cap_rebalance.py",
+      "sha256": "e1d62594c44543c8979943a224fb06b3e360c735ff54901e7dc10a6a9f73159e"
+    },
+    {
+      "bytes": 6994,
+      "path": "tests/test_cap_subset.py",
+      "sha256": "41b2ce38bb52df42749786adf9005a8c2db7aa080b56e4b589b7bfe2e0c017c5"
+    }
+  ],
+  "frequencies": [
+    "none",
+    "weekly",
+    "monthly"
+  ],
+  "performance_rows": 36,
+  "policy_config": "configs/final_cap_rebalancing.json",
+  "private_arrays_or_paths_published": false,
+  "publication_method": "Literal saved-aggregate subset and saved-path raster visualization; no refitting or account rerun",
+  "report_directory": "reports/final_cap_rebalancing",
+  "retained_payload_sha256": "6757f4c392301fb31089809aa5af96bdcd61dffe7b402263e18da5896f77fde9",
+  "schema": "final_actual_cap_rebalancing_publication_v1",
+  "source_report_sha256": "2a940582ceac6b9a108e3a9baf9319ef26b1c74eff29bedddf66e3bfd3472171",
+  "unique_control_rows": 15
+}

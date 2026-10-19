@@ -3,11 +3,16 @@
     "excluded_bond_etfs": [
       "BND"
     ],
-    "manifest": "metadata/final_no_bond_manifest.json",
-    "portfolios": 4,
-    "presentation": "configs/final_no_bond_study_presentation.json",
-    "report_index": "reports/final_no_bond_portfolios/README.md",
-    "scope": "Four unchanged saved allocations; removed cap models and original study/report fields are historical archives, not active final models.",
+    "frequencies": [
+      "none",
+      "weekly",
+      "monthly"
+    ],
+    "manifest": "metadata/final_cap_manifest.json",
+    "portfolios": 3,
+    "presentation": "configs/final_cap_rebalancing.json",
+    "report_index": "reports/final_cap_rebalancing/README.md",
+    "scope": "Weekly and Monthly actual cap corrections plus unchanged Initial allocation/no-rebalancing comparator; Daily corrections removed by literal saved-result subset, no refit.",
     "symbols": [
       "GDX",
       "FXI",
@@ -17,6 +22,25 @@
     ]
   },
   "aggregate_only": true,
+  "archived_portfolio_comparisons": [
+    {
+      "excluded_bond_etfs": [
+        "BND"
+      ],
+      "manifest": "metadata/final_no_bond_manifest.json",
+      "portfolios": 4,
+      "presentation": "configs/final_no_bond_study_presentation.json",
+      "report_index": "reports/final_no_bond_portfolios/README.md",
+      "scope": "Four unchanged saved allocations; removed cap models and original study/report fields are historical archives, not active final models.",
+      "symbols": [
+        "GDX",
+        "FXI",
+        "QQQ",
+        "UNG",
+        "FDN"
+      ]
+    }
+  ],
   "files": [
     {
       "bytes": 517,
@@ -24,24 +48,24 @@
       "sha256": "dca29fecef624db1bf50a80b82298ab612c2c0d2040104f0befcdde7b13e552c"
     },
     {
-      "bytes": 755,
+      "bytes": 890,
       "path": ".github/workflows/tests.yml",
-      "sha256": "3cb7bf878b4aff0844c4e47bf8213412cccf02ceef4a5fb8f541e39fc4ad4486"
+      "sha256": "28ed4a62faa28ec7551746f900427a8657bac8b24ae8f2a6972d29b9b36cc6e8"
     },
     {
-      "bytes": 438,
+      "bytes": 564,
       "path": ".gitignore",
-      "sha256": "0e43948d601b1603a75c22945def8d44a8ecd1f59f1296d98c0ca92ee0b776a8"
+      "sha256": "8467a6cdd885dc6c87bad32829d085fa5e091ad49f6a778430ae62a0c950e0a7"
     },
     {
-      "bytes": 2553,
+      "bytes": 3136,
       "path": "AGENTS.md",
-      "sha256": "cc7912b7a6594def2a245a48db1e06bc2f2376f96e940cbeca99d2346f5898a0"
+      "sha256": "e1c899249f0155d1c373ecc1a3330baba12f96209d66ebe102a47fb8cf2083a7"
     },
     {
-      "bytes": 9067,
+      "bytes": 9475,
       "path": "README.md",
-      "sha256": "a6ec1b80e01aa3fabd59efa1553df124c7db1f346377fc75d2e7d4ddfda0ec96"
+      "sha256": "ac9f0dc4aef5adf3caab60379cd0afc4d060dfd27b52d403ffa4495988cc948a"
     },
     {
       "bytes": 5204,
@@ -82,6 +106,11 @@
       "bytes": 244479,
       "path": "assets/periods/validation_baseline.png",
       "sha256": "151d7920c74dd943a655d5307913485cd1864d0b97570df0999e7ead8d1a3191"
+    },
+    {
+      "bytes": 851,
+      "path": "configs/final_cap_rebalancing.json",
+      "sha256": "89cbb81f7a13c4a97467798bf885fb0156d43f37a24e0a5e07f55dab03ed7dee"
     },
     {
       "bytes": 2093,
@@ -162,6 +191,11 @@
       "bytes": 8844,
       "path": "docs/data_sources.md",
       "sha256": "dd5dd256d754bd134bab47e64141a206932a5c3c2658f520db17c7994f4b44d6"
+    },
+    {
+      "bytes": 5093,
+      "path": "docs/final_cap_rebalancing.md",
+      "sha256": "3d7fd033948a7093040d5535eb22f5144221a5dbaaae16325dbe5526e3a52452"
     },
     {
       "bytes": 4060,
@@ -379,6 +413,11 @@
       "sha256": "198844666d26ae3040c352a65f124c702d99af1e6ed55d04496bde176249376a"
     },
     {
+      "bytes": 4670,
+      "path": "metadata/final_cap_manifest.json",
+      "sha256": "281ce40777df1f9e335192c48d94f66dc47cb367f280232dd7d915c3a2a74dee"
+    },
+    {
       "bytes": 7052,
       "path": "metadata/final_no_bond_manifest.json",
       "sha256": "4c4eba31b1fb11390377e009cc38014b12fca3d6c1750d9c743542e2f48b1c7f"
@@ -397,6 +436,56 @@
       "bytes": 558,
       "path": "pyproject.toml",
       "sha256": "6bf02295e84098d1bc691065bf5b773afe81fff3dd054b525b69082a73d41144"
+    },
+    {
+      "bytes": 3610,
+      "path": "reports/final_cap_rebalancing/README.md",
+      "sha256": "dc1343d78822417056145d354cdedba7c3f94706240f6b289c18817255d14957"
+    },
+    {
+      "bytes": 1716,
+      "path": "reports/final_cap_rebalancing/controls.csv",
+      "sha256": "fc21791f62fd61689068cd3d382a55643be43c286885ea333251742b7e9795bd"
+    },
+    {
+      "bytes": 333921,
+      "path": "reports/final_cap_rebalancing/development_baseline.png",
+      "sha256": "e8733ccb83152f6e3a6c9215c35e80c38931a6d41204bba7e52ca5c6d2dadc42"
+    },
+    {
+      "bytes": 3324,
+      "path": "reports/final_cap_rebalancing/figures_manifest.json",
+      "sha256": "06434361dc6b0bdf072e3d479f5d196907ee10bee87a597423cbfbbfc8fa4c49"
+    },
+    {
+      "bytes": 323693,
+      "path": "reports/final_cap_rebalancing/historical_OOS_baseline.png",
+      "sha256": "3c953835c5c57beacf6bdda80132fa26db998738428b11dc52814ab29db34283"
+    },
+    {
+      "bytes": 12228,
+      "path": "reports/final_cap_rebalancing/performance.csv",
+      "sha256": "c3826aaf481461849adfa700fa8d77e0d6302decb3cae3b53c0e46ba41fd6edf"
+    },
+    {
+      "bytes": 148188,
+      "path": "reports/final_cap_rebalancing/report.json",
+      "sha256": "394c21a2497a4411a90b9c576a67abff5611a0de5de2726e3e889aa6c4e72630"
+    },
+    {
+      "bytes": 11345,
+      "path": "reports/final_cap_rebalancing/report.md",
+      "sha256": "37582877f07e40b0c6568215c5333db16ed75d29a188f9e5388d4d77639361de"
+    },
+    {
+      "bytes": 1464,
+      "path": "reports/final_cap_rebalancing/source_subset_audit.json",
+      "sha256": "4baf5c5d3c0a03fb36e266dfa799c92484df1456fd5f119c893fd427719cd54d"
+    },
+    {
+      "bytes": 403818,
+      "path": "reports/final_cap_rebalancing/validation_baseline.png",
+      "sha256": "f26129311d9384ab74780147c65a3172a987718bd002262c32a85779488b3f1d"
     },
     {
       "bytes": 8626,
@@ -774,6 +863,11 @@
       "sha256": "3fbb506448c46d15c7a00ce718ac24d42a102f6897a731532633a5671a095f59"
     },
     {
+      "bytes": 1582,
+      "path": "scripts/build_final_cap_reports.py",
+      "sha256": "37d29ca6e5e399cd60e83f4f1df1fd7db274a0043e68ecf2585fa77d8553796e"
+    },
+    {
       "bytes": 25829,
       "path": "scripts/build_final_no_bond_reports.py",
       "sha256": "f9701e74f9ec52011f3c2c167898b83ea8cce1520cac9f94bcbd993b9715246c"
@@ -829,6 +923,11 @@
       "sha256": "5d35946a05ee29b4c72d1b3f6a9339a43568906156a962116f307c6142e67156"
     },
     {
+      "bytes": 2499,
+      "path": "scripts/verify_final_cap.py",
+      "sha256": "59f9b5c805f364ea4f0f48abfa7b0ecd309e22968ca789d533c40d44802e756b"
+    },
+    {
       "bytes": 12529,
       "path": "scripts/verify_final_no_bond.py",
       "sha256": "132afa51787538497ea8a269e0b457ee00141083f7f5ed2ebe80bd21bcd30ca5"
@@ -854,6 +953,21 @@
       "sha256": "7e777c6872b4271c4e36484830f3e6d8a77331149e09048fa7d06552f2216fcf"
     },
     {
+      "bytes": 21831,
+      "path": "src/trend_portfolio/cap_event_engine.py",
+      "sha256": "eb3f08d63d2b2c73da203db9ec77f4ac04c7c851d8415ddf92c95b8fb988cf9d"
+    },
+    {
+      "bytes": 14162,
+      "path": "src/trend_portfolio/cap_rebalance.py",
+      "sha256": "8686fd647305a3e9efc485856313b7bfba2234fa5c73c0b12c34c2b6944a604f"
+    },
+    {
+      "bytes": 20816,
+      "path": "src/trend_portfolio/cap_subset.py",
+      "sha256": "87c0aeb841cb027e0ff2a9b2f9eb519b9fd3650bb4a8734ed31899f9b5a6c2f6"
+    },
+    {
       "bytes": 16016,
       "path": "src/trend_portfolio/checkpoint_caps.py",
       "sha256": "4d3e989526598b791105dcf547d6247002c016eb09c5c04d3a4533b3ee62d907"
@@ -877,6 +991,21 @@
       "bytes": 7816,
       "path": "tests/test_analytics.py",
       "sha256": "0a48db7f252b43723b3182c003db65b6597ad162f223552470a82c10bc105e8c"
+    },
+    {
+      "bytes": 14666,
+      "path": "tests/test_cap_event_engine.py",
+      "sha256": "03e4a0260c9ab9366ef2bff5a3f7a6073e20c4eb12d89bc0396a9c6633c1def8"
+    },
+    {
+      "bytes": 10060,
+      "path": "tests/test_cap_rebalance.py",
+      "sha256": "e1d62594c44543c8979943a224fb06b3e360c735ff54901e7dc10a6a9f73159e"
+    },
+    {
+      "bytes": 6994,
+      "path": "tests/test_cap_subset.py",
+      "sha256": "41b2ce38bb52df42749786adf9005a8c2db7aa080b56e4b589b7bfe2e0c017c5"
     },
     {
       "bytes": 9561,
@@ -1022,10 +1151,15 @@
   },
   "verification": {
     "PDF_pages_visually_inspected": 31,
-    "active_aggregate_command": "python scripts/verify_final_no_bond.py --report reports/final_no_bond_portfolios/report.json --source-report reports/no_bond_portfolios/report.json",
+    "active_aggregate_command": "python scripts/verify_final_cap.py --report-dir reports/final_cap_rebalancing --config configs/final_cap_rebalancing.json",
+    "active_saved_performance_rows": 36,
+    "active_subset_tests_passed": 33,
+    "active_synthetic_tests_passed": 555,
+    "active_unique_control_rows": 15,
     "full_synthetic_tests_passed": 194,
     "independent_display_table_cells_verified": 1554,
     "maximum_CAGR_portfolio_in_current_reports": false,
+    "new_cap_sources_ruff_passed": true,
     "no_new_accounts_optimization_or_data_refresh": true,
     "publication_guard_tests_passed": 41,
     "report_builder_tests_passed": 47

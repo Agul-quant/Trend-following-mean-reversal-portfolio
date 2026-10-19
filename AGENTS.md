@@ -15,21 +15,29 @@
 - The selected ETF portfolio is retrospective: configurations, pruning and
   weights used the examined 2024–2026 history. It is not untouched portfolio OOS,
   a live allocation or trading authorization.
-- Mix normalized sleeve **wealth**, not returns at constant daily weights. The
-  current historical cap is on daily sleeve capital shares across four cost
-  scenarios, without rebalancing; it is not a future or intraday guarantee.
+- Preserve the distinct accounting models: the static benchmark mixes normalized
+  sleeve wealth once; actual cap corrections use the costed canonical-event
+  ledger. Never approximate rebalancing by free constant-weight return mixing.
 - Run tests before committing. Keep saved results auditable; generic optimizer
-  reruns are best-found research experiments, not replacements for saved weights.
+  reruns are research experiments, not replacements for saved weights.
 - Verify the origin push URL before every push. Never force-push without explicit
   authorization. Local Python: `~/.venvs/myenv/bin/python` when available.
 
-- Active final basket: GDX, FXI, QQQ, UNG and FDN; no bond ETFs. The final
-  FOUR portfolios are Daily cap, Initial cap, Uncapped and Equal initial,
-  defined in configs/final_no_bond_portfolios.json. Weekly/Monthly cap fits
-  are excluded from the active publication and retained only in the archive.
-  Keep the same saved full-precision weights; this is a result subset, not a refit.
-  Development 2017–2020, validation 2021–2023 and historical OOS
-  2024-01-01–2026-10-15 remain unchanged, all four costs, no rebalancing.
-  All prior financial sources, six-model no-bond results and original class
-  reports remain unchanged archives. Maximum CAGR stays excluded; corrected-split
-  work stays inactive. Completed fits are verification/report-only.
+- Active final basket: GDX, FXI, QQQ, UNG and FDN; no bond ETFs. Current models
+  are Weekly corrections, Monthly corrections and the Initial allocation /
+  no-rebalancing comparator. Daily corrections are excluded from active results,
+  tables and charts. Generic engine support for other frequencies is not an
+  active portfolio definition.
+- Use configs/final_cap_rebalancing.json and reports/final_cap_rebalancing.
+  Starting weights are the exact saved Initial cap vector, unchanged across
+  costs, frequencies and all three periods. Do not refit or rerun completed
+  accounts when filtering/reporting. Next-eligible-open corrections enforce a
+  post-cost sleeve-capital cap, not a continuous or daily-closing guarantee.
+- Development 2017–2020, validation 2021–2023 and historical OOS
+  2024-01-01–2026-10-15 remain unchanged, all four costs. No date extension,
+  live trading, leverage or shorting is implied. Results remain retrospective.
+- All prior financial sources, exact definitions/weights, archived static four
+  and six-model no-bond results and original class reports remain unchanged.
+  Their internal active labels are historical context; current routing is above.
+  Maximum CAGR stays excluded; corrected-split work stays inactive. The local
+  unpublished three-frequency cap source is preserved/ignored, not committed.

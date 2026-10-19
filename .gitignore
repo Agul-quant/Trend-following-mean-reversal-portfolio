@@ -35,3 +35,6 @@ dist/
 
 # Optional report renderer dependencies.
 node_modules/
+
+# Unpublished full three-frequency source; retain locally without publishing dropped cases.
+/reports/actual_cap_rebalancing/

@@ -18,3 +18,4 @@ jobs:
       - run: python scripts/verify_project.py
       - run: python scripts/verify_no_bond_portfolios.py --public-report reports/no_bond_portfolios/report.json
       - run: python scripts/verify_final_no_bond.py --report reports/final_no_bond_portfolios/report.json --source-report reports/no_bond_portfolios/report.json
+      - run: python scripts/verify_final_cap.py --report-dir reports/final_cap_rebalancing --config configs/final_cap_rebalancing.json
