@@ -9,3 +9,10 @@ reports/no_bond_portfolios/combined_report.md whitespace=-blank-at-eof
 reports/final_no_bond_portfolios/combined_report.md whitespace=-blank-at-eof
 scripts/verify_no_bond_portfolios.py whitespace=-blank-at-eof
 tests/test_no_bond_audit.py whitespace=-blank-at-eof
+
+# Reader reports are documentation, not research-engine language source.
+reports/** linguist-documentation
+final_reports/** linguist-documentation
+# Generated HTML stays browsable but is excluded from language stats/diffs.
+reports/**/*.html linguist-generated
+final_reports/**/*.html linguist-generated
