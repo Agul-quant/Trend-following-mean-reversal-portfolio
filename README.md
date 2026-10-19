@@ -4,6 +4,43 @@ Calculation code and aggregate results for **six fixed long/cash ETF strategies*
 GDX, FXI, QQQ, UNG, FDN and BND. The portfolio layer compares static initial
 allocations, correlations, cost sensitivity, and passive-ETF alpha/beta attribution.
 
+## Data sources and full research dataset
+
+**Market-data provider: [Alpha Vantage](https://www.alphavantage.co/documentation/).**
+The historical study uses daily OHLCV, adjusted closes, dividends and split
+coefficients from `TIME_SERIES_DAILY_ADJUSTED`, plus **30-minute OHLCV**
+from `TIME_SERIES_INTRADAY`, using verified native raw or matching-vintage-restored
+legacy observations. Available **15-minute** captures provide additional
+reconciliation evidence; they are not a complete 15-minute dataset for every ETF.
+Separate captures and daily anchors are cross-checks from the **same provider**,
+not independent-vendor confirmation. Trading sessions use the XNYS calendar in
+[exchange_calendars](https://github.com/gerrymanoim/exchange_calendars).
+Cash returns are modeled at 3% nominal ACT/365, not downloaded Treasury yields.
+
+### Full 56-ETF universe
+
+- **US equity indices (6):** SPY, QQQ, DIA, IWM, MDY, VTI.
+- **International / country equities (13):** EEM, EFA, EWA, EWC, EWJ, EWT, EWW, EWY, EWZ, FXI, INDA, MCHI, VGK.
+- **Broad US sectors (10):** XLB, XLE, XLF, XLI, XLK, XLP, XLRE, XLU, XLV, XLY.
+- **Industries / subsectors (13):** FDN, GDX, GDXJ, IBB, ITB, KBE, KRE, SMH, SOXX, XBI, XHB, XOP, XRT.
+- **Bonds (9):** BND, HYG, IEF, IEI, LQD, MBB, SHY, TIP, TLT.
+- **Commodities / precious metals (5):** DBC, GLD, SLV, UNG, USO.
+
+The research window is **2017-01-01–2026-10-15**, with daily feature initialization
+from **2015**, subject to actual ETF inception and available history. The corrected
+split is **2017–2020 development**, **2021–2024 validation**, and
+**2025-01-01–2026-10-15 OOS**. Stage eligibility is separate from the universe:
+listing an ETF does not mean it advances to every stage. These are listed ETF
+returns, not index levels, spot commodities or synthetic leveraged products.
+
+**Data availability:** the underlying market captures and full saved daily account paths
+are retained privately and are **not downloadable from this repository**. GitHub
+contains code, definitions, aggregate results and raster charts. See the
+[complete dataset specification and access/reproduction notes](docs/data_sources.md)
+for fields, price adjustments, coverage limits and the private input requirement.
+The performance tables below remain the earlier **six-ETF, 700-session,
+2024–2026-10-15 portfolio snapshot**, not corrected-split portfolio results.
+
 > **Retrospective research, not an untouched portfolio test.** ETF/configuration
 > selection, correlation pruning and weight fitting used the already examined
 > historical OOS sample. These results are not forward performance estimates,
