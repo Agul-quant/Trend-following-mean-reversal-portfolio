@@ -1,0 +1,137 @@
+{
+  "schema": "five_etf_four_portfolio_raster_verification_v1",
+  "baseline_commission_bps_each_way": 1,
+  "baseline_slippage_bps_each_way": 3,
+  "series_ids": [
+    "no_bond_daily_capped_max_sharpe",
+    "no_bond_initial_capped_max_sharpe",
+    "no_bond_uncapped_max_sharpe",
+    "no_bond_equal_initial",
+    "QQQ_buy_and_hold"
+  ],
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN"
+  ],
+  "initial_capital": 1000,
+  "no_rebalancing": true,
+  "raster_only": true,
+  "daily_input_arrays_exported": false,
+  "private_input_locators_exported": false,
+  "all_released_guards_unchanged": true,
+  "guard_count": 438,
+  "saved_report_sha256": "523c3e2396205781c1e4a6a9689c86c0e53aab0b5d87284a43bb410bbbe33f1f",
+  "stage_figures": [
+    {
+      "stage": "development",
+      "series": 5,
+      "points_per_series": 1008,
+      "initial_value": 1000,
+      "saved_aggregate_checks": [
+        {
+          "series_id": "no_bond_daily_capped_max_sharpe",
+          "terminal_equity_from_1000": 1826.743420927565,
+          "max_drawdown": -0.08064294589659049
+        },
+        {
+          "series_id": "no_bond_initial_capped_max_sharpe",
+          "terminal_equity_from_1000": 1818.1306277982567,
+          "max_drawdown": -0.08484367721871788
+        },
+        {
+          "series_id": "no_bond_uncapped_max_sharpe",
+          "terminal_equity_from_1000": 1818.1306277982567,
+          "max_drawdown": -0.08484367721871788
+        },
+        {
+          "series_id": "no_bond_equal_initial",
+          "terminal_equity_from_1000": 2043.998886569645,
+          "max_drawdown": -0.07389183619372475
+        },
+        {
+          "series_id": "QQQ_buy_and_hold",
+          "terminal_equity_from_1000": 2714.1061421715776,
+          "max_drawdown": -0.28559372098911295
+        }
+      ],
+      "file": "development_baseline.png",
+      "sha256": "5322992a9ca2687a16fe74fd2ce70aac8b9564fb438d53073e6e2c7c6cb73b8b",
+      "all_daily_points_rendered": true
+    },
+    {
+      "stage": "validation",
+      "series": 5,
+      "points_per_series": 754,
+      "initial_value": 1000,
+      "saved_aggregate_checks": [
+        {
+          "series_id": "no_bond_daily_capped_max_sharpe",
+          "terminal_equity_from_1000": 1252.1605516005402,
+          "max_drawdown": -0.1956723191086801
+        },
+        {
+          "series_id": "no_bond_initial_capped_max_sharpe",
+          "terminal_equity_from_1000": 1250.147058378805,
+          "max_drawdown": -0.19242484382205383
+        },
+        {
+          "series_id": "no_bond_uncapped_max_sharpe",
+          "terminal_equity_from_1000": 1250.147058378805,
+          "max_drawdown": -0.19242484382205383
+        },
+        {
+          "series_id": "no_bond_equal_initial",
+          "terminal_equity_from_1000": 1276.6608254445066,
+          "max_drawdown": -0.1567290453059258
+        },
+        {
+          "series_id": "QQQ_buy_and_hold",
+          "terminal_equity_from_1000": 1323.3716086579016,
+          "max_drawdown": -0.35119550757698037
+        }
+      ],
+      "file": "validation_baseline.png",
+      "sha256": "1e72867a5350054b58357ab4e6758a177fc7cb61e4526adc9783f33f23fa0ba6",
+      "all_daily_points_rendered": true
+    },
+    {
+      "stage": "historical_OOS",
+      "series": 5,
+      "points_per_series": 701,
+      "initial_value": 1000,
+      "saved_aggregate_checks": [
+        {
+          "series_id": "no_bond_daily_capped_max_sharpe",
+          "terminal_equity_from_1000": 1815.1179872857456,
+          "max_drawdown": -0.04906368760227375
+        },
+        {
+          "series_id": "no_bond_initial_capped_max_sharpe",
+          "terminal_equity_from_1000": 1844.6178215941652,
+          "max_drawdown": -0.046701205502941656
+        },
+        {
+          "series_id": "no_bond_uncapped_max_sharpe",
+          "terminal_equity_from_1000": 1844.6178215941652,
+          "max_drawdown": -0.046701205502941656
+        },
+        {
+          "series_id": "no_bond_equal_initial",
+          "terminal_equity_from_1000": 1796.4252035272996,
+          "max_drawdown": -0.05042710403967576
+        },
+        {
+          "series_id": "QQQ_buy_and_hold",
+          "terminal_equity_from_1000": 1818.3401235078422,
+          "max_drawdown": -0.22770144166602657
+        }
+      ],
+      "file": "historical_OOS_baseline.png",
+      "sha256": "0849bdf97f550cd1138d12bf37ea5d7701e7623c8d5ead33cb566bbff6b46dca",
+      "all_daily_points_rendered": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "all_images_decoded": true,
+  "all_in_page_anchors_exist": true,
+  "external_requests": 0,
+  "no_page_horizontal_overflow": true,
+  "offline": true,
+  "pages_checked": 6,
+  "passed": true,
+  "pdf_generated": false,
+  "responsive_desktop_and_mobile": true,
+  "schema": "no_bond_offline_html_browser_qa_v1"
+}

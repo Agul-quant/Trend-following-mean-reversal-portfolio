@@ -4,3 +4,8 @@
 *.pdf binary
 *.docx binary
 *.zip binary
+# Preserve exact byte-bound source/render artifacts, including terminal blank lines.
+reports/no_bond_portfolios/combined_report.md whitespace=-blank-at-eof
+reports/final_no_bond_portfolios/combined_report.md whitespace=-blank-at-eof
+scripts/verify_no_bond_portfolios.py whitespace=-blank-at-eof
+tests/test_no_bond_audit.py whitespace=-blank-at-eof

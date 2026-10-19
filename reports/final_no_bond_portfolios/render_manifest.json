@@ -1,0 +1,31 @@
+{
+  "aggregate_only": true,
+  "archived_six_report_sha256": "55010e543ec1af7210b24b4b2d2794d0b40c85e67541241ba058e97f85ae9239",
+  "figure_receipt_sha256": "22d2352c732cc943cf91730bb39c7b65bd7fe13c6113d6f63612decf71e23dc8",
+  "files": {
+    "README.md": "834afd464183930edc9969413bd095f591015c298d62bd3ebf43ab45d6885f37",
+    "combined_report.md": "0279f4789f5bec3ec2fcbb33a683086568cd12b5d897510232f3f21f0b3c5c92",
+    "development.html": "51ea2332c19699e798de63e22a344ddb4ff7d13013ce17efbec1b736c7f165c9",
+    "development_baseline.png": "5322992a9ca2687a16fe74fd2ce70aac8b9564fb438d53073e6e2c7c6cb73b8b",
+    "historical_OOS.html": "3ecd7d88f942276be02fcf5cc6c24850db1db3b6d6649d3f3ee3f5722d037bbd",
+    "historical_OOS_baseline.png": "0849bdf97f550cd1138d12bf37ea5d7701e7623c8d5ead33cb566bbff6b46dca",
+    "validation.html": "788a6bc5a29b887659009d1d950e637a1eb7696a05bc1878e706368f4c055d50",
+    "validation_baseline.png": "1e72867a5350054b58357ab4e6758a177fc7cb61e4526adc9783f33f23fa0ba6"
+  },
+  "no_account_or_optimizer_run": true,
+  "portfolio_ids": [
+    "no_bond_daily_capped_max_sharpe",
+    "no_bond_initial_capped_max_sharpe",
+    "no_bond_uncapped_max_sharpe",
+    "no_bond_equal_initial"
+  ],
+  "schema": "five_etf_four_portfolio_report_render_v1",
+  "source_report_sha256": "523c3e2396205781c1e4a6a9689c86c0e53aab0b5d87284a43bb410bbbe33f1f",
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN"
+  ]
+}

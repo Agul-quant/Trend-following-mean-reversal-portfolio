@@ -1,81 +1,117 @@
 # Trend Following and Mean Reversion ETF Portfolios
 
-A quantitative finance class project on six fixed long/cash ETF strategies and
-four static initial-capital portfolios. The **earlier study is restored as the
-active basis**: development **2017–2020**, validation **2021–2023**, and historical
-OOS **2024-01-01–2026-10-15**. The separate corrected-split experiment is inactive;
-its private artifacts are preserved, not deleted or merged into these results.
+The **final basket contains no bond ETFs**: **GDX, FXI, QQQ, UNG and FDN**.
+The four retained portfolios are **Daily cap fit, Initial cap fit, Uncapped fit
+and Equal initial**. The removed cap variants and standalone Maximum CAGR
+portfolio are excluded from all active reports, charts and comparisons.
 
-## Read the results
+## Current reports
 
-1. **Development and robustness — 2017–2020:** [PDF](final_reports/01_development/01_development_and_robustness.pdf) · [offline HTML](final_reports/01_development/01_development_and_robustness.html).
-2. **Validation and frozen selection — 2021–2023:** [PDF](final_reports/02_validation/02_validation_and_frozen_selection.pdf) · [offline HTML](final_reports/02_validation/02_validation_and_frozen_selection.html).
-3. **Historical OOS and conclusions — 2024–October 15, 2026:** [PDF](final_reports/03_historical_oos/03_historical_oos_and_conclusions.pdf) · [offline HTML](final_reports/03_historical_oos/03_historical_oos_and_conclusions.html).
+- [Report index](reports/final_no_bond_portfolios/README.md) and [all-period tables](reports/final_no_bond_portfolios/combined_report.md).
+- [Development — 2017–2020](reports/final_no_bond_portfolios/development.html).
+- [Validation — 2021–2023](reports/final_no_bond_portfolios/validation.html).
+- [Historical OOS — 2024–October 15, 2026](reports/final_no_bond_portfolios/historical_OOS.html).
 
-Reports follow the presentation and course-project structure of the
-[cryptocurrency class project](https://github.com/Agul-quant/Cryptocurrency-statistical-arbitrage/),
-but retain the ETF study's own signals, clocks, costs, cash and accounting.
-Each includes all four portfolios at all four slippages, matched QQQ and cash
-controls, equity/drawdown, capital-share diagnostics and QQQ-only/joint-six-ETF
-alpha and beta. Failures and undefined cash Sharpe remain visible.
+Each offline HTML includes **all four execution costs**, fresh-$1,000 accounts,
+matched QQQ/cash controls, equity and drawdown, QQQ-only and **joint-five-ETF**
+alpha/beta, daily capital-share diagnostics and strategy/portfolio correlations.
+See [full-precision aggregate JSON](reports/final_no_bond_portfolios/report.json),
+[exact saved weights](configs/final_no_bond_portfolios.json),
+[strategy definitions](configs/no_bond_selected_strategies.json) and
+[independent subset audit](reports/final_no_bond_portfolios/independent_audit.json).
 
-The [report index](final_reports/README.md) also links the
-[complete Word class project](final_reports/class_project/Trend_Following_Study_Class_Project.docx)
-and [reproducibility supplement](final_reports/class_project/Trend_Following_Study_Reproducibility.zip).
-Download an HTML file and open it locally: it works offline and embeds only raster
-curves, not numerical daily paths. See [report methods and course coverage](docs/class_project_reports.md).
+> **Retrospective research—not untouched portfolio OOS.** The retained weights
+> were fitted on the already examined **2024–October 15, 2026** history. Replaying
+> them in earlier periods does not remove hindsight. The removal is a literal
+> saved-result subset: **no refitting, account reruns or changed metrics**.
+> Numerical source fits are best-found, not globally certified; no live allocation
+> or trading is authorized.
 
-> **Retrospective research, not an untouched portfolio test.** Configuration
-> selection, ETF pruning and portfolio fitting used already examined historical
-> OOS. Replaying the final choices in earlier periods does not remove that
-> hindsight. No portfolio is approved for deployment and no new winner is
-> selected here. The historical daily-cap fit breaches one-third in validation:
-> **UNG reaches 35.18%, with 41 breach days at every cost**.
+## Four portfolio definitions
 
-## Four retained portfolios
+- **Daily cap fit:** each initial allocation and every fitted historical OOS daily
+  sleeve-capital share is at most one-third, across all four costs.
+- **Initial cap fit:** each starting allocation is at most one-third; **no later
+  enforcement**. Shares may subsequently drift above that value.
+- **Uncapped fit:** nonnegative initial weights summing to one, without the cap.
+- **Equal initial:** one-time **20%** allocation to each of the five strategies.
 
-The six sleeves are **GDX, FXI, QQQ, UNG, FDN and BND**. The same exact configuration
-and initial weights are used in every period and cost. The standalone maximum-CAGR
-100%-GDX strategy allocation is excluded from current reports; GDX remains an
-underlying sleeve. The original five-portfolio exports and charts stay unchanged
-in the [archived snapshot](docs/archived_five_portfolio_snapshot.md).
+**None rebalances.** Portfolio wealth is the sum of initial allocations multiplied
+by each saved strategy-account wealth path, including idle cash. This is not
+constant-weight return mixing. Cap checks do not create transfers or trades.
+Earlier-period concentration breaches remain visible; no historical cap is a
+future or intraday guarantee. BND is excluded from both allocations and joint
+passive-factor regressions, but the original modeled cash interest is unchanged.
+
+## Initial allocations
 
 | Strategy sleeve | Daily cap fit | Initial cap fit | Uncapped fit | Equal initial |
 |---|---:|---:|---:|---:|
-| GDX | 23.5729% | 29.0513% | 3.4761% | 16.6667% |
-| FXI | 24.9703% | 27.9920% | 4.2909% | 16.6667% |
-| QQQ | 5.6270% | 6.3045% | 1.0866% | 16.6667% |
-| UNG | 23.8965% | 26.7293% | 4.6524% | 16.6667% |
-| FDN | 8.6317% | 9.9229% | 1.1470% | 16.6667% |
-| BND | 13.3015% | 0.0000% | 85.3469% | 16.6667% |
+| GDX | 24.5454% | 29.0513% | 29.0513% | 20.0000% |
+| FXI | 30.1404% | 27.9920% | 27.9920% | 20.0000% |
+| QQQ | 7.0341% | 6.3045% | 6.3045% | 20.0000% |
+| UNG | 27.7007% | 26.7293% | 26.7293% | 20.0000% |
+| FDN | 10.5794% | 9.9229% | 9.9229% | 20.0000% |
 
-Weights allocate strategy-account wealth, including idle cash, not continuous ETF
-holdings. Capital is assigned once, then sleeve shares drift; there are no free
-cross-sleeve rebalance trades. The daily-cap constraint was fitted to historical
-OOS daily capital shares at all four costs, not future or intraday weights. Sharpe
-optimization was numerically best-found, not globally certified.
+Initial cap and Uncapped selected the same allocation; their curves overlap.
+The exact stored weights—not the rounded table—are used for every period and cost.
 
-## Baseline performance
+## Baseline performance across all three periods
 
-Baseline costs are **1-bp commission plus 3-bp one-way slippage, each way**.
-Each cell below is **cash-excess Sharpe / CAGR / daily maximum drawdown**.
+Baseline: **1-bp commission + 3-bp slippage each way**. Each cell is
+**cash-excess Sharpe / CAGR / daily maximum drawdown**.
 
 | Portfolio | Development 2017–2020 | Validation 2021–2023 | Historical OOS 2024–2026-10-15 |
 |---|---:|---:|---:|
-| Daily cap fit | 1.321 / 14.77% / -7.52% | 0.381 / 6.90% / -17.52% | 2.481 / 21.85% / -4.24% |
+| Daily cap fit | 1.350 / 16.28% / -8.06% | 0.417 / 7.83% / -19.57% | 2.476 / 23.85% / -4.91% |
 | Initial cap fit | 1.295 / 16.14% / -8.48% | 0.419 / 7.77% / -19.24% | 2.487 / 24.57% / -4.67% |
-| Uncapped fit | 1.320 / 6.21% / -2.32% | -0.243 / 1.82% / -9.70% | 2.497 / 6.86% / -0.82% |
-| Equal initial | 1.506 / 17.43% / -6.56% | 0.473 / 7.30% / -13.48% | 2.204 / 20.46% / -4.27% |
+| Uncapped fit | 1.295 / 16.14% / -8.48% | 0.419 / 7.77% / -19.24% | 2.487 / 24.57% / -4.67% |
+| Equal initial | 1.504 / 19.59% / -7.39% | 0.524 / 8.53% / -15.67% | 2.213 / 23.39% / -5.04% |
 | QQQ buy-and-hold | 1.063 / 28.39% / -28.56% | 0.387 / 9.84% / -35.12% | 0.996 / 23.93% / -22.77% |
 
-All three accounts start independently with **$1,000**; no holdings, orders,
-confirmation streaks or wealth carry between stages. Cash is **3% nominal
-ACT/365 event-compounded**, not 3% APY. “Cash-excess” is excess over that matched
-cash path—not excess over buy-and-hold. CAGR uses exact first-open-to-terminal
-elapsed time. Drawdown is daily, not intraday. The uncapped mix's negative
-validation Sharpe is retained despite positive nominal CAGR.
+The reports include **1, 3, 10 and 25 bps slippage each way**, plus 1-bp commission.
+Cash is **3% nominal ACT/365 event-compounded**, not 3% APY. Cash-excess Sharpe is
+above the matched cash path, not above buy-and-hold; cash Sharpe is undefined.
+CAGR uses exact first-open-to-terminal elapsed time. Drawdown includes initial
+capital and daily valuations, not an intraday maximum.
 
-![Four retained portfolios and matched passive QQQ in historical OOS, baseline costs](assets/periods/historical_OOS_baseline.png)
+![Four final portfolios and passive QQQ: historical OOS equity and drawdown at baseline costs](reports/final_no_bond_portfolios/historical_OOS_baseline.png)
+
+## Verify and reproduce
+
+```bash
+python -m pip install -e '.[test,plots]'
+python -m pytest -q
+python scripts/verify_project.py
+python scripts/verify_no_bond_portfolios.py --public-report reports/no_bond_portfolios/report.json
+python scripts/verify_final_no_bond.py --report reports/final_no_bond_portfolios/report.json \
+  --source-report reports/no_bond_portfolios/report.json
+```
+
+The first verifier checks publication hashes and historical source archives; the
+second checks the complete archived no-bond comparison; the final verifier checks
+that every active weight, metric and correlation submatrix is an exact saved
+subset. No API key, market download or optimizer is needed. Regenerate current
+presentation from public aggregates without changing financial calculations:
+
+```bash
+python scripts/build_final_no_bond_reports.py --report reports/final_no_bond_portfolios/report.json \
+  --source-report reports/no_bond_portfolios/report.json \
+  --figures-dir reports/final_no_bond_portfolios --output-dir outputs/final_no_bond_reports
+```
+
+See [current methods](docs/final_no_bond_portfolios.md) and
+[data access](docs/data_sources.md). Exact path/fit reproduction needs privately
+supplied authenticated saved accounts; no underlying daily arrays are published.
+
+## Preserved historical results
+
+- [Prior six-allocation no-bond comparison](docs/archived_six_portfolio_comparison.md): removed variants are historical only, not active models.
+- [Original four-portfolio class project](docs/archived_four_portfolio_snapshot.md) and [PDF/HTML/Word reports](final_reports/README.md): older six-sleeve results, not the current five-ETF final set.
+- [Original five-portfolio snapshot](docs/archived_five_portfolio_snapshot.md): includes the excluded Maximum CAGR comparison for provenance only.
+
+All historical financial definitions, account outcomes and freezes remain
+unchanged. The separate corrected-split experiment remains inactive/private.
 
 ## Data sources and full research dataset
 
@@ -112,56 +148,5 @@ are retained privately and are **not downloadable from this repository**. GitHub
 contains code, definitions, aggregate results and raster charts. See the
 [complete dataset specification and access/reproduction notes](docs/data_sources.md)
 for fields, price adjustments, coverage limits and the private input requirement.
-The reports cover four unchanged allocations across **six selected ETF strategy sleeves**.
+The original reports cover four allocations across six selected strategy sleeves; the active final comparison excludes BND and covers four allocations across **five ETF strategy sleeves**.
 The original 56-ETF screening universe is context, not a pooled 56-ETF portfolio.
-
-
-## Reproduce and verify
-
-Python 3.10 or later; public verification uses only the standard library:
-
-```bash
-python scripts/verify_project.py
-python -m pip install -e '.[test,plots]'
-python -m pytest -q
-```
-
-Regenerate the three offline HTML reports and their stage-specific aggregate
-CSV/JSON from the committed public tables, without market data or an API key:
-
-```bash
-python scripts/build_final_reports.py --output-dir outputs/rebuilt_final_reports
-```
-
-Optional PDF rendering uses that **same HTML**, not a second set of report
-calculations. Install the optional Node renderer dependencies and Chromium, then:
-
-```bash
-npm install
-npx playwright install chromium
-node scripts/render_final_reports.cjs --reports outputs/rebuilt_final_reports
-```
-
-Synthetic tests and aggregate/report generation do **not** reproduce the original
-indicator and intraday execution engine. Exact historical portfolio/regression
-recomputation requires separately supplied authenticated saved paths; see
-[three-period calculations](docs/periods.md), [input schema](docs/input_schema.md),
-[data access](docs/data_sources.md) and [reproducibility limits](docs/reproducibility.md).
-Do not commit those inputs. The [machine-readable publication manifest](metadata/project_manifest.json)
-binds the shipped reports, figures, code and aggregate evidence.
-
-## Package layout
-
-- `final_reports/`: three PDF/offline-HTML editions, stage CSV/JSON and the Word project/supplement.
-- `reports/four_portfolios_three_periods/`: 48 portfolio, 24 control and 48 cap outcomes at full precision.
-- `results/four_portfolio_attribution/`: 48 QQQ-only and 48 joint-six-ETF regressions, diagnostics and self-controls.
-- `configs/`: four active allocations, six strategy identities and restored study periods; the original five-allocation snapshot is preserved separately.
-- `assets/periods/`: audited raster figures without embedded daily arrays.
-- `src/`, `scripts/`, `tests/`: saved-account analytics, report generation and private-data-free checks.
-- `docs/`: methods, data sources, course coverage and reproduction boundaries.
-- `metadata/`: file checksums and active-study publication contract.
-
-The [original strategy research repository](https://github.com/Agul-quant/trend-following)
-is separate. This publication does not alter its frozen inputs, source, stage
-memberships or public study command. No new account evaluation, optimization,
-market-data refresh or trading was performed to build these reports.

@@ -1,0 +1,97 @@
+{
+  "BND_active_weights_or_factor_headers": false,
+  "figure_receipt_sha256": "22d2352c732cc943cf91730bb39c7b65bd7fe13c6113d6f63612decf71e23dc8",
+  "new_financial_runs_or_private_array_reads": false,
+  "passed": true,
+  "render_manifest_sha256": "48c6e51b4ae09ccd763deda3891d4cfe397b35d5dd0a7464a2d90c2ef53f0616",
+  "schema": "independent_visible_final_no_bond_report_audit_v1",
+  "source_report_sha256": "523c3e2396205781c1e4a6a9689c86c0e53aab0b5d87284a43bb410bbbe33f1f",
+  "stage_reports": {
+    "development": {
+      "QQQ_single_factor_rows": 16,
+      "active_symbols": [
+        "GDX",
+        "FXI",
+        "QQQ",
+        "UNG",
+        "FDN"
+      ],
+      "all_costs": [
+        1,
+        3,
+        10,
+        25
+      ],
+      "checkpoint_diagnostic_rows": 16,
+      "html_sha256": "51ea2332c19699e798de63e22a344ddb4ff7d13013ce17efbec1b736c7f165c9",
+      "joint_five_passive_factor_rows": 16,
+      "matched_control_cost_rows": 8,
+      "offline_raster_sha256": "5322992a9ca2687a16fe74fd2ce70aac8b9564fb438d53073e6e2c7c6cb73b8b",
+      "passed": true,
+      "portfolio_correlation_cost_matrices": 4,
+      "portfolio_cost_rows": 16,
+      "strategy_correlation_cost_matrices": 4,
+      "visible_data_cells": 717,
+      "visible_header_cells": 123,
+      "visible_tables": 20
+    },
+    "historical_OOS": {
+      "QQQ_single_factor_rows": 16,
+      "active_symbols": [
+        "GDX",
+        "FXI",
+        "QQQ",
+        "UNG",
+        "FDN"
+      ],
+      "all_costs": [
+        1,
+        3,
+        10,
+        25
+      ],
+      "checkpoint_diagnostic_rows": 16,
+      "html_sha256": "3ecd7d88f942276be02fcf5cc6c24850db1db3b6d6649d3f3ee3f5722d037bbd",
+      "joint_five_passive_factor_rows": 16,
+      "matched_control_cost_rows": 8,
+      "offline_raster_sha256": "0849bdf97f550cd1138d12bf37ea5d7701e7623c8d5ead33cb566bbff6b46dca",
+      "passed": true,
+      "portfolio_correlation_cost_matrices": 4,
+      "portfolio_cost_rows": 16,
+      "strategy_correlation_cost_matrices": 4,
+      "visible_data_cells": 717,
+      "visible_header_cells": 123,
+      "visible_tables": 20
+    },
+    "validation": {
+      "QQQ_single_factor_rows": 16,
+      "active_symbols": [
+        "GDX",
+        "FXI",
+        "QQQ",
+        "UNG",
+        "FDN"
+      ],
+      "all_costs": [
+        1,
+        3,
+        10,
+        25
+      ],
+      "checkpoint_diagnostic_rows": 16,
+      "html_sha256": "788a6bc5a29b887659009d1d950e637a1eb7696a05bc1878e706368f4c055d50",
+      "joint_five_passive_factor_rows": 16,
+      "matched_control_cost_rows": 8,
+      "offline_raster_sha256": "1e72867a5350054b58357ab4e6758a177fc7cb61e4526adc9783f33f23fa0ba6",
+      "passed": true,
+      "portfolio_correlation_cost_matrices": 4,
+      "portfolio_cost_rows": 16,
+      "strategy_correlation_cost_matrices": 4,
+      "visible_data_cells": 717,
+      "visible_header_cells": 123,
+      "visible_tables": 20
+    }
+  },
+  "total_visible_data_cells": 2151,
+  "total_visible_header_cells": 369
+}

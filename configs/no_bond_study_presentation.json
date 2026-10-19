@@ -1,0 +1,42 @@
+{
+  "baseline_cost": "1bp commission plus3bp slippage eachway",
+  "development": {
+    "end": "2020-12-31",
+    "start": "2017-01-01"
+  },
+  "excluded_etfs": [
+    "BND"
+  ],
+  "fit_stage": "historical_OOS",
+  "fit_status": "retrospective; already examined historical OOS. All five optimized allocations newly fitted; no global optimum certificate.",
+  "historical_OOS": {
+    "end": "2026-10-15",
+    "start": "2024-01-01"
+  },
+  "maximum_CAGR_portfolio": "excluded",
+  "original_four_and_five_portfolios": "preserved unchanged historical archives",
+  "portfolio_config": "configs/no_bond_portfolios.json",
+  "portfolio_ids": [
+    "no_bond_daily_capped_max_sharpe",
+    "no_bond_weekly_capped_max_sharpe",
+    "no_bond_monthly_capped_max_sharpe",
+    "no_bond_initial_capped_max_sharpe",
+    "no_bond_uncapped_max_sharpe",
+    "no_bond_equal_initial"
+  ],
+  "project_name": "Trend Following and Mean Reversion ETF Portfolios",
+  "schema": "five_etf_six_portfolio_active_presentation_v1",
+  "strategy_config": "configs/no_bond_selected_strategies.json",
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN"
+  ],
+  "validation": {
+    "end": "2023-12-31",
+    "start": "2021-01-01"
+  },
+  "weekly_monthly_policy": "Historical checkpoint caps, no rebalancing; initial bound and terminal partial periods included; all four costs constrained."
+}

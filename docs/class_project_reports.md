@@ -1,3 +1,5 @@
+> **Historical four-portfolio class reports.** These retain the original six-sleeve results unchanged. The active final set excludes all bond ETFs; see the [new five-ETF reports](../reports/final_no_bond_portfolios/README.md).
+
 # Class project reports
 
 ## Scope and reading order

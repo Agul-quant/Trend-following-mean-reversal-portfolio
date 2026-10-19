@@ -1,0 +1,34 @@
+{
+  "active_portfolio_ids": [
+    "no_bond_daily_capped_max_sharpe",
+    "no_bond_initial_capped_max_sharpe",
+    "no_bond_uncapped_max_sharpe",
+    "no_bond_equal_initial"
+  ],
+  "active_report_sha256": "523c3e2396205781c1e4a6a9689c86c0e53aab0b5d87284a43bb410bbbe33f1f",
+  "daily_only_cap_diagnostics": true,
+  "exact_portfolio_correlation_submatrix": true,
+  "exact_saved_definition_metric_solver_subsets": true,
+  "financial_metrics_recomputed_or_weights_refitted": false,
+  "passed": true,
+  "private_numerical_arrays_read": false,
+  "rows_verified": {
+    "QQQ_single_factor_rows": 48,
+    "checkpoint_rows": 48,
+    "control_rows": 24,
+    "five_passive_factor_rows": 48,
+    "portfolio_correlations": 12,
+    "portfolio_rows": 48,
+    "strategy_correlations": 12
+  },
+  "schema": "independent_final_no_bond_subset_audit_v1",
+  "source_report_sha256": "55010e543ec1af7210b24b4b2d2794d0b40c85e67541241ba058e97f85ae9239",
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN"
+  ],
+  "unchanged_original_controls": true
+}

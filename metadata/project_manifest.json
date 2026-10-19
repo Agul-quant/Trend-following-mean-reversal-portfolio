@@ -1,15 +1,32 @@
 {
+  "active_portfolio_comparison": {
+    "excluded_bond_etfs": [
+      "BND"
+    ],
+    "manifest": "metadata/final_no_bond_manifest.json",
+    "portfolios": 4,
+    "presentation": "configs/final_no_bond_study_presentation.json",
+    "report_index": "reports/final_no_bond_portfolios/README.md",
+    "scope": "Four unchanged saved allocations; removed cap models and original study/report fields are historical archives, not active final models.",
+    "symbols": [
+      "GDX",
+      "FXI",
+      "QQQ",
+      "UNG",
+      "FDN"
+    ]
+  },
   "aggregate_only": true,
   "files": [
     {
-      "bytes": 169,
+      "bytes": 517,
       "path": ".gitattributes",
-      "sha256": "62d1aad8158cd09cefc6bcaa111787d3065282ddae36b98aeb37e44ae58e370b"
+      "sha256": "dca29fecef624db1bf50a80b82298ab612c2c0d2040104f0befcdde7b13e552c"
     },
     {
-      "bytes": 482,
+      "bytes": 755,
       "path": ".github/workflows/tests.yml",
-      "sha256": "5595601125092e7b95425b3b054f125e2db019ed51eb298f7e2b62802eae6a55"
+      "sha256": "3cb7bf878b4aff0844c4e47bf8213412cccf02ceef4a5fb8f541e39fc4ad4486"
     },
     {
       "bytes": 438,
@@ -17,14 +34,14 @@
       "sha256": "0e43948d601b1603a75c22945def8d44a8ecd1f59f1296d98c0ca92ee0b776a8"
     },
     {
-      "bytes": 2185,
+      "bytes": 2553,
       "path": "AGENTS.md",
-      "sha256": "68c1baedb7d38489451b932614ab36ed9787a94993d76d90548c5979fa3e6928"
+      "sha256": "cc7912b7a6594def2a245a48db1e06bc2f2376f96e940cbeca99d2346f5898a0"
     },
     {
-      "bytes": 10021,
+      "bytes": 9067,
       "path": "README.md",
-      "sha256": "4ee128d921ee591ca2c6db0e76e908f1a81f3884db17324af19af6cd681637a5"
+      "sha256": "a6ec1b80e01aa3fabd59efa1553df124c7db1f346377fc75d2e7d4ddfda0ec96"
     },
     {
       "bytes": 5204,
@@ -67,9 +84,34 @@
       "sha256": "151d7920c74dd943a655d5307913485cd1864d0b97570df0999e7ead8d1a3191"
     },
     {
+      "bytes": 2093,
+      "path": "configs/final_no_bond_portfolios.json",
+      "sha256": "58bb8c66402ef41f8715cdbbf888f97397d9936ce59c79b7637234cf69a0ad78"
+    },
+    {
+      "bytes": 1397,
+      "path": "configs/final_no_bond_study_presentation.json",
+      "sha256": "7750266f6cffd1a08b7780f7353279d5773b803eabec4a7ef6c6d9e14ece0158"
+    },
+    {
       "bytes": 2763,
       "path": "configs/four_portfolios.json",
       "sha256": "79badfecbb5e260523582301bcd3aecda746323bab08142aa365c8df1642cc3e"
+    },
+    {
+      "bytes": 2996,
+      "path": "configs/no_bond_portfolios.json",
+      "sha256": "5591f45494eaa13500fbd5b32d3774d833017fa6dd37294b63365067addb1047"
+    },
+    {
+      "bytes": 2870,
+      "path": "configs/no_bond_selected_strategies.json",
+      "sha256": "2731bcb859b441e00b8619817f47426828458c0c4ee73ce185c61d4612db94ba"
+    },
+    {
+      "bytes": 1359,
+      "path": "configs/no_bond_study_presentation.json",
+      "sha256": "8676588ccc5c939f1169e80f7a68ff6e72052da75412067172e647b2fd8c33aa"
     },
     {
       "bytes": 3018,
@@ -97,19 +139,34 @@
       "sha256": "6bc0c2b5638bfce4b3bf12ba36bcf5c9357f4b76f3218d11c59ae83786d36941"
     },
     {
+      "bytes": 10265,
+      "path": "docs/archived_four_portfolio_snapshot.md",
+      "sha256": "119b27d7d30e3a8768a647b77d55386f9b4d0af1c218fe726f876609a322bb30"
+    },
+    {
+      "bytes": 1048,
+      "path": "docs/archived_six_portfolio_comparison.md",
+      "sha256": "ebfba6f0b29df92dada84ea38cb3625270b6e59dd8d6c87ade28a5487bb8ee70"
+    },
+    {
       "bytes": 4100,
       "path": "docs/charts.md",
       "sha256": "fe55d7480084fd2535176d2450f5e8ff39fb49cbf42a9bd7e770619534fb8c92"
     },
     {
-      "bytes": 13474,
+      "bytes": 13702,
       "path": "docs/class_project_reports.md",
-      "sha256": "65e823015b301923f9cf22041fdf368548db050d640666dd276dd6037a9c2038"
+      "sha256": "77a410726bfd31815eb314e2299a31408e261ef3cf3f72bcdc25887c533c26db"
     },
     {
       "bytes": 8844,
       "path": "docs/data_sources.md",
       "sha256": "dd5dd256d754bd134bab47e64141a206932a5c3c2658f520db17c7994f4b44d6"
+    },
+    {
+      "bytes": 4060,
+      "path": "docs/final_no_bond_portfolios.md",
+      "sha256": "f0755fa77d595225ebc26519493c2f515b23ee5b2499755f9a3a4509bedaa7d8"
     },
     {
       "bytes": 4267,
@@ -120,6 +177,11 @@
       "bytes": 8062,
       "path": "docs/methodology.md",
       "sha256": "3533002e0957fafb73299ad6af1156bc69040a2df8e38442d594f0a62b12bd43"
+    },
+    {
+      "bytes": 6859,
+      "path": "docs/no_bond_portfolios.md",
+      "sha256": "eac9630578dcaad38aeb761d72764cc844b84ced60ebec4965c26c78f6999073"
     },
     {
       "bytes": 4760,
@@ -292,9 +354,9 @@
       "sha256": "96d44b8e8c3ccaf0eabb6e69a4501cc6bed397b7bc7c3d85fdc1e6422e3cc531"
     },
     {
-      "bytes": 4629,
+      "bytes": 4857,
       "path": "final_reports/README.md",
-      "sha256": "ddb52472e5300f597d2a685e752b36feff89e84cf86b275f3efcea7f3af8c3db"
+      "sha256": "4aba4b1e5b5b6d975b5dde5ccd022cb788e34c07301ed60b1da4277927024d3f"
     },
     {
       "bytes": 803299,
@@ -317,6 +379,16 @@
       "sha256": "198844666d26ae3040c352a65f124c702d99af1e6ed55d04496bde176249376a"
     },
     {
+      "bytes": 7052,
+      "path": "metadata/final_no_bond_manifest.json",
+      "sha256": "4c4eba31b1fb11390377e009cc38014b12fca3d6c1750d9c743542e2f48b1c7f"
+    },
+    {
+      "bytes": 7024,
+      "path": "metadata/no_bond_manifest.json",
+      "sha256": "76edbcf98d8695f0e83a58f7e12ad679b564f5280256581fef60b6927721b8f2"
+    },
+    {
       "bytes": 307,
       "path": "package.json",
       "sha256": "27b01265b54ead15d898ea00c12f79abd5382623e326f45e12a9c81d6e017f17"
@@ -325,6 +397,116 @@
       "bytes": 558,
       "path": "pyproject.toml",
       "sha256": "6bf02295e84098d1bc691065bf5b773afe81fff3dd054b525b69082a73d41144"
+    },
+    {
+      "bytes": 8626,
+      "path": "reports/final_no_bond_portfolios/QQQ_single_factor_rows.csv",
+      "sha256": "1b97a8d38cddf852a5fe34e679da32fe95b4253c0267a75172894d06fb03dddb"
+    },
+    {
+      "bytes": 1959,
+      "path": "reports/final_no_bond_portfolios/README.md",
+      "sha256": "834afd464183930edc9969413bd095f591015c298d62bd3ebf43ab45d6885f37"
+    },
+    {
+      "bytes": 323,
+      "path": "reports/final_no_bond_portfolios/browser_qa.json",
+      "sha256": "0ac2b4dc6da1abd41bb2a1519ec32b63d5631f8e62525d2da6ca0279eb74dfb2"
+    },
+    {
+      "bytes": 6865,
+      "path": "reports/final_no_bond_portfolios/checkpoint_rows.csv",
+      "sha256": "9d26a7e683a3952cfdcf9b87a1516ab5e0e790b7adc51a77ba0d2cc721370f79"
+    },
+    {
+      "bytes": 48007,
+      "path": "reports/final_no_bond_portfolios/combined_report.md",
+      "sha256": "0279f4789f5bec3ec2fcbb33a683086568cd12b5d897510232f3f21f0b3c5c92"
+    },
+    {
+      "bytes": 4392,
+      "path": "reports/final_no_bond_portfolios/control_rows.csv",
+      "sha256": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae"
+    },
+    {
+      "bytes": 313119,
+      "path": "reports/final_no_bond_portfolios/development.html",
+      "sha256": "51ea2332c19699e798de63e22a344ddb4ff7d13013ce17efbec1b736c7f165c9"
+    },
+    {
+      "bytes": 215344,
+      "path": "reports/final_no_bond_portfolios/development_baseline.png",
+      "sha256": "5322992a9ca2687a16fe74fd2ce70aac8b9564fb438d53073e6e2c7c6cb73b8b"
+    },
+    {
+      "bytes": 4438,
+      "path": "reports/final_no_bond_portfolios/figures_verification.json",
+      "sha256": "22d2352c732cc943cf91730bb39c7b65bd7fe13c6113d6f63612decf71e23dc8"
+    },
+    {
+      "bytes": 12590,
+      "path": "reports/final_no_bond_portfolios/five_passive_factor_rows.csv",
+      "sha256": "5c833656bbaf097aa829324c488b7d8fea6af9903bd44555f4cdbef8f86415b3"
+    },
+    {
+      "bytes": 294898,
+      "path": "reports/final_no_bond_portfolios/historical_OOS.html",
+      "sha256": "3ecd7d88f942276be02fcf5cc6c24850db1db3b6d6649d3f3ee3f5722d037bbd"
+    },
+    {
+      "bytes": 201625,
+      "path": "reports/final_no_bond_portfolios/historical_OOS_baseline.png",
+      "sha256": "0849bdf97f550cd1138d12bf37ea5d7701e7623c8d5ead33cb566bbff6b46dca"
+    },
+    {
+      "bytes": 1040,
+      "path": "reports/final_no_bond_portfolios/independent_audit.json",
+      "sha256": "ae1979c31b23930280bedc923bc3f9e11b8506221cb6435bba907ec251782225"
+    },
+    {
+      "bytes": 27338,
+      "path": "reports/final_no_bond_portfolios/portfolio_correlations.csv",
+      "sha256": "92205cbce931b112ce41c82ac34d0dc1cee67005bcbeb2fc5a850ed198e5615d"
+    },
+    {
+      "bytes": 10347,
+      "path": "reports/final_no_bond_portfolios/portfolio_rows.csv",
+      "sha256": "cf8d2f4e154d46a3c445bec072d681e8ad218ae46d024e5c37deb1de6ae687fb"
+    },
+    {
+      "bytes": 1432,
+      "path": "reports/final_no_bond_portfolios/render_manifest.json",
+      "sha256": "48c6e51b4ae09ccd763deda3891d4cfe397b35d5dd0a7464a2d90c2ef53f0616"
+    },
+    {
+      "bytes": 177885,
+      "path": "reports/final_no_bond_portfolios/report.json",
+      "sha256": "523c3e2396205781c1e4a6a9689c86c0e53aab0b5d87284a43bb410bbbe33f1f"
+    },
+    {
+      "bytes": 572,
+      "path": "reports/final_no_bond_portfolios/stage_summaries.csv",
+      "sha256": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
+    },
+    {
+      "bytes": 14361,
+      "path": "reports/final_no_bond_portfolios/strategy_correlations.csv",
+      "sha256": "28f51bd3e6dec28f96cc123941c8181a0ac115e11d1e67f50a6d45e94418c4af"
+    },
+    {
+      "bytes": 321571,
+      "path": "reports/final_no_bond_portfolios/validation.html",
+      "sha256": "788a6bc5a29b887659009d1d950e637a1eb7696a05bc1878e706368f4c055d50"
+    },
+    {
+      "bytes": 221675,
+      "path": "reports/final_no_bond_portfolios/validation_baseline.png",
+      "sha256": "1e72867a5350054b58357ab4e6758a177fc7cb61e4526adc9783f33f23fa0ba6"
+    },
+    {
+      "bytes": 2983,
+      "path": "reports/final_no_bond_portfolios/visible_html_audit.json",
+      "sha256": "2dede3a2c0025f86d1c1386d32140371f998b904d895e4aa732ba503d95f73f0"
     },
     {
       "bytes": 11371,
@@ -365,6 +547,116 @@
       "bytes": 572,
       "path": "reports/four_portfolios_three_periods/stage_summaries.csv",
       "sha256": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
+    },
+    {
+      "bytes": 12971,
+      "path": "reports/no_bond_portfolios/QQQ_single_factor_rows.csv",
+      "sha256": "7015878512f8831ac98f2b5268ad146f2e43b9a4ab1b6fafcf079ea2c8f25ba9"
+    },
+    {
+      "bytes": 2192,
+      "path": "reports/no_bond_portfolios/README.md",
+      "sha256": "a7508c8a6009b2689d3497703dd2e7a394e1dc953f63329353d221b1d33d3ede"
+    },
+    {
+      "bytes": 311,
+      "path": "reports/no_bond_portfolios/browser_qa.json",
+      "sha256": "773fc320d4215bf49d3da4f81d1874d13a43be2decded1f97ceaab15461f68bd"
+    },
+    {
+      "bytes": 30320,
+      "path": "reports/no_bond_portfolios/checkpoint_rows.csv",
+      "sha256": "1b8d542d5a6f634720ca4a041447d5fce9019176cb4e0966ae7d255897783d2f"
+    },
+    {
+      "bytes": 74505,
+      "path": "reports/no_bond_portfolios/combined_report.md",
+      "sha256": "a2f9a2913d8201290386858e850ac835a759248628cb61941963767f4b1dceaa"
+    },
+    {
+      "bytes": 4392,
+      "path": "reports/no_bond_portfolios/control_rows.csv",
+      "sha256": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae"
+    },
+    {
+      "bytes": 334898,
+      "path": "reports/no_bond_portfolios/development.html",
+      "sha256": "6f80434263aace351c23206e71d74bd9c495cf2f4071ddd534914e70c25e5599"
+    },
+    {
+      "bytes": 220977,
+      "path": "reports/no_bond_portfolios/development_baseline.png",
+      "sha256": "68fd95a80555b127c9c7b091092f991d21da349a52d1ecf79bc40e252c8f3aa4"
+    },
+    {
+      "bytes": 5634,
+      "path": "reports/no_bond_portfolios/figures_verification.json",
+      "sha256": "475d25737a8e74dfe1b179df55e38131dc14fa333de102dfefbd281c37a7b748"
+    },
+    {
+      "bytes": 18867,
+      "path": "reports/no_bond_portfolios/five_passive_factor_rows.csv",
+      "sha256": "e589b392d9b6560d0c4a6d64611c8d3edbe944ec66918fe48e430b2582729bf0"
+    },
+    {
+      "bytes": 318021,
+      "path": "reports/no_bond_portfolios/historical_OOS.html",
+      "sha256": "72b9f22d0fd73700342f968faeb935c5c03fb8065aba7a6b6f13c25e76fcfa78"
+    },
+    {
+      "bytes": 208192,
+      "path": "reports/no_bond_portfolios/historical_OOS_baseline.png",
+      "sha256": "f95c5b4923356de9d05e463f6a0cf78a813da880a7102053c6b8d645d87528dd"
+    },
+    {
+      "bytes": 2365,
+      "path": "reports/no_bond_portfolios/independent_audit.json",
+      "sha256": "b7b393ef306d3eaf16c9a86f13b61b5ed65cecac6207f48f30b718cdf13af3b9"
+    },
+    {
+      "bytes": 56395,
+      "path": "reports/no_bond_portfolios/portfolio_correlations.csv",
+      "sha256": "e2704b6fcd4881b40bd302e26404cd95b4675dcbadaff7e385307d35b347df92"
+    },
+    {
+      "bytes": 15505,
+      "path": "reports/no_bond_portfolios/portfolio_rows.csv",
+      "sha256": "dd309c57255a11079aee03e7aec36ad42bd122f881bda50b1baad71af268cce7"
+    },
+    {
+      "bytes": 1412,
+      "path": "reports/no_bond_portfolios/render_manifest.json",
+      "sha256": "c8e780c600a21fa028c6e3278333626bc2339bc185571cc91c3fd4845ade28bb"
+    },
+    {
+      "bytes": 363451,
+      "path": "reports/no_bond_portfolios/report.json",
+      "sha256": "55010e543ec1af7210b24b4b2d2794d0b40c85e67541241ba058e97f85ae9239"
+    },
+    {
+      "bytes": 572,
+      "path": "reports/no_bond_portfolios/stage_summaries.csv",
+      "sha256": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
+    },
+    {
+      "bytes": 14361,
+      "path": "reports/no_bond_portfolios/strategy_correlations.csv",
+      "sha256": "28f51bd3e6dec28f96cc123941c8181a0ac115e11d1e67f50a6d45e94418c4af"
+    },
+    {
+      "bytes": 343602,
+      "path": "reports/no_bond_portfolios/validation.html",
+      "sha256": "8a7b6c2ae41fb3225a8f997f59a26f93dad6ee972cbf121af0e1cb799dba87a4"
+    },
+    {
+      "bytes": 227317,
+      "path": "reports/no_bond_portfolios/validation_baseline.png",
+      "sha256": "3ee02061ec8416abacf1254a05ba0eb1663e4b5c03d19c0e6d47f8ade8011982"
+    },
+    {
+      "bytes": 2980,
+      "path": "reports/no_bond_portfolios/visible_html_audit.json",
+      "sha256": "818260ca9bff95af7f193b0c33c3f4ed6accb0e773ced61708c66d89440ac9ff"
     },
     {
       "bytes": 2940,
@@ -482,14 +774,34 @@
       "sha256": "3fbb506448c46d15c7a00ce718ac24d42a102f6897a731532633a5671a095f59"
     },
     {
+      "bytes": 25829,
+      "path": "scripts/build_final_no_bond_reports.py",
+      "sha256": "f9701e74f9ec52011f3c2c167898b83ea8cce1520cac9f94bcbd993b9715246c"
+    },
+    {
       "bytes": 63134,
       "path": "scripts/build_final_reports.py",
       "sha256": "489b660df6f3b5146523c8e1fd80f4c3a8ab970f4748d6efbf8a46abf20db269"
     },
     {
+      "bytes": 42714,
+      "path": "scripts/build_no_bond_reports.py",
+      "sha256": "14a2eef2140f35004001610d6976e011eac770a8d7bc89148782b8003b6c4380"
+    },
+    {
       "bytes": 30945,
       "path": "scripts/export_saved_results.py",
       "sha256": "060c7fd2d23a5c3fdb765916bc13329758e0cfa60a73fb038694f32847d7e82a"
+    },
+    {
+      "bytes": 14555,
+      "path": "scripts/plot_final_no_bond.py",
+      "sha256": "a9a50bfeaff740a90b4aa7f89f634689cd194c256d017dc31f2fb0f3dc2c8ed2"
+    },
+    {
+      "bytes": 14740,
+      "path": "scripts/plot_no_bond_portfolios.py",
+      "sha256": "f80a4621f73318b5c15c4b4c02064fabccebff223e8fdc2eb2138afff71caef9"
     },
     {
       "bytes": 320,
@@ -502,9 +814,29 @@
       "sha256": "0e9056aa426d1a5cbf1f7601db65d34e405fa1ed17c8de48a0471206225d4d70"
     },
     {
+      "bytes": 22157,
+      "path": "scripts/report_no_bond_portfolios.py",
+      "sha256": "82d8df83edbcb93b979e37104a649031a76ee0d1f7493717a2a9233494190b7c"
+    },
+    {
       "bytes": 330,
       "path": "scripts/report_periods.py",
       "sha256": "4d914e65923163fad35a2fe6fa33714b7a3f3d3cc9806a6019982cf55fd43a61"
+    },
+    {
+      "bytes": 7645,
+      "path": "scripts/select_final_no_bond_portfolios.py",
+      "sha256": "5d35946a05ee29b4c72d1b3f6a9339a43568906156a962116f307c6142e67156"
+    },
+    {
+      "bytes": 12529,
+      "path": "scripts/verify_final_no_bond.py",
+      "sha256": "132afa51787538497ea8a269e0b457ee00141083f7f5ed2ebe80bd21bcd30ca5"
+    },
+    {
+      "bytes": 33274,
+      "path": "scripts/verify_no_bond_portfolios.py",
+      "sha256": "c834ae1c9f48e5ffe8fd1929ab6d3c2b5f28ae28785a1b8de1d6e5856bdc9d7b"
     },
     {
       "bytes": 31224,
@@ -520,6 +852,11 @@
       "bytes": 14492,
       "path": "src/trend_portfolio/analytics.py",
       "sha256": "7e777c6872b4271c4e36484830f3e6d8a77331149e09048fa7d06552f2216fcf"
+    },
+    {
+      "bytes": 16016,
+      "path": "src/trend_portfolio/checkpoint_caps.py",
+      "sha256": "4d3e989526598b791105dcf547d6247002c016eb09c5c04d3a4533b3ee62d907"
     },
     {
       "bytes": 11308,
@@ -547,6 +884,11 @@
       "sha256": "6384be3ff9dee48530fb23f72ba833cc1b5a47b36af61b0e520c6ffc6e3f9bf6"
     },
     {
+      "bytes": 10084,
+      "path": "tests/test_checkpoint_caps.py",
+      "sha256": "cf9f65c68bb806813724cb8e831dcad1421b9797a701f0aeccfec20c1b003867"
+    },
+    {
       "bytes": 4615,
       "path": "tests/test_cli.py",
       "sha256": "a13daf4b1bacad7f841b10ceee334829ff501f15646ecb4f9fcf086b850a320d"
@@ -562,9 +904,49 @@
       "sha256": "9d0ac501150166f93054b89c0c428d3e641168a6ae40e0f607fdf7ab2968e2bb"
     },
     {
+      "bytes": 9996,
+      "path": "tests/test_final_no_bond_audit.py",
+      "sha256": "2a935c9d55d35cc17b9d1bf0b3d208350a0e8336e42ca61a1f7d9fa1caee0016"
+    },
+    {
+      "bytes": 7998,
+      "path": "tests/test_final_no_bond_plots.py",
+      "sha256": "88f432e53c0defb935dc00c355fbb291417b239076048f72018b81a5c8bf939d"
+    },
+    {
+      "bytes": 12160,
+      "path": "tests/test_final_no_bond_presentation.py",
+      "sha256": "7346a4b3a6fce0dfd745bf90eff7a661d268633000552e8c9769b7297f63ee12"
+    },
+    {
+      "bytes": 3503,
+      "path": "tests/test_final_no_bond_selection.py",
+      "sha256": "a078c22a4efa2a9578a8b725a3b24c1c3794d82f2f24cc52ff17d5a7db8f6cb5"
+    },
+    {
       "bytes": 11925,
       "path": "tests/test_final_reports.py",
       "sha256": "98b68329f414e49d2cd480d579838f66b17653bd85ef3251ced8ecbb7f5b68d9"
+    },
+    {
+      "bytes": 15997,
+      "path": "tests/test_no_bond_audit.py",
+      "sha256": "7ff0e5a5a235acc6145f7c9cd49c50cc48784973a9ccca825b2c0b9c92713c2c"
+    },
+    {
+      "bytes": 8058,
+      "path": "tests/test_no_bond_plots.py",
+      "sha256": "8b8753fb78546959675f8b768a17b2cac77c39695efe66e90e0137e3cd335226"
+    },
+    {
+      "bytes": 17389,
+      "path": "tests/test_no_bond_presentation.py",
+      "sha256": "4741280d00d22ef767ed1be4b0aa13f22d7a5c1474c7a099d06d5ac9b8b62113"
+    },
+    {
+      "bytes": 6445,
+      "path": "tests/test_no_bond_runner.py",
+      "sha256": "3bea339ee5077f3cb8d3f54a7f8cfd3006ee9a686c376356ae05874a76678a31"
     },
     {
       "bytes": 9702,
@@ -640,6 +1022,7 @@
   },
   "verification": {
     "PDF_pages_visually_inspected": 31,
+    "active_aggregate_command": "python scripts/verify_final_no_bond.py --report reports/final_no_bond_portfolios/report.json --source-report reports/no_bond_portfolios/report.json",
     "full_synthetic_tests_passed": 194,
     "independent_display_table_cells_verified": 1554,
     "maximum_CAGR_portfolio_in_current_reports": false,

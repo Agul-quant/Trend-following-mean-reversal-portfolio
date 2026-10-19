@@ -1,0 +1,191 @@
+{
+  "active_presentation": "configs/final_no_bond_study_presentation.json",
+  "aggregate_only": true,
+  "files": [
+    {
+      "bytes": 2093,
+      "path": "configs/final_no_bond_portfolios.json",
+      "sha256": "58bb8c66402ef41f8715cdbbf888f97397d9936ce59c79b7637234cf69a0ad78"
+    },
+    {
+      "bytes": 1397,
+      "path": "configs/final_no_bond_study_presentation.json",
+      "sha256": "7750266f6cffd1a08b7780f7353279d5773b803eabec4a7ef6c6d9e14ece0158"
+    },
+    {
+      "bytes": 2870,
+      "path": "configs/no_bond_selected_strategies.json",
+      "sha256": "2731bcb859b441e00b8619817f47426828458c0c4ee73ce185c61d4612db94ba"
+    },
+    {
+      "bytes": 4060,
+      "path": "docs/final_no_bond_portfolios.md",
+      "sha256": "f0755fa77d595225ebc26519493c2f515b23ee5b2499755f9a3a4509bedaa7d8"
+    },
+    {
+      "bytes": 8626,
+      "path": "reports/final_no_bond_portfolios/QQQ_single_factor_rows.csv",
+      "sha256": "1b97a8d38cddf852a5fe34e679da32fe95b4253c0267a75172894d06fb03dddb"
+    },
+    {
+      "bytes": 1959,
+      "path": "reports/final_no_bond_portfolios/README.md",
+      "sha256": "834afd464183930edc9969413bd095f591015c298d62bd3ebf43ab45d6885f37"
+    },
+    {
+      "bytes": 323,
+      "path": "reports/final_no_bond_portfolios/browser_qa.json",
+      "sha256": "0ac2b4dc6da1abd41bb2a1519ec32b63d5631f8e62525d2da6ca0279eb74dfb2"
+    },
+    {
+      "bytes": 6865,
+      "path": "reports/final_no_bond_portfolios/checkpoint_rows.csv",
+      "sha256": "9d26a7e683a3952cfdcf9b87a1516ab5e0e790b7adc51a77ba0d2cc721370f79"
+    },
+    {
+      "bytes": 48007,
+      "path": "reports/final_no_bond_portfolios/combined_report.md",
+      "sha256": "0279f4789f5bec3ec2fcbb33a683086568cd12b5d897510232f3f21f0b3c5c92"
+    },
+    {
+      "bytes": 4392,
+      "path": "reports/final_no_bond_portfolios/control_rows.csv",
+      "sha256": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae"
+    },
+    {
+      "bytes": 313119,
+      "path": "reports/final_no_bond_portfolios/development.html",
+      "sha256": "51ea2332c19699e798de63e22a344ddb4ff7d13013ce17efbec1b736c7f165c9"
+    },
+    {
+      "bytes": 215344,
+      "path": "reports/final_no_bond_portfolios/development_baseline.png",
+      "sha256": "5322992a9ca2687a16fe74fd2ce70aac8b9564fb438d53073e6e2c7c6cb73b8b"
+    },
+    {
+      "bytes": 4438,
+      "path": "reports/final_no_bond_portfolios/figures_verification.json",
+      "sha256": "22d2352c732cc943cf91730bb39c7b65bd7fe13c6113d6f63612decf71e23dc8"
+    },
+    {
+      "bytes": 12590,
+      "path": "reports/final_no_bond_portfolios/five_passive_factor_rows.csv",
+      "sha256": "5c833656bbaf097aa829324c488b7d8fea6af9903bd44555f4cdbef8f86415b3"
+    },
+    {
+      "bytes": 294898,
+      "path": "reports/final_no_bond_portfolios/historical_OOS.html",
+      "sha256": "3ecd7d88f942276be02fcf5cc6c24850db1db3b6d6649d3f3ee3f5722d037bbd"
+    },
+    {
+      "bytes": 201625,
+      "path": "reports/final_no_bond_portfolios/historical_OOS_baseline.png",
+      "sha256": "0849bdf97f550cd1138d12bf37ea5d7701e7623c8d5ead33cb566bbff6b46dca"
+    },
+    {
+      "bytes": 1040,
+      "path": "reports/final_no_bond_portfolios/independent_audit.json",
+      "sha256": "ae1979c31b23930280bedc923bc3f9e11b8506221cb6435bba907ec251782225"
+    },
+    {
+      "bytes": 27338,
+      "path": "reports/final_no_bond_portfolios/portfolio_correlations.csv",
+      "sha256": "92205cbce931b112ce41c82ac34d0dc1cee67005bcbeb2fc5a850ed198e5615d"
+    },
+    {
+      "bytes": 10347,
+      "path": "reports/final_no_bond_portfolios/portfolio_rows.csv",
+      "sha256": "cf8d2f4e154d46a3c445bec072d681e8ad218ae46d024e5c37deb1de6ae687fb"
+    },
+    {
+      "bytes": 1432,
+      "path": "reports/final_no_bond_portfolios/render_manifest.json",
+      "sha256": "48c6e51b4ae09ccd763deda3891d4cfe397b35d5dd0a7464a2d90c2ef53f0616"
+    },
+    {
+      "bytes": 177885,
+      "path": "reports/final_no_bond_portfolios/report.json",
+      "sha256": "523c3e2396205781c1e4a6a9689c86c0e53aab0b5d87284a43bb410bbbe33f1f"
+    },
+    {
+      "bytes": 572,
+      "path": "reports/final_no_bond_portfolios/stage_summaries.csv",
+      "sha256": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
+    },
+    {
+      "bytes": 14361,
+      "path": "reports/final_no_bond_portfolios/strategy_correlations.csv",
+      "sha256": "28f51bd3e6dec28f96cc123941c8181a0ac115e11d1e67f50a6d45e94418c4af"
+    },
+    {
+      "bytes": 321571,
+      "path": "reports/final_no_bond_portfolios/validation.html",
+      "sha256": "788a6bc5a29b887659009d1d950e637a1eb7696a05bc1878e706368f4c055d50"
+    },
+    {
+      "bytes": 221675,
+      "path": "reports/final_no_bond_portfolios/validation_baseline.png",
+      "sha256": "1e72867a5350054b58357ab4e6758a177fc7cb61e4526adc9783f33f23fa0ba6"
+    },
+    {
+      "bytes": 2983,
+      "path": "reports/final_no_bond_portfolios/visible_html_audit.json",
+      "sha256": "2dede3a2c0025f86d1c1386d32140371f998b904d895e4aa732ba503d95f73f0"
+    },
+    {
+      "bytes": 25829,
+      "path": "scripts/build_final_no_bond_reports.py",
+      "sha256": "f9701e74f9ec52011f3c2c167898b83ea8cce1520cac9f94bcbd993b9715246c"
+    },
+    {
+      "bytes": 14555,
+      "path": "scripts/plot_final_no_bond.py",
+      "sha256": "a9a50bfeaff740a90b4aa7f89f634689cd194c256d017dc31f2fb0f3dc2c8ed2"
+    },
+    {
+      "bytes": 7645,
+      "path": "scripts/select_final_no_bond_portfolios.py",
+      "sha256": "5d35946a05ee29b4c72d1b3f6a9339a43568906156a962116f307c6142e67156"
+    },
+    {
+      "bytes": 12529,
+      "path": "scripts/verify_final_no_bond.py",
+      "sha256": "132afa51787538497ea8a269e0b457ee00141083f7f5ed2ebe80bd21bcd30ca5"
+    },
+    {
+      "bytes": 9996,
+      "path": "tests/test_final_no_bond_audit.py",
+      "sha256": "2a935c9d55d35cc17b9d1bf0b3d208350a0e8336e42ca61a1f7d9fa1caee0016"
+    },
+    {
+      "bytes": 7998,
+      "path": "tests/test_final_no_bond_plots.py",
+      "sha256": "88f432e53c0defb935dc00c355fbb291417b239076048f72018b81a5c8bf939d"
+    },
+    {
+      "bytes": 12160,
+      "path": "tests/test_final_no_bond_presentation.py",
+      "sha256": "7346a4b3a6fce0dfd745bf90eff7a661d268633000552e8c9769b7297f63ee12"
+    },
+    {
+      "bytes": 3503,
+      "path": "tests/test_final_no_bond_selection.py",
+      "sha256": "a078c22a4efa2a9578a8b725a3b24c1c3794d82f2f24cc52ff17d5a7db8f6cb5"
+    }
+  ],
+  "full_synthetic_suite_passed": 452,
+  "original_frozen_input_guards_unchanged": 413,
+  "prior_six_comparison_payloads_unchanged": 36,
+  "private_arrays_or_authorizations_published": false,
+  "report": "reports/final_no_bond_portfolios/report.json",
+  "retained_portfolio_ids": [
+    "no_bond_daily_capped_max_sharpe",
+    "no_bond_initial_capped_max_sharpe",
+    "no_bond_uncapped_max_sharpe",
+    "no_bond_equal_initial"
+  ],
+  "schema": "five_etf_four_portfolio_final_publication_v1",
+  "selection": "Exact saved-result subset; no refit or account run",
+  "source_archive": "reports/no_bond_portfolios/report.json",
+  "source_report_sha256": "55010e543ec1af7210b24b4b2d2794d0b40c85e67541241ba058e97f85ae9239"
+}

@@ -1,0 +1,12 @@
+{
+  "all_images_decoded": true,
+  "anchors_verified": true,
+  "body_horizontal_overflow": false,
+  "desktop_and_mobile": true,
+  "external_requests": 0,
+  "pages_checked": 6,
+  "passed": true,
+  "pdf_generated": false,
+  "removed_active_model_aliases_absent": true,
+  "schema": "final_four_no_bond_offline_browser_qa_v1"
+}

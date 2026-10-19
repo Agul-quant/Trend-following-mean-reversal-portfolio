@@ -12,7 +12,7 @@
   allowlists when staging. Public exports must be aggregate-only and portable.
   User-requested raster charts may visualize saved paths, but must not embed
   numerical daily series or private input locators in metadata or vector files.
-- The selected six-ETF portfolio is retrospective: configurations, pruning and
+- The selected ETF portfolio is retrospective: configurations, pruning and
   weights used the examined 2024–2026 history. It is not untouched portfolio OOS,
   a live allocation or trading authorization.
 - Mix normalized sleeve **wealth**, not returns at constant daily weights. The
@@ -23,8 +23,13 @@
 - Verify the origin push URL before every push. Never force-push without explicit
   authorization. Local Python: `~/.venvs/myenv/bin/python` when available.
 
-- Active publication restored by direct user request: development 2017–2020,
-  validation 2021–2023, historical OOS 2024-01-01–2026-10-15. The four saved
-  allocations in configs/four_portfolios.json are current; the standalone GDX
-  max-CAGR comparison is archived. Preserve the alternative corrected-split
-  private work, but do not use it for these reports or rerun/refit it.
+- Active final basket: GDX, FXI, QQQ, UNG and FDN; no bond ETFs. The final
+  FOUR portfolios are Daily cap, Initial cap, Uncapped and Equal initial,
+  defined in configs/final_no_bond_portfolios.json. Weekly/Monthly cap fits
+  are excluded from the active publication and retained only in the archive.
+  Keep the same saved full-precision weights; this is a result subset, not a refit.
+  Development 2017–2020, validation 2021–2023 and historical OOS
+  2024-01-01–2026-10-15 remain unchanged, all four costs, no rebalancing.
+  All prior financial sources, six-model no-bond results and original class
+  reports remain unchanged archives. Maximum CAGR stays excluded; corrected-split
+  work stays inactive. Completed fits are verification/report-only.
