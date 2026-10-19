@@ -1,4 +1,4 @@
-# Trend Following Study — ETF trend and mean-reversion portfolios
+# Trend Following and Mean Reversion ETF Portfolios
 
 Calculation code and aggregate results for **six fixed long/cash ETF strategies**:
 GDX, FXI, QQQ, UNG, FDN and BND. The portfolio layer compares static initial
