@@ -64,6 +64,25 @@ the mostly-cash BND strategy, illustrating that maximum Sharpe need not maximize
 growth. Maximum CAGR is a different, uncapped objective—not a one-third-capped
 recommendation and not passive GDX buy-and-hold.
 
+### Baseline equity curves and drawdowns
+
+The five saved portfolios and **passive QQQ buy-and-hold** each start with
+**$1,000**. All curves use the same **1-bp commission + 3-bp slippage each way**,
+the same 700 daily valuations through **October 15, 2026**, and paid terminal
+liquidation. Portfolio allocations are the unchanged static initial weights;
+there is no reoptimization or daily rebalancing. QQQ here is the cost-matched
+passive benchmark, **not** the active QQQ strategy sleeve.
+
+![Baseline net equity: five fixed portfolios and cost-matched QQQ buy-and-hold, each starting with $1,000](assets/baseline_equity.png)
+
+![Baseline daily drawdowns from each account's running peak, including the initial $1,000 balance](assets/baseline_drawdown.png)
+
+Drawdowns use each curve's own running peak, including its initial balance;
+they are **daily**, not intraday losses. These are hindsight-conditioned
+historical comparisons, not a new untouched portfolio test. Only raster charts
+and aggregate chart metadata are published; the numerical daily paths remain
+private. See [chart provenance and reproduction](docs/charts.md).
+
 ### Baseline attribution for the current portfolio
 
 Regress portfolio cash-excess returns jointly on **cost-matched passive
@@ -86,6 +105,7 @@ question. Full all-cost results and factor-overlap diagnostics are in [results](
 - Exact six strategy definitions, five portfolio allocations, and study conventions.
 - Sanitized aggregate results for all four costs, including own-ETF buy-and-hold
   comparisons, correlations and regression tables.
+- Baseline equity and daily-drawdown PNGs for the five portfolios and passive QQQ.
 - [Methodology](docs/methodology.md), [input schema](docs/input_schema.md), and
   [reproducibility limits](docs/reproducibility.md), plus the
   [local verification record](docs/verification.md).
@@ -101,7 +121,7 @@ tests run on generated synthetic data and public aggregates without it.
 Python 3.10 or later:
 
 ```bash
-python -m pip install -e '.[test]'
+python -m pip install -e '.[test,plots]'
 python -m pytest
 ```
 

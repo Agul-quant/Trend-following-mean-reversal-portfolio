@@ -10,6 +10,8 @@
 - No raw market data, full daily account paths, credentials, private source maps,
   authorization records, caches or study freezes belong in Git. Use explicit file
   allowlists when staging. Public exports must be aggregate-only and portable.
+  User-requested raster charts may visualize saved paths, but must not embed
+  numerical daily series or private input locators in metadata or vector files.
 - The selected six-ETF portfolio is retrospective: configurations, pruning and
   weights used the examined 2024–2026 history. It is not untouched portfolio OOS,
   a live allocation or trading authorization.

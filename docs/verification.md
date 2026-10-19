@@ -62,3 +62,24 @@ source maps, receipt payloads, credentials and local absolute paths. Review the
 exact staged files—not a broad copy of the original research directory—before
 any future commit. Synthetic tests and public checks cannot establish the unseen
 input data's lineage by themselves; see [reproducibility](reproducibility.md).
+
+## Baseline chart follow-up
+
+The README now includes net equity and daily-drawdown PNGs for all five fixed
+portfolios and passive QQQ at 1-bp commission plus 3-bp slippage each way.
+The renderer uses all 700 daily observations plus the initial $1,000 point
+(701 plotted points per series); it performs no strategy run or refit.
+
+**84 tests passed locally**, including nine new synthetic plot tests and six
+private-input-free chart-asset tests. The six chart summaries match the original
+baseline aggregates within **2.00 × 10⁻¹⁴** absolute difference. The original
+18 aggregate payloads, portfolio weights and frozen research sources remain
+unchanged. Source checks independently confirm that the QQQ curve is the matched
+passive control rather than the active strategy.
+
+Both 1920×1152 PNGs and 900-pixel-wide README previews were visually inspected.
+PNG chunks/metadata were checked for private paths or hidden daily arrays;
+only a generic software label and resolution information are present.
+The new renderer used Matplotlib **3.10.8**. See the
+[chart manifest](../assets/baseline_charts_manifest.json) for image, generator,
+configuration and private-input hashes, and [charts.md](charts.md) for reproduction.
