@@ -1,0 +1,121 @@
+{
+  "schema": "selected_six_strategy_definitions_v1",
+  "strategies": [
+    {
+      "candidate_id": "mr_30m__zscore_20__entry_m2__exit_0__shared_hours_3",
+      "definition": {
+        "confirmation_hours": 3.0,
+        "entry_threshold": -2.0,
+        "exit_threshold": 0.0,
+        "rule": {
+          "family": "ZSCORE",
+          "period": 20
+        }
+      },
+      "label": "Mean reversion: Z-score(20), enter \u2264 -2, exit \u2265 0",
+      "style": "mean_reversion",
+      "symbol": "GDX"
+    },
+    {
+      "candidate_id": "mr_30m__zscore_50__entry_m2__exit_0p5__shared_hours_3",
+      "definition": {
+        "confirmation_hours": 3.0,
+        "entry_threshold": -2.0,
+        "exit_threshold": 0.5,
+        "rule": {
+          "family": "ZSCORE",
+          "period": 50
+        }
+      },
+      "label": "Mean reversion: Z-score(50), enter \u2264 -2, exit \u2265 0.5",
+      "style": "mean_reversion",
+      "symbol": "FXI"
+    },
+    {
+      "candidate_id": "v5_30m__entry_ema_50__exit_ema_200__entry_hours_3__exit_hours_3",
+      "definition": {
+        "entry_confirmation_hours": 3.0,
+        "entry_rule": {
+          "family": "EMA",
+          "fast": null,
+          "period": 50,
+          "signal": null,
+          "slow": null
+        },
+        "exit_confirmation_hours": 3.0,
+        "exit_rule": {
+          "family": "EMA",
+          "fast": null,
+          "period": 200,
+          "signal": null,
+          "slow": null
+        }
+      },
+      "label": "Trend: EMA50 entry / EMA200 exit",
+      "style": "trend",
+      "symbol": "QQQ"
+    },
+    {
+      "candidate_id": "mr_30m__rsi_14__entry_30__exit_50__shared_hours_3",
+      "definition": {
+        "confirmation_hours": 3.0,
+        "entry_threshold": 30.0,
+        "exit_threshold": 50.0,
+        "rule": {
+          "family": "RSI",
+          "period": 14
+        }
+      },
+      "label": "Mean reversion: Wilder RSI(14), enter \u2264 30, exit \u2265 50",
+      "style": "mean_reversion",
+      "symbol": "UNG"
+    },
+    {
+      "candidate_id": "v5_30m__entry_ema_50__exit_ema_100__entry_hours_3__exit_hours_3",
+      "definition": {
+        "entry_confirmation_hours": 3.0,
+        "entry_rule": {
+          "family": "EMA",
+          "fast": null,
+          "period": 50,
+          "signal": null,
+          "slow": null
+        },
+        "exit_confirmation_hours": 3.0,
+        "exit_rule": {
+          "family": "EMA",
+          "fast": null,
+          "period": 100,
+          "signal": null,
+          "slow": null
+        }
+      },
+      "label": "Trend: EMA50 entry / EMA100 exit",
+      "style": "trend",
+      "symbol": "FDN"
+    },
+    {
+      "candidate_id": "mr_30m__ema_distance_50__entry_m0p02__exit_0p01__shared_hours_3",
+      "definition": {
+        "confirmation_hours": 3.0,
+        "entry_threshold": -0.02,
+        "exit_threshold": 0.01,
+        "rule": {
+          "family": "EMA_DISTANCE",
+          "period": 50
+        }
+      },
+      "label": "Mean reversion: EMA(50) distance, enter \u2264 -2%, exit \u2265 +1%",
+      "style": "mean_reversion",
+      "symbol": "BND"
+    }
+  ],
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN",
+    "BND"
+  ]
+}

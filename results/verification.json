@@ -1,0 +1,23 @@
+{
+  "QQQ_single_factor_rows": 44,
+  "aggregate_metric_rows": 20,
+  "byte_identical_reexport_with_same_verified_inputs_and_numeric_runtime": true,
+  "common_sessions": 700,
+  "correlation_pair_cost_rows": 60,
+  "cost_scenarios": 4,
+  "daily_cap_all_16800_valuation_sleeve_cost_inequalities_checked": true,
+  "full_daily_arrays_market_paths_source_maps_or_private_receipts_exported": false,
+  "market_data_downloads_strategy_account_runs_or_optimization": false,
+  "max_absolute_saved_value_vs_independent_arithmetic_error": 4.524158825347513e-13,
+  "numeric_export_method": "allowlisted fields; metrics/correlations/regressions cross-checked against verified private saved paths",
+  "pairwise_rows": 264,
+  "passed": true,
+  "passive_control_metric_rows": 24,
+  "portfolio_variants": 5,
+  "private_source_bindings_rehashed_unchanged": 508,
+  "schema": "aggregate_export_verification_v1",
+  "selected_strategies": 6,
+  "six_factor_joint_rows": 44,
+  "source_delivery_receipts_verified": 6,
+  "strategy_metric_rows": 24
+}

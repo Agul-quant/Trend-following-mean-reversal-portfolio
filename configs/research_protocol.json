@@ -1,0 +1,79 @@
+{
+  "ACT365_elapsed_years": 2.787043378995434,
+  "CAGR": "aggregate terminal wealth raised to inverse frozen ACT365 years, minus1",
+  "Sharpe": "sqrt252 * mean(net daily return - matched cash return) / sample_sd(ddof1)",
+  "accounting": {
+    "feature_seed_start": "2015-01-01",
+    "paid_terminal_liquidation": true,
+    "positions": "unlevered long/cash",
+    "stage_accounts": "fresh flat $1000 accounts; feature history only carried"
+  },
+  "cash": {
+    "compounding": "event time; not 3% APY",
+    "day_count": "ACT/365",
+    "nominal_annual_rate": 0.03
+  },
+  "costs": {
+    "commission_bps_each_way": 1.0,
+    "primary_slippage_bps_each_way": 3.0,
+    "slippage_bps_each_way": [
+      1.0,
+      3.0,
+      10.0,
+      25.0
+    ]
+  },
+  "daily_cap_scope": "historical sleeve CAPITAL shares at all700 daily valuations/all4costs; not intraday, ETF holdings or a future guarantee",
+  "development": {
+    "end": "2020-12-31",
+    "start": "2017-01-01"
+  },
+  "factor_order": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN",
+    "BND"
+  ],
+  "factor_returns": "same-cost passive ETF buy-and-hold; not active strategy returns",
+  "historical_OOS": {
+    "end": "2026-10-15",
+    "first_session": "2024-01-02",
+    "sessions": 700,
+    "start": "2024-01-01"
+  },
+  "initial_cash_per_strategy_account": 1000.0,
+  "max_drawdown": "aggregate daily-valuation drawdown including initial balance; not intraday",
+  "portfolio_model": "Static INITIAL sleeve capital, sum weights1; no cross-sleeve rebalancing or cash cross-funding",
+  "prior_study_amended_qualification_gate": {
+    "CAGR": "candidate net CAGR strictly exceeds0 when matched BH CAGR is negative; otherwise strictly exceeds two-thirds of matched BH CAGR",
+    "Sharpe": "candidate net cash-excess Sharpe strictly exceeds its matched own-ETF buy-and-hold Sharpe",
+    "scope": "earlier development/validation qualification; not a new OOS selection or a portfolio allocation constraint",
+    "slippage_bps_each_way": 25.0
+  },
+  "project_name": "Trend Following Study",
+  "regression": "cash-excess OLS with intercept; alpha annualization252*daily, not CAGR",
+  "reproduction_scope": "Portable saved-account analytics; full original market-data/indicator/execution study is not included",
+  "schema": "six_sleeve_research_protocol_v1",
+  "selection_context": "ETF/configuration selection, pruning and allocations use examined OOS; retrospective descriptive fits, not untouched portfolio OOS",
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN",
+    "BND"
+  ],
+  "timing": {
+    "consecutive_checks": 7,
+    "daily_causal_indicators": true,
+    "execution": "next eligible observed bar open",
+    "observations": "native half-hour",
+    "shared_confirmation_hours": 3.0
+  },
+  "validation": {
+    "end": "2023-12-31",
+    "start": "2021-01-01"
+  }
+}

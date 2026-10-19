@@ -1,0 +1,26 @@
+{
+  "QQQ_trade_count_caveat": "Frozen legacy counts are domain-checked; no event ledger exists for independent trade reconstruction",
+  "coefficient_caveat": "Partial slopes are not weights or causal effects; negative fitted beta is not an actual short position",
+  "historical_numerical_sources": "Previously completed, privately retained saved strategy and passive-control accounts",
+  "inference_caveat": "Post-selection fitted-history diagnostics; no significance, forecast, untouched-OOS or live-trading claim",
+  "intentionally_excluded": [
+    "daily account arrays",
+    "market prices",
+    "source snapshots",
+    "private receipts and source maps",
+    "credentials",
+    "local filesystem paths"
+  ],
+  "published_scope": "Selected aggregate definitions, weights, metrics, correlations and fitted coefficients only",
+  "reproduction_requirement": "Historical values require the separately retained private saved-account inputs. Synthetic examples do not reproduce these market results.",
+  "schema": "sanitized_saved_calculation_provenance_v1",
+  "source_delivery_receipt_sha256": {
+    "capped_receipt": "a672bda0a23c7be1adc25e7edc25e3f1052cb97fa5a3018cd3820ed6dc57b070",
+    "correlation_receipt": "66ab8b0ef2dfe0d400fa38a17a0daad7d3c940b15ac27243576a418d5c95e4ae",
+    "growth_receipt": "91986acfb94bef164a3c67451c336a5ae8d423cdd4ab2fc8024674b31453db53",
+    "multifactor_receipt": "736633f6225e4fbb7eee925025aedd5ab1c3b2d0d91a1c2791873b256cd1710b",
+    "portfolio_receipt": "97991ae64bf617688f7b9885ea68d928352935e5bff5de91aacc143c6d607443",
+    "qqq_receipt": "128ebbd930fe8e7b5d7155a80c247b99ea95129c91a29224d4730bd43123f42c"
+  },
+  "trade_count_units": "completed round trips, including paid terminal liquidation; fills count individual buys/sells"
+}
