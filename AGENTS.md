@@ -1,4 +1,4 @@
-# Trend Following Study — portfolio research
+# Trend Following and Mean Reversion ETF Portfolios
 
 - This repository is the separate public portfolio-analysis snapshot requested
   for `Agul-quant/Trend-following-mean-reversal-portfolio`. Do not redirect its
@@ -6,7 +6,7 @@
 - Preserve the published strategy IDs, exact saved portfolio weights and historical
   aggregate outcomes. A new calculation or correction must be labeled explicitly;
   do not silently replace a historical result with a new optimizer solution.
-- Public project name: **Trend Following Study**, without a version label.
+- Public project name: **Trend Following and Mean Reversion ETF Portfolios**, without a version label.
 - No raw market data, full daily account paths, credentials, private source maps,
   authorization records, caches or study freezes belong in Git. Use explicit file
   allowlists when staging. Public exports must be aggregate-only and portable.
@@ -22,3 +22,9 @@
   reruns are best-found research experiments, not replacements for saved weights.
 - Verify the origin push URL before every push. Never force-push without explicit
   authorization. Local Python: `~/.venvs/myenv/bin/python` when available.
+
+- Active publication restored by direct user request: development 2017–2020,
+  validation 2021–2023, historical OOS 2024-01-01–2026-10-15. The four saved
+  allocations in configs/four_portfolios.json are current; the standalone GDX
+  max-CAGR comparison is archived. Preserve the alternative corrected-split
+  private work, but do not use it for these reports or rerun/refit it.

@@ -1,3 +1,9 @@
+> **Historical five-portfolio archive.** Current development, validation and OOS
+> reports retain four allocations and exclude the standalone maximum-CAGR GDX
+> comparison. See the [current report index](../final_reports/README.md) and
+> [all-period four-portfolio tables](../reports/four_portfolios_three_periods/report.md).
+> The historical aggregate files below remain byte-unchanged for provenance.
+
 # Saved aggregate results
 
 Historical window **2024-01-01–2026-10-15**; 700 common daily observations from

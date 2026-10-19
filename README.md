@@ -1,10 +1,84 @@
 # Trend Following and Mean Reversion ETF Portfolios
 
-Calculation code and aggregate results for **six fixed long/cash ETF strategies**:
-GDX, FXI, QQQ, UNG, FDN and BND. The portfolio layer compares static initial
-allocations, correlations, cost sensitivity, and passive-ETF alpha/beta attribution.
+A quantitative finance class project on six fixed long/cash ETF strategies and
+four static initial-capital portfolios. The **earlier study is restored as the
+active basis**: development **2017–2020**, validation **2021–2023**, and historical
+OOS **2024-01-01–2026-10-15**. The separate corrected-split experiment is inactive;
+its private artifacts are preserved, not deleted or merged into these results.
+
+## Read the results
+
+1. **Development and robustness — 2017–2020:** [PDF](final_reports/01_development/01_development_and_robustness.pdf) · [offline HTML](final_reports/01_development/01_development_and_robustness.html).
+2. **Validation and frozen selection — 2021–2023:** [PDF](final_reports/02_validation/02_validation_and_frozen_selection.pdf) · [offline HTML](final_reports/02_validation/02_validation_and_frozen_selection.html).
+3. **Historical OOS and conclusions — 2024–October 15, 2026:** [PDF](final_reports/03_historical_oos/03_historical_oos_and_conclusions.pdf) · [offline HTML](final_reports/03_historical_oos/03_historical_oos_and_conclusions.html).
+
+Reports follow the presentation and course-project structure of the
+[cryptocurrency class project](https://github.com/Agul-quant/Cryptocurrency-statistical-arbitrage/),
+but retain the ETF study's own signals, clocks, costs, cash and accounting.
+Each includes all four portfolios at all four slippages, matched QQQ and cash
+controls, equity/drawdown, capital-share diagnostics and QQQ-only/joint-six-ETF
+alpha and beta. Failures and undefined cash Sharpe remain visible.
+
+The [report index](final_reports/README.md) also links the
+[complete Word class project](final_reports/class_project/Trend_Following_Study_Class_Project.docx)
+and [reproducibility supplement](final_reports/class_project/Trend_Following_Study_Reproducibility.zip).
+Download an HTML file and open it locally: it works offline and embeds only raster
+curves, not numerical daily paths. See [report methods and course coverage](docs/class_project_reports.md).
+
+> **Retrospective research, not an untouched portfolio test.** Configuration
+> selection, ETF pruning and portfolio fitting used already examined historical
+> OOS. Replaying the final choices in earlier periods does not remove that
+> hindsight. No portfolio is approved for deployment and no new winner is
+> selected here. The historical daily-cap fit breaches one-third in validation:
+> **UNG reaches 35.18%, with 41 breach days at every cost**.
+
+## Four retained portfolios
+
+The six sleeves are **GDX, FXI, QQQ, UNG, FDN and BND**. The same exact configuration
+and initial weights are used in every period and cost. The standalone maximum-CAGR
+100%-GDX strategy allocation is excluded from current reports; GDX remains an
+underlying sleeve. The original five-portfolio exports and charts stay unchanged
+in the [archived snapshot](docs/archived_five_portfolio_snapshot.md).
+
+| Strategy sleeve | Daily cap fit | Initial cap fit | Uncapped fit | Equal initial |
+|---|---:|---:|---:|---:|
+| GDX | 23.5729% | 29.0513% | 3.4761% | 16.6667% |
+| FXI | 24.9703% | 27.9920% | 4.2909% | 16.6667% |
+| QQQ | 5.6270% | 6.3045% | 1.0866% | 16.6667% |
+| UNG | 23.8965% | 26.7293% | 4.6524% | 16.6667% |
+| FDN | 8.6317% | 9.9229% | 1.1470% | 16.6667% |
+| BND | 13.3015% | 0.0000% | 85.3469% | 16.6667% |
+
+Weights allocate strategy-account wealth, including idle cash, not continuous ETF
+holdings. Capital is assigned once, then sleeve shares drift; there are no free
+cross-sleeve rebalance trades. The daily-cap constraint was fitted to historical
+OOS daily capital shares at all four costs, not future or intraday weights. Sharpe
+optimization was numerically best-found, not globally certified.
+
+## Baseline performance
+
+Baseline costs are **1-bp commission plus 3-bp one-way slippage, each way**.
+Each cell below is **cash-excess Sharpe / CAGR / daily maximum drawdown**.
+
+| Portfolio | Development 2017–2020 | Validation 2021–2023 | Historical OOS 2024–2026-10-15 |
+|---|---:|---:|---:|
+| Daily cap fit | 1.321 / 14.77% / -7.52% | 0.381 / 6.90% / -17.52% | 2.481 / 21.85% / -4.24% |
+| Initial cap fit | 1.295 / 16.14% / -8.48% | 0.419 / 7.77% / -19.24% | 2.487 / 24.57% / -4.67% |
+| Uncapped fit | 1.320 / 6.21% / -2.32% | -0.243 / 1.82% / -9.70% | 2.497 / 6.86% / -0.82% |
+| Equal initial | 1.506 / 17.43% / -6.56% | 0.473 / 7.30% / -13.48% | 2.204 / 20.46% / -4.27% |
+| QQQ buy-and-hold | 1.063 / 28.39% / -28.56% | 0.387 / 9.84% / -35.12% | 0.996 / 23.93% / -22.77% |
+
+All three accounts start independently with **$1,000**; no holdings, orders,
+confirmation streaks or wealth carry between stages. Cash is **3% nominal
+ACT/365 event-compounded**, not 3% APY. “Cash-excess” is excess over that matched
+cash path—not excess over buy-and-hold. CAGR uses exact first-open-to-terminal
+elapsed time. Drawdown is daily, not intraday. The uncapped mix's negative
+validation Sharpe is retained despite positive nominal CAGR.
+
+![Four retained portfolios and matched passive QQQ in historical OOS, baseline costs](assets/periods/historical_OOS_baseline.png)
 
 ## Data sources and full research dataset
+
 
 **Market-data provider: [Alpha Vantage](https://www.alphavantage.co/documentation/).**
 The historical study uses daily OHLCV, adjusted closes, dividends and split
@@ -27,9 +101,9 @@ Cash returns are modeled at 3% nominal ACT/365, not downloaded Treasury yields.
 - **Commodities / precious metals (5):** DBC, GLD, SLV, UNG, USO.
 
 The research window is **2017-01-01–2026-10-15**, with daily feature initialization
-from **2015**, subject to actual ETF inception and available history. The corrected
-split is **2017–2020 development**, **2021–2024 validation**, and
-**2025-01-01–2026-10-15 OOS**. Stage eligibility is separate from the universe:
+from **2015**, subject to actual ETF inception and available history. The restored active
+split is **2017–2020 development**, **2021–2023 validation**, and
+**2024-01-01–2026-10-15 historical OOS**. Stage eligibility is separate from the universe:
 listing an ETF does not mean it advances to every stage. These are listed ETF
 returns, not index levels, spot commodities or synthetic leveraged products.
 
@@ -38,154 +112,56 @@ are retained privately and are **not downloadable from this repository**. GitHub
 contains code, definitions, aggregate results and raster charts. See the
 [complete dataset specification and access/reproduction notes](docs/data_sources.md)
 for fields, price adjustments, coverage limits and the private input requirement.
-The performance tables below remain the earlier **six-ETF, 700-session,
-2024–2026-10-15 portfolio snapshot**, not corrected-split portfolio results.
+The reports cover four unchanged allocations across **six selected ETF strategy sleeves**.
+The original 56-ETF screening universe is context, not a pooled 56-ETF portfolio.
 
-> **Retrospective research, not an untouched portfolio test.** ETF/configuration
-> selection, correlation pruning and weight fitting used the already examined
-> historical OOS sample. These results are not forward performance estimates,
-> investment advice or an executable trading system.
 
-## Current portfolio
+## Reproduce and verify
 
-The chosen allocation maximizes baseline net **cash-excess Sharpe**, subject to
-no sleeve exceeding **one-third of portfolio capital at any of the 700 historical
-daily valuations, in any of the four cost scenarios**. Initial capital is allocated
-once. Sleeve weights then drift; there are **no cross-sleeve rebalance trades**.
-The Sharpe optimization is numerically best-found, not globally certified.
-
-| Strategy sleeve | Initial weight |
-|---|---:|
-| GDX | 23.5729% |
-| FXI | 24.9703% |
-| QQQ | 5.6270% |
-| UNG | 23.8965% |
-| FDN | 8.6317% |
-| BND | 13.3015% |
-
-Full-precision weights and unchanged strategy identities are in [configs](configs/).
-Weights allocate **strategy-account capital**, including its idle cash, not
-continuous ETF holdings. The historical cap does not enforce future or intraday
-limits and is not a risk-contribution cap.
-
-### Historical performance
-
-Scored window: **2024-01-01–2026-10-15**, with 700 common daily observations
-from January 2, 2024. Every scenario includes **1-bp commission each way** plus
-the listed one-way slippage. The same baseline-fitted weights are used at every cost.
-
-| Slippage each way | Cash-excess Sharpe | CAGR | Daily max drawdown |
-|---|---:|---:|---:|
-| 1 bp | 2.4924 | 21.98% | −4.23% |
-| **3 bps — baseline** | **2.4809** | **21.85%** | **−4.24%** |
-| 10 bps | 2.4402 | 21.42% | −4.25% |
-| 25 bps | 2.3510 | 20.50% | −4.29% |
-
-“Cash-excess” means returns above the study's matched cash-return path—not above
-buy-and-hold. Cash accrues at **3% nominal ACT/365, event-compounded**, not 3% APY.
-Drawdown here is measured at daily valuations, not the worst intraday loss.
-
-### Allocation comparisons at baseline
-
-| Portfolio | Cash-excess Sharpe | CAGR | Daily max drawdown |
-|---|---:|---:|---:|
-| Daily-capped max-Sharpe — current | 2.4809 | 21.85% | −4.24% |
-| Initial-only capped max-Sharpe | 2.4872 | 24.57% | −4.67% |
-| Uncapped max-Sharpe | 2.4966 | 6.86% | −0.82% |
-| Equal initial weights | 2.2043 | 20.46% | −4.27% |
-| Maximum CAGR: 100% GDX **strategy** | 1.8186 | 35.33% | −6.59% |
-
-The initial-only cap later reaches about 38.6% in one sleeve and does **not** meet
-the chosen daily cap. The uncapped solution allocates about 85.35% initially to
-the mostly-cash BND strategy, illustrating that maximum Sharpe need not maximize
-growth. Maximum CAGR is a different, uncapped objective—not a one-third-capped
-recommendation and not passive GDX buy-and-hold.
-
-### Baseline equity curves and drawdowns
-
-The five saved portfolios and **passive QQQ buy-and-hold** each start with
-**$1,000**. All curves use the same **1-bp commission + 3-bp slippage each way**,
-the same 700 daily valuations through **October 15, 2026**, and paid terminal
-liquidation. Portfolio allocations are the unchanged static initial weights;
-there is no reoptimization or daily rebalancing. QQQ here is the cost-matched
-passive benchmark, **not** the active QQQ strategy sleeve.
-
-![Baseline net equity: five fixed portfolios and cost-matched QQQ buy-and-hold, each starting with $1,000](assets/baseline_equity.png)
-
-![Baseline daily drawdowns from each account's running peak, including the initial $1,000 balance](assets/baseline_drawdown.png)
-
-Drawdowns use each curve's own running peak, including its initial balance;
-they are **daily**, not intraday losses. These are hindsight-conditioned
-historical comparisons, not a new untouched portfolio test. Only raster charts
-and aggregate chart metadata are published; the numerical daily paths remain
-private. See [chart provenance and reproduction](docs/charts.md).
-
-### Baseline attribution for the current portfolio
-
-Regress portfolio cash-excess returns jointly on **cost-matched passive
-buy-and-hold cash-excess returns**, not the six active strategy returns:
-
-| GDX beta | FXI beta | QQQ beta | UNG beta | FDN beta | BND beta | Annualized arithmetic alpha | R² |
-|---:|---:|---:|---:|---:|---:|---:|---:|
-| 0.0366 | 0.0369 | 0.0746 | 0.0090 | 0.0516 | −0.0169 | 12.59%/year | 31.37% |
-
-These are conditional linear sensitivities, **not allocation weights**. Negative
-BND beta does not imply a short position. Alpha is 252 times the daily intercept,
-not CAGR or proof of skill. Separate one-ETF regressions answer a different
-question. Full all-cost results and factor-overlap diagnostics are in [results](results/).
-
-## What is included
-
-- Portable Python analytics and synthetic tests: static wealth mixing, return
-  statistics, cap diagnostics, correlations, OLS attribution and optional
-  research-only optimization.
-- Exact six strategy definitions, five portfolio allocations, and study conventions.
-- Sanitized aggregate results for all four costs, including own-ETF buy-and-hold
-  comparisons, correlations and regression tables.
-- Baseline equity and daily-drawdown PNGs for the five portfolios and passive QQQ.
-- [Methodology](docs/methodology.md), [input schema](docs/input_schema.md), and
-  [reproducibility limits](docs/reproducibility.md), plus the
-  [local verification record](docs/verification.md).
-
-**Not included:** raw market data, full daily account paths, the original
-30-minute execution engine, private reconciliation evidence or study freezes.
-This repository cannot reconstruct historical trades from aggregate tables alone.
-Historical-number recomputation requires the private saved account input bundle;
-tests run on generated synthetic data and public aggregates without it.
-
-## Run
-
-Python 3.10 or later:
+Python 3.10 or later; public verification uses only the standard library:
 
 ```bash
+python scripts/verify_project.py
 python -m pip install -e '.[test,plots]'
-python -m pytest
+python -m pytest -q
 ```
 
-With a separately supplied private bundle matching the [schema](docs/input_schema.md):
+Regenerate the three offline HTML reports and their stage-specific aggregate
+CSV/JSON from the committed public tables, without market data or an API key:
 
 ```bash
-python scripts/analyze_portfolios.py \
-  --input private/portfolio_inputs.npz \
-  --portfolios configs/portfolios.json \
-  --years 2.787043378995434 \
-  --output outputs/recomputed_aggregates.json
+python scripts/build_final_reports.py --output-dir outputs/rebuilt_final_reports
 ```
 
-The default evaluates the saved weights, without optimization or market downloads.
-Do not commit the input bundle or generated daily paths. Optional optimizer output
-is a new numerical experiment and must not silently replace the published snapshot.
+Optional PDF rendering uses that **same HTML**, not a second set of report
+calculations. Install the optional Node renderer dependencies and Chromium, then:
 
-## Historical strategy context
+```bash
+npm install
+npx playwright install chromium
+node scripts/render_final_reports.cjs --reports outputs/rebuilt_final_reports
+```
 
-The parent study used development **2017–2020**, validation **2021–2023** and
-historical OOS **2024–2026-10-15**. Its 379 definitions per ETF comprised 289
-trend and 90 mean-reversion configurations. Daily causal indicators feed native
-half-hour observations, with shared three-trading-hour/seven-consecutive-check
-confirmation and next eligible bar-open execution. Each stage started independently
-with $1,000 and feature history, not inherited holdings or orders.
+Synthetic tests and aggregate/report generation do **not** reproduce the original
+indicator and intraday execution engine. Exact historical portfolio/regression
+recomputation requires separately supplied authenticated saved paths; see
+[three-period calculations](docs/periods.md), [input schema](docs/input_schema.md),
+[data access](docs/data_sources.md) and [reproducibility limits](docs/reproducibility.md).
+Do not commit those inputs. The [machine-readable publication manifest](metadata/project_manifest.json)
+binds the shipped reports, figures, code and aggregate evidence.
 
-The six configurations and five portfolio comparisons here were chosen after
-examining OOS outcomes. This separate portfolio snapshot does not alter the
-original stage memberships, freezes or public study command. The original research
-repository is [Agul-quant/trend-following](https://github.com/Agul-quant/trend-following).
+## Package layout
+
+- `final_reports/`: three PDF/offline-HTML editions, stage CSV/JSON and the Word project/supplement.
+- `reports/four_portfolios_three_periods/`: 48 portfolio, 24 control and 48 cap outcomes at full precision.
+- `results/four_portfolio_attribution/`: 48 QQQ-only and 48 joint-six-ETF regressions, diagnostics and self-controls.
+- `configs/`: four active allocations, six strategy identities and restored study periods; the original five-allocation snapshot is preserved separately.
+- `assets/periods/`: audited raster figures without embedded daily arrays.
+- `src/`, `scripts/`, `tests/`: saved-account analytics, report generation and private-data-free checks.
+- `docs/`: methods, data sources, course coverage and reproduction boundaries.
+- `metadata/`: file checksums and active-study publication contract.
+
+The [original strategy research repository](https://github.com/Agul-quant/trend-following)
+is separate. This publication does not alter its frozen inputs, source, stage
+memberships or public study command. No new account evaluation, optimization,
+market-data refresh or trading was performed to build these reports.

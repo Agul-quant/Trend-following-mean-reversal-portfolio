@@ -491,8 +491,8 @@ def test_export_rejects_receipt_parent_traversal_before_read(tmp_path, monkeypat
     assert not (tmp_path / "unused_output").exists()
 
 
-def test_main_README_numeric_tables_match_full_precision_exports():
-    tables = markdown_tables("README.md")
+def test_archived_README_numeric_tables_match_full_precision_exports():
+    tables = markdown_tables("docs/archived_five_portfolio_snapshot.md")
     assert [len(table) - 1 for table in tables] == [6, 4, 5, 1]
     config = portfolio_config()
     current = config["portfolios"][0]

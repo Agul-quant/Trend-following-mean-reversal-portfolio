@@ -32,3 +32,6 @@ dist/
 .DS_Store
 .idea/
 .vscode/
+
+# Optional report renderer dependencies.
+node_modules/

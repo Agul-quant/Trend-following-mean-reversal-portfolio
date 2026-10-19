@@ -1,0 +1,94 @@
+{
+  "schema": "same_html_pdf_rendering_v1",
+  "same_HTML_source": true,
+  "runtime": "Playwright 1.62.1",
+  "browser": "145.0.7632.6",
+  "external_network_requests": 0,
+  "raw_market_or_daily_arrays": false,
+  "reports": [
+    {
+      "stage": "development",
+      "html": "01_development/01_development_and_robustness.html",
+      "html_sha256": "1ee194ebf4680d3bd0e4905223c26bef52e5ae0c10216a4b626675bc642acf4d",
+      "pdf": "01_development/01_development_and_robustness.pdf",
+      "pdf_sha256": "8cd0c47b3bc6aefbd0c6f7ea93a0140e1fede79fc81c2564637438802431ea8a",
+      "offline_browser_checks": {
+        "title": "Development and robustness — ETF portfolios",
+        "brokenImages": 0,
+        "invalidAnchors": [],
+        "scripts": 0,
+        "desktopOverflow": false,
+        "numericHeaders": 77,
+        "numericHeaderAlignment": true,
+        "headings": [
+          "Trend Following and Mean Reversion ETF Portfolios",
+          "Executive summary",
+          "1 Project goal",
+          "2 Research outline",
+          "3 Data",
+          "4 Backtesting",
+          "5 Execution and slippage",
+          "6 Weighting",
+          "7 Performance evaluation"
+        ],
+        "mobileOverflow": false
+      }
+    },
+    {
+      "stage": "validation",
+      "html": "02_validation/02_validation_and_frozen_selection.html",
+      "html_sha256": "719ab52d4aa7a146f339c80a31fc86dd92e6005535833e4b4517c7c83bade475",
+      "pdf": "02_validation/02_validation_and_frozen_selection.pdf",
+      "pdf_sha256": "ef1921b7e0b5969e9406291827b65015d7793d0ca1ac43a34438eadd5f99c133",
+      "offline_browser_checks": {
+        "title": "Validation and frozen selection — ETF portfolios",
+        "brokenImages": 0,
+        "invalidAnchors": [],
+        "scripts": 0,
+        "desktopOverflow": false,
+        "numericHeaders": 77,
+        "numericHeaderAlignment": true,
+        "headings": [
+          "Trend Following and Mean Reversion ETF Portfolios",
+          "Executive summary",
+          "1 Project goal",
+          "2 Research outline",
+          "3 Data",
+          "4 Backtesting",
+          "5 Execution and slippage",
+          "6 Weighting",
+          "7 Performance evaluation"
+        ],
+        "mobileOverflow": false
+      }
+    },
+    {
+      "stage": "historical_OOS",
+      "html": "03_historical_oos/03_historical_oos_and_conclusions.html",
+      "html_sha256": "8df93f31472e224ba69bcc81010c91e7c7598d20be885d2cad69b2ce0e00ef26",
+      "pdf": "03_historical_oos/03_historical_oos_and_conclusions.pdf",
+      "pdf_sha256": "452def064f1814ac9b58e414f7584e9ecb98b379bdc74396094bba162f1caaa3",
+      "offline_browser_checks": {
+        "title": "Historical OOS and conclusions — ETF portfolios",
+        "brokenImages": 0,
+        "invalidAnchors": [],
+        "scripts": 0,
+        "desktopOverflow": false,
+        "numericHeaders": 77,
+        "numericHeaderAlignment": true,
+        "headings": [
+          "Trend Following and Mean Reversion ETF Portfolios",
+          "Executive summary",
+          "1 Project goal",
+          "2 Research outline",
+          "3 Data",
+          "4 Backtesting",
+          "5 Execution and slippage",
+          "6 Weighting",
+          "7 Performance evaluation"
+        ],
+        "mobileOverflow": false
+      }
+    }
+  ]
+}

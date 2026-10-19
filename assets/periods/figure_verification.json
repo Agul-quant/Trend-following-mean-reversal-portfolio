@@ -1,0 +1,84 @@
+{
+  "baseline_commission_bps_each_way": 1,
+  "baseline_slippage_bps_each_way": 3,
+  "raster_only": true,
+  "daily_input_arrays_exported": false,
+  "private_input_locators_exported": false,
+  "inputs_unchanged": true,
+  "stage_figures": [
+    {
+      "stage": "development",
+      "file": "development_baseline.png",
+      "points_per_series": 1008,
+      "series": 5,
+      "initial_value": 1000.0,
+      "sha256": "4047af4d17d77932b92da2727488d85ab33f137034ec09ace7e14e3c92be832b",
+      "all_daily_points_rendered": true,
+      "terminal_equity_by_series": {
+        "daily_capped_max_sharpe": 1734.0245192880889,
+        "initial_capped_max_sharpe": 1818.1306237167014,
+        "uncapped_max_sharpe": 1272.3830597305987,
+        "equal_initial": 1900.127854161334,
+        "QQQ_buy_and_hold": 2714.1061421715776
+      },
+      "max_daily_drawdown_by_series": {
+        "daily_capped_max_sharpe": -0.07518756963169027,
+        "initial_capped_max_sharpe": -0.0848436773924528,
+        "uncapped_max_sharpe": -0.02320771773141528,
+        "equal_initial": -0.06561523493468846,
+        "QQQ_buy_and_hold": -0.28559372098911295
+      }
+    },
+    {
+      "stage": "validation",
+      "file": "validation_baseline.png",
+      "points_per_series": 754,
+      "series": 5,
+      "initial_value": 1000.0,
+      "sha256": "151d7920c74dd943a655d5307913485cd1864d0b97570df0999e7ead8d1a3191",
+      "all_daily_points_rendered": true,
+      "terminal_equity_by_series": {
+        "daily_capped_max_sharpe": 1220.374850255912,
+        "initial_capped_max_sharpe": 1250.1470585982556,
+        "uncapped_max_sharpe": 1055.3612094688315,
+        "equal_initial": 1234.0515526083109,
+        "QQQ_buy_and_hold": 1323.3716086579016
+      },
+      "max_daily_drawdown_by_series": {
+        "daily_capped_max_sharpe": -0.17520230779405788,
+        "initial_capped_max_sharpe": -0.1924248457028832,
+        "uncapped_max_sharpe": -0.09698200898119425,
+        "equal_initial": -0.1347650662829739,
+        "QQQ_buy_and_hold": -0.35119550757698037
+      }
+    },
+    {
+      "stage": "historical_OOS",
+      "file": "historical_OOS_baseline.png",
+      "points_per_series": 701,
+      "series": 5,
+      "initial_value": 1000.0,
+      "sha256": "85b31591642c551961439bd6b13ff546a2a8eaaca5c748915b09159902d18db3",
+      "all_daily_points_rendered": true,
+      "terminal_equity_by_series": {
+        "daily_capped_max_sharpe": 1734.6373886015426,
+        "initial_capped_max_sharpe": 1844.6178215860564,
+        "uncapped_max_sharpe": 1203.0324539597977,
+        "equal_initial": 1680.1758803966086,
+        "QQQ_buy_and_hold": 1818.3401235078422
+      },
+      "max_daily_drawdown_by_series": {
+        "daily_capped_max_sharpe": -0.04236788454822371,
+        "initial_capped_max_sharpe": -0.04670120599504879,
+        "uncapped_max_sharpe": -0.008164932485092757,
+        "equal_initial": -0.042738561898660654,
+        "QQQ_buy_and_hold": -0.22770144166602657
+      }
+    }
+  ],
+  "correlation_figure": {
+    "file": "oos_strategy_correlations.png",
+    "sha256": "c69c49f2ec3e8ee49214398cb9bc23c41852a40a4b7e7393401b1751c924a291"
+  },
+  "aggregate_portfolio_rows_checked": 48
+}

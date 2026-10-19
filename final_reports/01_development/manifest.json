@@ -1,0 +1,48 @@
+{
+  "aggregate_only": true,
+  "files": {
+    "01_development_and_robustness.html": "1ee194ebf4680d3bd0e4905223c26bef52e5ae0c10216a4b626675bc642acf4d",
+    "QQQ_single_factor_rows.csv": "ed4edc63a75a4fe659e493b58689d97bf376fbb6491865be34954b1e874ba6d4",
+    "cap_rows.csv": "e9ab59b2c3f39e1e9bea5445d25c324e835ec06cbcd9ca89573376cad48ce8ca",
+    "control_rows.csv": "f55bccacd3370d823bf8e3ba668abdd4b77ca954292879965157542842b9deb7",
+    "factor_diagnostic_rows.csv": "dacb9c993611e73c79d2a86791d0ca6177ebd4794fd0f6b2c67bfc2f4a2707cb",
+    "portfolio_rows.csv": "6adf913f849ae52ae720de9bf73afe4a9eec88f069a632fc88463ef373d0c087",
+    "report.json": "515f7b59db8a3455cef6a5c26b0dc38710f2b4be33da4688df5fe591414f3f9b",
+    "six_passive_factor_rows.csv": "ddc0936d94a41d5db4a7ffc96ccff6ec47d4c49ee2401d155d1008900951cdf3"
+  },
+  "input_hashes": {
+    "assets/periods/development_baseline.png": "4047af4d17d77932b92da2727488d85ab33f137034ec09ace7e14e3c92be832b",
+    "assets/periods/figure_verification.json": "0ea64bc0cb5b17d931a9063dd29447c9cb89cafcb438607c9f3cbcea6ec07e8e",
+    "assets/periods/historical_OOS_baseline.png": "85b31591642c551961439bd6b13ff546a2a8eaaca5c748915b09159902d18db3",
+    "assets/periods/oos_strategy_correlations.png": "c69c49f2ec3e8ee49214398cb9bc23c41852a40a4b7e7393401b1751c924a291",
+    "assets/periods/validation_baseline.png": "151d7920c74dd943a655d5307913485cd1864d0b97570df0999e7ead8d1a3191",
+    "configs/four_portfolios.json": "79badfecbb5e260523582301bcd3aecda746323bab08142aa365c8df1642cc3e",
+    "configs/research_protocol.json": "82ae8e3c7f09c88c9d7535132c05eb1f3a0e1d97eacf7563db856912e31b6449",
+    "configs/selected_strategies.json": "0d983ac0bbb3a292d5223c5cd00c0e84997f542e7fff4c6e775079dc51cd68f9",
+    "configs/study_presentation.json": "296dfc53f19256617638f11c0a3a7900c4073d75f63571624e90533b7ad6f28b",
+    "reports/four_portfolios_three_periods/cap_rows.csv": "8e543919b46ba22050b82de4bfd5624ee8e36e8aea089313e09c88f7906f86a1",
+    "reports/four_portfolios_three_periods/control_rows.csv": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae",
+    "reports/four_portfolios_three_periods/manifest.json": "8b4aa571d06a761974bad9fa4426f562fc5836081232e8b8100fdad69a81a83d",
+    "reports/four_portfolios_three_periods/portfolio_rows.csv": "25d4a7fafa0e9cd1eb81ff61590aeadd3ef8ad523656862472198404d3477f77",
+    "reports/four_portfolios_three_periods/provenance.json": "6cb8129caa4df950c53797fb9953090882c2244509a8df58f646dd758da43ca6",
+    "reports/four_portfolios_three_periods/report.json": "2213a49db6c339841a06457a8dd762b2431a9d232ae512ff29541d9c90edd3b0",
+    "reports/four_portfolios_three_periods/report.md": "c0bf84644ca3a6c45c9de1d03e87bee3400da6f2cfd7a8ea16b938782586b2ce",
+    "reports/four_portfolios_three_periods/stage_summaries.csv": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3",
+    "results/export_manifest.json": "5bdc714b1175ba4c32ed5a36cbcc602b78932644cd81c47bfbeecd97cb345144",
+    "results/four_portfolio_attribution/QQQ_single_factor_all_periods_all_costs.csv": "14b2449aead11ef1ea65df568797b84fb15d4376f6e4b374dde117b2bc245dee",
+    "results/four_portfolio_attribution/attribution.json": "f2f066ae9d32d759f202791bf95a315db9c7dfa4d5369bbdd2480620cdbdac84",
+    "results/four_portfolio_attribution/factor_diagnostics_all_periods_all_costs.csv": "88df418f91fa1cc2aa87199036783b71b57cf5d281bb9eedfa1a59131d643fc1",
+    "results/four_portfolio_attribution/passive_factor_self_controls.csv": "0b12b293bfcc44c3c4efcd1fea4c045668079dd08a72db4945ad286828a922bf",
+    "results/four_portfolio_attribution/six_passive_factor_all_periods_all_costs.csv": "c43c0ea072a99cb9f8e72148ddcf057b4085b100c6ec097549a78a4401f0548b",
+    "results/strategy_correlation_matrices_all_costs.csv": "d8b1ec2a6a4e5c86c1c0506cfff8333bdf96e22b3a8a08839cf37436f2916f93"
+  },
+  "retrospective_OOS_examined": true,
+  "same_HTML_source_for_PDF": true,
+  "schema": "four_fixed_portfolios_offline_class_reports_v1",
+  "stage": "development",
+  "stage_bounds": [
+    "2017-01-01",
+    "2020-12-31"
+  ],
+  "static_initial_wealth": true
+}

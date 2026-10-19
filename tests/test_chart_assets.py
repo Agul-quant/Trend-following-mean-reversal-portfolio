@@ -141,7 +141,7 @@ def test_png_bytes_dimensions_and_only_nonprivate_raster_metadata():
         assert texts == [b"Software\x00Trend Following Study"]
         density = [payload for kind, payload in chunks if kind == b"pHYs"]
         assert len(density) == 1 and struct.unpack(">IIB", density[0]) == (6299, 6299, 1)
-    assert sorted(path.name for path in (ROOT / "assets").iterdir()) == [
+    assert sorted(path.name for path in (ROOT / "assets").iterdir() if path.is_file()) == [
         "baseline_charts_manifest.json", "baseline_drawdown.png", "baseline_equity.png"
     ]
 
@@ -170,10 +170,10 @@ def test_generator_config_bindings_and_original_aggregate_export_unchanged():
     assert data["original_aggregate_export_unchanged"] is True
 
 
-def test_readme_embeds_both_assets_and_documents_accounting_scope():
-    readme = (ROOT / "README.md").read_text()
+def test_archived_readme_embeds_original_assets_and_documents_accounting_scope():
+    readme = (ROOT / "docs/archived_five_portfolio_snapshot.md").read_text()
     for filename in FIGURES:
-        assert re.search(r"!\[[^\]]+\]\(assets/" + re.escape(filename) + r"\)", readme)
+        assert re.search(r"!\[[^\]]+\]\(../assets/" + re.escape(filename) + r"\)", readme)
     assert "docs/charts.md" in readme
     explanation = (ROOT / "docs/charts.md").read_text().lower()
     for term in ("700", "$1,000", "passive", "initial", "daily", "drawdown"):

@@ -1,0 +1,6 @@
+# Retain byte-identical frozen CSV exports, including their original CRLF endings.
+*.csv -text whitespace=cr-at-eol
+*.png binary
+*.pdf binary
+*.docx binary
+*.zip binary

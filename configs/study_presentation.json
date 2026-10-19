@@ -1,0 +1,27 @@
+{
+  "project_name": "Trend Following and Mean Reversion ETF Portfolios",
+  "active_study": "earlier_four_fixed_portfolio_study",
+  "development": {
+    "start": "2017-01-01",
+    "end": "2020-12-31"
+  },
+  "validation": {
+    "start": "2021-01-01",
+    "end": "2023-12-31"
+  },
+  "historical_OOS": {
+    "start": "2024-01-01",
+    "end": "2026-10-15"
+  },
+  "portfolio_ids": [
+    "daily_capped_max_sharpe",
+    "initial_capped_max_sharpe",
+    "uncapped_max_sharpe",
+    "equal_initial"
+  ],
+  "portfolio_config": "configs/four_portfolios.json",
+  "strategy_config": "configs/selected_strategies.json",
+  "selection_status": "retrospective; selected configurations and weights used examined historical OOS",
+  "corrected_split_status": "inactive, not used in these reports; private work preserved",
+  "maximum_CAGR_standalone_GDX": "excluded from current four; historical five-portfolio results retained unchanged"
+}

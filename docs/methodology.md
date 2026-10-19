@@ -1,5 +1,11 @@
 # Methodology
 
+The active class-project reports retain four allocations and the restored earlier
+study periods. The fifth maximum-CAGR comparison discussed below is an unchanged
+historical archive, not part of the current four. See the
+[current report index](../final_reports/README.md) and
+[course/report mapping](class_project_reports.md).
+
 ## Scope and chronology
 
 The portfolio layer uses six unchanged active strategy account series: GDX, FXI,

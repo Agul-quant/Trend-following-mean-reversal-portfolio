@@ -1,0 +1,14 @@
+{
+  "aggregate_only": true,
+  "files": {
+    "cap_rows.csv": "8e543919b46ba22050b82de4bfd5624ee8e36e8aea089313e09c88f7906f86a1",
+    "control_rows.csv": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae",
+    "portfolio_rows.csv": "25d4a7fafa0e9cd1eb81ff61590aeadd3ef8ad523656862472198404d3477f77",
+    "provenance.json": "6cb8129caa4df950c53797fb9953090882c2244509a8df58f646dd758da43ca6",
+    "report.json": "2213a49db6c339841a06457a8dd762b2431a9d232ae512ff29541d9c90edd3b0",
+    "report.md": "c0bf84644ca3a6c45c9de1d03e87bee3400da6f2cfd7a8ea16b938782586b2ce",
+    "stage_summaries.csv": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
+  },
+  "published_or_committed": false,
+  "schema": "four_portfolio_three_period_local_report_manifest_v1"
+}

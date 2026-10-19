@@ -1,3 +1,8 @@
+> These two five-comparison charts belong to the preserved historical archive.
+> The four active portfolios use the [three-period report figures](../assets/periods/)
+> and [current reports](../final_reports/README.md). The standalone maximum-CAGR
+> comparison is not part of the active reports.
+
 # Baseline equity and drawdown charts
 
 The README figures compare the five **unchanged saved portfolio allocations**

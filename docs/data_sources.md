@@ -29,9 +29,15 @@ constitute independent-vendor validation.
 |---|---|---|
 | Feature initialization | From 2015-01-01, where the ETF existed and observations are available | Daily indicator history only; at least 295 completed pre-development daily observations required; no fabricated pre-inception history |
 | Development | 2017-01-01–2020-12-31 | The unchanged 379 definitions per ETF: 289 trend and 90 long/cash mean-reversion rules |
-| Corrected validation | 2021-01-01–2024-12-31 | Exact eligible development survivors; only ETFs with more than five development survivors advance, subject to data eligibility |
-| Corrected OOS | 2025-01-01–2026-10-15 | Locked validation survivors in ETFs with more than five validation survivors; fixed endpoint |
-| Published six-strategy portfolio snapshot | 2024-01-01–2026-10-15 | Earlier split, 700 common daily valuations from 2024-01-02; not a corrected-split portfolio result |
+| Restored validation | 2021-01-01–2023-12-31 | Exact eligible development survivors; only ETFs with more than five development survivors advance, subject to data eligibility |
+| Restored historical OOS | 2024-01-01–2026-10-15 | Locked validation survivors in ETFs with more than five validation survivors; fixed endpoint |
+| Published six-strategy portfolio snapshot | 2024-01-01–2026-10-15 | Earlier split, 700 common daily valuations from 2024-01-02; restored active portfolio study |
+
+The active report basis is restored to development 2017–2020, validation 2021–2023
+and historical OOS 2024–2026-10-15. The alternative validation
+**2021-01-01–2024-12-31** / OOS **2025-01-01–2026-10-15** experiment is inactive.
+Its private artifacts are preserved but are not inputs or selections for these
+reports. No corrected-split portfolio fitting is presented.
 
 The universe has 56 ETFs: 6 US equity indices, 13 international/country equities,
 10 broad sectors, 13 industries/subsectors, 9 bond ETFs and 5 commodity/precious-
@@ -95,7 +101,7 @@ portfolio bundle is a **derived subset**, not the original market dataset:
 
 See the [input contract](input_schema.md) for validation requirements. These
 dimensions describe the earlier published snapshot, not a ready-made bundle
-for the corrected OOS period or the full 56-ETF universe.
+for a differently bounded OOS period or the full 56-ETF universe.
 
 ## Access and reproducibility
 
@@ -113,7 +119,7 @@ from the retained vintage and must be reconciled separately.
 
 For exact published portfolio-number recomputation, the source holder must supply
 the private saved-account bundle matching the [input schema](input_schema.md),
-then run the [README command](../README.md#run) at the saved allocations. This
+then run the [three-period calculation command](periods.md) at the saved allocations. This
 recomputes the portfolio analytics only; it does not reproduce intraday signals,
 corporate-action processing or original execution QA. Synthetic tests need no
 provider account, credentials or market data and are not performance evidence.

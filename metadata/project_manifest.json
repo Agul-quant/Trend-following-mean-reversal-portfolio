@@ -1,0 +1,650 @@
+{
+  "aggregate_only": true,
+  "files": [
+    {
+      "bytes": 169,
+      "path": ".gitattributes",
+      "sha256": "62d1aad8158cd09cefc6bcaa111787d3065282ddae36b98aeb37e44ae58e370b"
+    },
+    {
+      "bytes": 482,
+      "path": ".github/workflows/tests.yml",
+      "sha256": "5595601125092e7b95425b3b054f125e2db019ed51eb298f7e2b62802eae6a55"
+    },
+    {
+      "bytes": 438,
+      "path": ".gitignore",
+      "sha256": "0e43948d601b1603a75c22945def8d44a8ecd1f59f1296d98c0ca92ee0b776a8"
+    },
+    {
+      "bytes": 2185,
+      "path": "AGENTS.md",
+      "sha256": "68c1baedb7d38489451b932614ab36ed9787a94993d76d90548c5979fa3e6928"
+    },
+    {
+      "bytes": 10021,
+      "path": "README.md",
+      "sha256": "4ee128d921ee591ca2c6db0e76e908f1a81f3884db17324af19af6cd681637a5"
+    },
+    {
+      "bytes": 5204,
+      "path": "assets/baseline_charts_manifest.json",
+      "sha256": "487aa5dcf4c1679a289937b69dc64dcafae8348ca96b86fbf23b8fda51d482fa"
+    },
+    {
+      "bytes": 283001,
+      "path": "assets/baseline_drawdown.png",
+      "sha256": "a15925744565c86c1fa7d07feeb5a6508e0a23f8f5a43ab26424b4a77c9ffbec"
+    },
+    {
+      "bytes": 234626,
+      "path": "assets/baseline_equity.png",
+      "sha256": "ab2a04468a33d0eff2e7804e9c5dac11107bced66dc583f6e7ae9c5a7b21dbaf"
+    },
+    {
+      "bytes": 225083,
+      "path": "assets/periods/development_baseline.png",
+      "sha256": "4047af4d17d77932b92da2727488d85ab33f137034ec09ace7e14e3c92be832b"
+    },
+    {
+      "bytes": 3162,
+      "path": "assets/periods/figure_verification.json",
+      "sha256": "0ea64bc0cb5b17d931a9063dd29447c9cb89cafcb438607c9f3cbcea6ec07e8e"
+    },
+    {
+      "bytes": 220257,
+      "path": "assets/periods/historical_OOS_baseline.png",
+      "sha256": "85b31591642c551961439bd6b13ff546a2a8eaaca5c748915b09159902d18db3"
+    },
+    {
+      "bytes": 128316,
+      "path": "assets/periods/oos_strategy_correlations.png",
+      "sha256": "c69c49f2ec3e8ee49214398cb9bc23c41852a40a4b7e7393401b1751c924a291"
+    },
+    {
+      "bytes": 244479,
+      "path": "assets/periods/validation_baseline.png",
+      "sha256": "151d7920c74dd943a655d5307913485cd1864d0b97570df0999e7ead8d1a3191"
+    },
+    {
+      "bytes": 2763,
+      "path": "configs/four_portfolios.json",
+      "sha256": "79badfecbb5e260523582301bcd3aecda746323bab08142aa365c8df1642cc3e"
+    },
+    {
+      "bytes": 3018,
+      "path": "configs/portfolios.json",
+      "sha256": "1ca3d1669994437b80898de3e655b42160f77414324ea84fd0d67f17e5bb83fc"
+    },
+    {
+      "bytes": 2833,
+      "path": "configs/research_protocol.json",
+      "sha256": "82ae8e3c7f09c88c9d7535132c05eb1f3a0e1d97eacf7563db856912e31b6449"
+    },
+    {
+      "bytes": 3186,
+      "path": "configs/selected_strategies.json",
+      "sha256": "0d983ac0bbb3a292d5223c5cd00c0e84997f542e7fff4c6e775079dc51cd68f9"
+    },
+    {
+      "bytes": 918,
+      "path": "configs/study_presentation.json",
+      "sha256": "296dfc53f19256617638f11c0a3a7900c4073d75f63571624e90533b7ad6f28b"
+    },
+    {
+      "bytes": 7863,
+      "path": "docs/archived_five_portfolio_snapshot.md",
+      "sha256": "6bc0c2b5638bfce4b3bf12ba36bcf5c9357f4b76f3218d11c59ae83786d36941"
+    },
+    {
+      "bytes": 4100,
+      "path": "docs/charts.md",
+      "sha256": "fe55d7480084fd2535176d2450f5e8ff39fb49cbf42a9bd7e770619534fb8c92"
+    },
+    {
+      "bytes": 13474,
+      "path": "docs/class_project_reports.md",
+      "sha256": "65e823015b301923f9cf22041fdf368548db050d640666dd276dd6037a9c2038"
+    },
+    {
+      "bytes": 8844,
+      "path": "docs/data_sources.md",
+      "sha256": "dd5dd256d754bd134bab47e64141a206932a5c3c2658f520db17c7994f4b44d6"
+    },
+    {
+      "bytes": 4267,
+      "path": "docs/input_schema.md",
+      "sha256": "82876ef4b46203d5ca4b2acebed965578cf8968e930b1bacb337fdcd2fca8d5a"
+    },
+    {
+      "bytes": 8062,
+      "path": "docs/methodology.md",
+      "sha256": "3533002e0957fafb73299ad6af1156bc69040a2df8e38442d594f0a62b12bd43"
+    },
+    {
+      "bytes": 4760,
+      "path": "docs/periods.md",
+      "sha256": "a3fdd8e79eea6fdf4e1b7c8ae0853c10153b6162c6ad7fbb85205399204a3bfb"
+    },
+    {
+      "bytes": 3644,
+      "path": "docs/reproducibility.md",
+      "sha256": "50f80d5d697283e27acc76a6377af6361175c0704ae6af2465b5431d09b3938d"
+    },
+    {
+      "bytes": 4693,
+      "path": "docs/verification.md",
+      "sha256": "943aa3a4257899a3d78773c12d48aad123f833af04d9d70a49693d9dadccd537"
+    },
+    {
+      "bytes": 338191,
+      "path": "final_reports/01_development/01_development_and_robustness.html",
+      "sha256": "1ee194ebf4680d3bd0e4905223c26bef52e5ae0c10216a4b626675bc642acf4d"
+    },
+    {
+      "bytes": 821084,
+      "path": "final_reports/01_development/01_development_and_robustness.pdf",
+      "sha256": "8cd0c47b3bc6aefbd0c6f7ea93a0140e1fede79fc81c2564637438802431ea8a"
+    },
+    {
+      "bytes": 2859,
+      "path": "final_reports/01_development/QQQ_single_factor_rows.csv",
+      "sha256": "ed4edc63a75a4fe659e493b58689d97bf376fbb6491865be34954b1e874ba6d4"
+    },
+    {
+      "bytes": 3966,
+      "path": "final_reports/01_development/cap_rows.csv",
+      "sha256": "e9ab59b2c3f39e1e9bea5445d25c324e835ec06cbcd9ca89573376cad48ce8ca"
+    },
+    {
+      "bytes": 1625,
+      "path": "final_reports/01_development/control_rows.csv",
+      "sha256": "f55bccacd3370d823bf8e3ba668abdd4b77ca954292879965157542842b9deb7"
+    },
+    {
+      "bytes": 800,
+      "path": "final_reports/01_development/factor_diagnostic_rows.csv",
+      "sha256": "dacb9c993611e73c79d2a86791d0ca6177ebd4794fd0f6b2c67bfc2f4a2707cb"
+    },
+    {
+      "bytes": 4100,
+      "path": "final_reports/01_development/manifest.json",
+      "sha256": "15ae255b8fb809ace4753a66d33b5546a9bf65cce854687d4a7b17db49f3410c"
+    },
+    {
+      "bytes": 3498,
+      "path": "final_reports/01_development/portfolio_rows.csv",
+      "sha256": "6adf913f849ae52ae720de9bf73afe4a9eec88f069a632fc88463ef373d0c087"
+    },
+    {
+      "bytes": 51078,
+      "path": "final_reports/01_development/report.json",
+      "sha256": "515f7b59db8a3455cef6a5c26b0dc38710f2b4be33da4688df5fe591414f3f9b"
+    },
+    {
+      "bytes": 4535,
+      "path": "final_reports/01_development/six_passive_factor_rows.csv",
+      "sha256": "ddc0936d94a41d5db4a7ffc96ccff6ec47d4c49ee2401d155d1008900951cdf3"
+    },
+    {
+      "bytes": 364447,
+      "path": "final_reports/02_validation/02_validation_and_frozen_selection.html",
+      "sha256": "719ab52d4aa7a146f339c80a31fc86dd92e6005535833e4b4517c7c83bade475"
+    },
+    {
+      "bytes": 836053,
+      "path": "final_reports/02_validation/02_validation_and_frozen_selection.pdf",
+      "sha256": "ef1921b7e0b5969e9406291827b65015d7793d0ca1ac43a34438eadd5f99c133"
+    },
+    {
+      "bytes": 2853,
+      "path": "final_reports/02_validation/QQQ_single_factor_rows.csv",
+      "sha256": "3c1e7e507fd2e6c775bd179024dd920a431d271e2d6cd0dc6d718a2387048c8c"
+    },
+    {
+      "bytes": 3959,
+      "path": "final_reports/02_validation/cap_rows.csv",
+      "sha256": "9912d4e51068691a1178f0c3bdc86a7af8681a5ac096f88c6b8f995ae8cf4aee"
+    },
+    {
+      "bytes": 1603,
+      "path": "final_reports/02_validation/control_rows.csv",
+      "sha256": "7a7a7c270d8086245e3ccf722ea110a0e8aee5645edcd7864f8541cb4596f4e0"
+    },
+    {
+      "bytes": 793,
+      "path": "final_reports/02_validation/factor_diagnostic_rows.csv",
+      "sha256": "b5e8aba4abd41965b51eaa165575ebe2b9c486bb49a6524241ebe63d322374a1"
+    },
+    {
+      "bytes": 4104,
+      "path": "final_reports/02_validation/manifest.json",
+      "sha256": "c5c73de4c586542d6c79afb8f3b6eeec47fba2b8614d3e7a23fe9bdbf8cdf983"
+    },
+    {
+      "bytes": 3459,
+      "path": "final_reports/02_validation/portfolio_rows.csv",
+      "sha256": "e4ed134aa0a40f0e99067cb3071303fb008f5c594efa141f7511e7b597af16c7"
+    },
+    {
+      "bytes": 51179,
+      "path": "final_reports/02_validation/report.json",
+      "sha256": "de8831158dac51ac4a741bb7f2be018baf82cf2dcbec432b77908c3b55272053"
+    },
+    {
+      "bytes": 4519,
+      "path": "final_reports/02_validation/six_passive_factor_rows.csv",
+      "sha256": "8ae728a29bc7cb465c89f4e7138ee7e5b899a3510f587b6356c6e1ba9f83bffd"
+    },
+    {
+      "bytes": 503813,
+      "path": "final_reports/03_historical_oos/03_historical_oos_and_conclusions.html",
+      "sha256": "8df93f31472e224ba69bcc81010c91e7c7598d20be885d2cad69b2ce0e00ef26"
+    },
+    {
+      "bytes": 929913,
+      "path": "final_reports/03_historical_oos/03_historical_oos_and_conclusions.pdf",
+      "sha256": "452def064f1814ac9b58e414f7584e9ecb98b379bdc74396094bba162f1caaa3"
+    },
+    {
+      "bytes": 2899,
+      "path": "final_reports/03_historical_oos/QQQ_single_factor_rows.csv",
+      "sha256": "42127848d820df089d2eb98879bc951b77c68ca949585beff1cc20e5cd4bda39"
+    },
+    {
+      "bytes": 738,
+      "path": "final_reports/03_historical_oos/baseline_active_strategy_correlation_rows.csv",
+      "sha256": "7945326b5795e15f6bf14df422f33c11bc09f9d938125d3458ae2c1b96e6c2ec"
+    },
+    {
+      "bytes": 4021,
+      "path": "final_reports/03_historical_oos/cap_rows.csv",
+      "sha256": "e1f5c192ef3c241e89556d09018a838010d42f3c542b82b6ee2db1b8cb783f76"
+    },
+    {
+      "bytes": 1639,
+      "path": "final_reports/03_historical_oos/control_rows.csv",
+      "sha256": "be8ae809b91cbddf04f389c6ed8f4785333d2771f4f36cedaf0e962f7b966851"
+    },
+    {
+      "bytes": 816,
+      "path": "final_reports/03_historical_oos/factor_diagnostic_rows.csv",
+      "sha256": "c329ac63e54e2a1bca6d75372f6812f09a4cc83fdfc5d21e46e1459d514c4bbc"
+    },
+    {
+      "bytes": 4228,
+      "path": "final_reports/03_historical_oos/manifest.json",
+      "sha256": "e79947794c3c9e0c30c4c0799c8267f8bf58a977320f958968872968281cb0f9"
+    },
+    {
+      "bytes": 3511,
+      "path": "final_reports/03_historical_oos/portfolio_rows.csv",
+      "sha256": "ccaf94a76bbd6ed9cdcb0bc4cc49304f8370089cbd7fa7705384d6713d06ceb8"
+    },
+    {
+      "bytes": 52746,
+      "path": "final_reports/03_historical_oos/report.json",
+      "sha256": "f1e62094da3595d0278f9e848572cc9204a0da5fce8640cc1d985bb6bde25fdc"
+    },
+    {
+      "bytes": 4607,
+      "path": "final_reports/03_historical_oos/six_passive_factor_rows.csv",
+      "sha256": "96d44b8e8c3ccaf0eabb6e69a4501cc6bed397b7bc7c3d85fdc1e6422e3cc531"
+    },
+    {
+      "bytes": 4629,
+      "path": "final_reports/README.md",
+      "sha256": "ddb52472e5300f597d2a685e752b36feff89e84cf86b275f3efcea7f3af8c3db"
+    },
+    {
+      "bytes": 803299,
+      "path": "final_reports/class_project/Trend_Following_Study_Class_Project.docx",
+      "sha256": "4bd8849cade3917fafdb6e2bc1c46138b05cafbe3cbce9cf2f515c698233394b"
+    },
+    {
+      "bytes": 898837,
+      "path": "final_reports/class_project/Trend_Following_Study_Reproducibility.zip",
+      "sha256": "294f3df45ee9d18ca36dc150906d708a108870e47b1a1871918ee0ced50d79ae"
+    },
+    {
+      "bytes": 7109,
+      "path": "final_reports/manifest.json",
+      "sha256": "992367a396a26486dca404433850865f445dc4eacda9df55df0014f8a1c0238f"
+    },
+    {
+      "bytes": 3288,
+      "path": "final_reports/render_manifest.json",
+      "sha256": "198844666d26ae3040c352a65f124c702d99af1e6ed55d04496bde176249376a"
+    },
+    {
+      "bytes": 307,
+      "path": "package.json",
+      "sha256": "27b01265b54ead15d898ea00c12f79abd5382623e326f45e12a9c81d6e017f17"
+    },
+    {
+      "bytes": 558,
+      "path": "pyproject.toml",
+      "sha256": "6bf02295e84098d1bc691065bf5b773afe81fff3dd054b525b69082a73d41144"
+    },
+    {
+      "bytes": 11371,
+      "path": "reports/four_portfolios_three_periods/cap_rows.csv",
+      "sha256": "8e543919b46ba22050b82de4bfd5624ee8e36e8aea089313e09c88f7906f86a1"
+    },
+    {
+      "bytes": 4392,
+      "path": "reports/four_portfolios_three_periods/control_rows.csv",
+      "sha256": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae"
+    },
+    {
+      "bytes": 781,
+      "path": "reports/four_portfolios_three_periods/manifest.json",
+      "sha256": "8b4aa571d06a761974bad9fa4426f562fc5836081232e8b8100fdad69a81a83d"
+    },
+    {
+      "bytes": 10013,
+      "path": "reports/four_portfolios_three_periods/portfolio_rows.csv",
+      "sha256": "25d4a7fafa0e9cd1eb81ff61590aeadd3ef8ad523656862472198404d3477f77"
+    },
+    {
+      "bytes": 2560,
+      "path": "reports/four_portfolios_three_periods/provenance.json",
+      "sha256": "6cb8129caa4df950c53797fb9953090882c2244509a8df58f646dd758da43ca6"
+    },
+    {
+      "bytes": 79685,
+      "path": "reports/four_portfolios_three_periods/report.json",
+      "sha256": "2213a49db6c339841a06457a8dd762b2431a9d232ae512ff29541d9c90edd3b0"
+    },
+    {
+      "bytes": 8021,
+      "path": "reports/four_portfolios_three_periods/report.md",
+      "sha256": "c0bf84644ca3a6c45c9de1d03e87bee3400da6f2cfd7a8ea16b938782586b2ce"
+    },
+    {
+      "bytes": 572,
+      "path": "reports/four_portfolios_three_periods/stage_summaries.csv",
+      "sha256": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
+    },
+    {
+      "bytes": 2940,
+      "path": "results/QQQ_single_factor_portfolios_all_costs.csv",
+      "sha256": "24a56cfee57caf2f9a477303815292c31252ba04c89ad5255eab21840112dda1"
+    },
+    {
+      "bytes": 3134,
+      "path": "results/QQQ_single_factor_strategy_sleeves_all_costs.csv",
+      "sha256": "0f6a067863f7a4d98fa6534cee78a97d07dfad167d937700a1d6fe1171273ac1"
+    },
+    {
+      "bytes": 6943,
+      "path": "results/README.md",
+      "sha256": "1580e6e86fa169c6fb9bdad9491b1a6a749656946220322878851454d4981caf"
+    },
+    {
+      "bytes": 2793,
+      "path": "results/export_manifest.json",
+      "sha256": "5bdc714b1175ba4c32ed5a36cbcc602b78932644cd81c47bfbeecd97cb345144"
+    },
+    {
+      "bytes": 8102,
+      "path": "results/four_portfolio_attribution/QQQ_single_factor_all_periods_all_costs.csv",
+      "sha256": "14b2449aead11ef1ea65df568797b84fb15d4376f6e4b374dde117b2bc245dee"
+    },
+    {
+      "bytes": 81530,
+      "path": "results/four_portfolio_attribution/attribution.json",
+      "sha256": "f2f066ae9d32d759f202791bf95a315db9c7dfa4d5369bbdd2480620cdbdac84"
+    },
+    {
+      "bytes": 2036,
+      "path": "results/four_portfolio_attribution/factor_diagnostics_all_periods_all_costs.csv",
+      "sha256": "88df418f91fa1cc2aa87199036783b71b57cf5d281bb9eedfa1a59131d643fc1"
+    },
+    {
+      "bytes": 5021,
+      "path": "results/four_portfolio_attribution/passive_factor_self_controls.csv",
+      "sha256": "0b12b293bfcc44c3c4efcd1fea4c045668079dd08a72db4945ad286828a922bf"
+    },
+    {
+      "bytes": 13062,
+      "path": "results/four_portfolio_attribution/six_passive_factor_all_periods_all_costs.csv",
+      "sha256": "c43c0ea072a99cb9f8e72148ddcf057b4085b100c6ec097549a78a4401f0548b"
+    },
+    {
+      "bytes": 4502,
+      "path": "results/own_ETF_buy_and_hold_metrics_all_costs.csv",
+      "sha256": "183182922fd0bda356304c8d0d6cb00505ec3e7c7532177a6fd5ffdcf299e09e"
+    },
+    {
+      "bytes": 14495,
+      "path": "results/pairwise_portfolio_betas_all_costs.csv",
+      "sha256": "604fc6c817413fac0127268cd174e3c1c0214cc6805a588bda9b8e7951be5ea0"
+    },
+    {
+      "bytes": 15108,
+      "path": "results/pairwise_strategy_sleeve_betas_all_costs.csv",
+      "sha256": "f38e59a2e1816979d5549fd741d4c0dd4b5373a18d4ad5fb0bfcf26abdefb70e"
+    },
+    {
+      "bytes": 9656,
+      "path": "results/portfolio_capital_drift_all_costs.csv",
+      "sha256": "0bfa2387b042f621a3202523ec0d035c1e9557e868318310ba32a119f982ceee"
+    },
+    {
+      "bytes": 3494,
+      "path": "results/portfolio_metrics_all_costs.csv",
+      "sha256": "12a373c13095f36579bc6f5da2b2823e995db2a3663fc7075e60f6f6e892d489"
+    },
+    {
+      "bytes": 1770,
+      "path": "results/provenance.json",
+      "sha256": "b64d3f75d7779bc9914a335d06508f7e169c3ef73914e965ae35b5bce131e198"
+    },
+    {
+      "bytes": 6913,
+      "path": "results/six_factor_diagnostics.json",
+      "sha256": "2feeb2663dc0f449e9e5a17462341a7211fc91246af198eb4c18e0a306e74f23"
+    },
+    {
+      "bytes": 5382,
+      "path": "results/six_factor_portfolios_all_costs.csv",
+      "sha256": "97300ce63c42af50a10a99f9e4ae9a480b93dd3e160a294ddb5e75149f3c80a7"
+    },
+    {
+      "bytes": 6092,
+      "path": "results/six_factor_strategy_sleeves_all_costs.csv",
+      "sha256": "792f6314def6016fc317a9278f7c6333789bd37039fa28721e803d1b0e774d0d"
+    },
+    {
+      "bytes": 3035,
+      "path": "results/strategy_correlation_matrices_all_costs.csv",
+      "sha256": "d8b1ec2a6a4e5c86c1c0506cfff8333bdf96e22b3a8a08839cf37436f2916f93"
+    },
+    {
+      "bytes": 2046,
+      "path": "results/strategy_correlation_pairs_all_costs.csv",
+      "sha256": "f64fa94a4005393cde903c4a27eae577d67b5e2453b279764e30ff14ebd29952"
+    },
+    {
+      "bytes": 5150,
+      "path": "results/strategy_metrics_all_costs.csv",
+      "sha256": "042e4448023ed3dc5053e983ae05f5314b33167bfe42a94326d3fe92878a25dc"
+    },
+    {
+      "bytes": 1019,
+      "path": "results/verification.json",
+      "sha256": "f4edb4f3bae48fd4d9d7f3bdb6a6d91eedaf1a7bf0623e50acd59fcdcc0433fd"
+    },
+    {
+      "bytes": 315,
+      "path": "scripts/analyze_portfolios.py",
+      "sha256": "3fbb506448c46d15c7a00ce718ac24d42a102f6897a731532633a5671a095f59"
+    },
+    {
+      "bytes": 63134,
+      "path": "scripts/build_final_reports.py",
+      "sha256": "489b660df6f3b5146523c8e1fd80f4c3a8ab970f4748d6efbf8a46abf20db269"
+    },
+    {
+      "bytes": 30945,
+      "path": "scripts/export_saved_results.py",
+      "sha256": "060c7fd2d23a5c3fdb765916bc13329758e0cfa60a73fb038694f32847d7e82a"
+    },
+    {
+      "bytes": 320,
+      "path": "scripts/plot_portfolios.py",
+      "sha256": "b3869051e62af79955fffc54f8b03b8e946c2607e8ef9746c2c06fc8f7d85b0f"
+    },
+    {
+      "bytes": 5597,
+      "path": "scripts/render_final_reports.cjs",
+      "sha256": "0e9056aa426d1a5cbf1f7601db65d34e405fa1ed17c8de48a0471206225d4d70"
+    },
+    {
+      "bytes": 330,
+      "path": "scripts/report_periods.py",
+      "sha256": "4d914e65923163fad35a2fe6fa33714b7a3f3d3cc9806a6019982cf55fd43a61"
+    },
+    {
+      "bytes": 31224,
+      "path": "scripts/verify_project.py",
+      "sha256": "008391bdc18a66146e438f24caee90aadbeb1a3984212406ea87b5e140469f5a"
+    },
+    {
+      "bytes": 470,
+      "path": "src/trend_portfolio/__init__.py",
+      "sha256": "42ffdfcc0180f28adac46d8d02294937ec97b87058c0d1df5e38876e1bde5d9b"
+    },
+    {
+      "bytes": 14492,
+      "path": "src/trend_portfolio/analytics.py",
+      "sha256": "7e777c6872b4271c4e36484830f3e6d8a77331149e09048fa7d06552f2216fcf"
+    },
+    {
+      "bytes": 11308,
+      "path": "src/trend_portfolio/cli.py",
+      "sha256": "687dcb82b1994b5566ae7ff54ef85756744b4a56963f86c2ada5e26546595815"
+    },
+    {
+      "bytes": 12238,
+      "path": "src/trend_portfolio/periods.py",
+      "sha256": "a73cde491d3b283296f228c7b50c0ebbacf850261f06bec2c39eb347c571153c"
+    },
+    {
+      "bytes": 13010,
+      "path": "src/trend_portfolio/plotting.py",
+      "sha256": "87d8cc8170b7239ccddcb0dcdef30f78ca765e7d3ee20f81f4aa201c6f5aaea3"
+    },
+    {
+      "bytes": 7816,
+      "path": "tests/test_analytics.py",
+      "sha256": "0a48db7f252b43723b3182c003db65b6597ad162f223552470a82c10bc105e8c"
+    },
+    {
+      "bytes": 9561,
+      "path": "tests/test_chart_assets.py",
+      "sha256": "6384be3ff9dee48530fb23f72ba833cc1b5a47b36af61b0e520c6ffc6e3f9bf6"
+    },
+    {
+      "bytes": 4615,
+      "path": "tests/test_cli.py",
+      "sha256": "a13daf4b1bacad7f841b10ceee334829ff501f15646ecb4f9fcf086b850a320d"
+    },
+    {
+      "bytes": 3016,
+      "path": "tests/test_data_documentation.py",
+      "sha256": "9773a124e2af0d845ca1ea3548ec40102038f5d5b2e925ba7afcf78402889f7c"
+    },
+    {
+      "bytes": 22961,
+      "path": "tests/test_exported_results.py",
+      "sha256": "9d0ac501150166f93054b89c0c428d3e641168a6ae40e0f607fdf7ab2968e2bb"
+    },
+    {
+      "bytes": 11925,
+      "path": "tests/test_final_reports.py",
+      "sha256": "98b68329f414e49d2cd480d579838f66b17653bd85ef3251ced8ecbb7f5b68d9"
+    },
+    {
+      "bytes": 9702,
+      "path": "tests/test_periods.py",
+      "sha256": "661c4dc8cf84371bd13c0aa3f92e2613584e3140d68d538162e950972c7b4b97"
+    },
+    {
+      "bytes": 6489,
+      "path": "tests/test_plotting.py",
+      "sha256": "aa8dcfbe3f53502b84848b49d69db07a3556ecebc3b4eaae35c1639798bbb0ec"
+    },
+    {
+      "bytes": 8164,
+      "path": "tests/test_publication.py",
+      "sha256": "5cb9ec1121c7a67757f3b4e7f1a4f0f93d493f35a0271810d7b6526145f0c4bd"
+    }
+  ],
+  "format_reference": {
+    "commit": "5d4fb259b0ca3d448bb6a55d09445063d1f48add",
+    "repository": "https://github.com/Agul-quant/Cryptocurrency-statistical-arbitrage/",
+    "use": "Report presentation only; no crypto results, rules, costs or data adopted"
+  },
+  "reports": [
+    {
+      "directory": "final_reports/01_development",
+      "html": "final_reports/01_development/01_development_and_robustness.html",
+      "manifest": "final_reports/01_development/manifest.json",
+      "pdf": "final_reports/01_development/01_development_and_robustness.pdf",
+      "stage": "development"
+    },
+    {
+      "directory": "final_reports/02_validation",
+      "html": "final_reports/02_validation/02_validation_and_frozen_selection.html",
+      "manifest": "final_reports/02_validation/manifest.json",
+      "pdf": "final_reports/02_validation/02_validation_and_frozen_selection.pdf",
+      "stage": "validation"
+    },
+    {
+      "directory": "final_reports/03_historical_oos",
+      "html": "final_reports/03_historical_oos/03_historical_oos_and_conclusions.html",
+      "manifest": "final_reports/03_historical_oos/manifest.json",
+      "pdf": "final_reports/03_historical_oos/03_historical_oos_and_conclusions.pdf",
+      "stage": "historical_OOS"
+    }
+  ],
+  "schema": "earlier_four_portfolio_publication_v1",
+  "study": {
+    "active_study": "earlier_four_fixed_portfolio_study",
+    "corrected_split_status": "inactive, not used in these reports; private work preserved",
+    "development": {
+      "end": "2020-12-31",
+      "start": "2017-01-01"
+    },
+    "historical_OOS": {
+      "end": "2026-10-15",
+      "start": "2024-01-01"
+    },
+    "maximum_CAGR_standalone_GDX": "excluded from current four; historical five-portfolio results retained unchanged",
+    "portfolio_config": "configs/four_portfolios.json",
+    "portfolio_ids": [
+      "daily_capped_max_sharpe",
+      "initial_capped_max_sharpe",
+      "uncapped_max_sharpe",
+      "equal_initial"
+    ],
+    "project_name": "Trend Following and Mean Reversion ETF Portfolios",
+    "selection_status": "retrospective; selected configurations and weights used examined historical OOS",
+    "strategy_config": "configs/selected_strategies.json",
+    "validation": {
+      "end": "2023-12-31",
+      "start": "2021-01-01"
+    }
+  },
+  "verification": {
+    "PDF_pages_visually_inspected": 31,
+    "full_synthetic_tests_passed": 194,
+    "independent_display_table_cells_verified": 1554,
+    "maximum_CAGR_portfolio_in_current_reports": false,
+    "no_new_accounts_optimization_or_data_refresh": true,
+    "publication_guard_tests_passed": 41,
+    "report_builder_tests_passed": 47
+  }
+}
