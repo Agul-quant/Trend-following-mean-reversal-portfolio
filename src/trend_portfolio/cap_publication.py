@@ -493,6 +493,18 @@ def markdown(report, comparison=None):
             f"![{STAGE_LABELS[stage]} baseline equity and drawdown]({stage}_baseline.png)",
             "",
         ]
+    if equal_rows:
+        out += [
+            "## Daily net return plots — baseline costs",
+            "",
+            "Five separate panels show the four portfolios and QQQ buy-and-hold at 1-bp commission plus 3-bp slippage each way. Values are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; each stage is independent.",
+            "",
+        ]
+        for stage in STAGES:
+            out += [
+                f"![{STAGE_LABELS[stage]}: daily net returns]({stage}_daily_returns_baseline.png)",
+                "",
+            ]
     out += [
         "## Audit and portable verification",
         "",

@@ -8,6 +8,155 @@
     "Monthly corrections",
     "QQQ buy-and-hold"
   ],
+  "daily_return_figures": {
+    "aggregation_smoothing_interpolation_clipping": "none",
+    "baseline_slippage_bps_each_way": 3,
+    "commission_bps_each_way": 1,
+    "figures": {
+      "development": {
+        "baseline_slippage_bps_each_way": 3,
+        "commission_bps_each_way": 1,
+        "curves": [
+          "Initial allocation; no rebalancing",
+          "Equal weight; no rebalancing",
+          "Weekly corrections",
+          "Monthly corrections",
+          "QQQ buy-and-hold"
+        ],
+        "daily_observations": 1007,
+        "filename": "development_daily_returns_baseline.png",
+        "first_valuation_timestamp_utc": "2017-01-03T22:00:00+00:00",
+        "height_px": 1802,
+        "metadata_keys": [
+          "Software",
+          "dpi"
+        ],
+        "presentation_label": "2017\u20132020 development-period portfolio backcast (retrospective)",
+        "public_return_columns": [
+          "initial_allocation_return",
+          "equal_initial_return",
+          "weekly_corrections_return",
+          "monthly_corrections_return",
+          "QQQ_buy_and_hold_return"
+        ],
+        "public_return_source": "reports/reproducibility/development.csv",
+        "public_return_source_sha256": "367d18973a95630b7d033cdb775dae3677199d3cff494905169ef42e9c01dfcd",
+        "return_formula": "r_t = E_t / E_previous - 1; first denominator is fresh stage capital.",
+        "scored_period": [
+          "2017-01-01",
+          "2020-12-31"
+        ],
+        "sha256": "3f6f0e511a1b0db0194c92494ace09905c8b9ee0ff979ccc116094b098660bb3",
+        "stage": "development",
+        "terminal_valuation_timestamp_utc": "2020-12-31T22:00:00+00:00",
+        "unit": "percent net simple total daily return; not cash-excess",
+        "width_px": 2040,
+        "y_limits_percent": [
+          -14,
+          14
+        ]
+      },
+      "historical_OOS": {
+        "baseline_slippage_bps_each_way": 3,
+        "commission_bps_each_way": 1,
+        "curves": [
+          "Initial allocation; no rebalancing",
+          "Equal weight; no rebalancing",
+          "Weekly corrections",
+          "Monthly corrections",
+          "QQQ buy-and-hold"
+        ],
+        "daily_observations": 700,
+        "filename": "historical_OOS_daily_returns_baseline.png",
+        "first_valuation_timestamp_utc": "2024-01-02T22:00:00+00:00",
+        "height_px": 1802,
+        "metadata_keys": [
+          "Software",
+          "dpi"
+        ],
+        "presentation_label": "2024\u20132026-10-15 portfolio-selection sample (IN-SAMPLE)",
+        "public_return_columns": [
+          "initial_allocation_return",
+          "equal_initial_return",
+          "weekly_corrections_return",
+          "monthly_corrections_return",
+          "QQQ_buy_and_hold_return"
+        ],
+        "public_return_source": "reports/reproducibility/historical_OOS.csv",
+        "public_return_source_sha256": "5528cfbde5339f17721337d6d1b0c062ea83ac8012be5847afc9f99646f0e4d7",
+        "return_formula": "r_t = E_t / E_previous - 1; first denominator is fresh stage capital.",
+        "scored_period": [
+          "2024-01-01",
+          "2026-10-15"
+        ],
+        "sha256": "ee77a29f380b83c0c7322942e3547911fddd108caa4775f3e68c0a38280e8813",
+        "stage": "historical_OOS",
+        "terminal_valuation_timestamp_utc": "2026-10-15T21:00:00+00:00",
+        "unit": "percent net simple total daily return; not cash-excess",
+        "width_px": 2040,
+        "y_limits_percent": [
+          -14,
+          14
+        ]
+      },
+      "validation": {
+        "baseline_slippage_bps_each_way": 3,
+        "commission_bps_each_way": 1,
+        "curves": [
+          "Initial allocation; no rebalancing",
+          "Equal weight; no rebalancing",
+          "Weekly corrections",
+          "Monthly corrections",
+          "QQQ buy-and-hold"
+        ],
+        "daily_observations": 753,
+        "filename": "validation_daily_returns_baseline.png",
+        "first_valuation_timestamp_utc": "2021-01-04T22:00:00+00:00",
+        "height_px": 1802,
+        "metadata_keys": [
+          "Software",
+          "dpi"
+        ],
+        "presentation_label": "2021\u20132023 validation-period portfolio backcast (retrospective)",
+        "public_return_columns": [
+          "initial_allocation_return",
+          "equal_initial_return",
+          "weekly_corrections_return",
+          "monthly_corrections_return",
+          "QQQ_buy_and_hold_return"
+        ],
+        "public_return_source": "reports/reproducibility/validation.csv",
+        "public_return_source_sha256": "fbdb2fa45d5f54578aa33c9b4c160037ee1c0552a30d182ab9b36fa0bd4aff1e",
+        "return_formula": "r_t = E_t / E_previous - 1; first denominator is fresh stage capital.",
+        "scored_period": [
+          "2021-01-01",
+          "2023-12-31"
+        ],
+        "sha256": "3a983200c202cca1dbe1faae3c09301806d13ca736d3c9be98c838d1e554e6f0",
+        "stage": "validation",
+        "terminal_valuation_timestamp_utc": "2023-12-29T22:00:00+00:00",
+        "unit": "percent net simple total daily return; not cash-excess",
+        "width_px": 2040,
+        "y_limits_percent": [
+          -14,
+          14
+        ]
+      }
+    },
+    "numeric_daily_series_or_private_locators_embedded": false,
+    "plot_type": "five vertically stacked zero-to-return daily stems; one series per panel",
+    "raw_market_data_read": false,
+    "rendered_from_public_derived_returns": true,
+    "renderer": "scripts/build_daily_return_figures.py",
+    "return_formula": "r_t = E_t / E_previous - 1; first denominator is fresh stage capital.",
+    "saved_financial_results_or_forward_freeze_changed": false,
+    "schema": "public_daily_return_raster_figures_v1",
+    "shared_y_limits_percent": [
+      -14,
+      14
+    ],
+    "unit": "percent net simple total daily return; not cash-excess"
+  },
   "drawdown_includes_initial_capital": true,
   "figures": {
     "development": {

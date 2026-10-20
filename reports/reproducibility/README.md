@@ -71,6 +71,27 @@ reporting tool for the author: explicit private saved-input arguments and NumPy 
 needed to create a new export. It never executes a strategy engine or optimizer.
 Those inputs are intentionally **not** distributed or required by the verifier.
 
+## Daily-return plots
+
+The main [README](../../README.md) and [report index](../etf_portfolios/README.md)
+embed daily net return plots for all three periods at baseline costs. Each
+figure separates the four portfolios and QQQ buy-and-hold into five panels;
+values are net simple total returns in percent, **not cumulative returns,
+drawdown or cash-excess returns**. All daily observations are retained, with
+a common vertical scale and no smoothing or clipping.
+
+Regenerate these static images from the public return files only:
+
+```sh
+python -m pip install -e '.[plots]'
+python scripts/build_daily_return_figures.py
+```
+
+Input hashes, series, observation counts and image hashes are recorded in the
+[figure manifest](../etf_portfolios/figures_manifest.json). The historical
+2024–2026 portfolio-selection sample remains **in-sample**. No financial
+account, optimizer, raw-data download or forward portfolio changes are involved.
+
 ## Exact arithmetic and clocks
 
 For each stage/cost/series separately, start normalized wealth at **1 before the

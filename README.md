@@ -137,6 +137,29 @@ capital and daily valuations, not an intraday maximum.
 
 ![Four portfolio comparisons and QQQ buy-and-hold: retrospective portfolio-selection sample (in-sample) baseline equity and drawdown](reports/etf_portfolios/historical_OOS_baseline.png)
 
+## Daily return plots — baseline costs
+
+These plots show **daily net simple returns (%)**, not equity growth or
+drawdown. Separate panels compare the four portfolios and QQQ buy-and-hold
+on the same vertical scale, using **1-bp commission + 3-bp slippage each way**.
+All daily observations are shown without smoothing, clipping or resampling.
+These are total returns including modeled cash interest, **not cash-excess
+returns**; the first observation starts from each stage's initial capital.
+
+### Development-period backcast: 2017–2020
+
+![Daily net returns: development-period retrospective portfolio backcast](reports/etf_portfolios/development_daily_returns_baseline.png)
+
+### Validation-period backcast: 2021–2023
+
+![Daily net returns: validation-period retrospective portfolio backcast](reports/etf_portfolios/validation_daily_returns_baseline.png)
+
+### Portfolio-selection sample: 2024–October 15, 2026 (in-sample)
+
+![Daily net returns: retrospective portfolio-selection sample, in-sample](reports/etf_portfolios/historical_OOS_daily_returns_baseline.png)
+
+[Download the verified daily returns and reproduce the plots](reports/reproducibility/README.md).
+
 ## Verify and reproduce
 
 ```bash

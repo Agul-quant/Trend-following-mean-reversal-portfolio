@@ -52,6 +52,19 @@ raw ETF inputs and sleeve-level paths remain private.
 
 ![Retrospective portfolio-selection sample (in-sample): portfolio policies and QQQ](historical_OOS_baseline.png)
 
+## Daily net return plots
+
+At the same baseline costs, five separate panels show the four portfolios and
+QQQ buy-and-hold. Values are **daily net simple total returns (%)**, not
+cumulative wealth, drawdown or cash-excess returns. The common vertical scale
+retains all observed moves; there is no smoothing, resampling or clipping.
+
+![Development-period backcast: daily net returns](development_daily_returns_baseline.png)
+
+![Validation-period backcast: daily net returns](validation_daily_returns_baseline.png)
+
+![Portfolio-selection sample, in-sample: daily net returns](historical_OOS_daily_returns_baseline.png)
+
 ## Evidence boundary
 
 This is **retrospective**, previously examined research—not untouched portfolio

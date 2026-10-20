@@ -86,3 +86,4 @@ node_modules/
 !/tests/test_daily_returns.py
 !/tests/test_paper_engine.py
 !/scripts/refresh_publication_manifest.py
+!/scripts/build_daily_return_figures.py

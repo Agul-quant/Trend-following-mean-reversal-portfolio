@@ -82,3 +82,133 @@ def test_comparison_figures_include_all_four_portfolios_and_qqq():
         assert figure["curves"] == names
         assert "equal_initial_return" in figure["public_return_columns"]
     assert "20%" in (ROOT / "README.md").read_text()
+
+
+def daily_plot_module():
+    import importlib.util
+    import pytest
+
+    pytest.importorskip("matplotlib")
+    spec = importlib.util.spec_from_file_location(
+        "daily_return_plot_builder", ROOT / "scripts/build_daily_return_figures.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_daily_return_plots_use_every_unmodified_baseline_return():
+    import csv
+    import hashlib
+    import numpy as np
+
+    module = daily_plot_module()
+    expected_counts = {"development": 1007, "validation": 753, "historical_OOS": 700}
+    loaded = {}
+    for stage, count in expected_counts.items():
+        data = module.load_baseline(ROOT, stage)
+        path = ROOT / f"reports/reproducibility/{stage}.csv"
+        with path.open(newline="") as handle:
+            rows = [
+                r for r in csv.DictReader(handle) if r["slippage_bps_each_way"] == "3"
+            ]
+        assert data["observations"] == len(data["dates"]) == count
+        assert data["source_sha256"] == hashlib.sha256(path.read_bytes()).hexdigest()
+        assert data["date_strings"] == tuple(r["date"] for r in rows)
+        assert len(data["returns"]) == 5
+        for series, values in data["returns"].items():
+            # Raw net simple returns: no cumprod, cash subtraction or initial zero.
+            np.testing.assert_array_equal(
+                values, [float(r[series + "_return"]) for r in rows]
+            )
+        loaded[stage] = data
+    lower, upper = module.common_limits(loaded)
+    for data in loaded.values():
+        for values in data["returns"].values():
+            assert lower <= min(values) * 100 <= max(values) * 100 <= upper
+
+
+def test_daily_return_images_and_links_are_published_for_every_period():
+    import hashlib
+
+    manifest = json.loads(
+        (ROOT / "reports/etf_portfolios/figures_manifest.json").read_text()
+    )
+    daily = manifest["daily_return_figures"]
+    assert daily["commission_bps_each_way"] == 1
+    assert daily["baseline_slippage_bps_each_way"] == 3
+    assert daily["aggregation_smoothing_interpolation_clipping"] == "none"
+    names = manifest["curve_names"]
+    readme = (ROOT / "README.md").read_text()
+    index = (ROOT / "reports/etf_portfolios/README.md").read_text()
+    report = (ROOT / "reports/etf_portfolios/report.md").read_text()
+    for stage, count in (
+        ("development", 1007),
+        ("validation", 753),
+        ("historical_OOS", 700),
+    ):
+        figure = daily["figures"][stage]
+        filename = f"{stage}_daily_returns_baseline.png"
+        assert figure["filename"] == filename
+        assert figure["daily_observations"] == count
+        assert figure["curves"] == names
+        assert figure["y_limits_percent"] == daily["shared_y_limits_percent"]
+        assert (
+            figure["sha256"]
+            == hashlib.sha256(
+                (ROOT / "reports/etf_portfolios" / filename).read_bytes()
+            ).hexdigest()
+        )
+        assert filename in readme and filename in index and filename in report
+
+
+def test_daily_plot_loader_rejects_revised_csv_without_release_receipt(tmp_path):
+    import shutil
+    import pytest
+
+    module = daily_plot_module()
+    folder = tmp_path / "reports/reproducibility"
+    folder.mkdir(parents=True)
+    shutil.copyfile(
+        ROOT / "reports/reproducibility/manifest.json", folder / "manifest.json"
+    )
+    source = ROOT / "reports/reproducibility/development.csv"
+    (folder / "development.csv").write_bytes(source.read_bytes() + b"\n")
+    with pytest.raises(ValueError, match="SHA256|byte count"):
+        module.load_baseline(tmp_path, "development")
+
+
+def test_daily_plot_loader_rejects_nonfinite_values_even_with_refreshed_receipt(
+    tmp_path,
+):
+    import csv
+    import hashlib
+    import pytest
+
+    module = daily_plot_module()
+    folder = tmp_path / "reports/reproducibility"
+    folder.mkdir(parents=True)
+    release = json.loads((ROOT / "reports/reproducibility/manifest.json").read_text())
+    source = ROOT / "reports/reproducibility/development.csv"
+    with source.open(newline="") as handle:
+        reader = csv.DictReader(handle)
+        names = reader.fieldnames
+        rows = list(reader)
+    rows[0]["initial_allocation_return"] = "nan"
+    changed = folder / "development.csv"
+    with changed.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=names)
+        writer.writeheader()
+        writer.writerows(rows)
+    record = next(
+        r
+        for r in release["files"]
+        if r["path"] == "reports/reproducibility/development.csv"
+    )
+    record.update(
+        bytes=changed.stat().st_size,
+        sha256=hashlib.sha256(changed.read_bytes()).hexdigest(),
+    )
+    (folder / "manifest.json").write_text(json.dumps(release))
+    with pytest.raises(ValueError, match="Nonfinite|invalid simple"):
+        module.load_baseline(tmp_path, "development")

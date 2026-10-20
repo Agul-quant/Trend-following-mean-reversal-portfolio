@@ -139,6 +139,16 @@ Each panel restarts at $1,000 and compares four portfolios with cost-matched QQQ
 
 ![Retrospective portfolio-selection sample (in-sample) baseline equity and drawdown](historical_OOS_baseline.png)
 
+## Daily net return plots — baseline costs
+
+Five separate panels show the four portfolios and QQQ buy-and-hold at 1-bp commission plus 3-bp slippage each way. Values are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; each stage is independent.
+
+![Development-period portfolio backcast (retrospective): daily net returns](development_daily_returns_baseline.png)
+
+![Validation-period portfolio backcast (retrospective): daily net returns](validation_daily_returns_baseline.png)
+
+![Retrospective portfolio-selection sample (in-sample): daily net returns](historical_OOS_daily_returns_baseline.png)
+
 ## Audit and portable verification
 
 The completed financial audit checked disabled-rebalancing equivalence to all five original frozen sleeve paths and matched cash across all periods/costs, then independently checked chronological cash, corporate actions, inherited dividend reinvestment, signal fills, cap orders, self-financing transfers, post-cost caps and daily statistics. Those sources and completed results remain unchanged.
