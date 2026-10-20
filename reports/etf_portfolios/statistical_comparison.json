@@ -1,0 +1,2823 @@
+{
+  "equal_initial_definition": "20% to each of the same five fixed strategy sleeves once at stage start; capital then drifts, with no rebalancing.",
+  "inference": {
+    "hac": "Intercept-only Bartlett Newey\u2013West variance with HC1 n/(n-1) scaling; no factor regression",
+    "iid": "mean(excess)/(sample_sd(excess)/sqrt(n)); also cash_excess_sharpe*sqrt(n/252)",
+    "lag_rule": "min(n-1, floor(4*(n/100)^(2/9))); fixed sample-size rule, not fit to t-statistic",
+    "limitations": "No p-value or investment-significance claim. HAC addresses some serial dependence, not ETF/rule/weight selection, multiple testing, structural breaks or small trade counts.",
+    "quantity": "t-statistic for the mean daily net portfolio return minus matched cash return, not regression alpha",
+    "sensitivity_lags": "0,5,10,20 and primary lag, deduplicated and bounded by n-1"
+  },
+  "interpretation": "Descriptive retrospective comparison. All allocations/rules inherit examined history; not untouched portfolio OOS.",
+  "rows": [
+    {
+      "cagr": 0.16236449201906958,
+      "cash_excess_sharpe": 1.3030246262441834,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.6047562485623383,
+      "max_drawdown": -0.08482384974006218,
+      "mean_daily_cash_excess_return": 0.0004964613060771981,
+      "mean_etf_exposure": 0.29567447158661914,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.0309229737703944,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.6047562485623383
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.0039915466411977
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.0309229737703944
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.3462824676434595
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.46709119733717
+        }
+      ],
+      "observations": 1007,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 1,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8241781193359095
+    },
+    {
+      "cagr": 0.16236449201906958,
+      "cash_excess_sharpe": 1.3030246262441834,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.6047562485623383,
+      "max_drawdown": -0.08482384974006218,
+      "mean_daily_cash_excess_return": 0.0004964613060771981,
+      "mean_etf_exposure": 0.29567447158661914,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.0309229737703944,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.6047562485623383
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.0039915466411977
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.0309229737703944
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.3462824676434595
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.46709119733717
+        }
+      ],
+      "observations": 1007,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 1,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8241781193359095
+    },
+    {
+      "cagr": 0.16236449201906958,
+      "cash_excess_sharpe": 1.3030246262441834,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.6047562485623383,
+      "max_drawdown": -0.08482384974006218,
+      "mean_daily_cash_excess_return": 0.0004964613060771981,
+      "mean_etf_exposure": 0.29567447158661914,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.0309229737703944,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.6047562485623383
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.0039915466411977
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.0309229737703944
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.3462824676434595
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.46709119733717
+        }
+      ],
+      "observations": 1007,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 1,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8241781193359095
+    },
+    {
+      "cagr": 0.19681083157133203,
+      "cash_excess_sharpe": 1.511215191580746,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 3.020930789726009,
+      "max_drawdown": -0.07360081834066423,
+      "mean_daily_cash_excess_return": 0.0006149396280681963,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.3525451129102612,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.020930789726009
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.291324072397083
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.3525451129102612
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.5994250519395337
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.8007568219809458
+        }
+      ],
+      "observations": 1007,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 1,
+      "stage": "development",
+      "terminal_normalized_equity": 2.0499407554469715
+    },
+    {
+      "cagr": 0.28403135952688296,
+      "cash_excess_sharpe": 1.0631115317315065,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.1251681276186325,
+      "max_drawdown": -0.28559372098911306,
+      "mean_daily_cash_excess_return": 0.0009812865725848637,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.558253280115989,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.1251681276186325
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.4919391049503434
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.558253280115989
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 2.5775441204199363
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 2.6348563688113504
+        }
+      ],
+      "observations": 1007,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 1,
+      "stage": "development",
+      "terminal_normalized_equity": 2.7151920018329583
+    },
+    {
+      "cagr": 0.0304527320553766,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 1007,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 1,
+      "stage": "development",
+      "terminal_normalized_equity": 1.1273326040209972
+    },
+    {
+      "cagr": 0.16139881245256585,
+      "cash_excess_sharpe": 1.2949583896743433,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.588631779627139,
+      "max_drawdown": -0.08484367721871733,
+      "mean_daily_cash_excess_return": 0.000493143623915375,
+      "mean_etf_exposure": 0.29575483520029094,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.0129100131938187,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.588631779627139
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.9859794354603624
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.0129100131938187
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.32685965949675
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.4483528019171743
+        }
+      ],
+      "observations": 1007,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 3,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8181306277982625
+    },
+    {
+      "cagr": 0.16139881245256585,
+      "cash_excess_sharpe": 1.2949583896743433,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.588631779627139,
+      "max_drawdown": -0.08484367721871733,
+      "mean_daily_cash_excess_return": 0.000493143623915375,
+      "mean_etf_exposure": 0.29575483520029094,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.0129100131938187,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.588631779627139
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.9859794354603624
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.0129100131938187
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.32685965949675
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.4483528019171743
+        }
+      ],
+      "observations": 1007,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 3,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8181306277982625
+    },
+    {
+      "cagr": 0.16139881245256585,
+      "cash_excess_sharpe": 1.2949583896743433,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.588631779627139,
+      "max_drawdown": -0.08484367721871733,
+      "mean_daily_cash_excess_return": 0.000493143623915375,
+      "mean_etf_exposure": 0.29575483520029094,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.0129100131938187,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.588631779627139
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.9859794354603624
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.0129100131938187
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.32685965949675
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.4483528019171743
+        }
+      ],
+      "observations": 1007,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 3,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.8181306277982625
+    },
+    {
+      "cagr": 0.19594162710075486,
+      "cash_excess_sharpe": 1.5041424601213582,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 3.006792345146995,
+      "max_drawdown": -0.07389183619372475,
+      "mean_daily_cash_excess_return": 0.0006120545794034261,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.3362184077871517,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.006792345146995
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.275331450339202
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.3362184077871517
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.581270991917557
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.7812543504971377
+        }
+      ],
+      "observations": 1007,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 3,
+      "stage": "development",
+      "terminal_normalized_equity": 2.043998886569635
+    },
+    {
+      "cagr": 0.28390281423727454,
+      "cash_excess_sharpe": 1.0626817009872407,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.124308892655301,
+      "max_drawdown": -0.28559372098911284,
+      "mean_daily_cash_excess_return": 0.0009808886954187008,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.5572782629975808,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.124308892655301
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.490980279538592
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.5572782629975808
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 2.5765708397188267
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 2.6338987877954874
+        }
+      ],
+      "observations": 1007,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 3,
+      "stage": "development",
+      "terminal_normalized_equity": 2.7141061421715778
+    },
+    {
+      "cagr": 0.0304527320553766,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 1007,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 3,
+      "stage": "development",
+      "terminal_normalized_equity": 1.1273326040209972
+    },
+    {
+      "cagr": 0.15802737964069846,
+      "cash_excess_sharpe": 1.2666373836514309,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.53201787078922,
+      "max_drawdown": -0.08491248837319076,
+      "mean_daily_cash_excess_return": 0.0004815406129155186,
+      "mean_etf_exposure": 0.29603610386091395,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.9495192920200544,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.53201787078922
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.9226164066173093
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.9495192920200544
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.2583915606325924
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.3820726239416854
+        }
+      ],
+      "observations": 1007,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 10,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.797135074197437
+    },
+    {
+      "cagr": 0.15802737964069846,
+      "cash_excess_sharpe": 1.2666373836514309,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.53201787078922,
+      "max_drawdown": -0.08491248837319076,
+      "mean_daily_cash_excess_return": 0.0004815406129155186,
+      "mean_etf_exposure": 0.29603610386091395,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.9495192920200544,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.53201787078922
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.9226164066173093
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.9495192920200544
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.2583915606325924
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.3820726239416854
+        }
+      ],
+      "observations": 1007,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 10,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.797135074197437
+    },
+    {
+      "cagr": 0.15802737964069846,
+      "cash_excess_sharpe": 1.2666373836514309,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.53201787078922,
+      "max_drawdown": -0.08491248837319076,
+      "mean_daily_cash_excess_return": 0.0004815406129155186,
+      "mean_etf_exposure": 0.29603610386091395,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.9495192920200544,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.53201787078922
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.9226164066173093
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.9495192920200544
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.2583915606325924
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.3820726239416854
+        }
+      ],
+      "observations": 1007,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 10,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.797135074197437
+    },
+    {
+      "cagr": 0.1929064427076288,
+      "cash_excess_sharpe": 1.4793630566682485,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.9572581270822327,
+      "max_drawdown": -0.07490883959223338,
+      "mean_daily_cash_excess_return": 0.0006019650673732253,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.2790125881313417,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.9572581270822327
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.219303515648793
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.2790125881313417
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.517680293986775
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.712897223816365
+        }
+      ],
+      "observations": 1007,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 10,
+      "stage": "development",
+      "terminal_normalized_equity": 2.023351628386109
+    },
+    {
+      "cagr": 0.28345300686779235,
+      "cash_excess_sharpe": 1.0611748648695485,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.121296715667955,
+      "max_drawdown": -0.28559372098911295,
+      "mean_daily_cash_excess_return": 0.0009794967512248608,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.553856024646125,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.121296715667955
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.487615571970235
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.553856024646125
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 2.57315436791153
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 2.6305362979779217
+        }
+      ],
+      "observations": 1007,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 10,
+      "stage": "development",
+      "terminal_normalized_equity": 2.7103090503976555
+    },
+    {
+      "cagr": 0.0304527320553766,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 1007,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 10,
+      "stage": "development",
+      "terminal_normalized_equity": 1.1273326040209972
+    },
+    {
+      "cagr": 0.1508468613450829,
+      "cash_excess_sharpe": 1.205499122012749,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.409802015599578,
+      "max_drawdown": -0.08505689175500086,
+      "mean_daily_cash_excess_return": 0.00045672334545630985,
+      "mean_etf_exposure": 0.29663879417567357,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.8119264962637733,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.409802015599578
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.7852120247803005
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.8119264962637733
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.109188279065517
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.2364609019141675
+        }
+      ],
+      "observations": 1007,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 25,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7530247546248852
+    },
+    {
+      "cagr": 0.1508468613450829,
+      "cash_excess_sharpe": 1.205499122012749,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.409802015599578,
+      "max_drawdown": -0.08505689175500086,
+      "mean_daily_cash_excess_return": 0.00045672334545630985,
+      "mean_etf_exposure": 0.29663879417567357,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.8119264962637733,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.409802015599578
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.7852120247803005
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.8119264962637733
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.109188279065517
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.2364609019141675
+        }
+      ],
+      "observations": 1007,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 25,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7530247546248852
+    },
+    {
+      "cagr": 0.1508468613450829,
+      "cash_excess_sharpe": 1.205499122012749,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.409802015599578,
+      "max_drawdown": -0.08505689175500086,
+      "mean_daily_cash_excess_return": 0.00045672334545630985,
+      "mean_etf_exposure": 0.29663879417567357,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.8119264962637733,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.409802015599578
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.7852120247803005
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.8119264962637733
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.109188279065517
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.2364609019141675
+        }
+      ],
+      "observations": 1007,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 25,
+      "stage": "development",
+      "strategy_round_trips": 38,
+      "terminal_normalized_equity": 1.7530247546248852
+    },
+    {
+      "cagr": 0.18643908037184093,
+      "cash_excess_sharpe": 1.4261471264972192,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.8508790734218383,
+      "max_drawdown": -0.077080013808831,
+      "mean_daily_cash_excess_return": 0.0005803872223292438,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.1561525349245163,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.8508790734218383
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.099007816764431
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.1561525349245163
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.3812156824892208
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.5660085216514616
+        }
+      ],
+      "observations": 1007,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 25,
+      "stage": "development",
+      "terminal_normalized_equity": 1.9798783937869355
+    },
+    {
+      "cagr": 0.28248966182967555,
+      "cash_excess_sharpe": 1.057933318923,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": 2.1148168403922196,
+      "max_drawdown": -0.2855937209891126,
+      "mean_daily_cash_excess_return": 0.0009765172842774454,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 2.546472311357668,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 2.1148168403922196
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 2.4803596212113215
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 2.546472311357668
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 2.565781384760602
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 2.6232739208393094
+        }
+      ],
+      "observations": 1007,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 25,
+      "stage": "development",
+      "terminal_normalized_equity": 2.70219028110348
+    },
+    {
+      "cagr": 0.0304527320553766,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 3.9953767123287673,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 1007,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 25,
+      "stage": "development",
+      "terminal_normalized_equity": 1.1273326040209972
+    },
+    {
+      "cagr": 0.07900848264044728,
+      "cash_excess_sharpe": 0.42900884004543083,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.7415893067796916,
+      "max_drawdown": -0.19217306144434199,
+      "mean_daily_cash_excess_return": 0.00021363470831530006,
+      "mean_etf_exposure": 0.31820482330256494,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.7734549157417362,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.7415893067796916
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.7769394090371488
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.7734549157417362
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7669987814265873
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.7936211038751588
+        }
+      ],
+      "observations": 753,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 1,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2547580107844345
+    },
+    {
+      "cagr": 0.08448998544503704,
+      "cash_excess_sharpe": 0.48024112810624264,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.8301499923444264,
+      "max_drawdown": -0.17527587012876666,
+      "mean_daily_cash_excess_return": 0.00023183425515589372,
+      "mean_etf_exposure": 0.3198638154223031,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.8660362384898537,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.8301499923444264
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.8684313214133171
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.8660362384898537
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.8608352756100132
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.898449271572199
+        }
+      ],
+      "observations": 753,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 1,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2738777338103304
+    },
+    {
+      "cagr": 0.08374128233532992,
+      "cash_excess_sharpe": 0.4738068198117355,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.819027577647272,
+      "max_drawdown": -0.17699570640338502,
+      "mean_daily_cash_excess_return": 0.0002292250885892671,
+      "mean_etf_exposure": 0.31958895723008934,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.8541136210216519,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.819027577647272
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.8565458176677694
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.8541136210216519
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.8491027273628483
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.8857453298567227
+        }
+      ],
+      "observations": 753,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 1,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.271254880897107
+    },
+    {
+      "cagr": 0.08660543769782157,
+      "cash_excess_sharpe": 0.5347176420989812,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.9243186818366311,
+      "max_drawdown": -0.1564069801229797,
+      "mean_daily_cash_excess_return": 0.00023454032585838705,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.986827336879701,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.9243186818366311
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.9877453218751979
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.986827336879701
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.977810804073995
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 1.0132420660164503
+        }
+      ],
+      "observations": 753,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 1,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.281308016353999
+    },
+    {
+      "cagr": 0.09857721419897189,
+      "cash_excess_sharpe": 0.38783252765735216,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.6704114891934957,
+      "max_drawdown": -0.3511955075769818,
+      "mean_daily_cash_excess_return": 0.00036588548383153043,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.719991546419472,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.6704114891934957
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.7140668077587081
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.719991546419472
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7259613630675309
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.7280485614365576
+        }
+      ],
+      "observations": 753,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 1,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.3239010632081587
+    },
+    {
+      "cagr": 0.03045271078819457,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 753,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 1,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.0936571393976933
+    },
+    {
+      "cagr": 0.07767825108036258,
+      "cash_excess_sharpe": 0.41913686726745725,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.7245245081890843,
+      "max_drawdown": -0.19242484382205582,
+      "mean_daily_cash_excess_return": 0.00020875515860307325,
+      "mean_etf_exposure": 0.31816998726040807,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.7558065179403851,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.7245245081890843
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.7592281756227174
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.7558065179403851
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7494640245747793
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.7754151669149016
+        }
+      ],
+      "observations": 753,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 3,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2501470583788048
+    },
+    {
+      "cagr": 0.08318757905860245,
+      "cash_excess_sharpe": 0.4704326340796917,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.813194923808001,
+      "max_drawdown": -0.175379600266101,
+      "mean_daily_cash_excess_return": 0.00022706009792401865,
+      "mean_etf_exposure": 0.319846823471105,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.8485372685397603,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.813194923808001
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.8508888601151171
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.8485372685397603
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.8434309531566857
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.8802916868990656
+        }
+      ],
+      "observations": 753,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 3,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2693174619009937
+    },
+    {
+      "cagr": 0.08244208720197131,
+      "cash_excess_sharpe": 0.46404415118039843,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.8021517233831351,
+      "max_drawdown": -0.17709339760626985,
+      "mean_daily_cash_excess_return": 0.00022445799836584576,
+      "mean_etf_exposure": 0.31957104811365605,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.8366927890030955,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.8021517233831351
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.8390794660344484
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.8366927890030955
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.8317747025367954
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.8676780450633397
+        }
+      ],
+      "observations": 753,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 3,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2667120733160142
+    },
+    {
+      "cagr": 0.08528330927909829,
+      "cash_excess_sharpe": 0.5236643398447283,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.905211824375396,
+      "max_drawdown": -0.15672904530592624,
+      "mean_daily_cash_excess_return": 0.0002297193893117717,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.9664381317803705,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.905211824375396
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.9673639302223134
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.9664381317803705
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.9575657938451555
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.9920399127430838
+        }
+      ],
+      "observations": 753,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 3,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.2766608254445035
+    },
+    {
+      "cagr": 0.09842998231459035,
+      "cash_excess_sharpe": 0.3872650760024494,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.669430586144165,
+      "max_drawdown": -0.35119550757698037,
+      "mean_daily_cash_excess_return": 0.0003653605082142831,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.7189500230394127,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.669430586144165
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.7130340142554158
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.7189500230394127
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7249153916252424
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.7270321143867163
+        }
+      ],
+      "observations": 753,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 3,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.3233716086579015
+    },
+    {
+      "cagr": 0.03045271078819457,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 753,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 3,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.0936571393976933
+    },
+    {
+      "cagr": 0.07304116334102284,
+      "cash_excess_sharpe": 0.3846462216662418,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.6649036063002544,
+      "max_drawdown": -0.19330446518224886,
+      "mean_daily_cash_excess_return": 0.0001917007044463278,
+      "mean_etf_exposure": 0.31804767712733323,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.6940909988100674,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.6649036063002544
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.697285908601937
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.6940909988100674
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.688157976332969
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.7117826505063625
+        }
+      ],
+      "observations": 753,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 10,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2341617346327538
+    },
+    {
+      "cagr": 0.07864534700142473,
+      "cash_excess_sharpe": 0.4360946732113064,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.753837954394696,
+      "max_drawdown": -0.1757426347238894,
+      "mean_daily_cash_excess_return": 0.00021036715715092027,
+      "mean_etf_exposure": 0.31978707550961455,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.787215214087146,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.753837954394696
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.7894120750146024
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.787215214087146
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7824441429833165
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.8166602823474725
+        }
+      ],
+      "observations": 753,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 10,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.253498161524299
+    },
+    {
+      "cagr": 0.07791129690842319,
+      "cash_excess_sharpe": 0.42986525151592847,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.743069708882029,
+      "max_drawdown": -0.17743522697801517,
+      "mean_daily_cash_excess_return": 0.00020779074605126223,
+      "mean_etf_exposure": 0.3195081286844993,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.7756447196720967,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.743069708882029
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.7778698290730063
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.7756447196720967
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7710549924892525
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.8043622642640544
+        }
+      ],
+      "observations": 753,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 10,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2509540446023117
+    },
+    {
+      "cagr": 0.08067343251784816,
+      "cash_excess_sharpe": 0.4850260072658918,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.8384211860537518,
+      "max_drawdown": -0.1578549247537796,
+      "mean_daily_cash_excess_return": 0.00021286614854760182,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.8951527810475794,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.8384211860537518
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.8960969224912314
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.8951527810475794
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.8867967149099248
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.9179956443066569
+        }
+      ],
+      "observations": 753,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 10,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.2605451062107165
+    },
+    {
+      "cagr": 0.097914825875819,
+      "cash_excess_sharpe": 0.38527874676553153,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.6659969960072202,
+      "max_drawdown": -0.3511955075769807,
+      "mean_daily_cash_excess_return": 0.000363523913577037,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.715303525163954,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.6659969960072202
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.7094181260130038
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.715303525163954
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7212531660759456
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.7234724494892117
+        }
+      ],
+      "observations": 753,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 10,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.3215201838477197
+    },
+    {
+      "cagr": 0.03045271078819457,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 753,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 10,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.0936571393976933
+    },
+    {
+      "cagr": 0.06320177340819952,
+      "cash_excess_sharpe": 0.31108014907801823,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.537736499982753,
+      "max_drawdown": -0.1951808984565856,
+      "mean_daily_cash_excess_return": 0.0001552806760428924,
+      "mean_etf_exposure": 0.31778358069971097,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.5621677712051898,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.537736499982753
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.5648427228422959
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.5621677712051898
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.5571736725652995
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.5759374815785906
+        }
+      ],
+      "observations": 753,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 25,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.200694015913884
+    },
+    {
+      "cagr": 0.06899615932741344,
+      "cash_excess_sharpe": 0.3624926396280141,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.6266086855133619,
+      "max_drawdown": -0.17652046538866117,
+      "mean_daily_cash_excess_return": 0.00017468336412547857,
+      "mean_etf_exposure": 0.31965759299107643,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.6554526450504062,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.6266086855133619
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.657305780527848
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.6554526450504062
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.6514206211757744
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.679932367263335
+        }
+      ],
+      "observations": 753,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 25,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2203289741613677
+    },
+    {
+      "cagr": 0.06828765895891117,
+      "cash_excess_sharpe": 0.35659683570160294,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.616417135273434,
+      "max_drawdown": -0.17816726029869578,
+      "mean_daily_cash_excess_return": 0.00017216695061383092,
+      "mean_etf_exposure": 0.31937205270571833,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.6444716529585071,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.616417135273434
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.6463397635836577
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.6444716529585071
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.6406040374510118
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.6683084237521658
+        }
+      ],
+      "observations": 753,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 25,
+      "stage": "validation",
+      "strategy_round_trips": 46,
+      "terminal_normalized_equity": 1.2179167656035386
+    },
+    {
+      "cagr": 0.07088641481178241,
+      "cash_excess_sharpe": 0.4025074756592331,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.69577876254523,
+      "max_drawdown": -0.16026044245584026,
+      "mean_daily_cash_excess_return": 0.000176856749503781,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.7428611374145442,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.69577876254523
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.743797730761955
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.7428611374145442
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7356740287170375
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.7602526219469387
+        }
+      ],
+      "observations": 753,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 25,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.226780205867419
+    },
+    {
+      "cagr": 0.09681172957133438,
+      "cash_excess_sharpe": 0.38102116140741094,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": 0.6586372880488721,
+      "max_drawdown": -0.3511955075769808,
+      "mean_daily_cash_excess_return": 0.0003595926387162259,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 0.7074837851131818,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 0.6586372880488721
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 0.7016642587733303
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 0.7074837851131818
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 0.7133988941501188
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 0.7158338758604536
+        }
+      ],
+      "observations": 753,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 25,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.31756155134835
+    },
+    {
+      "cagr": 0.03045271078819457,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.984417808219178,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 753,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 25,
+      "stage": "validation",
+      "terminal_normalized_equity": 1.0936571393976933
+    },
+    {
+      "cagr": 0.24708567257349706,
+      "cash_excess_sharpe": 2.4986949622285506,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.164491603714251,
+      "max_drawdown": -0.04664022278406388,
+      "mean_daily_cash_excess_return": 0.0007720510576848476,
+      "mean_etf_exposure": 0.252110863923164,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.225390877708,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.164491603714251
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.213932372926483
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.225390877708
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.211266471161072
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 4.01778384735975
+        }
+      ],
+      "observations": 700,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 1,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.850406389763223
+    },
+    {
+      "cagr": 0.2473847475832247,
+      "cash_excess_sharpe": 2.5257907655301093,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.209651275883515,
+      "max_drawdown": -0.04664022278406388,
+      "mean_daily_cash_excess_return": 0.0007727747850507782,
+      "mean_etf_exposure": 0.25357235759372143,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.251484439221574,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.209651275883515
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.242244413460266
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.251484439221574
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.237306686793793
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 4.0385453417711705
+        }
+      ],
+      "observations": 700,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 1,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.851643441153329
+    },
+    {
+      "cagr": 0.24790333597392858,
+      "cash_excess_sharpe": 2.5273150012034016,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.212191668672336,
+      "max_drawdown": -0.04664022278406388,
+      "mean_daily_cash_excess_return": 0.0007744675098132463,
+      "mean_etf_exposure": 0.2532374032471236,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.2564762955884765,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.212191668672336
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.246963791391295
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.2564762955884765
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.242034672730913
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 4.045360767048493
+        }
+      ],
+      "observations": 700,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 1,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.853789713187462
+    },
+    {
+      "cagr": 0.23517377001057616,
+      "cash_excess_sharpe": 2.2243749500736145,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 3.7072915834560236,
+      "max_drawdown": -0.05037893005584759,
+      "mean_daily_cash_excess_return": 0.0007355973042783587,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.85840945094167,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.7072915834560236
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.826770414812457
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.85840945094167
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.9088786578986983
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.8269675625135005
+        }
+      ],
+      "observations": 700,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 1,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.8015656123772457
+    },
+    {
+      "cagr": 0.23946591277164217,
+      "cash_excess_sharpe": 0.9966565505749924,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 1.6610942509583206,
+      "max_drawdown": -0.22770144166602646,
+      "mean_daily_cash_excess_return": 0.0008205804858357888,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 1.8499083515784311,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 1.6610942509583206
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 1.827644751019453
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 1.8499083515784311
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 1.9056796090815251
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 1.9770635995907975
+        }
+      ],
+      "observations": 700,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 1,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.819067605075386
+    },
+    {
+      "cagr": 0.030452719956333828,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 700,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 1,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.0872008819805894
+    },
+    {
+      "cagr": 0.24568449659339933,
+      "cash_excess_sharpe": 2.4872171831212806,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.1453619718688,
+      "max_drawdown": -0.04670120550294132,
+      "mean_daily_cash_excess_return": 0.0007675415482308974,
+      "mean_etf_exposure": 0.25214112064166827,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.2094434701670815,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.1453619718688
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.197561138765751
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.2094434701670815
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.196677320096242
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 4.005163455503179
+        }
+      ],
+      "observations": 700,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 3,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8446178215941729
+    },
+    {
+      "cagr": 0.24600312955861714,
+      "cash_excess_sharpe": 2.5138650201977337,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.189775033662889,
+      "max_drawdown": -0.04670120550294132,
+      "mean_daily_cash_excess_return": 0.0007683346518232573,
+      "mean_etf_exposure": 0.25358214160896897,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.235021086734781,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.189775033662889
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.225295130499256
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.235021086734781
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.222361504697646
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 4.025893590172738
+        }
+      ],
+      "observations": 700,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 3,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8459331434275403
+    },
+    {
+      "cagr": 0.24652955882726138,
+      "cash_excess_sharpe": 2.5155059717462653,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.1925099529104415,
+      "max_drawdown": -0.04670120550294132,
+      "mean_daily_cash_excess_return": 0.0007700541504527604,
+      "mean_etf_exposure": 0.25325066121487816,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.240137125330284,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.1925099529104415
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.230149059744462
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.240137125330284
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.227176727890295
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 4.03271787202392
+        }
+      ],
+      "observations": 700,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 3,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8481075688998416
+    },
+    {
+      "cagr": 0.23390807337079483,
+      "cash_excess_sharpe": 2.213019969026138,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 3.688366615043563,
+      "max_drawdown": -0.05042710403967576,
+      "mean_daily_cash_excess_return": 0.0007314993674994098,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.8402576656621066,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.688366615043563
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.808418467713246
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.8402576656621066
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.8914659390785107
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.8112711783843696
+        }
+      ],
+      "observations": 700,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 3,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.7964252035272947
+    },
+    {
+      "cagr": 0.23928803580923613,
+      "cash_excess_sharpe": 0.9959467485475899,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 1.6599112475793165,
+      "max_drawdown": -0.22770144166602646,
+      "mean_daily_cash_excess_return": 0.0008200118633705699,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 1.8484564527919547,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 1.6599112475793165
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 1.8262175439174513
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 1.8484564527919547
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 1.9041851240033008
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 1.975596409953239
+        }
+      ],
+      "observations": 700,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 3,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.8183401235078422
+    },
+    {
+      "cagr": 0.030452719956333828,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 700,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 3,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.0872008819805894
+    },
+    {
+      "cagr": 0.24080033011707797,
+      "cash_excess_sharpe": 2.4466791217828767,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.077798536304794,
+      "max_drawdown": -0.04691472412373199,
+      "mean_daily_cash_excess_return": 0.0007517851627086452,
+      "mean_etf_exposure": 0.25224692753241895,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.152877483046344,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.077798536304794
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.139518100304715
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.152877483046344
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.144848513527642
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.9602668257365665
+        }
+      ],
+      "observations": 700,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 10,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.824531059883747
+    },
+    {
+      "cagr": 0.2411853531034108,
+      "cash_excess_sharpe": 2.471787093553781,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.119645155922968,
+      "max_drawdown": -0.04691472412373199,
+      "mean_daily_cash_excess_return": 0.0007528152908656652,
+      "mean_etf_exposure": 0.25361657082518646,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.17670304723744,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.119645155922968
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.165284202103232
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.17670304723744
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.169328555041265
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.9808984507088296
+        }
+      ],
+      "observations": 700,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 10,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8261093983953962
+    },
+    {
+      "cagr": 0.24173977268462224,
+      "cash_excess_sharpe": 2.4738473644962222,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 4.123078940827037,
+      "max_drawdown": -0.04691472412373199,
+      "mean_daily_cash_excess_return": 0.000754630681877612,
+      "mean_etf_exposure": 0.2532972200808432,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.182281909283301,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 4.123078940827037
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.170637282196626
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.182281909283301
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.174477236099817
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.9877779821222092
+        }
+      ],
+      "observations": 700,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 10,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.8283836879737159
+    },
+    {
+      "cagr": 0.2294956645615706,
+      "cash_excess_sharpe": 2.1731278361184367,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 3.6218797268640603,
+      "max_drawdown": -0.05059572726205508,
+      "mean_daily_cash_excess_return": 0.0007171822972349712,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.7763100059394628,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.6218797268640603
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.743797705881962
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.7763100059394628
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.8300228916208727
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.755764041890662
+        }
+      ],
+      "observations": 700,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 10,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.778578531937573
+    },
+    {
+      "cagr": 0.23866566718290783,
+      "cash_excess_sharpe": 0.9934586191916032,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 1.6557643653193383,
+      "max_drawdown": -0.22770144166602602,
+      "mean_daily_cash_excess_return": 0.0008180225761972729,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 1.843367315063776,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 1.6557643653193383
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 1.8212151102180947
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 1.843367315063776
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 1.8989458951221656
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 1.970449953106578
+        }
+      ],
+      "observations": 700,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 10,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.8157962272991108
+    },
+    {
+      "cagr": 0.030452719956333828,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 700,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 10,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.0872008819805894
+    },
+    {
+      "cagr": 0.23043794486735786,
+      "cash_excess_sharpe": 2.357932345034885,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 3.9298872417248085,
+      "max_drawdown": -0.047372676309405226,
+      "mean_daily_cash_excess_return": 0.0007181622694053363,
+      "mean_etf_exposure": 0.25247317888331405,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.027711501245305,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.9298872417248085
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.011232806098191
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.027711501245305
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.029713969279438
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.86017579032332
+        }
+      ],
+      "observations": 700,
+      "series": "initial_allocation",
+      "slippage_bps_each_way": 25,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.7823801391756913
+    },
+    {
+      "cagr": 0.23095450488383454,
+      "cash_excess_sharpe": 2.379890252440526,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 3.966483754067542,
+      "max_drawdown": -0.047372676309405226,
+      "mean_daily_cash_excess_return": 0.0007196698261800434,
+      "mean_etf_exposure": 0.2536913189410047,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.048066281037394,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.966483754067542
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.0330744670663545
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.048066281037394
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.051833701106927
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.880651015538094
+        }
+      ],
+      "observations": 700,
+      "series": "weekly_corrections",
+      "slippage_bps_each_way": 25,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.7844663972600079
+    },
+    {
+      "cagr": 0.2315090230741177,
+      "cash_excess_sharpe": 2.3831233455953287,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 3.9718722426588817,
+      "max_drawdown": -0.047372676309405226,
+      "mean_daily_cash_excess_return": 0.0007214905951509391,
+      "mean_etf_exposure": 0.2534011860180767,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 4.054887671526773,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.9718722426588817
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 4.039826797998728
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 4.054887671526773
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 4.0577036076110975
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.8873326706411504
+        }
+      ],
+      "observations": 700,
+      "series": "monthly_corrections",
+      "slippage_bps_each_way": 25,
+      "stage": "historical_OOS",
+      "strategy_round_trips": 34,
+      "terminal_normalized_equity": 1.7867077008773984
+    },
+    {
+      "cagr": 0.220131599355596,
+      "cash_excess_sharpe": 2.086906576336293,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 3.4781776272271547,
+      "max_drawdown": -0.050957135714455815,
+      "mean_daily_cash_excess_return": 0.0006866373139583541,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 3.63716803936968,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 3.4781776272271547
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 3.6033627414606455
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 3.63716803936968
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 3.6958037657427107
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 3.6338615420196234
+        }
+      ],
+      "observations": 700,
+      "series": "equal_initial",
+      "slippage_bps_each_way": 25,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.7410817000357057
+    },
+    {
+      "cagr": 0.23733306868669246,
+      "cash_excess_sharpe": 0.9881071845061573,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": 1.646845307510262,
+      "max_drawdown": -0.22770144166602635,
+      "mean_daily_cash_excess_return": 0.0008137644763158631,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": 1.8324235847257384,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": 1.646845307510262
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": 1.810458619044804
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": 1.8324235847257384
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": 1.8876751802223612
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": 1.959363600550904
+        }
+      ],
+      "observations": 700,
+      "series": "QQQ_buy_and_hold",
+      "slippage_bps_each_way": 25,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.8103569838842304
+    },
+    {
+      "cagr": 0.030452719956333828,
+      "cash_excess_sharpe": null,
+      "commission_bps_each_way": 1,
+      "elapsed_act365_years": 2.787043378995434,
+      "iid_mean_excess_t": null,
+      "max_drawdown": 0.0,
+      "mean_daily_cash_excess_return": 0.0,
+      "newey_west_lags": 6,
+      "newey_west_mean_excess_t": null,
+      "newey_west_sensitivity": [
+        {
+          "lags": 0,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 5,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 6,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 10,
+          "mean_excess_t": null
+        },
+        {
+          "lags": 20,
+          "mean_excess_t": null
+        }
+      ],
+      "observations": 700,
+      "series": "matched_cash",
+      "slippage_bps_each_way": 25,
+      "stage": "historical_OOS",
+      "terminal_normalized_equity": 1.0872008819805894
+    }
+  ],
+  "schema": "aggregate_return_statistical_comparison_v1"
+}

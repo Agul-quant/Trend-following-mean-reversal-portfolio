@@ -1,5 +1,6 @@
 {
-  "aggregate_only": true,
+  "aggregate_only": false,
+  "derived_returns_manifest": "reports/reproducibility/manifest.json",
   "files": [
     {
       "bytes": 1676,
@@ -12,24 +13,34 @@
       "sha256": "89cbb81f7a13c4a97467798bf885fb0156d43f37a24e0a5e07f55dab03ed7dee"
     },
     {
+      "bytes": 7484,
+      "path": "configs/paper_portfolio_freeze.json",
+      "sha256": "03576187f70da001534261d2c6ee6a0bc37b9a121a9503bc0adeb082e9ee7af3"
+    },
+    {
       "bytes": 2803,
       "path": "configs/selected_etf_strategies.json",
       "sha256": "574408940d0937f7a7fe74fefa6e9a82baac14339edaa3fd039cc49a453b4fbe"
     },
     {
-      "bytes": 6667,
+      "bytes": 7300,
       "path": "docs/etf_data_sources.md",
-      "sha256": "7270fea48553246ae1f4c3703aa67211dce944ea516ab9ea2a32d9b0bf45ebb6"
+      "sha256": "93e639c1d99ca6a0200ba11ea1964881f18103974579c513b48e8ebae1a5b83f"
     },
     {
-      "bytes": 10436,
+      "bytes": 12583,
       "path": "docs/etf_methods.md",
-      "sha256": "56042010cee1ef51db83128ae1ef39e1641d6197ef72105840ea58e6dd15b833"
+      "sha256": "a2f5c0d7d91d1cedcda1ee16eb25ba4dbee6ba641b80bec14d222a033025f628"
     },
     {
-      "bytes": 3375,
+      "bytes": 8332,
+      "path": "docs/paper_tracking.md",
+      "sha256": "dbd8e5ef7c04ce2c7738e574aae93254bbe927bc3c168cc7a78d7b2fa727794b"
+    },
+    {
+      "bytes": 4135,
       "path": "reports/etf_portfolios/README.md",
-      "sha256": "d6839a5ae9fd7df8fe10c4005567c2bbf141a3cd4a604ca65b144da64e08cb41"
+      "sha256": "8ab1ee24041bf13f1a457cd9664358f452906f484bf162a5e68b79a2f0a9baf2"
     },
     {
       "bytes": 1716,
@@ -37,19 +48,19 @@
       "sha256": "fc21791f62fd61689068cd3d382a55643be43c286885ea333251742b7e9795bd"
     },
     {
-      "bytes": 333921,
+      "bytes": 283603,
       "path": "reports/etf_portfolios/development_baseline.png",
-      "sha256": "e8733ccb83152f6e3a6c9215c35e80c38931a6d41204bba7e52ca5c6d2dadc42"
+      "sha256": "7655b275132f3cb92696450cf3455294d84889daf78681e6e9eef5e446c2d785"
     },
     {
-      "bytes": 3324,
+      "bytes": 4198,
       "path": "reports/etf_portfolios/figures_manifest.json",
-      "sha256": "06434361dc6b0bdf072e3d479f5d196907ee10bee87a597423cbfbbfc8fa4c49"
+      "sha256": "aa15880e53c6b9127f1834e9c2ce90fc40fa0550625b40aa79eba10db55b62a0"
     },
     {
-      "bytes": 323693,
+      "bytes": 286771,
       "path": "reports/etf_portfolios/historical_OOS_baseline.png",
-      "sha256": "3c953835c5c57beacf6bdda80132fa26db998738428b11dc52814ab29db34283"
+      "sha256": "7a4bf47ecb779f6ef974dfd599e0dbcc6b2924dabdc1b7f5c729389ab8a04b57"
     },
     {
       "bytes": 12228,
@@ -62,9 +73,9 @@
       "sha256": "d5ef72a38826a275cbf5df69b9f5a176e582c4fa8daff4cfc61f9dd3a129b858"
     },
     {
-      "bytes": 11390,
+      "bytes": 12251,
       "path": "reports/etf_portfolios/report.md",
-      "sha256": "d57c3053516cee4f2d6963432eadc21e78c182628f137c245be116822d7f957d"
+      "sha256": "39d072ebe3f122059f109239fc2b2f1f3ae70248d65250865b728d3454bc58d9"
     },
     {
       "bytes": 1394,
@@ -72,9 +83,59 @@
       "sha256": "73e3457992b0befa0a4ff2455c5fb5a489c4dde9cdfef63414c815c01ba4944a"
     },
     {
-      "bytes": 403818,
+      "bytes": 13323,
+      "path": "reports/etf_portfolios/statistical_comparison.csv",
+      "sha256": "5f36680729e0360c50d2d3e731b8d1f74f09a174e6051a3056e39e63f11d9b6b"
+    },
+    {
+      "bytes": 80061,
+      "path": "reports/etf_portfolios/statistical_comparison.json",
+      "sha256": "6563091cf53b17a8b9b19e2790c2849e32f3bb6a324f9097805616a35be32881"
+    },
+    {
+      "bytes": 360118,
       "path": "reports/etf_portfolios/validation_baseline.png",
-      "sha256": "f26129311d9384ab74780147c65a3172a987718bd002262c32a85779488b3f1d"
+      "sha256": "cc9d7371192359c1c3b9f06751a425e20f3cd1b4ffa07dfd6ff25df6f2cced90"
+    },
+    {
+      "bytes": 2895,
+      "path": "reports/paper_tracking/README.md",
+      "sha256": "0021489dd027093e89d8a9e66d0beb596eda5ee7e599ae2a39c47f3e7ea39ca5"
+    },
+    {
+      "bytes": 74,
+      "path": "reports/paper_tracking/daily_returns.csv",
+      "sha256": "f8a8f9d29c9a220e50f63e985979555e86b01cc947dce803cd404c2a3f0832f9"
+    },
+    {
+      "bytes": 445,
+      "path": "reports/paper_tracking/status.json",
+      "sha256": "5f918d17d3595517a51a29228b634aae458f9f81f6126ea1e2eee013448b2d2d"
+    },
+    {
+      "bytes": 8217,
+      "path": "reports/reproducibility/README.md",
+      "sha256": "9ef857ceeaa9baa59426dcbfe7b821f51b5aac76b57f4b5876c5b133d39f270b"
+    },
+    {
+      "bytes": 759194,
+      "path": "reports/reproducibility/development.csv",
+      "sha256": "367d18973a95630b7d033cdb775dae3677199d3cff494905169ef42e9c01dfcd"
+    },
+    {
+      "bytes": 536822,
+      "path": "reports/reproducibility/historical_OOS.csv",
+      "sha256": "5528cfbde5339f17721337d6d1b0c062ea83ac8012be5847afc9f99646f0e4d7"
+    },
+    {
+      "bytes": 4584,
+      "path": "reports/reproducibility/manifest.json",
+      "sha256": "710e7a8ba4fe634bd9129502d8daa0a5ebd5c566f799bb61514f623925b1ce4e"
+    },
+    {
+      "bytes": 563114,
+      "path": "reports/reproducibility/validation.csv",
+      "sha256": "fbdb2fa45d5f54578aa33c9b4c160037ee1c0552a30d182ab9b36fa0bd4aff1e"
     }
   ],
   "financial_provenance": {
@@ -88,11 +149,14 @@
     "unchanged_starting_weights": true,
     "unchanged_strategy_ids_and_definitions": true
   },
+  "forward_freeze": "configs/paper_portfolio_freeze.json",
   "frequencies": [
     "none",
     "weekly",
     "monthly"
   ],
+  "public_data_scope": "aggregate_metrics_and_derived_portfolio_returns",
+  "raw_etf_data_published": false,
   "report_directory": "reports/etf_portfolios",
   "schema": "etf_portfolio_artifacts_v1",
   "symbols": [

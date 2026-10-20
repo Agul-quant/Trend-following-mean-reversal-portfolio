@@ -40,7 +40,7 @@ from the same provider are **not independent-vendor verification**.
 | Feature initialization | From 2015-01-01, subject to actual inception and verified availability | At least 295 completed pre-development daily observations; no fabricated pre-inception prices |
 | Development | 2017-01-01–2020-12-31 | Fresh, flat account; feature history only carries forward |
 | Validation | 2021-01-01–2023-12-31 | Independently restarted account and unchanged released definitions |
-| Historical OOS | 2024-01-01–2026-10-15 | Independently restarted account; fixed complete-session endpoint |
+| Retrospective portfolio-selection sample (**in-sample**; internal historical_OOS) | 2024-01-01–2026-10-15 | Independently restarted account; fixed complete-session endpoint |
 
 Each underlying ETF/configuration study begins with $1,000. Each reported
 portfolio also begins independently with **$1,000 total**, divided among its
@@ -82,11 +82,20 @@ still requires its own strict session coverage and price-basis evidence.
 
 ## Public access and reproducibility boundary
 
-**No raw market data or complete numerical account paths are distributed.**
-Private captures, event primitives, source maps, authorizations, credentials,
-freezes and full daily arrays remain outside Git. Public CSV/JSON tables contain
-aggregate outcomes. Published PNG curves visualize saved paths without embedding
-the daily numerical series or private input locations.
+**Raw ETF market data and sleeve-level account paths remain private.**
+The user authorized a narrow release of **derived aggregate daily simple
+returns**: the three historical portfolio policies, equal-initial comparator,
+matched QQQ buy-and-hold and modeled cash, across the three periods/four costs.
+See the [return dataset and schema](../reports/reproducibility/README.md) and
+[portable verifier](../scripts/verify_daily_returns.py). Dates and exact
+initial/terminal clocks allow public recomputation of cash-excess Sharpe, CAGR,
+drawdown and mean-excess t-statistics. The CSVs contain no raw prices, volume,
+per-ETF holdings, fills, credentials or private filesystem locations.
+
+Private captures, event primitives, source maps, historical authorizations and
+full sleeve records stay outside Git. The public forward freeze is a separately
+authorized model protocol/hash seal, not a redistribution of historical private
+input freezes.
 
 Public source and synthetic tests allow inspection of accounting and scope
 checks, but the public repository alone is **not full end-to-end financial

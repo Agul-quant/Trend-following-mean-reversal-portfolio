@@ -1,0 +1,167 @@
+{
+  "payload": {
+    "accounts": "Four independent total-$1000 paper accounts; flat sleeves, empty pending orders and confirmation streaks at inception.",
+    "baseline_slippage_bps": 3,
+    "benchmark": "QQQ buy-and-hold: costed first future-open purchase, ongoing marked holdings and distributions; no monitoring-date sale. Same-clock modeled cash control.",
+    "cash_compounding": "Once per unique native open/close/17NY event timestamp, including overnight/weekend elapsed time.",
+    "cash_day_count": "ACT/365",
+    "cash_nominal_rate": 0.03,
+    "change_policy": "No refit, ETF/rule/weight change or future winner switch. A changed model requires a separate prospective dated experiment, never replacement of this record.",
+    "commission_bps_each_way": 1,
+    "confirmation": "Seven consecutive native half-hour checks / three trading hours; next eligible observed bar-open fill. Preview daily features causally; finalize daily recursion once at17NY.",
+    "corporate_actions": "Native raw prices, split and distributions; same fee-free dividend-reinvestment proxy, no taxes or extra market impact.",
+    "data_wait_policy": "No collector or QA-packet producer configured. Missing/incomplete inputs block observations, never fabricate flat returns or automatically change inception.",
+    "exchange_calendar": "XNYS",
+    "feature_history": "Complete verified2015-01-02 through pre-inception daily seed; features only, never pre-start holdings/orders/streaks.",
+    "frozen_at_utc": "2026-10-20T17:49:17+00:00",
+    "historical_interpretation": "2024-01-01\u20132026-10-15 was retrospective portfolio-selection in-sample, excluded from forward record. October16\u201320 are not backdated forward days.",
+    "initial_cash": 1000,
+    "initial_weights": {
+      "FDN": 0.0992289629872361,
+      "FXI": 0.2799197437112525,
+      "GDX": 0.2905130826010515,
+      "QQQ": 0.06304492619579012,
+      "UNG": 0.26729328450466966
+    },
+    "input_schema": "forward_paper_native_packet_v1",
+    "monitoring": "Weekdays18:15 America/New_York; consumes local sealed packets; no broker connection or automatic commits/pushes.",
+    "observations": "Completed-day modeled paper accounting; actual processing/capture times preserved. Late capture is delayed reconstruction, not contemporaneously logged execution.",
+    "portfolio_transfers": "None. Initial capital allocation only; sleeve shares drift freely after inception, with no ongoing one-third cap.",
+    "primary_choice": "Explicit human choice: Initial allocation, no rebalancing",
+    "primary_frequency": "none",
+    "protocol": "docs/paper_tracking.md",
+    "publication": "Aggregate net daily portfolio/QQQ/cash returns and non-sensitive status only. Raw prices, per-sleeve positions, fills, private receipts and credentials remain private.",
+    "revision_policy": "Accepted seed/session and aggregate-return prefixes immutable; quarantine discrepancies and preserve attempts. No silent history repair.",
+    "runtime_versions": {
+      "exchange_calendars": "4.13.2",
+      "numpy": "2.4.6",
+      "pandas": "2.2.3",
+      "python": "3.12.11",
+      "scipy": "1.15.3"
+    },
+    "slippage_bps_each_way": [
+      1,
+      3,
+      10,
+      25
+    ],
+    "source_hashes": {
+      "configs/final_cap_rebalancing.json": "89cbb81f7a13c4a97467798bf885fb0156d43f37a24e0a5e07f55dab03ed7dee",
+      "configs/selected_etf_strategies.json": "574408940d0937f7a7fe74fefa6e9a82baac14339edaa3fd039cc49a453b4fbe",
+      "scripts/run_paper_tracker.py": "ff37cca3063839d94ade4fca48f7701181d59f6ec2d02ce88860c2d2ed3fd70e",
+      "src/trend_portfolio/__init__.py": "42ffdfcc0180f28adac46d8d02294937ec97b87058c0d1df5e38876e1bde5d9b",
+      "src/trend_portfolio/analytics.py": "7e777c6872b4271c4e36484830f3e6d8a77331149e09048fa7d06552f2216fcf",
+      "src/trend_portfolio/paper_engine.py": "b560fcc3ff462dd326518fba06caae224373fd683fd3b6de1013609074f3c18d"
+    },
+    "source_policy": "Certified native raw30-minute regular-session inputs only; complete XNYS grid, actions and passing strict reconciliation receipts. No downloads/credentials or external-queue changes by tracker.",
+    "start_open_utc": "2026-10-21T13:30:00+00:00",
+    "start_session": "2026-10-21",
+    "strategies": [
+      {
+        "candidate_id": "mr_30m__zscore_20__entry_m2__exit_0__shared_hours_3",
+        "definition": {
+          "confirmation_hours": 3.0,
+          "entry_threshold": -2.0,
+          "exit_threshold": 0.0,
+          "rule": {
+            "family": "ZSCORE",
+            "period": 20
+          }
+        },
+        "label": "Mean reversion: Z-score(20), enter \u2264 -2, exit \u2265 0",
+        "style": "mean_reversion",
+        "symbol": "GDX"
+      },
+      {
+        "candidate_id": "mr_30m__zscore_50__entry_m2__exit_0p5__shared_hours_3",
+        "definition": {
+          "confirmation_hours": 3.0,
+          "entry_threshold": -2.0,
+          "exit_threshold": 0.5,
+          "rule": {
+            "family": "ZSCORE",
+            "period": 50
+          }
+        },
+        "label": "Mean reversion: Z-score(50), enter \u2264 -2, exit \u2265 0.5",
+        "style": "mean_reversion",
+        "symbol": "FXI"
+      },
+      {
+        "candidate_id": "v5_30m__entry_ema_50__exit_ema_200__entry_hours_3__exit_hours_3",
+        "definition": {
+          "entry_confirmation_hours": 3.0,
+          "entry_rule": {
+            "family": "EMA",
+            "fast": null,
+            "period": 50,
+            "signal": null,
+            "slow": null
+          },
+          "exit_confirmation_hours": 3.0,
+          "exit_rule": {
+            "family": "EMA",
+            "fast": null,
+            "period": 200,
+            "signal": null,
+            "slow": null
+          }
+        },
+        "label": "Trend: EMA50 entry / EMA200 exit",
+        "style": "trend",
+        "symbol": "QQQ"
+      },
+      {
+        "candidate_id": "mr_30m__rsi_14__entry_30__exit_50__shared_hours_3",
+        "definition": {
+          "confirmation_hours": 3.0,
+          "entry_threshold": 30.0,
+          "exit_threshold": 50.0,
+          "rule": {
+            "family": "RSI",
+            "period": 14
+          }
+        },
+        "label": "Mean reversion: Wilder RSI(14), enter \u2264 30, exit \u2265 50",
+        "style": "mean_reversion",
+        "symbol": "UNG"
+      },
+      {
+        "candidate_id": "v5_30m__entry_ema_50__exit_ema_100__entry_hours_3__exit_hours_3",
+        "definition": {
+          "entry_confirmation_hours": 3.0,
+          "entry_rule": {
+            "family": "EMA",
+            "fast": null,
+            "period": 50,
+            "signal": null,
+            "slow": null
+          },
+          "exit_confirmation_hours": 3.0,
+          "exit_rule": {
+            "family": "EMA",
+            "fast": null,
+            "period": 100,
+            "signal": null,
+            "slow": null
+          }
+        },
+        "label": "Trend: EMA50 entry / EMA100 exit",
+        "style": "trend",
+        "symbol": "FDN"
+      }
+    ],
+    "symbols": [
+      "GDX",
+      "FXI",
+      "QQQ",
+      "UNG",
+      "FDN"
+    ],
+    "terminal_policy": "No forced liquidation at monitoring cutoffs. Positions carry. Prospective termination requires separate authorization.",
+    "timezone": "America/New_York",
+    "title": "Frozen forward paper portfolio \u2014 Initial allocation; no rebalancing"
+  },
+  "payload_sha256": "699ee893b2b3cc56f2b5c03a635cc449af99c7f82100f329d0c4ee5c79295f20",
+  "schema": "forward_paper_portfolio_freeze_v1"
+}

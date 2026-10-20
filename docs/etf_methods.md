@@ -21,7 +21,7 @@ conditions and exit on recovery, not a short strategy.
 |---|---|---|
 | Development | 2017-01-01–2020-12-31 | Fresh $1,000, flat account |
 | Validation | 2021-01-01–2023-12-31 | Fresh $1,000, flat account |
-| Historical OOS | 2024-01-01–2026-10-15 | Fresh $1,000, flat account |
+| Retrospective portfolio-selection sample (**in-sample**; internal historical_OOS) | 2024-01-01–2026-10-15 | Fresh $1,000, flat account |
 
 Daily causal indicators use native half-hour observations and the shared
 **three-trading-hour / seven-consecutive-check** entry and exit confirmation.
@@ -183,7 +183,9 @@ Public manifests bind aggregate bytes, policy and scope, and synthetic tests
 exercise accounting without market data. They do not replace the unpublished
 input provenance or independently recreate source financial outcomes from a
 hash. Exact financial reproduction requires authenticated private inputs,
-event primitives, ledgers and paths; these are not published.
+event primitives, ledgers and sleeve paths; these are not published.
+Derived aggregate daily portfolio/benchmark/cash returns are now released with
+a portable summary-statistic verifier; this does not expose raw ETF prices.
 
 **Retrospective selection is material.** Strategy identities, pruning and the
 starting vector used already examined historical OOS. The historical stage name
@@ -192,3 +194,33 @@ claim, forward alpha guarantee or live trading instruction.
 
 [Current aggregate report](../reports/etf_portfolios/report.md) ·
 [Data sources and scope](etf_data_sources.md)
+
+## Statistical comparison and inference
+
+The equal-initial comparator allocates 20% once to each of the same five
+strategies and allows capital to drift. It is extracted from existing saved
+wealth paths, not a new optimizer or free daily rebalanced return average.
+The [public returns release](../reports/reproducibility/README.md) includes all
+three periods and costs, plus the current fitted static, weekly and monthly
+accounts and matched controls. Historical retained aggregates are unchanged.
+
+For `x = net_portfolio_return - matched_cash_return`, the IID mean-excess
+t-statistic is `mean(x)/(sample_std(x)/sqrt(n))`. HAC/Newey–West inference
+uses an intercept-only regression, Bartlett weights, a predeclared automatic
+lag `floor(4*(n/100)^(2/9))`, HC1 finite-sample correction, and explicit
+0/5/10/20-lag sensitivity. These are tests of the daily mean excess return,
+not regression-alpha t-statistics. See the public verifier for exact arithmetic.
+Serial dependence matters ([Lo, 2002](https://rpc.cfainstitute.org/research/financial-analysts-journal/2002/the-statistics-of-sharpe-ratios)); HAC does not correct
+for the historical search, chosen universe, pruning, optimized weights or
+multiple testing. Do not interpret either statistic as a selection-adjusted
+p-value or evidence of untouched portfolio OOS.
+
+## Prospective paper tracking
+
+Only **Initial allocation; no rebalancing** is the primary forward portfolio,
+explicitly chosen by the user. The timestamped [public protocol seal](../configs/paper_portfolio_freeze.json)
+and [operating protocol](paper_tracking.md) define the future-only start, fresh
+flat accounts, fixed strategies/weights/costs/cash and fail-closed data checks.
+No historical 2024–2026 observation is counted as forward. The running account
+is marked, not forcibly liquidated at each report date. Paper outcomes are
+simulated hypothetical fills, never actual broker executions.

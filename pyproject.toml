@@ -12,6 +12,7 @@ dependencies = ["numpy>=1.24", "scipy>=1.10"]
 [project.optional-dependencies]
 test = ["pytest>=7"]
 plots = ["matplotlib>=3.6"]
+paper = ["pandas>=2", "exchange_calendars>=4.5"]
 
 [project.scripts]
 trend-portfolio = "trend_portfolio.cli:main"
@@ -28,5 +29,7 @@ testpaths = [
   "tests/test_cap_publication.py",
   "tests/test_publication_integrity.py",
   "tests/test_etf_documentation.py",
+  "tests/test_daily_returns.py",
+  "tests/test_paper_engine.py",
 ]
 pythonpath = ["src"]

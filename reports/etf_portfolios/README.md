@@ -39,13 +39,14 @@ including cash, not ETF exposure or risk contribution.
 
 Every panel starts from **$1,000** and uses **1-bp commission plus 3-bp slippage
 each way**. The four curves are the Initial comparator, Weekly corrections,
-Monthly corrections and QQQ buy-and-hold. Numerical daily paths remain private.
+Monthly corrections and QQQ buy-and-hold. Derived aggregate daily returns are [public](../reproducibility/README.md);
+raw ETF inputs and sleeve-level paths remain private.
 
 ![Development: portfolio policies and QQQ](development_baseline.png)
 
 ![Validation: portfolio policies and QQQ](validation_baseline.png)
 
-![Historical OOS: portfolio policies and QQQ](historical_OOS_baseline.png)
+![Retrospective portfolio-selection sample (in-sample): portfolio policies and QQQ](historical_OOS_baseline.png)
 
 ## Evidence boundary
 
@@ -55,4 +56,15 @@ portfolio accounts were independently audited before the publication cleanup.
 Portable checks pin financial aggregates, configuration, rendered tables and
 raster metadata; they do not reconstruct unavailable source data from a hash.
 Exact financial reproduction requires the privately retained authenticated
-input/event/account records. No underlying numerical daily series is published.
+input/event/account records. A [portable daily-return verifier](../../scripts/verify_daily_returns.py) now
+reproduces summary statistics from the public derived returns, without raw
+ETF data. This is not end-to-end signal/trade reproduction.
+
+## Weight sensitivity and t-statistics
+
+See the [full comparison](statistical_comparison.csv), including equal initial
+20% weights with no rebalancing, IID and HAC mean-excess t-statistics. The
+2024–2026 portfolio-selection sample is **in-sample**; HAC does not remove
+selection bias. The baseline fitted static case has 34 round trips and 25.21%
+mean ETF exposure. The [forward record](../paper_tracking/README.md) starts only
+after the actual timestamped freeze.

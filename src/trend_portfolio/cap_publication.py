@@ -15,7 +15,9 @@ import math
 from pathlib import Path
 import re
 
-COMPLETED_SOURCE_SHA = "2a940582ceac6b9a108e3a9baf9319ef26b1c74eff29bedddf66e3bfd3472171"
+COMPLETED_SOURCE_SHA = (
+    "2a940582ceac6b9a108e3a9baf9319ef26b1c74eff29bedddf66e3bfd3472171"
+)
 SOURCE_SHA = "394c21a2497a4411a90b9c576a67abff5611a0de5de2726e3e889aa6c4e72630"
 RETAINED_SHA = "6757f4c392301fb31089809aa5af96bdcd61dffe7b402263e18da5896f77fde9"
 SOURCE_SCHEMA = "final_actual_cap_rebalance_aggregate_report_v1"
@@ -30,14 +32,17 @@ STAGES = {
     "validation": ("2021-01-01", "2023-12-31", 753),
     "historical_OOS": ("2024-01-01", "2026-10-15", 700),
 }
+STAGE_LABELS = {
+    "development": "Development-period portfolio backcast (retrospective)",
+    "validation": "Validation-period portfolio backcast (retrospective)",
+    "historical_OOS": "Retrospective portfolio-selection sample (in-sample)",
+}
 LABELS = {
     "none": "Initial allocation; no rebalancing",
     "weekly": "Weekly corrections",
     "monthly": "Monthly corrections",
 }
-SELECTION = (
-    "Exact saved aggregates; presentation-only changes, no refit, account run or metric recomputation"
-)
+SELECTION = "Exact saved aggregates; presentation-only changes, no refit, account run or metric recomputation"
 PAYLOAD_KEYS = (
     "baseline_slippage_bps",
     "cap_fraction",
@@ -219,10 +224,16 @@ def validate_report(report, config=None):
         "Retained saved values or metadata changed",
     )
     require(
-        set(report) == set(PAYLOAD_KEYS) | {
-            "schema", "title", "source_report_sha256",
-            "presentation_source_report_sha256", "retained_source_payload_sha256",
-            "retained_frequencies", "selection_method",
+        set(report)
+        == set(PAYLOAD_KEYS)
+        | {
+            "schema",
+            "title",
+            "source_report_sha256",
+            "presentation_source_report_sha256",
+            "retained_source_payload_sha256",
+            "retained_frequencies",
+            "selection_method",
         },
         "Unexpected public report fields",
     )
@@ -375,7 +386,7 @@ def markdown(report):
     ]
     for stage, (start, end, _) in STAGES.items():
         out += [
-            f"### {stage.replace('_', ' ')} — {start} to {end}",
+            f"### {STAGE_LABELS[stage]} — {start} to {end}",
             "",
             "| Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |",
             "|---|---:|---:|---:|---:|---:|---:|---:|",
@@ -412,7 +423,7 @@ def markdown(report):
                 else _number(r["max_post_execution_capital_share"], True, 4)
             )
             out.append(
-                f"| {stage} | {LABELS[frequency]} | {r['daily_cap_breach_days']} | {_number(r['max_daily_capital_share'], True, 2)} | {r['observed_common_open_breaches_before_cap']} | {_number(r['max_observed_common_open_share_before_cap'], True, 2)} | {post} |"
+                f"| {STAGE_LABELS[stage]} | {LABELS[frequency]} | {r['daily_cap_breach_days']} | {_number(r['max_daily_capital_share'], True, 2)} | {r['observed_common_open_breaches_before_cap']} | {_number(r['max_observed_common_open_share_before_cap'], True, 2)} | {post} |"
             )
     out += [
         "",
@@ -422,13 +433,16 @@ def markdown(report):
         "",
     ]
     for stage in STAGES:
-        out += [f"![{stage} baseline equity and drawdown]({stage}_baseline.png)", ""]
+        out += [
+            f"![{STAGE_LABELS[stage]} baseline equity and drawdown]({stage}_baseline.png)",
+            "",
+        ]
     out += [
         "## Audit and portable verification",
         "",
         "The completed financial audit checked disabled-rebalancing equivalence to all five original frozen sleeve paths and matched cash across all periods/costs, then independently checked chronological cash, corporate actions, inherited dividend reinvestment, signal fills, cap orders, self-financing transfers, post-cost caps and daily statistics. Those sources and completed results remain unchanged.",
         "",
-        "This publication's verifier checks the exact 36 saved rows, 15 original controls, saved weights, metadata and canonical full-precision digest using only public aggregate artifacts. It does **not** reproduce the private financial audit or derive results anew. Private market/account paths are not exported. Alpha and betas in JSON are descriptive regressions; annual alpha is the arithmetic intercept times 252, not CAGR. Joint beta order is GDX, FXI, QQQ, UNG, FDN.",
+        "This publication's verifier checks the exact 36 saved rows, 15 original controls, saved weights, metadata and canonical full-precision digest using only public aggregate artifacts. It does **not** reproduce the private financial audit or derive results anew. Derived aggregate daily returns and an independent summary-statistic verifier are [published separately](../reproducibility/README.md); raw ETF inputs and sleeve paths remain private. The [equal-initial and IID/HAC comparison](statistical_comparison.csv) is descriptive and not selection-adjusted. Alpha and betas in JSON are descriptive regressions; annual alpha is the arithmetic intercept times 252, not CAGR. Joint beta order is GDX, FXI, QQQ, UNG, FDN.",
         "",
         f"- Completed source aggregate SHA256: `{COMPLETED_SOURCE_SHA}`",
         f"- Prior saved aggregate presentation SHA256: `{SOURCE_SHA}`",

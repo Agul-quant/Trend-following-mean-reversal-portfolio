@@ -1,4 +1,4 @@
-name: Synthetic analytics tests
+name: Public reproducibility and synthetic tests
 on: [push, pull_request]
 permissions:
   contents: read
@@ -13,7 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - run: python -m pip install -e '.[test,plots]'
+      - run: python -m pip install -e '.[test,plots,paper]'
       - run: python -m pytest -q
       - run: python scripts/verify_etf_publication.py --report-dir reports/etf_portfolios --config configs/final_cap_rebalancing.json
+      - run: python scripts/verify_daily_returns.py
       - run: python scripts/verify_publication.py

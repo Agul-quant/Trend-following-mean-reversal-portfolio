@@ -32,7 +32,7 @@ Sharpe is net **cash-excess** Sharpe: sqrt(252) times mean daily portfolio retur
 
 Trips are completed strategy round trips including paid terminal exits. Partial cap orders are separate orders, not extra completed trips. Cap executions can be cash transfers without an ETF order. Extra cap costs are direct cap-order commissions plus slippage, not the change in total costs versus the comparator; later strategy-order sizes may also change.
 
-### development — 2017-01-01 to 2020-12-31
+### Development-period portfolio backcast (retrospective) — 2017-01-01 to 2020-12-31
 
 | Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -54,7 +54,7 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 | QQQ buy-and-hold | 25 | 1.058 | 28.25% | -28.56% | 1 | — | — |
 | Matched cash | — | Undefined | 3.05% | 0.00% | 0 | — | — |
 
-### validation — 2021-01-01 to 2023-12-31
+### Validation-period portfolio backcast (retrospective) — 2021-01-01 to 2023-12-31
 
 | Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -76,7 +76,7 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 | QQQ buy-and-hold | 25 | 0.381 | 9.68% | -35.12% | 1 | — | — |
 | Matched cash | — | Undefined | 3.05% | 0.00% | 0 | — | — |
 
-### historical OOS — 2024-01-01 to 2026-10-15
+### Retrospective portfolio-selection sample (in-sample) — 2024-01-01 to 2026-10-15
 
 | Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -104,31 +104,31 @@ These observations cover daily valuations and common eligible opens only. Openin
 
 | Period | Model | Daily breach days | Max daily sleeve share | Observed open breaches | Max observed open share | Max share after correction |
 |---|---|---:|---:|---:|---:|---:|
-| development | Initial allocation; no rebalancing | 0 | 29.43% | 0 | 30.51% | — |
-| development | Weekly corrections | 0 | 29.43% | 0 | 30.51% | — |
-| development | Monthly corrections | 0 | 29.43% | 0 | 30.51% | — |
-| validation | Initial allocation; no rebalancing | 128 | 38.24% | 1649 | 38.23% | — |
-| validation | Weekly corrections | 20 | 35.06% | 242 | 35.39% | 33.3333% |
-| validation | Monthly corrections | 46 | 36.22% | 577 | 36.22% | 33.3333% |
-| historical_OOS | Initial allocation; no rebalancing | 134 | 38.56% | 1752 | 38.67% | — |
-| historical_OOS | Weekly corrections | 17 | 34.87% | 249 | 36.25% | 33.3333% |
-| historical_OOS | Monthly corrections | 56 | 37.26% | 743 | 37.37% | 33.3333% |
+| Development-period portfolio backcast (retrospective) | Initial allocation; no rebalancing | 0 | 29.43% | 0 | 30.51% | — |
+| Development-period portfolio backcast (retrospective) | Weekly corrections | 0 | 29.43% | 0 | 30.51% | — |
+| Development-period portfolio backcast (retrospective) | Monthly corrections | 0 | 29.43% | 0 | 30.51% | — |
+| Validation-period portfolio backcast (retrospective) | Initial allocation; no rebalancing | 128 | 38.24% | 1649 | 38.23% | — |
+| Validation-period portfolio backcast (retrospective) | Weekly corrections | 20 | 35.06% | 242 | 35.39% | 33.3333% |
+| Validation-period portfolio backcast (retrospective) | Monthly corrections | 46 | 36.22% | 577 | 36.22% | 33.3333% |
+| Retrospective portfolio-selection sample (in-sample) | Initial allocation; no rebalancing | 134 | 38.56% | 1752 | 38.67% | — |
+| Retrospective portfolio-selection sample (in-sample) | Weekly corrections | 17 | 34.87% | 249 | 36.25% | 33.3333% |
+| Retrospective portfolio-selection sample (in-sample) | Monthly corrections | 56 | 37.26% | 743 | 37.37% | 33.3333% |
 
 ## Baseline equity and drawdown curves
 
 Each panel restarts at $1,000 and compares the three retained models with cost-matched QQQ buy-and-hold. Raster images contain no embedded numerical daily series.
 
-![development baseline equity and drawdown](development_baseline.png)
+![Development-period portfolio backcast (retrospective) baseline equity and drawdown](development_baseline.png)
 
-![validation baseline equity and drawdown](validation_baseline.png)
+![Validation-period portfolio backcast (retrospective) baseline equity and drawdown](validation_baseline.png)
 
-![historical_OOS baseline equity and drawdown](historical_OOS_baseline.png)
+![Retrospective portfolio-selection sample (in-sample) baseline equity and drawdown](historical_OOS_baseline.png)
 
 ## Audit and portable verification
 
 The completed financial audit checked disabled-rebalancing equivalence to all five original frozen sleeve paths and matched cash across all periods/costs, then independently checked chronological cash, corporate actions, inherited dividend reinvestment, signal fills, cap orders, self-financing transfers, post-cost caps and daily statistics. Those sources and completed results remain unchanged.
 
-This publication's verifier checks the exact 36 saved rows, 15 original controls, saved weights, metadata and canonical full-precision digest using only public aggregate artifacts. It does **not** reproduce the private financial audit or derive results anew. Private market/account paths are not exported. Alpha and betas in JSON are descriptive regressions; annual alpha is the arithmetic intercept times 252, not CAGR. Joint beta order is GDX, FXI, QQQ, UNG, FDN.
+This publication's verifier checks the exact 36 saved rows, 15 original controls, saved weights, metadata and canonical full-precision digest using only public aggregate artifacts. It does **not** reproduce the private financial audit or derive results anew. Derived aggregate daily returns and an independent summary-statistic verifier are [published separately](../reproducibility/README.md); raw ETF inputs and sleeve paths remain private. The [equal-initial and IID/HAC comparison](statistical_comparison.csv) is descriptive and not selection-adjusted. Alpha and betas in JSON are descriptive regressions; annual alpha is the arithmetic intercept times 252, not CAGR. Joint beta order is GDX, FXI, QQQ, UNG, FDN.
 
 - Completed source aggregate SHA256: `2a940582ceac6b9a108e3a9baf9319ef26b1c74eff29bedddf66e3bfd3472171`
 - Prior saved aggregate presentation SHA256: `394c21a2497a4411a90b9c576a67abff5611a0de5de2726e3e889aa6c4e72630`

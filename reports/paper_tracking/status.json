@@ -1,0 +1,10 @@
+{
+  "accepted_sessions": 0,
+  "checked_at_utc": "2026-10-20T17:49:18.716477+00:00",
+  "freeze_sha256": "699ee893b2b3cc56f2b5c03a635cc449af99c7f82100f329d0c4ee5c79295f20",
+  "message": "No completed-session QA-sealed native packet is available; no paper returns have been invented.",
+  "performance_available": false,
+  "schema": "forward_paper_tracking_status_v1",
+  "start_session": "2026-10-21",
+  "status": "awaiting_qa_sealed_native_data"
+}

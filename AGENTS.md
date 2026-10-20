@@ -7,11 +7,13 @@
   aggregate outcomes. A new calculation or correction must be labeled explicitly;
   do not silently replace a historical result with a new optimizer solution.
 - Public project name: **Trend Following and Mean Reversion ETF Portfolios**, without a version label.
-- No raw market data, full daily account paths, credentials, private source maps,
-  authorization records, caches or study freezes belong in Git. Use explicit file
-  allowlists when staging. Public exports must be aggregate-only and portable.
-  User-requested raster charts may visualize saved paths, but must not embed
-  numerical daily series or private input locators in metadata or vector files.
+- Raw ETF data, sleeve-level account/position paths, credentials, private source
+  maps, authorization receipts, caches and historical private freezes stay out
+  of Git. The user explicitly authorized publication of derived aggregate daily
+  portfolio, QQQ benchmark and modeled cash RETURNS, plus portable verification.
+  This narrow exception does not authorize raw OHLCV, fills or private locators.
+  Use explicit staging allowlists. The separately authorized public forward
+  portfolio protocol/hash seal contains rules and public source hashes only.
 - The selected ETF portfolio is retrospective: configurations, pruning and
   weights used the examined 2024–2026 history. It is not untouched portfolio OOS,
   a live allocation or trading authorization.
@@ -48,3 +50,19 @@
   with scripts/verify_etf_publication.py and scripts/verify_publication.py.
 - Maximum CAGR stays excluded; corrected-split work stays inactive. The
   unpublished broader correction source remains private and is not committed.
+
+- **Forward paper portfolio, explicitly chosen by the user:** Initial allocation,
+  no rebalancing; exact existing five definitions and starting weights. Weekly
+  and Monthly corrections remain historical comparisons, not candidate forward
+  winners. Follow configs/paper_portfolio_freeze.json and docs/paper_tracking.md.
+  Never backdate the actual freeze, change the frozen model, refit, splice
+  historical holdings or terminally liquidate at every monitoring update.
+  Fresh flat $1,000 paper accounts per cost start only at the sealed future open.
+  Missing/unreconciled inputs block tracking; never fabricate paper returns.
+  Revised consumed evidence requires quarantine and a disclosed correction, not
+  silent history replacement. Paper tracking never authorizes broker orders.
+- The internal historical_OOS ID is preserved for compatibility, but every
+  reader-facing 2024–2026 portfolio result must be labeled retrospective
+  portfolio-selection / in-sample. Earlier portfolio backcasts also inherit
+  hindsight selection. Daily-return verification reproduces summary statistics,
+  not the private market-data-to-signal audit or selection-adjusted inference.

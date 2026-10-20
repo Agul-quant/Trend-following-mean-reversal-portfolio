@@ -71,3 +71,18 @@ node_modules/
 !/tests/test_cap_publication.py
 !/tests/test_publication_integrity.py
 !/tests/test_etf_documentation.py
+
+# Authorized derived-return release and forward paper protocol only.
+!/reports/reproducibility/
+!/reports/paper_tracking/
+!/configs/paper_portfolio_freeze.json
+!/docs/paper_tracking.md
+!/src/trend_portfolio/return_verification.py
+!/src/trend_portfolio/paper_engine.py
+!/scripts/export_portfolio_daily_returns.py
+!/scripts/verify_daily_returns.py
+!/scripts/build_return_figures.py
+!/scripts/run_paper_tracker.py
+!/tests/test_daily_returns.py
+!/tests/test_paper_engine.py
+!/scripts/refresh_publication_manifest.py

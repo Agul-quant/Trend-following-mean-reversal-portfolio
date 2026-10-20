@@ -11,7 +11,9 @@ import pytest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SPEC = importlib.util.spec_from_file_location("publication_integrity", ROOT / "scripts/verify_publication.py")
+SPEC = importlib.util.spec_from_file_location(
+    "publication_integrity", ROOT / "scripts/verify_publication.py"
+)
 PUBLIC = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(PUBLIC)
 
@@ -33,23 +35,47 @@ def tree(tmp_path):
     active = ["GDX", "FXI", "QQQ", "UNG", "FDN"]
     # Distinct synthetic uppercase identifiers; no market values are present.
     universe = active + ["ZZ" + chr(65 + i // 26) + chr(65 + i % 26) for i in range(42)]
-    study = {"universe_config": "configs/universe.json", "strategies_config": "configs/strategies.json",
-             "policy_config": "configs/policy.json", "report_directory": "reports/comparison"}
+    study = {
+        "universe_config": "configs/universe.json",
+        "strategies_config": "configs/strategies.json",
+        "policy_config": "configs/policy.json",
+        "report_directory": "reports/comparison",
+    }
     payloads = {
-        study["universe_config"]: {"schema": "etf_research_universe_v1", "universe_size": 47,
-                                   "symbols": universe, "selected_symbols": active,
-                                   "categories": {"Synthetic group": universe}},
-        study["strategies_config"]: {"symbols": active, "strategies": [{"symbol": s} for s in active]},
-        study["policy_config"]: {"symbols": active, "frequencies": ["none", "weekly", "monthly"]},
-        "reports/comparison/report.json": {"symbols": active,
-            "retained_frequencies": ["none", "weekly", "monthly"], "rows": [{} for _ in range(36)],
-            "controls": [{} for _ in range(15)]},
+        study["universe_config"]: {
+            "schema": "etf_research_universe_v1",
+            "universe_size": 47,
+            "symbols": universe,
+            "selected_symbols": active,
+            "categories": {"Synthetic group": universe},
+        },
+        study["strategies_config"]: {
+            "symbols": active,
+            "strategies": [{"symbol": s} for s in active],
+        },
+        study["policy_config"]: {
+            "symbols": active,
+            "frequencies": ["none", "weekly", "monthly"],
+        },
+        "reports/comparison/report.json": {
+            "symbols": active,
+            "retained_frequencies": ["none", "weekly", "monthly"],
+            "rows": [{} for _ in range(36)],
+            "controls": [{} for _ in range(15)],
+        },
     }
     for name, value in payloads.items():
         write_json(tmp_path / name, value)
-    (tmp_path / "README.md").write_text("[Saved report](reports/comparison/report.json)\n")
-    manifest = {"schema": PUBLIC.SCHEMA, "aggregate_only": True, "universe_size": 47, "study": study,
-                "files": [{"path": p} for p in sorted([*payloads, "README.md"])]}
+    (tmp_path / "README.md").write_text(
+        "[Saved report](reports/comparison/report.json)\n"
+    )
+    manifest = {
+        "schema": PUBLIC.SCHEMA,
+        "aggregate_only": True,
+        "universe_size": 47,
+        "study": study,
+        "files": [{"path": p} for p in sorted([*payloads, "README.md"])],
+    }
     refresh(tmp_path, manifest)
     return tmp_path, manifest
 
@@ -62,17 +88,20 @@ def test_synthetic_tree_passes_without_private_reads(tree):
     assert receipt["financial_audit_reproduced"] is False
 
 
-@pytest.mark.parametrize("mutation", [
-    lambda m: m.update(schema="unknown"),
-    lambda m: m.update(aggregate_only=False),
-    lambda m: m.update(universe_size=48),
-    lambda m: m["files"].append(m["files"][0].copy()),
-    lambda m: m["files"][0].update(path="../outside.json"),
-    lambda m: m["files"][0].update(path=".cache/private.json"),
-    lambda m: m["files"][0].update(bytes=True),
-    lambda m: m["files"][0].update(sha256="0" * 64),
-    lambda m: m["study"].update(policy_config="unlisted.json"),
-])
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        lambda m: m.update(schema="unknown"),
+        lambda m: m.update(aggregate_only=False),
+        lambda m: m.update(universe_size=48),
+        lambda m: m["files"].append(m["files"][0].copy()),
+        lambda m: m["files"][0].update(path="../outside.json"),
+        lambda m: m["files"][0].update(path=".cache/private.json"),
+        lambda m: m["files"][0].update(bytes=True),
+        lambda m: m["files"][0].update(sha256="0" * 64),
+        lambda m: m["study"].update(policy_config="unlisted.json"),
+    ],
+)
 def test_manifest_corruption_rejected(tree, mutation):
     root, manifest = tree
     mutation(manifest)
@@ -110,13 +139,16 @@ def test_category_counts_cannot_disagree_with_universe(tree):
         PUBLIC.verify(root)
 
 
-@pytest.mark.parametrize("bad", [
-    {"locator": "/Users/synthetic/private.csv"},
-    {"locator": "file://private"},
-    {"token": "api_key=abcdefghijk"},
-    {"daily_values": list(range(129))},
-    {"x": float("inf")},
-])
+@pytest.mark.parametrize(
+    "bad",
+    [
+        {"locator": "/Users/synthetic/private.csv"},
+        {"locator": "file://private"},
+        {"token": "api_key=abcdefghijk"},
+        {"daily_values": list(range(129))},
+        {"x": float("inf")},
+    ],
+)
 def test_json_safety_rejects_unpublished_content(bad):
     with pytest.raises(ValueError):
         PUBLIC.safe_json(bad)
@@ -152,12 +184,22 @@ def test_link_to_unlisted_local_file_rejected(tree):
 
 
 def png_chunk(tag, data):
-    return struct.pack(">I", len(data)) + tag + data + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF)
+    return (
+        struct.pack(">I", len(data))
+        + tag
+        + data
+        + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF)
+    )
 
 
 def png(extra=b""):
-    return (b"\x89PNG\r\n\x1a\n" + png_chunk(b"IHDR", struct.pack(">IIBBBBB", 1, 1, 8, 2, 0, 0, 0))
-            + extra + png_chunk(b"IDAT", zlib.compress(b"\x00\x00\x00\x00")) + png_chunk(b"IEND", b""))
+    return (
+        b"\x89PNG\r\n\x1a\n"
+        + png_chunk(b"IHDR", struct.pack(">IIBBBBB", 1, 1, 8, 2, 0, 0, 0))
+        + extra
+        + png_chunk(b"IDAT", zlib.compress(b"\x00\x00\x00\x00"))
+        + png_chunk(b"IEND", b"")
+    )
 
 
 def test_raster_png_accepts_only_small_software_text():
@@ -173,7 +215,11 @@ def test_raster_png_accepts_only_small_software_text():
 @pytest.mark.parametrize("which", ["universe", "selected", "frequency", "rows"])
 def test_scope_cannot_change_by_refreshing_manifest(tree, which):
     root, manifest = tree
-    key = {"universe": "universe_config", "selected": "strategies_config", "frequency": "policy_config"}.get(which)
+    key = {
+        "universe": "universe_config",
+        "selected": "strategies_config",
+        "frequency": "policy_config",
+    }.get(which)
     name = manifest["study"][key] if key else "reports/comparison/report.json"
     value = json.loads((root / name).read_text())
     if which == "universe":
@@ -202,3 +248,66 @@ def test_current_public_export_contract():
     assert receipt["passed"]
     assert receipt["universe_size"] == 47
     assert receipt["performance_rows"] == 36 and receipt["control_rows"] == 15
+
+
+@pytest.fixture
+def paper_tree(tmp_path):
+    """Synthetic future return rows, not a paper-account evaluation."""
+    import shutil
+
+    envelope = json.loads((ROOT / "configs/paper_portfolio_freeze.json").read_text())
+    names = {
+        "freeze": "configs/paper_portfolio_freeze.json",
+        "status": "reports/paper_tracking/status.json",
+        "daily_returns": "reports/paper_tracking/daily_returns.csv",
+    }
+    allowed = set(names.values()) | set(envelope["payload"]["source_hashes"])
+    for name in allowed:
+        target = tmp_path / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT / name, target)
+    data = "session,timestamp,slippage_bps,portfolio_return,cash_return,qqq_bh_return\n"
+    data += "".join(
+        f"2026-10-21,2026-10-21T21:00:00+00:00,{cost},0.001,0.00001,0.002\n"
+        for cost in (1, 3, 10, 25)
+    )
+    (tmp_path / names["daily_returns"]).write_text(data)
+    status = {
+        "freeze_sha256": envelope["payload_sha256"],
+        "accepted_sessions": 1,
+        "performance_available": True,
+        "status": "awaiting_next_qa_sealed_native_data",
+    }
+    write_json(tmp_path / names["status"], status)
+    return tmp_path, {"paper_tracking": names}, allowed, status
+
+
+def test_paper_wait_after_accepted_session_compatible_with_frozen_tracker(paper_tree):
+    root, manifest, allowed, _ = paper_tree
+    PUBLIC._paper(manifest, root, allowed)
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        lambda s: s.update(daily_returns_sha256="0" * 64),
+        lambda s: s.update(status="tracking_completed_sessions"),
+        lambda s: s.update(status="arbitrary"),
+        lambda s: s.update(performance_available=False),
+        lambda s: s.update(accepted_sessions=2),
+    ],
+)
+def test_paper_active_status_remains_strict(paper_tree, mutation):
+    root, manifest, allowed, status = paper_tree
+    mutation(status)
+    write_json(root / manifest["paper_tracking"]["status"], status)
+    with pytest.raises(ValueError):
+        PUBLIC._paper(manifest, root, allowed)
+
+
+def test_paper_requires_every_cost_per_session(paper_tree):
+    root, manifest, allowed, _ = paper_tree
+    path = root / manifest["paper_tracking"]["daily_returns"]
+    path.write_text(path.read_text().replace("+00:00,25,", "+00:00,1,"))
+    with pytest.raises(ValueError, match="Duplicate|missing cost"):
+        PUBLIC._paper(manifest, root, allowed)

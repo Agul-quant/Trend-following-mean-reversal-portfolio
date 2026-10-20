@@ -23,11 +23,14 @@
         "Software",
         "dpi"
       ],
+      "presentation_label": "2017\u20132020 development-period portfolio backcast (retrospective)",
+      "public_return_source": "reports/reproducibility/development.csv",
+      "public_return_source_sha256": "367d18973a95630b7d033cdb775dae3677199d3cff494905169ef42e9c01dfcd",
       "scored_period": [
         "2017-01-01",
         "2020-12-31"
       ],
-      "sha256": "e8733ccb83152f6e3a6c9215c35e80c38931a6d41204bba7e52ca5c6d2dadc42",
+      "sha256": "7655b275132f3cb92696450cf3455294d84889daf78681e6e9eef5e446c2d785",
       "source_sha256": {
         "QQQ_buy_and_hold": "a239a3821b86f5b266c386334cac5494f4efae7e00bc91d0b443d5dae6e31577",
         "monthly": "73258188cd69a0523092d25643874095e4bff1db111eb820d2dfa39a4597ca16",
@@ -51,11 +54,14 @@
         "Software",
         "dpi"
       ],
+      "presentation_label": "2024\u20132026-10-15 portfolio-selection sample (IN-SAMPLE)",
+      "public_return_source": "reports/reproducibility/historical_OOS.csv",
+      "public_return_source_sha256": "5528cfbde5339f17721337d6d1b0c062ea83ac8012be5847afc9f99646f0e4d7",
       "scored_period": [
         "2024-01-01",
         "2026-10-15"
       ],
-      "sha256": "3c953835c5c57beacf6bdda80132fa26db998738428b11dc52814ab29db34283",
+      "sha256": "7a4bf47ecb779f6ef974dfd599e0dbcc6b2924dabdc1b7f5c729389ab8a04b57",
       "source_sha256": {
         "QQQ_buy_and_hold": "a97ec5989af0361ce0d8856cc61a3d1febf0ae344ee59ce7d17119cce02f739e",
         "monthly": "09f83c57453a68963bedf5ff9bb0c47cec1cfad608db05e65063dd58d5df3f3e",
@@ -79,11 +85,14 @@
         "Software",
         "dpi"
       ],
+      "presentation_label": "2021\u20132023 validation-period portfolio backcast (retrospective)",
+      "public_return_source": "reports/reproducibility/validation.csv",
+      "public_return_source_sha256": "fbdb2fa45d5f54578aa33c9b4c160037ee1c0552a30d182ab9b36fa0bd4aff1e",
       "scored_period": [
         "2021-01-01",
         "2023-12-31"
       ],
-      "sha256": "f26129311d9384ab74780147c65a3172a987718bd002262c32a85779488b3f1d",
+      "sha256": "cc9d7371192359c1c3b9f06751a425e20f3cd1b4ffa07dfd6ff25df6f2cced90",
       "source_sha256": {
         "QQQ_buy_and_hold": "48afbd6c9d1b2f1772d19b52a55769a9b659a9b1662dbec840281669883baaf3",
         "monthly": "6284d85741a9685c1d082998cd1522e8231614e4c1687509c1d84ad1dac5c93e",
@@ -96,5 +105,6 @@
   },
   "initial_capital_per_stage": 1000,
   "numeric_daily_series_or_private_locators_embedded": false,
+  "rendered_from_public_derived_returns": true,
   "schema": "final_cap_rebalancing_raster_figures_v1"
 }
