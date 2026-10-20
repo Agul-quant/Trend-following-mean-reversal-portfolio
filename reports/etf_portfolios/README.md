@@ -1,16 +1,20 @@
 # ETF Strategy Portfolios
 
-The portfolio uses **GDX, FXI, QQQ, UNG and FDN**, with **Weekly corrections**,
-**Monthly corrections** and the **Initial allocation / no-rebalancing benchmark**.
-Starting weights are identical across all periods, frequencies and costs.
+The comparison uses **GDX, FXI, QQQ, UNG and FDN**, with four portfolios:
+**Initial allocation; no rebalancing**, **Equal weight; no rebalancing**,
+**Weekly corrections** and **Monthly corrections**. The fitted starting vector
+is identical across periods, correction frequencies and costs; equal weight
+starts at 20% per sleeve in every period/cost and then drifts.
 
 - [All three periods and four costs](report.md).
 - [Full-precision results, alpha and betas](report.json).
-- [Portfolio performance](performance.csv) and [matched QQQ/cash controls](controls.csv).
+- [Fitted-allocation performance](performance.csv), [full comparison](statistical_comparison.csv) and [matched QQQ/cash controls](controls.csv).
 - [Saved-aggregate identity receipt](source_subset_audit.json) and [figure manifest](figures_manifest.json).
 - [Strategy definitions](../../configs/selected_etf_strategies.json), [portfolio policy](../../configs/final_cap_rebalancing.json), [methods](../../docs/etf_methods.md) and [research scope/data sources](../../docs/etf_data_sources.md).
 
-The publication has **36 portfolio-cost-period rows** and **15 distinct controls**.
+The original aggregate has **36 fitted-portfolio-cost-period rows** and
+**15 distinct controls**. The released equal-weight comparison adds **12 rows**,
+for **48 portfolio comparisons** across all three periods and four costs.
 These are unchanged completed results, not a new fit, account replay or selection
 exercise. The research scope and report terminology have been made consistent;
 earlier snapshots are retained privately rather than mixed into this tree.
@@ -38,8 +42,8 @@ including cash, not ETF exposure or risk contribution.
 ## Baseline equity and drawdown
 
 Every panel starts from **$1,000** and uses **1-bp commission plus 3-bp slippage
-each way**. The four curves are the Initial comparator, Weekly corrections,
-Monthly corrections and QQQ buy-and-hold. Derived aggregate daily returns are [public](../reproducibility/README.md);
+each way**. The five curves are the fitted Initial allocation, Equal weight
+(no rebalancing), Weekly corrections, Monthly corrections and QQQ buy-and-hold. Derived aggregate daily returns are [public](../reproducibility/README.md);
 raw ETF inputs and sleeve-level paths remain private.
 
 ![Development: portfolio policies and QQQ](development_baseline.png)

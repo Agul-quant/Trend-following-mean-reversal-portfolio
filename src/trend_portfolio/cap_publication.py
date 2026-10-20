@@ -342,8 +342,45 @@ def _number(value, percent=False, digits=3):
     return f"{value * (100 if percent else 1):.{digits}f}" + ("%" if percent else "")
 
 
-def markdown(report):
+def equal_initial_rows(comparison):
+    """Read the twelve already released comparison summaries, never rerun accounts."""
+    if comparison is None:
+        return {}
+    public_json(comparison)
+    require(
+        comparison.get("schema") == "aggregate_return_statistical_comparison_v1",
+        "Incorrect equal-weight comparison schema",
+    )
+    selected = [
+        r for r in comparison.get("rows", []) if r.get("series") == "equal_initial"
+    ]
+    lookup = {(r.get("stage"), r.get("slippage_bps_each_way")): r for r in selected}
+    require(
+        len(selected) == len(lookup) == 12
+        and set(lookup) == {(stage, cost) for stage in STAGES for cost in COSTS},
+        "Equal-weight comparison must contain all twelve stage/cost results",
+    )
+    for (stage, _), row in lookup.items():
+        require(
+            row.get("observations") == STAGES[stage][2]
+            and row.get("commission_bps_each_way") == 1,
+            "Equal-weight comparison mechanics differ",
+        )
+        require(
+            all(
+                isinstance(row.get(key), (int, float))
+                and not isinstance(row[key], bool)
+                and math.isfinite(row[key])
+                for key in ("cash_excess_sharpe", "cagr", "max_drawdown")
+            ),
+            "Equal-weight comparison metrics must be finite",
+        )
+    return lookup
+
+
+def markdown(report, comparison=None):
     validate_report(report)
+    equal_rows = equal_initial_rows(comparison)
     rows = {(r["stage"], r["frequency"], r["slippage_bps"]): r for r in report["rows"]}
     controls = {
         (r["stage"], r["control"], r["slippage_bps"]): r for r in report["controls"]
@@ -353,11 +390,15 @@ def markdown(report):
         "",
         "## Scope and method",
         "",
-        "The comparison contains **Weekly corrections**, **Monthly corrections** and the **Initial allocation; no rebalancing** comparator. These are completed independently audited calculations—not a new optimizer, account run or performance improvement. All saved full-precision values are unchanged.",
+        (
+            "The comparison contains **Initial allocation; no rebalancing**, **Equal weight; no rebalancing**, **Weekly corrections** and **Monthly corrections**. All use the same five strategies. The original 36 fitted-allocation results plus 12 released equal-weight comparisons give 48 portfolio/cost/period outcomes. No account or optimizer was rerun; saved full-precision results are unchanged."
+            if equal_rows
+            else "The comparison contains **Weekly corrections**, **Monthly corrections** and the **Initial allocation; no rebalancing** comparator. These are completed independently audited calculations—not a new optimizer, account run or performance improvement. All saved full-precision values are unchanged."
+        ),
         "",
         "The long/cash strategy universe is **GDX, FXI, QQQ, UNG and FDN**, used consistently throughout this publication. No shorts, leverage or standalone Maximum CAGR allocation are used. Each period starts independently with **$1,000**, flat accounts and empty orders/confirmation streaks; causal feature history alone carries across stages.",
         "",
-        "### Same saved starting weights for every frequency, period and cost",
+        "### Saved fitted starting weights; unchanged across periods and costs",
         "",
         "| Strategy sleeve | Initial weight |",
         "|---|---:|",
@@ -365,6 +406,12 @@ def markdown(report):
     out += [
         f"| {s} | {_number(report['initial_weights'][s], True, 9)} |" for s in SYMBOLS
     ]
+    if equal_rows:
+        out += [
+            "",
+            "**Equal weight; no rebalancing** instead starts at **20% per sleeve**, once at each stage's inception. Capital then drifts. It uses the same rules and costs, is not periodically rebalanced, and does not change the frozen fitted-weight forward portfolio.",
+            "",
+        ]
     out += [
         "",
         "At the last actual trading session of each ISO week or calendar month, the **17:00 New York** valuation queues a correction only when a sleeve's whole strategy-account capital (ETF plus cash) exceeds one-third. October 15, 2026 is not an artificial week/month end. Execution waits for the next simultaneous eligible observed native 30-minute bar open, strictly after the decision. Corporate actions, original dividend reinvestment and normal confirmed strategy fills occur first; a vanished breach cancels the intent.",
@@ -396,6 +443,11 @@ def markdown(report):
                 r = rows[(stage, frequency, cost)]
                 out.append(
                     f"| {LABELS[frequency]} | {cost} | {_number(r['cash_excess_sharpe'])} | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | {r['strategy_round_trips']} | {r['cap_executions']} / {r['paid_cap_orders']} | {_number(r['extra_cap_commission'] + r['extra_cap_slippage'], digits=4)} |"
+                )
+            if equal_rows:
+                r = equal_rows[(stage, cost)]
+                out.append(
+                    f"| Equal weight; no rebalancing | {cost} | {_number(r['cash_excess_sharpe'])} | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | — | 0 / 0 | 0.0000 |"
                 )
             r = controls[(stage, "QQQ_buy_and_hold", cost)]
             out.append(
@@ -429,7 +481,11 @@ def markdown(report):
         "",
         "## Baseline equity and drawdown curves",
         "",
-        "Each panel restarts at $1,000 and compares the three retained models with cost-matched QQQ buy-and-hold. Raster images contain no embedded numerical daily series.",
+        (
+            "Each panel restarts at $1,000 and compares four portfolios with cost-matched QQQ buy-and-hold. Equal-weight metrics come from the already published return release; its trip count is not inferred from aggregate returns. Raster images contain no embedded numerical daily series."
+            if equal_rows
+            else "Each panel restarts at $1,000 and compares the three fitted-allocation models with cost-matched QQQ buy-and-hold. Raster images contain no embedded numerical daily series."
+        ),
         "",
     ]
     for stage in STAGES:

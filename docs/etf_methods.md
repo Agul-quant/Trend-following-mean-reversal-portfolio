@@ -1,8 +1,8 @@
 # ETF Strategy and Portfolio Methods
 
 The current portfolio comparison uses **GDX, FXI, QQQ, UNG and FDN**, with
-**Weekly corrections**, **Monthly corrections** and an **Initial allocation;
-no rebalancing** comparator. All are unlevered and long/cash. There is no
+**Initial allocation; no rebalancing**, **Equal weight; no rebalancing**,
+**Weekly corrections** and **Monthly corrections** comparisons. All are unlevered and long/cash. There is no
 shorting, standalone maximum-CAGR allocation or newly optimized starting vector.
 
 This is a scope-restricted publication of completed, previously examined
@@ -62,8 +62,9 @@ Exact identifiers, rule parameters and definitions are in
 
 Each portfolio starts each stage independently with **$1,000 total**, initially
 flat and allocated to the five cash sleeves below. The full-precision saved
-vector is identical across stages, costs and correction frequencies; it was
-not refitted for the current publication.
+fitted vector is identical across stages, costs and correction frequencies; it
+was not refitted. The equal-weight comparison instead allocates 20% to each
+sleeve once per stage, with no later rebalancing.
 
 | Sleeve | Initial weight |
 |---|---:|
@@ -176,8 +177,10 @@ Before the completed cap calculations, disabled-correction replay matched the
 five original frozen sleeve wealth paths and cash across all three periods and
 four costs. Independent scalar checks examined chronological cash, actions,
 dividend reinvestment, fills, transfers, paid costs, post-cost caps and saved
-statistics. The current comparison retains **36 portfolio/cost/period rows and
-15 distinct matched controls**; this publication does not rerun those accounts.
+statistics. The original aggregate retains **36 fitted-portfolio/cost/period rows and
+15 distinct matched controls**. The public return release supplies the 12
+equal-weight comparison rows, for 48 portfolio outcomes; this publication
+does not rerun any account or change the frozen forward portfolio.
 
 Public manifests bind aggregate bytes, policy and scope, and synthetic tests
 exercise accounting without market data. They do not replace the unpublished

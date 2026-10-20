@@ -1,5 +1,18 @@
 {
   "aggregate_only": false,
+  "comparison_scope": {
+    "equal_weight_comparison_source": "reports/etf_portfolios/statistical_comparison.json",
+    "frozen_forward_portfolio": "initial_allocation",
+    "historical_portfolios": [
+      "initial_allocation",
+      "equal_initial",
+      "weekly_corrections",
+      "monthly_corrections"
+    ],
+    "original_pinned_results": 36,
+    "portfolio_cost_period_results": 48,
+    "released_equal_weight_results": 12
+  },
   "derived_returns_manifest": "reports/reproducibility/manifest.json",
   "files": [
     {
@@ -28,9 +41,9 @@
       "sha256": "93e639c1d99ca6a0200ba11ea1964881f18103974579c513b48e8ebae1a5b83f"
     },
     {
-      "bytes": 12583,
+      "bytes": 12844,
       "path": "docs/etf_methods.md",
-      "sha256": "a2f5c0d7d91d1cedcda1ee16eb25ba4dbee6ba641b80bec14d222a033025f628"
+      "sha256": "2029869e4604979fbf0fdcb36466cf9b0c7b0fc10ce72882563005d61662bef7"
     },
     {
       "bytes": 8332,
@@ -38,9 +51,9 @@
       "sha256": "dbd8e5ef7c04ce2c7738e574aae93254bbe927bc3c168cc7a78d7b2fa727794b"
     },
     {
-      "bytes": 4135,
+      "bytes": 4500,
       "path": "reports/etf_portfolios/README.md",
-      "sha256": "8ab1ee24041bf13f1a457cd9664358f452906f484bf162a5e68b79a2f0a9baf2"
+      "sha256": "ec6df023dc5077c62829f0363a833343208ff08cd64c94bf39e3307282c39982"
     },
     {
       "bytes": 1716,
@@ -48,19 +61,19 @@
       "sha256": "fc21791f62fd61689068cd3d382a55643be43c286885ea333251742b7e9795bd"
     },
     {
-      "bytes": 283603,
+      "bytes": 335908,
       "path": "reports/etf_portfolios/development_baseline.png",
-      "sha256": "7655b275132f3cb92696450cf3455294d84889daf78681e6e9eef5e446c2d785"
+      "sha256": "38b0cff28e329427b042ae81ff38705f9e750672ecb5390cc986e2357e393527"
     },
     {
-      "bytes": 4198,
+      "bytes": 5014,
       "path": "reports/etf_portfolios/figures_manifest.json",
-      "sha256": "aa15880e53c6b9127f1834e9c2ce90fc40fa0550625b40aa79eba10db55b62a0"
+      "sha256": "944f638f18748d050e85fed5a102fca5b56fcca5305ac94abdeabc993dea7290"
     },
     {
-      "bytes": 286771,
+      "bytes": 326256,
       "path": "reports/etf_portfolios/historical_OOS_baseline.png",
-      "sha256": "7a4bf47ecb779f6ef974dfd599e0dbcc6b2924dabdc1b7f5c729389ab8a04b57"
+      "sha256": "820708344ca925060e35ae7fe41e0bba76abcec622c3fb331ad3d1e3dd77782b"
     },
     {
       "bytes": 12228,
@@ -73,9 +86,9 @@
       "sha256": "d5ef72a38826a275cbf5df69b9f5a176e582c4fa8daff4cfc61f9dd3a129b858"
     },
     {
-      "bytes": 12251,
+      "bytes": 13751,
       "path": "reports/etf_portfolios/report.md",
-      "sha256": "39d072ebe3f122059f109239fc2b2f1f3ae70248d65250865b728d3454bc58d9"
+      "sha256": "6f1a814fb68acb37087b319d0f5d25e4b02a86c2ec071f3204a87a1bcb5ef5fd"
     },
     {
       "bytes": 1394,
@@ -93,9 +106,9 @@
       "sha256": "6563091cf53b17a8b9b19e2790c2849e32f3bb6a324f9097805616a35be32881"
     },
     {
-      "bytes": 360118,
+      "bytes": 412299,
       "path": "reports/etf_portfolios/validation_baseline.png",
-      "sha256": "cc9d7371192359c1c3b9f06751a425e20f3cd1b4ffa07dfd6ff25df6f2cced90"
+      "sha256": "f6428fabd0da050808f6c328f1752337869b7b68d33c5e4509f4dea8545f4349"
     },
     {
       "bytes": 2895,

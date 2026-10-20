@@ -63,3 +63,22 @@ def test_every_published_symbol_is_documented():
     detail = (ROOT / "docs/etf_data_sources.md").read_text()
     for symbol in universe["symbols"]:
         assert symbol in readme and symbol in detail
+
+
+def test_comparison_figures_include_all_four_portfolios_and_qqq():
+    manifest = json.loads(
+        (ROOT / "reports/etf_portfolios/figures_manifest.json").read_text()
+    )
+    names = [
+        "Initial allocation; no rebalancing",
+        "Equal weight; no rebalancing",
+        "Weekly corrections",
+        "Monthly corrections",
+        "QQQ buy-and-hold",
+    ]
+    assert manifest["curve_names"] == names
+    for stage in ("development", "validation", "historical_OOS"):
+        figure = manifest["figures"][stage]
+        assert figure["curves"] == names
+        assert "equal_initial_return" in figure["public_return_columns"]
+    assert "20%" in (ROOT / "README.md").read_text()

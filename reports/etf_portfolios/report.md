@@ -2,11 +2,11 @@
 
 ## Scope and method
 
-The comparison contains **Weekly corrections**, **Monthly corrections** and the **Initial allocation; no rebalancing** comparator. These are completed independently audited calculations—not a new optimizer, account run or performance improvement. All saved full-precision values are unchanged.
+The comparison contains **Initial allocation; no rebalancing**, **Equal weight; no rebalancing**, **Weekly corrections** and **Monthly corrections**. All use the same five strategies. The original 36 fitted-allocation results plus 12 released equal-weight comparisons give 48 portfolio/cost/period outcomes. No account or optimizer was rerun; saved full-precision results are unchanged.
 
 The long/cash strategy universe is **GDX, FXI, QQQ, UNG and FDN**, used consistently throughout this publication. No shorts, leverage or standalone Maximum CAGR allocation are used. Each period starts independently with **$1,000**, flat accounts and empty orders/confirmation streaks; causal feature history alone carries across stages.
 
-### Same saved starting weights for every frequency, period and cost
+### Saved fitted starting weights; unchanged across periods and costs
 
 | Strategy sleeve | Initial weight |
 |---|---:|
@@ -15,6 +15,9 @@ The long/cash strategy universe is **GDX, FXI, QQQ, UNG and FDN**, used consiste
 | QQQ | 6.304492620% |
 | UNG | 26.729328450% |
 | FDN | 9.922896299% |
+
+**Equal weight; no rebalancing** instead starts at **20% per sleeve**, once at each stage's inception. Capital then drifts. It uses the same rules and costs, is not periodically rebalanced, and does not change the frozen fitted-weight forward portfolio.
+
 
 At the last actual trading session of each ISO week or calendar month, the **17:00 New York** valuation queues a correction only when a sleeve's whole strategy-account capital (ETF plus cash) exceeds one-third. October 15, 2026 is not an artificial week/month end. Execution waits for the next simultaneous eligible observed native 30-minute bar open, strictly after the decision. Corporate actions, original dividend reinvestment and normal confirmed strategy fills occur first; a vanished breach cancels the intent.
 
@@ -39,18 +42,22 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 | Initial allocation; no rebalancing | 1 | 1.303 | 16.24% | -8.48% | 38 | 0 / 0 | 0.0000 |
 | Weekly corrections | 1 | 1.303 | 16.24% | -8.48% | 38 | 0 / 0 | 0.0000 |
 | Monthly corrections | 1 | 1.303 | 16.24% | -8.48% | 38 | 0 / 0 | 0.0000 |
+| Equal weight; no rebalancing | 1 | 1.511 | 19.68% | -7.36% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 1 | 1.063 | 28.40% | -28.56% | 1 | — | — |
 | Initial allocation; no rebalancing | 3 | 1.295 | 16.14% | -8.48% | 38 | 0 / 0 | 0.0000 |
 | Weekly corrections | 3 | 1.295 | 16.14% | -8.48% | 38 | 0 / 0 | 0.0000 |
 | Monthly corrections | 3 | 1.295 | 16.14% | -8.48% | 38 | 0 / 0 | 0.0000 |
+| Equal weight; no rebalancing | 3 | 1.504 | 19.59% | -7.39% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 3 | 1.063 | 28.39% | -28.56% | 1 | — | — |
 | Initial allocation; no rebalancing | 10 | 1.267 | 15.80% | -8.49% | 38 | 0 / 0 | 0.0000 |
 | Weekly corrections | 10 | 1.267 | 15.80% | -8.49% | 38 | 0 / 0 | 0.0000 |
 | Monthly corrections | 10 | 1.267 | 15.80% | -8.49% | 38 | 0 / 0 | 0.0000 |
+| Equal weight; no rebalancing | 10 | 1.479 | 19.29% | -7.49% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 10 | 1.061 | 28.35% | -28.56% | 1 | — | — |
 | Initial allocation; no rebalancing | 25 | 1.205 | 15.08% | -8.51% | 38 | 0 / 0 | 0.0000 |
 | Weekly corrections | 25 | 1.205 | 15.08% | -8.51% | 38 | 0 / 0 | 0.0000 |
 | Monthly corrections | 25 | 1.205 | 15.08% | -8.51% | 38 | 0 / 0 | 0.0000 |
+| Equal weight; no rebalancing | 25 | 1.426 | 18.64% | -7.71% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 25 | 1.058 | 28.25% | -28.56% | 1 | — | — |
 | Matched cash | — | Undefined | 3.05% | 0.00% | 0 | — | — |
 
@@ -61,18 +68,22 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 | Initial allocation; no rebalancing | 1 | 0.429 | 7.90% | -19.22% | 46 | 0 / 0 | 0.0000 |
 | Weekly corrections | 1 | 0.480 | 8.45% | -17.53% | 46 | 4 / 5 | 0.0083 |
 | Monthly corrections | 1 | 0.474 | 8.37% | -17.70% | 46 | 3 / 1 | 0.0004 |
+| Equal weight; no rebalancing | 1 | 0.535 | 8.66% | -15.64% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 1 | 0.388 | 9.86% | -35.12% | 1 | — | — |
 | Initial allocation; no rebalancing | 3 | 0.419 | 7.77% | -19.24% | 46 | 0 / 0 | 0.0000 |
 | Weekly corrections | 3 | 0.470 | 8.32% | -17.54% | 46 | 4 / 5 | 0.0167 |
 | Monthly corrections | 3 | 0.464 | 8.24% | -17.71% | 46 | 3 / 1 | 0.0007 |
+| Equal weight; no rebalancing | 3 | 0.524 | 8.53% | -15.67% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 3 | 0.387 | 9.84% | -35.12% | 1 | — | — |
 | Initial allocation; no rebalancing | 10 | 0.385 | 7.30% | -19.33% | 46 | 0 / 0 | 0.0000 |
 | Weekly corrections | 10 | 0.436 | 7.86% | -17.57% | 46 | 4 / 5 | 0.0467 |
 | Monthly corrections | 10 | 0.430 | 7.79% | -17.74% | 46 | 3 / 1 | 0.0020 |
+| Equal weight; no rebalancing | 10 | 0.485 | 8.07% | -15.79% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 10 | 0.385 | 9.79% | -35.12% | 1 | — | — |
 | Initial allocation; no rebalancing | 25 | 0.311 | 6.32% | -19.52% | 46 | 0 / 0 | 0.0000 |
 | Weekly corrections | 25 | 0.362 | 6.90% | -17.65% | 46 | 4 / 5 | 0.1143 |
 | Monthly corrections | 25 | 0.357 | 6.83% | -17.82% | 46 | 3 / 1 | 0.0050 |
+| Equal weight; no rebalancing | 25 | 0.403 | 7.09% | -16.03% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 25 | 0.381 | 9.68% | -35.12% | 1 | — | — |
 | Matched cash | — | Undefined | 3.05% | 0.00% | 0 | — | — |
 
@@ -83,18 +94,22 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 | Initial allocation; no rebalancing | 1 | 2.499 | 24.71% | -4.66% | 34 | 0 / 0 | 0.0000 |
 | Weekly corrections | 1 | 2.526 | 24.74% | -4.66% | 34 | 5 / 11 | 0.0160 |
 | Monthly corrections | 1 | 2.527 | 24.79% | -4.66% | 34 | 3 / 8 | 0.0104 |
+| Equal weight; no rebalancing | 1 | 2.224 | 23.52% | -5.04% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 1 | 0.997 | 23.95% | -22.77% | 1 | — | — |
 | Initial allocation; no rebalancing | 3 | 2.487 | 24.57% | -4.67% | 34 | 0 / 0 | 0.0000 |
 | Weekly corrections | 3 | 2.514 | 24.60% | -4.67% | 34 | 5 / 11 | 0.0317 |
 | Monthly corrections | 3 | 2.516 | 24.65% | -4.67% | 34 | 3 / 8 | 0.0202 |
+| Equal weight; no rebalancing | 3 | 2.213 | 23.39% | -5.04% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 3 | 0.996 | 23.93% | -22.77% | 1 | — | — |
 | Initial allocation; no rebalancing | 10 | 2.447 | 24.08% | -4.69% | 34 | 0 / 0 | 0.0000 |
 | Weekly corrections | 10 | 2.472 | 24.12% | -4.69% | 34 | 5 / 11 | 0.0848 |
 | Monthly corrections | 10 | 2.474 | 24.17% | -4.69% | 34 | 3 / 8 | 0.0510 |
+| Equal weight; no rebalancing | 10 | 2.173 | 22.95% | -5.06% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 10 | 0.993 | 23.87% | -22.77% | 1 | — | — |
 | Initial allocation; no rebalancing | 25 | 2.358 | 23.04% | -4.74% | 34 | 0 / 0 | 0.0000 |
 | Weekly corrections | 25 | 2.380 | 23.10% | -4.74% | 34 | 5 / 11 | 0.1882 |
 | Monthly corrections | 25 | 2.383 | 23.15% | -4.74% | 34 | 2 / 5 | 0.1103 |
+| Equal weight; no rebalancing | 25 | 2.087 | 22.01% | -5.10% | — | 0 / 0 | 0.0000 |
 | QQQ buy-and-hold | 25 | 0.988 | 23.73% | -22.77% | 1 | — | — |
 | Matched cash | — | Undefined | 3.05% | 0.00% | 0 | — | — |
 
@@ -116,7 +131,7 @@ These observations cover daily valuations and common eligible opens only. Openin
 
 ## Baseline equity and drawdown curves
 
-Each panel restarts at $1,000 and compares the three retained models with cost-matched QQQ buy-and-hold. Raster images contain no embedded numerical daily series.
+Each panel restarts at $1,000 and compares four portfolios with cost-matched QQQ buy-and-hold. Equal-weight metrics come from the already published return release; its trip count is not inferred from aggregate returns. Raster images contain no embedded numerical daily series.
 
 ![Development-period portfolio backcast (retrospective) baseline equity and drawdown](development_baseline.png)
 

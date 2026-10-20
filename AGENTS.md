@@ -26,13 +26,12 @@
   authorization. Local Python: `~/.venvs/myenv/bin/python` when available.
 
 - Active final basket: GDX, FXI, QQQ, UNG and FDN. Current models
-  are Weekly corrections, Monthly corrections and the Initial allocation /
-  no-rebalancing comparator. Daily corrections are excluded from active results,
-  tables and charts. Generic engine support for other frequencies is not an
-  active portfolio definition.
+  are Initial allocation / no rebalancing, Equal weight / no rebalancing,
+  Weekly corrections and Monthly corrections. Equal weight is a historical
+  20%-per-sleeve comparison; the frozen forward model remains unchanged.
 - Use configs/final_cap_rebalancing.json and reports/etf_portfolios.
-  Starting weights are the exact saved Initial cap vector, unchanged across
-  costs, frequencies and all three periods. Do not refit or rerun completed
+  Fitted models keep the exact saved Initial cap vector across costs,
+  frequencies and all three periods; equal weight instead starts at 20% each. Do not refit or rerun completed
   accounts when filtering/reporting. Next-eligible-open corrections enforce a
   post-cost sleeve-capital cap, not a continuous or daily-closing guarantee.
 - Development 2017–2020, validation 2021–2023 and historical OOS
@@ -45,8 +44,10 @@
   results remain byte-preserved privately; do not rewrite them or turn scope
   cleanup into a new screening/optimization run. They are not current public
   dependencies. Do not reintroduce withdrawn snapshots into the public tree.
-- Current report/metadata scope is 36 portfolio-cost-period results and 15
-  distinct controls, across unchanged three periods and four costs. Validate
+- The original aggregate preserves 36 fitted-portfolio-cost-period results
+  and 15 distinct controls. The released equal-initial comparator adds 12
+  historical comparison rows, giving 48 portfolio results across three periods
+  and four costs. Do not alter the original aggregate or the forward freeze. Validate
   with scripts/verify_etf_publication.py and scripts/verify_publication.py.
 - Maximum CAGR stays excluded; corrected-split work stays inactive. The
   unpublished broader correction source remains private and is not committed.

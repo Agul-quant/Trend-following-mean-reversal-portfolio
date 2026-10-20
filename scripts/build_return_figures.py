@@ -23,6 +23,7 @@ STAGES = {
 }
 CURVES = {
     "initial_allocation": "Initial allocation; no rebalancing",
+    "equal_initial": "Equal weight; no rebalancing",
     "weekly_corrections": "Weekly corrections",
     "monthly_corrections": "Monthly corrections",
     "QQQ_buy_and_hold": "QQQ buy-and-hold",
@@ -34,6 +35,7 @@ def main():
     destination = ROOT / "reports/etf_portfolios"
     manifest_path = destination / "figures_manifest.json"
     manifest = json.loads(manifest_path.read_text())
+    manifest["curve_names"] = list(CURVES.values())
     for stage, title in STAGES.items():
         source = ROOT / release["stages"][stage]["csv"]
         with source.open(newline="") as f:
@@ -50,7 +52,7 @@ def main():
             sharex=True,
             gridspec_kw={"height_ratios": [2.1, 1]},
         )
-        colors = ["#2563eb", "#d97706", "#16a34a", "#6b7280"]
+        colors = ["#2563eb", "#9333ea", "#d97706", "#16a34a", "#6b7280"]
         for (key, label), color in zip(CURVES.items(), colors):
             equity = 1000 * np.cumprod(
                 [1] + [1 + float(r[key + "_return"]) for r in rows]
@@ -84,6 +86,8 @@ def main():
         plt.close(fig)
         item = manifest["figures"][stage]
         item.update(
+            curves=list(CURVES.values()),
+            public_return_columns=[key + "_return" for key in CURVES],
             sha256=hashlib.sha256((destination / filename).read_bytes()).hexdigest(),
             presentation_label=title,
             public_return_source=release["stages"][stage]["csv"],

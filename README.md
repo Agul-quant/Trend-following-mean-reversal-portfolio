@@ -1,29 +1,33 @@
 # Trend Following and Mean Reversion ETF Portfolios
 
 The final basket is **GDX, FXI, QQQ, UNG and FDN**.
-The historical comparison contains **Weekly corrections**, **Monthly corrections**
-and the **Initial allocation / no-rebalancing benchmark**. Daily corrections
-have been removed from the active results and charts. The starting allocation
-is unchanged across frequencies, periods and costs; **nothing was refitted**.
+The historical comparison contains **Initial allocation; no rebalancing**,
+**Equal weight; no rebalancing**, **Weekly corrections** and **Monthly corrections**.
+The fitted starting allocation is unchanged across frequencies, periods and costs;
+the equal-weight comparison starts at **20% per sleeve**. **Nothing was refitted**.
 
 ## Current reports
 
 - [Report index and interpretation](reports/etf_portfolios/README.md).
 - [All three retrospective periods — all four costs](reports/etf_portfolios/report.md).
 - [Full-precision aggregate results, alpha and betas](reports/etf_portfolios/report.json).
-- [Performance CSV](reports/etf_portfolios/performance.csv) and [matched QQQ/cash controls](reports/etf_portfolios/controls.csv).
+- [Fitted-allocation performance CSV](reports/etf_portfolios/performance.csv),
+  [full comparison CSV](reports/etf_portfolios/statistical_comparison.csv) and
+  [matched QQQ/cash controls](reports/etf_portfolios/controls.csv).
 - [Exact starting weights and policies](configs/final_cap_rebalancing.json) and [unchanged strategy definitions](configs/selected_etf_strategies.json).
 
 > **Retrospective research—not untouched portfolio OOS.** Strategies and initial
 > weights used the already examined 2024–October 15, 2026 history. Earlier-period
-> replay does not remove hindsight. The frequency removal is a literal subset of
-> completed, independently audited results: no new account simulation, optimizer,
-> price refresh, changed retained metrics or live trading.
+> replay does not remove hindsight. The comparison uses completed, independently
+> audited results: no new account simulation, optimizer, price refresh, changed
+> retained metrics or live trading.
 
 ## Actual cap corrections—not historical cap fits
 
 - **Initial allocation / no rebalancing:** invest once in the five strategy
   accounts; allow their capital shares to drift afterward.
+- **Equal weight; no rebalancing:** allocate 20% once to each of the same five
+  strategy accounts; let their capital shares drift afterward.
 - **Weekly corrections:** check at the last actual trading session of each ISO
   week, at **17:00 New York**. Only a sleeve above one-third queues a correction.
 - **Monthly corrections:** the same rule at the last actual trading session of
@@ -60,13 +64,13 @@ tracking is a simulation, not live execution or a guarantee of future alpha.
 
 ## Unchanged initial allocation
 
-| Strategy sleeve | Initial allocation |
-|---|---:|
-| GDX | 29.051308% |
-| FXI | 27.991974% |
-| QQQ | 6.304493% |
-| UNG | 26.729328% |
-| FDN | 9.922896% |
+| Strategy sleeve | Fitted initial allocation | Equal-weight comparison |
+|---|---:|---:|
+| GDX | 29.051308% | 20% |
+| FXI | 27.991974% | 20% |
+| QQQ | 6.304493% | 20% |
+| UNG | 26.729328% | 20% |
+| FDN | 9.922896% | 20% |
 
 Each period starts independently with **$1,000**, all sleeves initially in cash.
 Feature history is carried, not holdings, orders or confirmation streaks. The
@@ -114,6 +118,7 @@ Baseline: **1-bp commission + 3-bp slippage each way**. Each cell is
 | Portfolio | Development-period backcast 2017–2020 | Validation-period backcast 2021–2023 | Portfolio-selection sample 2024–2026-10-15 (**in-sample**) |
 |---|---:|---:|---:|
 | Initial allocation; no rebalancing | 1.295 / 16.14% / -8.48% | 0.419 / 7.77% / -19.24% | 2.487 / 24.57% / -4.67% |
+| Equal weight; no rebalancing | 1.504 / 19.59% / -7.39% | 0.524 / 8.53% / -15.67% | 2.213 / 23.39% / -5.04% |
 | Weekly corrections | 1.295 / 16.14% / -8.48% | 0.470 / 8.32% / -17.54% | 2.514 / 24.60% / -4.67% |
 | Monthly corrections | 1.295 / 16.14% / -8.48% | 0.464 / 8.24% / -17.71% | 2.516 / 24.65% / -4.67% |
 | QQQ buy-and-hold | 1.063 / 28.39% / -28.56% | 0.387 / 9.84% / -35.12% | 0.996 / 23.93% / -22.77% |
@@ -130,7 +135,7 @@ is above the matched cash path, not above buy-and-hold; cash Sharpe is undefined
 CAGR uses exact first-open-to-terminal elapsed time. Drawdown includes initial
 capital and daily valuations, not an intraday maximum.
 
-![Weekly and Monthly corrections, no-rebalancing comparator and QQQ buy-and-hold: retrospective portfolio-selection sample (in-sample) baseline equity and drawdown](reports/etf_portfolios/historical_OOS_baseline.png)
+![Four portfolio comparisons and QQQ buy-and-hold: retrospective portfolio-selection sample (in-sample) baseline equity and drawdown](reports/etf_portfolios/historical_OOS_baseline.png)
 
 ## Verify and reproduce
 
@@ -203,5 +208,7 @@ verification script recomputes the published summary statistics without raw ETF 
 This is metric reproducibility, not end-to-end recreation of signals and trades. See the
 [dataset specification and access/reproduction notes](docs/etf_data_sources.md)
 for fields, price adjustments, coverage limits and the private input requirement.
-The current comparison contains two cap-correction policies plus the no-rebalancing comparator across **five ETF strategy sleeves**.
+The historical comparison contains **four portfolios** across the same five ETF
+strategy sleeves: fitted initial allocation, equal weight, Weekly corrections
+and Monthly corrections, plus matched QQQ buy-and-hold and cash controls.
 The 47-ETF research scope is context, not a pooled 47-ETF portfolio.

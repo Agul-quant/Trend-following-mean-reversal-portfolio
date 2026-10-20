@@ -201,3 +201,58 @@ def test_standalone_verifier_reads_only_public_files(report, tmp_path):
     (directory / "performance.csv").write_text("changed")
     with pytest.raises(ValueError, match="presentation changed"):
         module.verify(directory, config)
+
+
+def test_released_equal_weight_comparison_in_all_periods_and_costs(report):
+    comparison = read_json(ROOT / "reports/etf_portfolios/statistical_comparison.json")
+    text = markdown(report, comparison)
+    assert text.count("| Equal weight; no rebalancing |") == 12
+    assert "48 portfolio/cost/period outcomes" in text
+    assert "20% per sleeve" in text
+    assert "four portfolios" in text
+    assert text == (ROOT / "reports/etf_portfolios/report.md").read_text()
+    readme = (ROOT / "README.md").read_text()
+    cells = []
+    for stage in ("development", "validation", "historical_OOS"):
+        row = next(
+            r
+            for r in comparison["rows"]
+            if r["stage"] == stage
+            and r["series"] == "equal_initial"
+            and r["slippage_bps_each_way"] == 3
+        )
+        cells.append(
+            f"{row['cash_excess_sharpe']:.3f} / {row['cagr'] * 100:.2f}% / {row['max_drawdown'] * 100:.2f}%"
+        )
+    assert "| Equal weight; no rebalancing | " + " | ".join(cells) + " |" in readme
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        lambda c: c.update(schema="unrecognized"),
+        lambda c: c["rows"].pop(
+            next(i for i, r in enumerate(c["rows"]) if r["series"] == "equal_initial")
+        ),
+        lambda c: c["rows"].append(
+            copy.deepcopy(next(r for r in c["rows"] if r["series"] == "equal_initial"))
+        ),
+        lambda c: next(r for r in c["rows"] if r["series"] == "equal_initial").update(
+            slippage_bps_each_way=2
+        ),
+        lambda c: next(r for r in c["rows"] if r["series"] == "equal_initial").update(
+            commission_bps_each_way=2
+        ),
+        lambda c: next(r for r in c["rows"] if r["series"] == "equal_initial").update(
+            observations=1
+        ),
+        lambda c: next(r for r in c["rows"] if r["series"] == "equal_initial").update(
+            cagr=float("nan")
+        ),
+    ],
+)
+def test_equal_comparison_scope_cannot_silently_change(report, mutation):
+    comparison = read_json(ROOT / "reports/etf_portfolios/statistical_comparison.json")
+    mutation(comparison)
+    with pytest.raises(ValueError):
+        markdown(report, comparison)

@@ -36,10 +36,12 @@ def verify(directory, config_path):
         read_json(directory / "source_subset_audit.json") == source_audit(report),
         "Detached saved-aggregate receipt changed",
     )
+    comparison_path = directory / "statistical_comparison.json"
+    comparison = read_json(comparison_path) if comparison_path.is_file() else None
     expected = {
         "performance.csv": csv_text(report["rows"], CSV_KEYS),
         "controls.csv": csv_text(report["controls"], CONTROL_KEYS),
-        "report.md": markdown(report),
+        "report.md": markdown(report, comparison),
     }
     for name, text in expected.items():
         require(
@@ -58,6 +60,7 @@ def verify(directory, config_path):
         "frequencies": list(RETAINED_FREQUENCIES),
         "retained_performance_rows": 36,
         "unchanged_control_rows": 15,
+        "released_equal_weight_comparison_rows": 12 if comparison is not None else 0,
         "private_market_or_account_inputs_read": False,
         "financial_audit_reproduced": False,
         "unpinned_recomputed_proof_accepted": False,
