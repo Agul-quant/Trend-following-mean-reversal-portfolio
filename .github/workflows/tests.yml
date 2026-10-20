@@ -15,7 +15,5 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python -m pip install -e '.[test,plots]'
       - run: python -m pytest -q
-      - run: python scripts/verify_project.py
-      - run: python scripts/verify_no_bond_portfolios.py --public-report reports/no_bond_portfolios/report.json
-      - run: python scripts/verify_final_no_bond.py --report reports/final_no_bond_portfolios/report.json --source-report reports/no_bond_portfolios/report.json
-      - run: python scripts/verify_final_cap.py --report-dir reports/final_cap_rebalancing --config configs/final_cap_rebalancing.json
+      - run: python scripts/verify_etf_publication.py --report-dir reports/etf_portfolios --config configs/final_cap_rebalancing.json
+      - run: python scripts/verify_publication.py

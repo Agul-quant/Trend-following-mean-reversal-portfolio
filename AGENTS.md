@@ -23,12 +23,12 @@
 - Verify the origin push URL before every push. Never force-push without explicit
   authorization. Local Python: `~/.venvs/myenv/bin/python` when available.
 
-- Active final basket: GDX, FXI, QQQ, UNG and FDN; no bond ETFs. Current models
+- Active final basket: GDX, FXI, QQQ, UNG and FDN. Current models
   are Weekly corrections, Monthly corrections and the Initial allocation /
   no-rebalancing comparator. Daily corrections are excluded from active results,
   tables and charts. Generic engine support for other frequencies is not an
   active portfolio definition.
-- Use configs/final_cap_rebalancing.json and reports/final_cap_rebalancing.
+- Use configs/final_cap_rebalancing.json and reports/etf_portfolios.
   Starting weights are the exact saved Initial cap vector, unchanged across
   costs, frequencies and all three periods. Do not refit or rerun completed
   accounts when filtering/reporting. Next-eligible-open corrections enforce a
@@ -36,8 +36,15 @@
 - Development 2017–2020, validation 2021–2023 and historical OOS
   2024-01-01–2026-10-15 remain unchanged, all four costs. No date extension,
   live trading, leverage or shorting is implied. Results remain retrospective.
-- All prior financial sources, exact definitions/weights, archived static four
-  and six-model no-bond results and original class reports remain unchanged.
-  Their internal active labels are historical context; current routing is above.
-  Maximum CAGR stays excluded; corrected-split work stays inactive. The local
-  unpublished three-frequency cap source is preserved/ignored, not committed.
+- The published research scope is the exact 47-product list in
+  configs/etf_universe.json. Exact five selected definitions are in
+  configs/selected_etf_strategies.json. Use neutral ETF labels throughout.
+- Earlier snapshots, source identifiers, definitions, account paths and aggregate
+  results remain byte-preserved privately; do not rewrite them or turn scope
+  cleanup into a new screening/optimization run. They are not current public
+  dependencies. Do not reintroduce withdrawn snapshots into the public tree.
+- Current report/metadata scope is 36 portfolio-cost-period results and 15
+  distinct controls, across unchanged three periods and four costs. Validate
+  with scripts/verify_etf_publication.py and scripts/verify_publication.py.
+- Maximum CAGR stays excluded; corrected-split work stays inactive. The
+  unpublished broader correction source remains private and is not committed.

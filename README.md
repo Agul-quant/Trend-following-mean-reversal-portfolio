@@ -1,6 +1,6 @@
 # Trend Following and Mean Reversion ETF Portfolios
 
-The final basket is **GDX, FXI, QQQ, UNG and FDN**, with **no bond ETFs**.
+The final basket is **GDX, FXI, QQQ, UNG and FDN**.
 The current comparison contains **Weekly corrections**, **Monthly corrections**
 and the **Initial allocation / no-rebalancing benchmark**. Daily corrections
 have been removed from the active results and charts. The starting allocation
@@ -8,11 +8,11 @@ is unchanged across frequencies, periods and costs; **nothing was refitted**.
 
 ## Current reports
 
-- [Report index and interpretation](reports/final_cap_rebalancing/README.md).
-- [Development, validation and historical OOS — all four costs](reports/final_cap_rebalancing/report.md).
-- [Full-precision aggregate results, alpha and betas](reports/final_cap_rebalancing/report.json).
-- [Performance CSV](reports/final_cap_rebalancing/performance.csv) and [matched QQQ/cash controls](reports/final_cap_rebalancing/controls.csv).
-- [Exact starting weights and policies](configs/final_cap_rebalancing.json) and [unchanged strategy definitions](configs/no_bond_selected_strategies.json).
+- [Report index and interpretation](reports/etf_portfolios/README.md).
+- [Development, validation and historical OOS — all four costs](reports/etf_portfolios/report.md).
+- [Full-precision aggregate results, alpha and betas](reports/etf_portfolios/report.json).
+- [Performance CSV](reports/etf_portfolios/performance.csv) and [matched QQQ/cash controls](reports/etf_portfolios/controls.csv).
+- [Exact starting weights and policies](configs/final_cap_rebalancing.json) and [unchanged strategy definitions](configs/selected_etf_strategies.json).
 
 > **Retrospective research—not untouched portfolio OOS.** Strategies and initial
 > weights used the already examined 2024–October 15, 2026 history. Earlier-period
@@ -81,16 +81,16 @@ is above the matched cash path, not above buy-and-hold; cash Sharpe is undefined
 CAGR uses exact first-open-to-terminal elapsed time. Drawdown includes initial
 capital and daily valuations, not an intraday maximum.
 
-![Weekly and Monthly corrections, no-rebalancing comparator and QQQ buy-and-hold: historical OOS baseline equity and drawdown](reports/final_cap_rebalancing/historical_OOS_baseline.png)
+![Weekly and Monthly corrections, no-rebalancing comparator and QQQ buy-and-hold: historical OOS baseline equity and drawdown](reports/etf_portfolios/historical_OOS_baseline.png)
 
 ## Verify and reproduce
 
 ```bash
 python -m pip install -e '.[test,plots]'
 python -m pytest -q
-python scripts/verify_final_cap.py --report-dir reports/final_cap_rebalancing \
+python scripts/verify_etf_publication.py --report-dir reports/final_cap_rebalancing \
   --config configs/final_cap_rebalancing.json
-python scripts/verify_project.py
+python scripts/verify_publication.py
 ```
 
 The portable checks verify published aggregate integrity, exact retained values,
@@ -102,20 +102,19 @@ the unpublished original aggregate requires that private source.
 The costed canonical-event kernels are included with synthetic tests. Exact
 financial reproduction needs the privately retained authenticated inputs,
 causal signal/event primitives and saved accounts; they are not redistributed.
-See [current methods](docs/final_cap_rebalancing.md) and [data access](docs/data_sources.md).
+See [current methods](docs/etf_methods.md) and [data access](docs/etf_data_sources.md).
 
-## Preserved historical results
+## Publication scope and provenance
 
-These links are **archives, not active portfolio definitions**. Their original
-wording, financial values, code and figures remain unchanged for provenance.
+The current tree presents the **47-ETF research scope** listed below and the
+five-strategy portfolio above, consistently from methodology through results.
+Earlier snapshots are retained privately and unchanged rather than mixed into
+this publication. Git history is not rewritten.
 
-- [Prior four static no-bond allocations](reports/final_no_bond_portfolios/README.md): Daily cap fit, Initial cap fit, Uncapped and Equal initial; **none rebalanced**. The old Daily cap fit is not the removed Daily correction policy.
-- [Earlier six-allocation no-bond comparison](docs/archived_six_portfolio_comparison.md): historical fitted caps, not the current Weekly/Monthly corrections.
-- [Original four-portfolio class project](docs/archived_four_portfolio_snapshot.md) and [PDF/HTML/Word reports](final_reports/README.md): older six-sleeve results.
-- [Original five-portfolio snapshot](docs/archived_five_portfolio_snapshot.md): the excluded Maximum CAGR comparison is historical only.
-
-All historical financial definitions, account outcomes and freezes remain
-unchanged. The separate corrected-split experiment remains inactive/private.
+This is a retrospective, scope-restricted presentation of previously examined
+research—not a newly executed 47-ETF screening campaign. Scope cleanup changes
+neither a retained strategy definition nor a portfolio weight, account path,
+metric or control. No new stage membership counts are invented.
 
 ## Data sources and full research dataset
 
@@ -131,13 +130,12 @@ not independent-vendor confirmation. Trading sessions use the XNYS calendar in
 [exchange_calendars](https://github.com/gerrymanoim/exchange_calendars).
 Cash returns are modeled at 3% nominal ACT/365, not downloaded Treasury yields.
 
-### Full 56-ETF universe
+### Published 47-ETF universe
 
 - **US equity indices (6):** SPY, QQQ, DIA, IWM, MDY, VTI.
 - **International / country equities (13):** EEM, EFA, EWA, EWC, EWJ, EWT, EWW, EWY, EWZ, FXI, INDA, MCHI, VGK.
 - **Broad US sectors (10):** XLB, XLE, XLF, XLI, XLK, XLP, XLRE, XLU, XLV, XLY.
 - **Industries / subsectors (13):** FDN, GDX, GDXJ, IBB, ITB, KBE, KRE, SMH, SOXX, XBI, XHB, XOP, XRT.
-- **Bonds (9):** BND, HYG, IEF, IEI, LQD, MBB, SHY, TIP, TLT.
 - **Commodities / precious metals (5):** DBC, GLD, SLV, UNG, USO.
 
 The research window is **2017-01-01–2026-10-15**, with daily feature initialization
@@ -150,7 +148,7 @@ returns, not index levels, spot commodities or synthetic leveraged products.
 **Data availability:** the underlying market captures and full saved daily account paths
 are retained privately and are **not downloadable from this repository**. GitHub
 contains code, definitions, aggregate results and raster charts. See the
-[complete dataset specification and access/reproduction notes](docs/data_sources.md)
+[dataset specification and access/reproduction notes](docs/etf_data_sources.md)
 for fields, price adjustments, coverage limits and the private input requirement.
-The original reports cover four allocations across six selected strategy sleeves. The active comparison excludes BND and contains two cap-correction policies plus the no-rebalancing comparator across **five ETF strategy sleeves**.
-The original 56-ETF screening universe is context, not a pooled 56-ETF portfolio.
+The current comparison contains two cap-correction policies plus the no-rebalancing comparator across **five ETF strategy sleeves**.
+The 47-ETF research scope is context, not a pooled 47-ETF portfolio.

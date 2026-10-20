@@ -1,8 +1,0 @@
-{
-  "name": "etf-portfolio-report-renderer",
-  "private": true,
-  "description": "Optional offline HTML to PDF renderer for the saved ETF research reports",
-  "engines": {"node": ">=20"},
-  "devDependencies": {"playwright": "1.62.1"},
-  "scripts": {"reports:pdf": "node scripts/render_final_reports.cjs"}
-}

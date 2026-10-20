@@ -1,0 +1,106 @@
+{
+  "aggregate_only": true,
+  "files": [
+    {
+      "bytes": 1676,
+      "path": "configs/etf_universe.json",
+      "sha256": "c49d5dd76c8961e157383596366f9b0c8fb3b6e2268345f956a1d3b02f58bd14"
+    },
+    {
+      "bytes": 851,
+      "path": "configs/final_cap_rebalancing.json",
+      "sha256": "89cbb81f7a13c4a97467798bf885fb0156d43f37a24e0a5e07f55dab03ed7dee"
+    },
+    {
+      "bytes": 2803,
+      "path": "configs/selected_etf_strategies.json",
+      "sha256": "574408940d0937f7a7fe74fefa6e9a82baac14339edaa3fd039cc49a453b4fbe"
+    },
+    {
+      "bytes": 6667,
+      "path": "docs/etf_data_sources.md",
+      "sha256": "7270fea48553246ae1f4c3703aa67211dce944ea516ab9ea2a32d9b0bf45ebb6"
+    },
+    {
+      "bytes": 10436,
+      "path": "docs/etf_methods.md",
+      "sha256": "56042010cee1ef51db83128ae1ef39e1641d6197ef72105840ea58e6dd15b833"
+    },
+    {
+      "bytes": 3375,
+      "path": "reports/etf_portfolios/README.md",
+      "sha256": "d6839a5ae9fd7df8fe10c4005567c2bbf141a3cd4a604ca65b144da64e08cb41"
+    },
+    {
+      "bytes": 1716,
+      "path": "reports/etf_portfolios/controls.csv",
+      "sha256": "fc21791f62fd61689068cd3d382a55643be43c286885ea333251742b7e9795bd"
+    },
+    {
+      "bytes": 333921,
+      "path": "reports/etf_portfolios/development_baseline.png",
+      "sha256": "e8733ccb83152f6e3a6c9215c35e80c38931a6d41204bba7e52ca5c6d2dadc42"
+    },
+    {
+      "bytes": 3324,
+      "path": "reports/etf_portfolios/figures_manifest.json",
+      "sha256": "06434361dc6b0bdf072e3d479f5d196907ee10bee87a597423cbfbbfc8fa4c49"
+    },
+    {
+      "bytes": 323693,
+      "path": "reports/etf_portfolios/historical_OOS_baseline.png",
+      "sha256": "3c953835c5c57beacf6bdda80132fa26db998738428b11dc52814ab29db34283"
+    },
+    {
+      "bytes": 12228,
+      "path": "reports/etf_portfolios/performance.csv",
+      "sha256": "c3826aaf481461849adfa700fa8d77e0d6302decb3cae3b53c0e46ba41fd6edf"
+    },
+    {
+      "bytes": 148264,
+      "path": "reports/etf_portfolios/report.json",
+      "sha256": "d5ef72a38826a275cbf5df69b9f5a176e582c4fa8daff4cfc61f9dd3a129b858"
+    },
+    {
+      "bytes": 11390,
+      "path": "reports/etf_portfolios/report.md",
+      "sha256": "d57c3053516cee4f2d6963432eadc21e78c182628f137c245be116822d7f957d"
+    },
+    {
+      "bytes": 1394,
+      "path": "reports/etf_portfolios/source_subset_audit.json",
+      "sha256": "73e3457992b0befa0a4ff2455c5fb5a489c4dde9cdfef63414c815c01ba4944a"
+    },
+    {
+      "bytes": 403818,
+      "path": "reports/etf_portfolios/validation_baseline.png",
+      "sha256": "f26129311d9384ab74780147c65a3172a987718bd002262c32a85779488b3f1d"
+    }
+  ],
+  "financial_provenance": {
+    "canonical_payload_sha256": "6757f4c392301fb31089809aa5af96bdcd61dffe7b402263e18da5896f77fde9",
+    "distinct_controls": 15,
+    "new_account_runs": false,
+    "new_optimization": false,
+    "new_universe_screen": false,
+    "performance_rows": 36,
+    "unchanged_daily_paths_and_metrics": true,
+    "unchanged_starting_weights": true,
+    "unchanged_strategy_ids_and_definitions": true
+  },
+  "frequencies": [
+    "none",
+    "weekly",
+    "monthly"
+  ],
+  "report_directory": "reports/etf_portfolios",
+  "schema": "etf_portfolio_artifacts_v1",
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN"
+  ],
+  "universe_size": 47
+}

@@ -1,0 +1,39 @@
+{
+  "canonical_digest": "SHA256 of UTF-8 JSON with sorted keys and compact separators for the published retained payload keys",
+  "exact_saved_full_precision_values": true,
+  "metrics_recomputed": false,
+  "optimizer_or_account_run": false,
+  "passed": true,
+  "presentation_source_report_sha256": "394c21a2497a4411a90b9c576a67abff5611a0de5de2726e3e889aa6c4e72630",
+  "private_market_or_account_inputs_read": false,
+  "retained_frequencies": [
+    "none",
+    "weekly",
+    "monthly"
+  ],
+  "retained_payload_keys": [
+    "baseline_slippage_bps",
+    "cap_fraction",
+    "commission_bps_each_way",
+    "controls",
+    "created_at_utc",
+    "independent_audit_passed",
+    "initial_weights",
+    "metrics",
+    "optimized",
+    "original_frozen_sources_unchanged",
+    "periods",
+    "rebalancing",
+    "retrospective",
+    "rows",
+    "slippage_bps_each_way",
+    "symbols"
+  ],
+  "retained_performance_rows": 36,
+  "retained_source_payload_sha256": "6757f4c392301fb31089809aa5af96bdcd61dffe7b402263e18da5896f77fde9",
+  "same_original_initial_weights": true,
+  "schema": "detached_etf_portfolio_aggregate_audit_v1",
+  "source_report_sha256": "2a940582ceac6b9a108e3a9baf9319ef26b1c74eff29bedddf66e3bfd3472171",
+  "unchanged_control_rows": 15,
+  "verification_scope": "Detached aggregate identity and exact-value verification; inherits completed independent financial audit, does not rerun it"
+}

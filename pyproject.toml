@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "trend-portfolio-research"
 version = "0.0.0"
-description = "Static-initial-capital ETF strategy portfolio analytics"
+description = "ETF strategy portfolio analytics and costed cap-correction research"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.24", "scipy>=1.10"]
 
@@ -20,5 +20,13 @@ trend-portfolio = "trend_portfolio.cli:main"
 where = ["src"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = [
+  "tests/test_analytics.py",
+  "tests/test_cli.py",
+  "tests/test_cap_event_engine.py",
+  "tests/test_cap_rebalance.py",
+  "tests/test_cap_publication.py",
+  "tests/test_publication_integrity.py",
+  "tests/test_etf_documentation.py",
+]
 pythonpath = ["src"]

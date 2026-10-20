@@ -1,111 +1,35 @@
 {
-  "active_portfolio_comparison": {
-    "excluded_bond_etfs": [
-      "BND"
-    ],
-    "frequencies": [
-      "none",
-      "weekly",
-      "monthly"
-    ],
-    "manifest": "metadata/final_cap_manifest.json",
-    "portfolios": 3,
-    "presentation": "configs/final_cap_rebalancing.json",
-    "report_index": "reports/final_cap_rebalancing/README.md",
-    "scope": "Weekly and Monthly actual cap corrections plus unchanged Initial allocation/no-rebalancing comparator; Daily corrections removed by literal saved-result subset, no refit.",
-    "symbols": [
-      "GDX",
-      "FXI",
-      "QQQ",
-      "UNG",
-      "FDN"
-    ]
-  },
   "aggregate_only": true,
-  "archived_portfolio_comparisons": [
-    {
-      "excluded_bond_etfs": [
-        "BND"
-      ],
-      "manifest": "metadata/final_no_bond_manifest.json",
-      "portfolios": 4,
-      "presentation": "configs/final_no_bond_study_presentation.json",
-      "report_index": "reports/final_no_bond_portfolios/README.md",
-      "scope": "Four unchanged saved allocations; removed cap models and original study/report fields are historical archives, not active final models.",
-      "symbols": [
-        "GDX",
-        "FXI",
-        "QQQ",
-        "UNG",
-        "FDN"
-      ]
-    }
-  ],
   "files": [
     {
-      "bytes": 821,
+      "bytes": 289,
       "path": ".gitattributes",
-      "sha256": "d19e29a4222f31e4ed581c954470ec106519cea95ddba839673231cae97527b6"
+      "sha256": "edcedc8fbd5e25cb140f610a4bff9f60956cb6bd4db5a13663691e9c8903087f"
     },
     {
-      "bytes": 890,
+      "bytes": 620,
       "path": ".github/workflows/tests.yml",
-      "sha256": "28ed4a62faa28ec7551746f900427a8657bac8b24ae8f2a6972d29b9b36cc6e8"
+      "sha256": "0f6677217d670655c2e86ba909e07c2327e222b92135bad1cf8a101af0ca0ef1"
     },
     {
-      "bytes": 564,
+      "bytes": 1407,
       "path": ".gitignore",
-      "sha256": "8467a6cdd885dc6c87bad32829d085fa5e091ad49f6a778430ae62a0c950e0a7"
+      "sha256": "ad400d30a374d6ff8f43d7ebb67b0d0c10cbb654900dd3a65348d74a4aee41cd"
     },
     {
-      "bytes": 3136,
+      "bytes": 3619,
       "path": "AGENTS.md",
-      "sha256": "e1c899249f0155d1c373ecc1a3330baba12f96209d66ebe102a47fb8cf2083a7"
+      "sha256": "083da98422b837d9db0ce5ac8a98984abd55ca1910aa944e4cd17605d0de5353"
     },
     {
-      "bytes": 9475,
+      "bytes": 8821,
       "path": "README.md",
-      "sha256": "ac9f0dc4aef5adf3caab60379cd0afc4d060dfd27b52d403ffa4495988cc948a"
+      "sha256": "2011720d7d30f0ef5741619eb665614efa9ae3fe07fb156b491629a15b03745a"
     },
     {
-      "bytes": 5204,
-      "path": "assets/baseline_charts_manifest.json",
-      "sha256": "487aa5dcf4c1679a289937b69dc64dcafae8348ca96b86fbf23b8fda51d482fa"
-    },
-    {
-      "bytes": 283001,
-      "path": "assets/baseline_drawdown.png",
-      "sha256": "a15925744565c86c1fa7d07feeb5a6508e0a23f8f5a43ab26424b4a77c9ffbec"
-    },
-    {
-      "bytes": 234626,
-      "path": "assets/baseline_equity.png",
-      "sha256": "ab2a04468a33d0eff2e7804e9c5dac11107bced66dc583f6e7ae9c5a7b21dbaf"
-    },
-    {
-      "bytes": 225083,
-      "path": "assets/periods/development_baseline.png",
-      "sha256": "4047af4d17d77932b92da2727488d85ab33f137034ec09ace7e14e3c92be832b"
-    },
-    {
-      "bytes": 3162,
-      "path": "assets/periods/figure_verification.json",
-      "sha256": "0ea64bc0cb5b17d931a9063dd29447c9cb89cafcb438607c9f3cbcea6ec07e8e"
-    },
-    {
-      "bytes": 220257,
-      "path": "assets/periods/historical_OOS_baseline.png",
-      "sha256": "85b31591642c551961439bd6b13ff546a2a8eaaca5c748915b09159902d18db3"
-    },
-    {
-      "bytes": 128316,
-      "path": "assets/periods/oos_strategy_correlations.png",
-      "sha256": "c69c49f2ec3e8ee49214398cb9bc23c41852a40a4b7e7393401b1751c924a291"
-    },
-    {
-      "bytes": 244479,
-      "path": "assets/periods/validation_baseline.png",
-      "sha256": "151d7920c74dd943a655d5307913485cd1864d0b97570df0999e7ead8d1a3191"
+      "bytes": 1676,
+      "path": "configs/etf_universe.json",
+      "sha256": "c49d5dd76c8961e157383596366f9b0c8fb3b6e2268345f956a1d3b02f58bd14"
     },
     {
       "bytes": 851,
@@ -113,749 +37,79 @@
       "sha256": "89cbb81f7a13c4a97467798bf885fb0156d43f37a24e0a5e07f55dab03ed7dee"
     },
     {
-      "bytes": 2093,
-      "path": "configs/final_no_bond_portfolios.json",
-      "sha256": "58bb8c66402ef41f8715cdbbf888f97397d9936ce59c79b7637234cf69a0ad78"
+      "bytes": 2803,
+      "path": "configs/selected_etf_strategies.json",
+      "sha256": "574408940d0937f7a7fe74fefa6e9a82baac14339edaa3fd039cc49a453b4fbe"
     },
     {
-      "bytes": 1397,
-      "path": "configs/final_no_bond_study_presentation.json",
-      "sha256": "7750266f6cffd1a08b7780f7353279d5773b803eabec4a7ef6c6d9e14ece0158"
+      "bytes": 6667,
+      "path": "docs/etf_data_sources.md",
+      "sha256": "7270fea48553246ae1f4c3703aa67211dce944ea516ab9ea2a32d9b0bf45ebb6"
     },
     {
-      "bytes": 2763,
-      "path": "configs/four_portfolios.json",
-      "sha256": "79badfecbb5e260523582301bcd3aecda746323bab08142aa365c8df1642cc3e"
+      "bytes": 10436,
+      "path": "docs/etf_methods.md",
+      "sha256": "56042010cee1ef51db83128ae1ef39e1641d6197ef72105840ea58e6dd15b833"
     },
     {
-      "bytes": 2996,
-      "path": "configs/no_bond_portfolios.json",
-      "sha256": "5591f45494eaa13500fbd5b32d3774d833017fa6dd37294b63365067addb1047"
+      "bytes": 3299,
+      "path": "metadata/etf_portfolio_manifest.json",
+      "sha256": "7bc1fac745f69c81677bfa08a4ca27c4dcf2081ed66675f4cf699e977b4f9580"
     },
     {
-      "bytes": 2870,
-      "path": "configs/no_bond_selected_strategies.json",
-      "sha256": "2731bcb859b441e00b8619817f47426828458c0c4ee73ce185c61d4612db94ba"
-    },
-    {
-      "bytes": 1359,
-      "path": "configs/no_bond_study_presentation.json",
-      "sha256": "8676588ccc5c939f1169e80f7a68ff6e72052da75412067172e647b2fd8c33aa"
-    },
-    {
-      "bytes": 3018,
-      "path": "configs/portfolios.json",
-      "sha256": "1ca3d1669994437b80898de3e655b42160f77414324ea84fd0d67f17e5bb83fc"
-    },
-    {
-      "bytes": 2833,
-      "path": "configs/research_protocol.json",
-      "sha256": "82ae8e3c7f09c88c9d7535132c05eb1f3a0e1d97eacf7563db856912e31b6449"
-    },
-    {
-      "bytes": 3186,
-      "path": "configs/selected_strategies.json",
-      "sha256": "0d983ac0bbb3a292d5223c5cd00c0e84997f542e7fff4c6e775079dc51cd68f9"
-    },
-    {
-      "bytes": 918,
-      "path": "configs/study_presentation.json",
-      "sha256": "296dfc53f19256617638f11c0a3a7900c4073d75f63571624e90533b7ad6f28b"
-    },
-    {
-      "bytes": 7863,
-      "path": "docs/archived_five_portfolio_snapshot.md",
-      "sha256": "6bc0c2b5638bfce4b3bf12ba36bcf5c9357f4b76f3218d11c59ae83786d36941"
-    },
-    {
-      "bytes": 10265,
-      "path": "docs/archived_four_portfolio_snapshot.md",
-      "sha256": "119b27d7d30e3a8768a647b77d55386f9b4d0af1c218fe726f876609a322bb30"
-    },
-    {
-      "bytes": 1048,
-      "path": "docs/archived_six_portfolio_comparison.md",
-      "sha256": "ebfba6f0b29df92dada84ea38cb3625270b6e59dd8d6c87ade28a5487bb8ee70"
-    },
-    {
-      "bytes": 4100,
-      "path": "docs/charts.md",
-      "sha256": "fe55d7480084fd2535176d2450f5e8ff39fb49cbf42a9bd7e770619534fb8c92"
-    },
-    {
-      "bytes": 13702,
-      "path": "docs/class_project_reports.md",
-      "sha256": "77a410726bfd31815eb314e2299a31408e261ef3cf3f72bcdc25887c533c26db"
-    },
-    {
-      "bytes": 8844,
-      "path": "docs/data_sources.md",
-      "sha256": "dd5dd256d754bd134bab47e64141a206932a5c3c2658f520db17c7994f4b44d6"
-    },
-    {
-      "bytes": 5093,
-      "path": "docs/final_cap_rebalancing.md",
-      "sha256": "3d7fd033948a7093040d5535eb22f5144221a5dbaaae16325dbe5526e3a52452"
-    },
-    {
-      "bytes": 4060,
-      "path": "docs/final_no_bond_portfolios.md",
-      "sha256": "f0755fa77d595225ebc26519493c2f515b23ee5b2499755f9a3a4509bedaa7d8"
-    },
-    {
-      "bytes": 4267,
-      "path": "docs/input_schema.md",
-      "sha256": "82876ef4b46203d5ca4b2acebed965578cf8968e930b1bacb337fdcd2fca8d5a"
-    },
-    {
-      "bytes": 8062,
-      "path": "docs/methodology.md",
-      "sha256": "3533002e0957fafb73299ad6af1156bc69040a2df8e38442d594f0a62b12bd43"
-    },
-    {
-      "bytes": 6859,
-      "path": "docs/no_bond_portfolios.md",
-      "sha256": "eac9630578dcaad38aeb761d72764cc844b84ced60ebec4965c26c78f6999073"
-    },
-    {
-      "bytes": 4760,
-      "path": "docs/periods.md",
-      "sha256": "a3fdd8e79eea6fdf4e1b7c8ae0853c10153b6162c6ad7fbb85205399204a3bfb"
-    },
-    {
-      "bytes": 3644,
-      "path": "docs/reproducibility.md",
-      "sha256": "50f80d5d697283e27acc76a6377af6361175c0704ae6af2465b5431d09b3938d"
-    },
-    {
-      "bytes": 4693,
-      "path": "docs/verification.md",
-      "sha256": "943aa3a4257899a3d78773c12d48aad123f833af04d9d70a49693d9dadccd537"
-    },
-    {
-      "bytes": 338191,
-      "path": "final_reports/01_development/01_development_and_robustness.html",
-      "sha256": "1ee194ebf4680d3bd0e4905223c26bef52e5ae0c10216a4b626675bc642acf4d"
-    },
-    {
-      "bytes": 821084,
-      "path": "final_reports/01_development/01_development_and_robustness.pdf",
-      "sha256": "8cd0c47b3bc6aefbd0c6f7ea93a0140e1fede79fc81c2564637438802431ea8a"
-    },
-    {
-      "bytes": 2859,
-      "path": "final_reports/01_development/QQQ_single_factor_rows.csv",
-      "sha256": "ed4edc63a75a4fe659e493b58689d97bf376fbb6491865be34954b1e874ba6d4"
-    },
-    {
-      "bytes": 3966,
-      "path": "final_reports/01_development/cap_rows.csv",
-      "sha256": "e9ab59b2c3f39e1e9bea5445d25c324e835ec06cbcd9ca89573376cad48ce8ca"
-    },
-    {
-      "bytes": 1625,
-      "path": "final_reports/01_development/control_rows.csv",
-      "sha256": "f55bccacd3370d823bf8e3ba668abdd4b77ca954292879965157542842b9deb7"
-    },
-    {
-      "bytes": 800,
-      "path": "final_reports/01_development/factor_diagnostic_rows.csv",
-      "sha256": "dacb9c993611e73c79d2a86791d0ca6177ebd4794fd0f6b2c67bfc2f4a2707cb"
-    },
-    {
-      "bytes": 4100,
-      "path": "final_reports/01_development/manifest.json",
-      "sha256": "15ae255b8fb809ace4753a66d33b5546a9bf65cce854687d4a7b17db49f3410c"
-    },
-    {
-      "bytes": 3498,
-      "path": "final_reports/01_development/portfolio_rows.csv",
-      "sha256": "6adf913f849ae52ae720de9bf73afe4a9eec88f069a632fc88463ef373d0c087"
-    },
-    {
-      "bytes": 51078,
-      "path": "final_reports/01_development/report.json",
-      "sha256": "515f7b59db8a3455cef6a5c26b0dc38710f2b4be33da4688df5fe591414f3f9b"
-    },
-    {
-      "bytes": 4535,
-      "path": "final_reports/01_development/six_passive_factor_rows.csv",
-      "sha256": "ddc0936d94a41d5db4a7ffc96ccff6ec47d4c49ee2401d155d1008900951cdf3"
-    },
-    {
-      "bytes": 364447,
-      "path": "final_reports/02_validation/02_validation_and_frozen_selection.html",
-      "sha256": "719ab52d4aa7a146f339c80a31fc86dd92e6005535833e4b4517c7c83bade475"
-    },
-    {
-      "bytes": 836053,
-      "path": "final_reports/02_validation/02_validation_and_frozen_selection.pdf",
-      "sha256": "ef1921b7e0b5969e9406291827b65015d7793d0ca1ac43a34438eadd5f99c133"
-    },
-    {
-      "bytes": 2853,
-      "path": "final_reports/02_validation/QQQ_single_factor_rows.csv",
-      "sha256": "3c1e7e507fd2e6c775bd179024dd920a431d271e2d6cd0dc6d718a2387048c8c"
-    },
-    {
-      "bytes": 3959,
-      "path": "final_reports/02_validation/cap_rows.csv",
-      "sha256": "9912d4e51068691a1178f0c3bdc86a7af8681a5ac096f88c6b8f995ae8cf4aee"
-    },
-    {
-      "bytes": 1603,
-      "path": "final_reports/02_validation/control_rows.csv",
-      "sha256": "7a7a7c270d8086245e3ccf722ea110a0e8aee5645edcd7864f8541cb4596f4e0"
-    },
-    {
-      "bytes": 793,
-      "path": "final_reports/02_validation/factor_diagnostic_rows.csv",
-      "sha256": "b5e8aba4abd41965b51eaa165575ebe2b9c486bb49a6524241ebe63d322374a1"
-    },
-    {
-      "bytes": 4104,
-      "path": "final_reports/02_validation/manifest.json",
-      "sha256": "c5c73de4c586542d6c79afb8f3b6eeec47fba2b8614d3e7a23fe9bdbf8cdf983"
-    },
-    {
-      "bytes": 3459,
-      "path": "final_reports/02_validation/portfolio_rows.csv",
-      "sha256": "e4ed134aa0a40f0e99067cb3071303fb008f5c594efa141f7511e7b597af16c7"
-    },
-    {
-      "bytes": 51179,
-      "path": "final_reports/02_validation/report.json",
-      "sha256": "de8831158dac51ac4a741bb7f2be018baf82cf2dcbec432b77908c3b55272053"
-    },
-    {
-      "bytes": 4519,
-      "path": "final_reports/02_validation/six_passive_factor_rows.csv",
-      "sha256": "8ae728a29bc7cb465c89f4e7138ee7e5b899a3510f587b6356c6e1ba9f83bffd"
-    },
-    {
-      "bytes": 503813,
-      "path": "final_reports/03_historical_oos/03_historical_oos_and_conclusions.html",
-      "sha256": "8df93f31472e224ba69bcc81010c91e7c7598d20be885d2cad69b2ce0e00ef26"
-    },
-    {
-      "bytes": 929913,
-      "path": "final_reports/03_historical_oos/03_historical_oos_and_conclusions.pdf",
-      "sha256": "452def064f1814ac9b58e414f7584e9ecb98b379bdc74396094bba162f1caaa3"
-    },
-    {
-      "bytes": 2899,
-      "path": "final_reports/03_historical_oos/QQQ_single_factor_rows.csv",
-      "sha256": "42127848d820df089d2eb98879bc951b77c68ca949585beff1cc20e5cd4bda39"
-    },
-    {
-      "bytes": 738,
-      "path": "final_reports/03_historical_oos/baseline_active_strategy_correlation_rows.csv",
-      "sha256": "7945326b5795e15f6bf14df422f33c11bc09f9d938125d3458ae2c1b96e6c2ec"
-    },
-    {
-      "bytes": 4021,
-      "path": "final_reports/03_historical_oos/cap_rows.csv",
-      "sha256": "e1f5c192ef3c241e89556d09018a838010d42f3c542b82b6ee2db1b8cb783f76"
-    },
-    {
-      "bytes": 1639,
-      "path": "final_reports/03_historical_oos/control_rows.csv",
-      "sha256": "be8ae809b91cbddf04f389c6ed8f4785333d2771f4f36cedaf0e962f7b966851"
-    },
-    {
-      "bytes": 816,
-      "path": "final_reports/03_historical_oos/factor_diagnostic_rows.csv",
-      "sha256": "c329ac63e54e2a1bca6d75372f6812f09a4cc83fdfc5d21e46e1459d514c4bbc"
-    },
-    {
-      "bytes": 4228,
-      "path": "final_reports/03_historical_oos/manifest.json",
-      "sha256": "e79947794c3c9e0c30c4c0799c8267f8bf58a977320f958968872968281cb0f9"
-    },
-    {
-      "bytes": 3511,
-      "path": "final_reports/03_historical_oos/portfolio_rows.csv",
-      "sha256": "ccaf94a76bbd6ed9cdcb0bc4cc49304f8370089cbd7fa7705384d6713d06ceb8"
-    },
-    {
-      "bytes": 52746,
-      "path": "final_reports/03_historical_oos/report.json",
-      "sha256": "f1e62094da3595d0278f9e848572cc9204a0da5fce8640cc1d985bb6bde25fdc"
-    },
-    {
-      "bytes": 4607,
-      "path": "final_reports/03_historical_oos/six_passive_factor_rows.csv",
-      "sha256": "96d44b8e8c3ccaf0eabb6e69a4501cc6bed397b7bc7c3d85fdc1e6422e3cc531"
-    },
-    {
-      "bytes": 4857,
-      "path": "final_reports/README.md",
-      "sha256": "4aba4b1e5b5b6d975b5dde5ccd022cb788e34c07301ed60b1da4277927024d3f"
-    },
-    {
-      "bytes": 803299,
-      "path": "final_reports/class_project/Trend_Following_Study_Class_Project.docx",
-      "sha256": "4bd8849cade3917fafdb6e2bc1c46138b05cafbe3cbce9cf2f515c698233394b"
-    },
-    {
-      "bytes": 898837,
-      "path": "final_reports/class_project/Trend_Following_Study_Reproducibility.zip",
-      "sha256": "294f3df45ee9d18ca36dc150906d708a108870e47b1a1871918ee0ced50d79ae"
-    },
-    {
-      "bytes": 7109,
-      "path": "final_reports/manifest.json",
-      "sha256": "992367a396a26486dca404433850865f445dc4eacda9df55df0014f8a1c0238f"
-    },
-    {
-      "bytes": 3288,
-      "path": "final_reports/render_manifest.json",
-      "sha256": "198844666d26ae3040c352a65f124c702d99af1e6ed55d04496bde176249376a"
-    },
-    {
-      "bytes": 4670,
-      "path": "metadata/final_cap_manifest.json",
-      "sha256": "281ce40777df1f9e335192c48d94f66dc47cb367f280232dd7d915c3a2a74dee"
-    },
-    {
-      "bytes": 7052,
-      "path": "metadata/final_no_bond_manifest.json",
-      "sha256": "4c4eba31b1fb11390377e009cc38014b12fca3d6c1750d9c743542e2f48b1c7f"
-    },
-    {
-      "bytes": 7024,
-      "path": "metadata/no_bond_manifest.json",
-      "sha256": "76edbcf98d8695f0e83a58f7e12ad679b564f5280256581fef60b6927721b8f2"
-    },
-    {
-      "bytes": 307,
-      "path": "package.json",
-      "sha256": "27b01265b54ead15d898ea00c12f79abd5382623e326f45e12a9c81d6e017f17"
-    },
-    {
-      "bytes": 558,
+      "bytes": 798,
       "path": "pyproject.toml",
-      "sha256": "6bf02295e84098d1bc691065bf5b773afe81fff3dd054b525b69082a73d41144"
+      "sha256": "3274648d0b1aadbb58174cf05946cba552e96cc1511f587aab6cfdb45544dc31"
     },
     {
-      "bytes": 3610,
-      "path": "reports/final_cap_rebalancing/README.md",
-      "sha256": "dc1343d78822417056145d354cdedba7c3f94706240f6b289c18817255d14957"
+      "bytes": 3375,
+      "path": "reports/etf_portfolios/README.md",
+      "sha256": "d6839a5ae9fd7df8fe10c4005567c2bbf141a3cd4a604ca65b144da64e08cb41"
     },
     {
       "bytes": 1716,
-      "path": "reports/final_cap_rebalancing/controls.csv",
+      "path": "reports/etf_portfolios/controls.csv",
       "sha256": "fc21791f62fd61689068cd3d382a55643be43c286885ea333251742b7e9795bd"
     },
     {
       "bytes": 333921,
-      "path": "reports/final_cap_rebalancing/development_baseline.png",
+      "path": "reports/etf_portfolios/development_baseline.png",
       "sha256": "e8733ccb83152f6e3a6c9215c35e80c38931a6d41204bba7e52ca5c6d2dadc42"
     },
     {
       "bytes": 3324,
-      "path": "reports/final_cap_rebalancing/figures_manifest.json",
+      "path": "reports/etf_portfolios/figures_manifest.json",
       "sha256": "06434361dc6b0bdf072e3d479f5d196907ee10bee87a597423cbfbbfc8fa4c49"
     },
     {
       "bytes": 323693,
-      "path": "reports/final_cap_rebalancing/historical_OOS_baseline.png",
+      "path": "reports/etf_portfolios/historical_OOS_baseline.png",
       "sha256": "3c953835c5c57beacf6bdda80132fa26db998738428b11dc52814ab29db34283"
     },
     {
       "bytes": 12228,
-      "path": "reports/final_cap_rebalancing/performance.csv",
+      "path": "reports/etf_portfolios/performance.csv",
       "sha256": "c3826aaf481461849adfa700fa8d77e0d6302decb3cae3b53c0e46ba41fd6edf"
     },
     {
-      "bytes": 148188,
-      "path": "reports/final_cap_rebalancing/report.json",
-      "sha256": "394c21a2497a4411a90b9c576a67abff5611a0de5de2726e3e889aa6c4e72630"
+      "bytes": 148264,
+      "path": "reports/etf_portfolios/report.json",
+      "sha256": "d5ef72a38826a275cbf5df69b9f5a176e582c4fa8daff4cfc61f9dd3a129b858"
     },
     {
-      "bytes": 11345,
-      "path": "reports/final_cap_rebalancing/report.md",
-      "sha256": "37582877f07e40b0c6568215c5333db16ed75d29a188f9e5388d4d77639361de"
+      "bytes": 11390,
+      "path": "reports/etf_portfolios/report.md",
+      "sha256": "d57c3053516cee4f2d6963432eadc21e78c182628f137c245be116822d7f957d"
     },
     {
-      "bytes": 1464,
-      "path": "reports/final_cap_rebalancing/source_subset_audit.json",
-      "sha256": "4baf5c5d3c0a03fb36e266dfa799c92484df1456fd5f119c893fd427719cd54d"
+      "bytes": 1394,
+      "path": "reports/etf_portfolios/source_subset_audit.json",
+      "sha256": "73e3457992b0befa0a4ff2455c5fb5a489c4dde9cdfef63414c815c01ba4944a"
     },
     {
       "bytes": 403818,
-      "path": "reports/final_cap_rebalancing/validation_baseline.png",
+      "path": "reports/etf_portfolios/validation_baseline.png",
       "sha256": "f26129311d9384ab74780147c65a3172a987718bd002262c32a85779488b3f1d"
-    },
-    {
-      "bytes": 8626,
-      "path": "reports/final_no_bond_portfolios/QQQ_single_factor_rows.csv",
-      "sha256": "1b97a8d38cddf852a5fe34e679da32fe95b4253c0267a75172894d06fb03dddb"
-    },
-    {
-      "bytes": 1959,
-      "path": "reports/final_no_bond_portfolios/README.md",
-      "sha256": "834afd464183930edc9969413bd095f591015c298d62bd3ebf43ab45d6885f37"
-    },
-    {
-      "bytes": 323,
-      "path": "reports/final_no_bond_portfolios/browser_qa.json",
-      "sha256": "0ac2b4dc6da1abd41bb2a1519ec32b63d5631f8e62525d2da6ca0279eb74dfb2"
-    },
-    {
-      "bytes": 6865,
-      "path": "reports/final_no_bond_portfolios/checkpoint_rows.csv",
-      "sha256": "9d26a7e683a3952cfdcf9b87a1516ab5e0e790b7adc51a77ba0d2cc721370f79"
-    },
-    {
-      "bytes": 48007,
-      "path": "reports/final_no_bond_portfolios/combined_report.md",
-      "sha256": "0279f4789f5bec3ec2fcbb33a683086568cd12b5d897510232f3f21f0b3c5c92"
-    },
-    {
-      "bytes": 4392,
-      "path": "reports/final_no_bond_portfolios/control_rows.csv",
-      "sha256": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae"
-    },
-    {
-      "bytes": 313119,
-      "path": "reports/final_no_bond_portfolios/development.html",
-      "sha256": "51ea2332c19699e798de63e22a344ddb4ff7d13013ce17efbec1b736c7f165c9"
-    },
-    {
-      "bytes": 215344,
-      "path": "reports/final_no_bond_portfolios/development_baseline.png",
-      "sha256": "5322992a9ca2687a16fe74fd2ce70aac8b9564fb438d53073e6e2c7c6cb73b8b"
-    },
-    {
-      "bytes": 4438,
-      "path": "reports/final_no_bond_portfolios/figures_verification.json",
-      "sha256": "22d2352c732cc943cf91730bb39c7b65bd7fe13c6113d6f63612decf71e23dc8"
-    },
-    {
-      "bytes": 12590,
-      "path": "reports/final_no_bond_portfolios/five_passive_factor_rows.csv",
-      "sha256": "5c833656bbaf097aa829324c488b7d8fea6af9903bd44555f4cdbef8f86415b3"
-    },
-    {
-      "bytes": 294898,
-      "path": "reports/final_no_bond_portfolios/historical_OOS.html",
-      "sha256": "3ecd7d88f942276be02fcf5cc6c24850db1db3b6d6649d3f3ee3f5722d037bbd"
-    },
-    {
-      "bytes": 201625,
-      "path": "reports/final_no_bond_portfolios/historical_OOS_baseline.png",
-      "sha256": "0849bdf97f550cd1138d12bf37ea5d7701e7623c8d5ead33cb566bbff6b46dca"
-    },
-    {
-      "bytes": 1040,
-      "path": "reports/final_no_bond_portfolios/independent_audit.json",
-      "sha256": "ae1979c31b23930280bedc923bc3f9e11b8506221cb6435bba907ec251782225"
-    },
-    {
-      "bytes": 27338,
-      "path": "reports/final_no_bond_portfolios/portfolio_correlations.csv",
-      "sha256": "92205cbce931b112ce41c82ac34d0dc1cee67005bcbeb2fc5a850ed198e5615d"
-    },
-    {
-      "bytes": 10347,
-      "path": "reports/final_no_bond_portfolios/portfolio_rows.csv",
-      "sha256": "cf8d2f4e154d46a3c445bec072d681e8ad218ae46d024e5c37deb1de6ae687fb"
-    },
-    {
-      "bytes": 1432,
-      "path": "reports/final_no_bond_portfolios/render_manifest.json",
-      "sha256": "48c6e51b4ae09ccd763deda3891d4cfe397b35d5dd0a7464a2d90c2ef53f0616"
-    },
-    {
-      "bytes": 177885,
-      "path": "reports/final_no_bond_portfolios/report.json",
-      "sha256": "523c3e2396205781c1e4a6a9689c86c0e53aab0b5d87284a43bb410bbbe33f1f"
-    },
-    {
-      "bytes": 572,
-      "path": "reports/final_no_bond_portfolios/stage_summaries.csv",
-      "sha256": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
-    },
-    {
-      "bytes": 14361,
-      "path": "reports/final_no_bond_portfolios/strategy_correlations.csv",
-      "sha256": "28f51bd3e6dec28f96cc123941c8181a0ac115e11d1e67f50a6d45e94418c4af"
-    },
-    {
-      "bytes": 321571,
-      "path": "reports/final_no_bond_portfolios/validation.html",
-      "sha256": "788a6bc5a29b887659009d1d950e637a1eb7696a05bc1878e706368f4c055d50"
-    },
-    {
-      "bytes": 221675,
-      "path": "reports/final_no_bond_portfolios/validation_baseline.png",
-      "sha256": "1e72867a5350054b58357ab4e6758a177fc7cb61e4526adc9783f33f23fa0ba6"
-    },
-    {
-      "bytes": 2983,
-      "path": "reports/final_no_bond_portfolios/visible_html_audit.json",
-      "sha256": "2dede3a2c0025f86d1c1386d32140371f998b904d895e4aa732ba503d95f73f0"
-    },
-    {
-      "bytes": 11371,
-      "path": "reports/four_portfolios_three_periods/cap_rows.csv",
-      "sha256": "8e543919b46ba22050b82de4bfd5624ee8e36e8aea089313e09c88f7906f86a1"
-    },
-    {
-      "bytes": 4392,
-      "path": "reports/four_portfolios_three_periods/control_rows.csv",
-      "sha256": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae"
-    },
-    {
-      "bytes": 781,
-      "path": "reports/four_portfolios_three_periods/manifest.json",
-      "sha256": "8b4aa571d06a761974bad9fa4426f562fc5836081232e8b8100fdad69a81a83d"
-    },
-    {
-      "bytes": 10013,
-      "path": "reports/four_portfolios_three_periods/portfolio_rows.csv",
-      "sha256": "25d4a7fafa0e9cd1eb81ff61590aeadd3ef8ad523656862472198404d3477f77"
-    },
-    {
-      "bytes": 2560,
-      "path": "reports/four_portfolios_three_periods/provenance.json",
-      "sha256": "6cb8129caa4df950c53797fb9953090882c2244509a8df58f646dd758da43ca6"
-    },
-    {
-      "bytes": 79685,
-      "path": "reports/four_portfolios_three_periods/report.json",
-      "sha256": "2213a49db6c339841a06457a8dd762b2431a9d232ae512ff29541d9c90edd3b0"
-    },
-    {
-      "bytes": 8021,
-      "path": "reports/four_portfolios_three_periods/report.md",
-      "sha256": "c0bf84644ca3a6c45c9de1d03e87bee3400da6f2cfd7a8ea16b938782586b2ce"
-    },
-    {
-      "bytes": 572,
-      "path": "reports/four_portfolios_three_periods/stage_summaries.csv",
-      "sha256": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
-    },
-    {
-      "bytes": 12971,
-      "path": "reports/no_bond_portfolios/QQQ_single_factor_rows.csv",
-      "sha256": "7015878512f8831ac98f2b5268ad146f2e43b9a4ab1b6fafcf079ea2c8f25ba9"
-    },
-    {
-      "bytes": 2192,
-      "path": "reports/no_bond_portfolios/README.md",
-      "sha256": "a7508c8a6009b2689d3497703dd2e7a394e1dc953f63329353d221b1d33d3ede"
-    },
-    {
-      "bytes": 311,
-      "path": "reports/no_bond_portfolios/browser_qa.json",
-      "sha256": "773fc320d4215bf49d3da4f81d1874d13a43be2decded1f97ceaab15461f68bd"
-    },
-    {
-      "bytes": 30320,
-      "path": "reports/no_bond_portfolios/checkpoint_rows.csv",
-      "sha256": "1b8d542d5a6f634720ca4a041447d5fce9019176cb4e0966ae7d255897783d2f"
-    },
-    {
-      "bytes": 74505,
-      "path": "reports/no_bond_portfolios/combined_report.md",
-      "sha256": "a2f9a2913d8201290386858e850ac835a759248628cb61941963767f4b1dceaa"
-    },
-    {
-      "bytes": 4392,
-      "path": "reports/no_bond_portfolios/control_rows.csv",
-      "sha256": "d3ba31d76868adf86b9cb64d7f1fb7db0b2f291e5c32e86bfe1adf86a12311ae"
-    },
-    {
-      "bytes": 334898,
-      "path": "reports/no_bond_portfolios/development.html",
-      "sha256": "6f80434263aace351c23206e71d74bd9c495cf2f4071ddd534914e70c25e5599"
-    },
-    {
-      "bytes": 220977,
-      "path": "reports/no_bond_portfolios/development_baseline.png",
-      "sha256": "68fd95a80555b127c9c7b091092f991d21da349a52d1ecf79bc40e252c8f3aa4"
-    },
-    {
-      "bytes": 5634,
-      "path": "reports/no_bond_portfolios/figures_verification.json",
-      "sha256": "475d25737a8e74dfe1b179df55e38131dc14fa333de102dfefbd281c37a7b748"
-    },
-    {
-      "bytes": 18867,
-      "path": "reports/no_bond_portfolios/five_passive_factor_rows.csv",
-      "sha256": "e589b392d9b6560d0c4a6d64611c8d3edbe944ec66918fe48e430b2582729bf0"
-    },
-    {
-      "bytes": 318021,
-      "path": "reports/no_bond_portfolios/historical_OOS.html",
-      "sha256": "72b9f22d0fd73700342f968faeb935c5c03fb8065aba7a6b6f13c25e76fcfa78"
-    },
-    {
-      "bytes": 208192,
-      "path": "reports/no_bond_portfolios/historical_OOS_baseline.png",
-      "sha256": "f95c5b4923356de9d05e463f6a0cf78a813da880a7102053c6b8d645d87528dd"
-    },
-    {
-      "bytes": 2365,
-      "path": "reports/no_bond_portfolios/independent_audit.json",
-      "sha256": "b7b393ef306d3eaf16c9a86f13b61b5ed65cecac6207f48f30b718cdf13af3b9"
-    },
-    {
-      "bytes": 56395,
-      "path": "reports/no_bond_portfolios/portfolio_correlations.csv",
-      "sha256": "e2704b6fcd4881b40bd302e26404cd95b4675dcbadaff7e385307d35b347df92"
-    },
-    {
-      "bytes": 15505,
-      "path": "reports/no_bond_portfolios/portfolio_rows.csv",
-      "sha256": "dd309c57255a11079aee03e7aec36ad42bd122f881bda50b1baad71af268cce7"
-    },
-    {
-      "bytes": 1412,
-      "path": "reports/no_bond_portfolios/render_manifest.json",
-      "sha256": "c8e780c600a21fa028c6e3278333626bc2339bc185571cc91c3fd4845ade28bb"
-    },
-    {
-      "bytes": 363451,
-      "path": "reports/no_bond_portfolios/report.json",
-      "sha256": "55010e543ec1af7210b24b4b2d2794d0b40c85e67541241ba058e97f85ae9239"
-    },
-    {
-      "bytes": 572,
-      "path": "reports/no_bond_portfolios/stage_summaries.csv",
-      "sha256": "f08b757ff80c70459a6e9fa93c0152426a7cca8bd86505cac5dfcfbdb356b8b3"
-    },
-    {
-      "bytes": 14361,
-      "path": "reports/no_bond_portfolios/strategy_correlations.csv",
-      "sha256": "28f51bd3e6dec28f96cc123941c8181a0ac115e11d1e67f50a6d45e94418c4af"
-    },
-    {
-      "bytes": 343602,
-      "path": "reports/no_bond_portfolios/validation.html",
-      "sha256": "8a7b6c2ae41fb3225a8f997f59a26f93dad6ee972cbf121af0e1cb799dba87a4"
-    },
-    {
-      "bytes": 227317,
-      "path": "reports/no_bond_portfolios/validation_baseline.png",
-      "sha256": "3ee02061ec8416abacf1254a05ba0eb1663e4b5c03d19c0e6d47f8ade8011982"
-    },
-    {
-      "bytes": 2980,
-      "path": "reports/no_bond_portfolios/visible_html_audit.json",
-      "sha256": "818260ca9bff95af7f193b0c33c3f4ed6accb0e773ced61708c66d89440ac9ff"
-    },
-    {
-      "bytes": 2940,
-      "path": "results/QQQ_single_factor_portfolios_all_costs.csv",
-      "sha256": "24a56cfee57caf2f9a477303815292c31252ba04c89ad5255eab21840112dda1"
-    },
-    {
-      "bytes": 3134,
-      "path": "results/QQQ_single_factor_strategy_sleeves_all_costs.csv",
-      "sha256": "0f6a067863f7a4d98fa6534cee78a97d07dfad167d937700a1d6fe1171273ac1"
-    },
-    {
-      "bytes": 6943,
-      "path": "results/README.md",
-      "sha256": "1580e6e86fa169c6fb9bdad9491b1a6a749656946220322878851454d4981caf"
-    },
-    {
-      "bytes": 2793,
-      "path": "results/export_manifest.json",
-      "sha256": "5bdc714b1175ba4c32ed5a36cbcc602b78932644cd81c47bfbeecd97cb345144"
-    },
-    {
-      "bytes": 8102,
-      "path": "results/four_portfolio_attribution/QQQ_single_factor_all_periods_all_costs.csv",
-      "sha256": "14b2449aead11ef1ea65df568797b84fb15d4376f6e4b374dde117b2bc245dee"
-    },
-    {
-      "bytes": 81530,
-      "path": "results/four_portfolio_attribution/attribution.json",
-      "sha256": "f2f066ae9d32d759f202791bf95a315db9c7dfa4d5369bbdd2480620cdbdac84"
-    },
-    {
-      "bytes": 2036,
-      "path": "results/four_portfolio_attribution/factor_diagnostics_all_periods_all_costs.csv",
-      "sha256": "88df418f91fa1cc2aa87199036783b71b57cf5d281bb9eedfa1a59131d643fc1"
-    },
-    {
-      "bytes": 5021,
-      "path": "results/four_portfolio_attribution/passive_factor_self_controls.csv",
-      "sha256": "0b12b293bfcc44c3c4efcd1fea4c045668079dd08a72db4945ad286828a922bf"
-    },
-    {
-      "bytes": 13062,
-      "path": "results/four_portfolio_attribution/six_passive_factor_all_periods_all_costs.csv",
-      "sha256": "c43c0ea072a99cb9f8e72148ddcf057b4085b100c6ec097549a78a4401f0548b"
-    },
-    {
-      "bytes": 4502,
-      "path": "results/own_ETF_buy_and_hold_metrics_all_costs.csv",
-      "sha256": "183182922fd0bda356304c8d0d6cb00505ec3e7c7532177a6fd5ffdcf299e09e"
-    },
-    {
-      "bytes": 14495,
-      "path": "results/pairwise_portfolio_betas_all_costs.csv",
-      "sha256": "604fc6c817413fac0127268cd174e3c1c0214cc6805a588bda9b8e7951be5ea0"
-    },
-    {
-      "bytes": 15108,
-      "path": "results/pairwise_strategy_sleeve_betas_all_costs.csv",
-      "sha256": "f38e59a2e1816979d5549fd741d4c0dd4b5373a18d4ad5fb0bfcf26abdefb70e"
-    },
-    {
-      "bytes": 9656,
-      "path": "results/portfolio_capital_drift_all_costs.csv",
-      "sha256": "0bfa2387b042f621a3202523ec0d035c1e9557e868318310ba32a119f982ceee"
-    },
-    {
-      "bytes": 3494,
-      "path": "results/portfolio_metrics_all_costs.csv",
-      "sha256": "12a373c13095f36579bc6f5da2b2823e995db2a3663fc7075e60f6f6e892d489"
-    },
-    {
-      "bytes": 1770,
-      "path": "results/provenance.json",
-      "sha256": "b64d3f75d7779bc9914a335d06508f7e169c3ef73914e965ae35b5bce131e198"
-    },
-    {
-      "bytes": 6913,
-      "path": "results/six_factor_diagnostics.json",
-      "sha256": "2feeb2663dc0f449e9e5a17462341a7211fc91246af198eb4c18e0a306e74f23"
-    },
-    {
-      "bytes": 5382,
-      "path": "results/six_factor_portfolios_all_costs.csv",
-      "sha256": "97300ce63c42af50a10a99f9e4ae9a480b93dd3e160a294ddb5e75149f3c80a7"
-    },
-    {
-      "bytes": 6092,
-      "path": "results/six_factor_strategy_sleeves_all_costs.csv",
-      "sha256": "792f6314def6016fc317a9278f7c6333789bd37039fa28721e803d1b0e774d0d"
-    },
-    {
-      "bytes": 3035,
-      "path": "results/strategy_correlation_matrices_all_costs.csv",
-      "sha256": "d8b1ec2a6a4e5c86c1c0506cfff8333bdf96e22b3a8a08839cf37436f2916f93"
-    },
-    {
-      "bytes": 2046,
-      "path": "results/strategy_correlation_pairs_all_costs.csv",
-      "sha256": "f64fa94a4005393cde903c4a27eae577d67b5e2453b279764e30ff14ebd29952"
-    },
-    {
-      "bytes": 5150,
-      "path": "results/strategy_metrics_all_costs.csv",
-      "sha256": "042e4448023ed3dc5053e983ae05f5314b33167bfe42a94326d3fe92878a25dc"
-    },
-    {
-      "bytes": 1019,
-      "path": "results/verification.json",
-      "sha256": "f4edb4f3bae48fd4d9d7f3bdb6a6d91eedaf1a7bf0623e50acd59fcdcc0433fd"
     },
     {
       "bytes": 315,
@@ -863,84 +117,19 @@
       "sha256": "3fbb506448c46d15c7a00ce718ac24d42a102f6897a731532633a5671a095f59"
     },
     {
-      "bytes": 1582,
-      "path": "scripts/build_final_cap_reports.py",
-      "sha256": "37d29ca6e5e399cd60e83f4f1df1fd7db274a0043e68ecf2585fa77d8553796e"
+      "bytes": 1567,
+      "path": "scripts/build_etf_reports.py",
+      "sha256": "bd060039dcff083fa87554f60fa78c2b971b0d8b7a0dc950803b31fd9588f209"
     },
     {
-      "bytes": 25829,
-      "path": "scripts/build_final_no_bond_reports.py",
-      "sha256": "f9701e74f9ec52011f3c2c167898b83ea8cce1520cac9f94bcbd993b9715246c"
+      "bytes": 2583,
+      "path": "scripts/verify_etf_publication.py",
+      "sha256": "d9b6f0763aae5df9872f1b398f2b1b1adb1e54b5e468895f0bc1c62bdeebc4b8"
     },
     {
-      "bytes": 63134,
-      "path": "scripts/build_final_reports.py",
-      "sha256": "489b660df6f3b5146523c8e1fd80f4c3a8ab970f4748d6efbf8a46abf20db269"
-    },
-    {
-      "bytes": 42714,
-      "path": "scripts/build_no_bond_reports.py",
-      "sha256": "14a2eef2140f35004001610d6976e011eac770a8d7bc89148782b8003b6c4380"
-    },
-    {
-      "bytes": 30945,
-      "path": "scripts/export_saved_results.py",
-      "sha256": "060c7fd2d23a5c3fdb765916bc13329758e0cfa60a73fb038694f32847d7e82a"
-    },
-    {
-      "bytes": 14555,
-      "path": "scripts/plot_final_no_bond.py",
-      "sha256": "a9a50bfeaff740a90b4aa7f89f634689cd194c256d017dc31f2fb0f3dc2c8ed2"
-    },
-    {
-      "bytes": 14740,
-      "path": "scripts/plot_no_bond_portfolios.py",
-      "sha256": "f80a4621f73318b5c15c4b4c02064fabccebff223e8fdc2eb2138afff71caef9"
-    },
-    {
-      "bytes": 320,
-      "path": "scripts/plot_portfolios.py",
-      "sha256": "b3869051e62af79955fffc54f8b03b8e946c2607e8ef9746c2c06fc8f7d85b0f"
-    },
-    {
-      "bytes": 5597,
-      "path": "scripts/render_final_reports.cjs",
-      "sha256": "0e9056aa426d1a5cbf1f7601db65d34e405fa1ed17c8de48a0471206225d4d70"
-    },
-    {
-      "bytes": 22157,
-      "path": "scripts/report_no_bond_portfolios.py",
-      "sha256": "82d8df83edbcb93b979e37104a649031a76ee0d1f7493717a2a9233494190b7c"
-    },
-    {
-      "bytes": 330,
-      "path": "scripts/report_periods.py",
-      "sha256": "4d914e65923163fad35a2fe6fa33714b7a3f3d3cc9806a6019982cf55fd43a61"
-    },
-    {
-      "bytes": 7645,
-      "path": "scripts/select_final_no_bond_portfolios.py",
-      "sha256": "5d35946a05ee29b4c72d1b3f6a9339a43568906156a962116f307c6142e67156"
-    },
-    {
-      "bytes": 2499,
-      "path": "scripts/verify_final_cap.py",
-      "sha256": "59f9b5c805f364ea4f0f48abfa7b0ecd309e22968ca789d533c40d44802e756b"
-    },
-    {
-      "bytes": 12529,
-      "path": "scripts/verify_final_no_bond.py",
-      "sha256": "132afa51787538497ea8a269e0b457ee00141083f7f5ed2ebe80bd21bcd30ca5"
-    },
-    {
-      "bytes": 33274,
-      "path": "scripts/verify_no_bond_portfolios.py",
-      "sha256": "c834ae1c9f48e5ffe8fd1929ab6d3c2b5f28ae28785a1b8de1d6e5856bdc9d7b"
-    },
-    {
-      "bytes": 31224,
-      "path": "scripts/verify_project.py",
-      "sha256": "008391bdc18a66146e438f24caee90aadbeb1a3984212406ea87b5e140469f5a"
+      "bytes": 10462,
+      "path": "scripts/verify_publication.py",
+      "sha256": "5d69291e76a2c7cfeca3739178c0b8aad814a97d48fc987ce1ec2b40cbce9f52"
     },
     {
       "bytes": 470,
@@ -958,34 +147,19 @@
       "sha256": "eb3f08d63d2b2c73da203db9ec77f4ac04c7c851d8415ddf92c95b8fb988cf9d"
     },
     {
+      "bytes": 20882,
+      "path": "src/trend_portfolio/cap_publication.py",
+      "sha256": "4ba9a20a2277f15f22ebc98b050cd82bb39fc54e9a2d35adf402ed08c345266f"
+    },
+    {
       "bytes": 14162,
       "path": "src/trend_portfolio/cap_rebalance.py",
       "sha256": "8686fd647305a3e9efc485856313b7bfba2234fa5c73c0b12c34c2b6944a604f"
     },
     {
-      "bytes": 20816,
-      "path": "src/trend_portfolio/cap_subset.py",
-      "sha256": "87c0aeb841cb027e0ff2a9b2f9eb519b9fd3650bb4a8734ed31899f9b5a6c2f6"
-    },
-    {
-      "bytes": 16016,
-      "path": "src/trend_portfolio/checkpoint_caps.py",
-      "sha256": "4d3e989526598b791105dcf547d6247002c016eb09c5c04d3a4533b3ee62d907"
-    },
-    {
       "bytes": 11308,
       "path": "src/trend_portfolio/cli.py",
       "sha256": "687dcb82b1994b5566ae7ff54ef85756744b4a56963f86c2ada5e26546595815"
-    },
-    {
-      "bytes": 12238,
-      "path": "src/trend_portfolio/periods.py",
-      "sha256": "a73cde491d3b283296f228c7b50c0ebbacf850261f06bec2c39eb347c571153c"
-    },
-    {
-      "bytes": 13010,
-      "path": "src/trend_portfolio/plotting.py",
-      "sha256": "87d8cc8170b7239ccddcb0dcdef30f78ca765e7d3ee20f81f4aa201c6f5aaea3"
     },
     {
       "bytes": 7816,
@@ -998,24 +172,14 @@
       "sha256": "03e4a0260c9ab9366ef2bff5a3f7a6073e20c4eb12d89bc0396a9c6633c1def8"
     },
     {
+      "bytes": 7425,
+      "path": "tests/test_cap_publication.py",
+      "sha256": "371d4787fddc95064ebb172a0960f702e119134b3a7b78a1d19ced177cc84bf4"
+    },
+    {
       "bytes": 10060,
       "path": "tests/test_cap_rebalance.py",
       "sha256": "e1d62594c44543c8979943a224fb06b3e360c735ff54901e7dc10a6a9f73159e"
-    },
-    {
-      "bytes": 6994,
-      "path": "tests/test_cap_subset.py",
-      "sha256": "41b2ce38bb52df42749786adf9005a8c2db7aa080b56e4b589b7bfe2e0c017c5"
-    },
-    {
-      "bytes": 9561,
-      "path": "tests/test_chart_assets.py",
-      "sha256": "6384be3ff9dee48530fb23f72ba833cc1b5a47b36af61b0e520c6ffc6e3f9bf6"
-    },
-    {
-      "bytes": 10084,
-      "path": "tests/test_checkpoint_caps.py",
-      "sha256": "cf9f65c68bb806813724cb8e831dcad1421b9797a701f0aeccfec20c1b003867"
     },
     {
       "bytes": 4615,
@@ -1023,145 +187,53 @@
       "sha256": "a13daf4b1bacad7f841b10ceee334829ff501f15646ecb4f9fcf086b850a320d"
     },
     {
-      "bytes": 3016,
-      "path": "tests/test_data_documentation.py",
-      "sha256": "9773a124e2af0d845ca1ea3548ec40102038f5d5b2e925ba7afcf78402889f7c"
+      "bytes": 2205,
+      "path": "tests/test_etf_documentation.py",
+      "sha256": "ba5debe72a3a24d6d7066b1c581dcad0effb414cf55ec022ece98ed1190d653d"
     },
     {
-      "bytes": 22961,
-      "path": "tests/test_exported_results.py",
-      "sha256": "9d0ac501150166f93054b89c0c428d3e641168a6ae40e0f607fdf7ab2968e2bb"
-    },
-    {
-      "bytes": 9996,
-      "path": "tests/test_final_no_bond_audit.py",
-      "sha256": "2a935c9d55d35cc17b9d1bf0b3d208350a0e8336e42ca61a1f7d9fa1caee0016"
-    },
-    {
-      "bytes": 7998,
-      "path": "tests/test_final_no_bond_plots.py",
-      "sha256": "88f432e53c0defb935dc00c355fbb291417b239076048f72018b81a5c8bf939d"
-    },
-    {
-      "bytes": 12160,
-      "path": "tests/test_final_no_bond_presentation.py",
-      "sha256": "7346a4b3a6fce0dfd745bf90eff7a661d268633000552e8c9769b7297f63ee12"
-    },
-    {
-      "bytes": 3503,
-      "path": "tests/test_final_no_bond_selection.py",
-      "sha256": "a078c22a4efa2a9578a8b725a3b24c1c3794d82f2f24cc52ff17d5a7db8f6cb5"
-    },
-    {
-      "bytes": 11925,
-      "path": "tests/test_final_reports.py",
-      "sha256": "98b68329f414e49d2cd480d579838f66b17653bd85ef3251ced8ecbb7f5b68d9"
-    },
-    {
-      "bytes": 15997,
-      "path": "tests/test_no_bond_audit.py",
-      "sha256": "7ff0e5a5a235acc6145f7c9cd49c50cc48784973a9ccca825b2c0b9c92713c2c"
-    },
-    {
-      "bytes": 8058,
-      "path": "tests/test_no_bond_plots.py",
-      "sha256": "8b8753fb78546959675f8b768a17b2cac77c39695efe66e90e0137e3cd335226"
-    },
-    {
-      "bytes": 17389,
-      "path": "tests/test_no_bond_presentation.py",
-      "sha256": "4741280d00d22ef767ed1be4b0aa13f22d7a5c1474c7a099d06d5ac9b8b62113"
-    },
-    {
-      "bytes": 6445,
-      "path": "tests/test_no_bond_runner.py",
-      "sha256": "3bea339ee5077f3cb8d3f54a7f8cfd3006ee9a686c376356ae05874a76678a31"
-    },
-    {
-      "bytes": 9702,
-      "path": "tests/test_periods.py",
-      "sha256": "661c4dc8cf84371bd13c0aa3f92e2613584e3140d68d538162e950972c7b4b97"
-    },
-    {
-      "bytes": 6489,
-      "path": "tests/test_plotting.py",
-      "sha256": "aa8dcfbe3f53502b84848b49d69db07a3556ecebc3b4eaae35c1639798bbb0ec"
-    },
-    {
-      "bytes": 8164,
-      "path": "tests/test_publication.py",
-      "sha256": "5cb9ec1121c7a67757f3b4e7f1a4f0f93d493f35a0271810d7b6526145f0c4bd"
+      "bytes": 7895,
+      "path": "tests/test_publication_integrity.py",
+      "sha256": "87c413e3b77249ebb67b44bf8479a4f48fdc34ff24ee7a726649db25034d57db"
     }
   ],
-  "format_reference": {
-    "commit": "5d4fb259b0ca3d448bb6a55d09445063d1f48add",
-    "repository": "https://github.com/Agul-quant/Cryptocurrency-statistical-arbitrage/",
-    "use": "Report presentation only; no crypto results, rules, costs or data adopted"
+  "financial_provenance": {
+    "canonical_payload_sha256": "6757f4c392301fb31089809aa5af96bdcd61dffe7b402263e18da5896f77fde9",
+    "distinct_controls": 15,
+    "new_account_runs": false,
+    "new_optimization": false,
+    "new_universe_screen": false,
+    "performance_rows": 36,
+    "unchanged_daily_paths_and_metrics": true,
+    "unchanged_starting_weights": true,
+    "unchanged_strategy_ids_and_definitions": true
   },
-  "reports": [
-    {
-      "directory": "final_reports/01_development",
-      "html": "final_reports/01_development/01_development_and_robustness.html",
-      "manifest": "final_reports/01_development/manifest.json",
-      "pdf": "final_reports/01_development/01_development_and_robustness.pdf",
-      "stage": "development"
-    },
-    {
-      "directory": "final_reports/02_validation",
-      "html": "final_reports/02_validation/02_validation_and_frozen_selection.html",
-      "manifest": "final_reports/02_validation/manifest.json",
-      "pdf": "final_reports/02_validation/02_validation_and_frozen_selection.pdf",
-      "stage": "validation"
-    },
-    {
-      "directory": "final_reports/03_historical_oos",
-      "html": "final_reports/03_historical_oos/03_historical_oos_and_conclusions.html",
-      "manifest": "final_reports/03_historical_oos/manifest.json",
-      "pdf": "final_reports/03_historical_oos/03_historical_oos_and_conclusions.pdf",
-      "stage": "historical_OOS"
-    }
+  "frequencies": [
+    "none",
+    "weekly",
+    "monthly"
   ],
-  "schema": "earlier_four_portfolio_publication_v1",
+  "project_name": "Trend Following and Mean Reversion ETF Portfolios",
+  "schema": "etf_portfolio_publication_v1",
   "study": {
-    "active_study": "earlier_four_fixed_portfolio_study",
-    "corrected_split_status": "inactive, not used in these reports; private work preserved",
-    "development": {
-      "end": "2020-12-31",
-      "start": "2017-01-01"
-    },
-    "historical_OOS": {
-      "end": "2026-10-15",
-      "start": "2024-01-01"
-    },
-    "maximum_CAGR_standalone_GDX": "excluded from current four; historical five-portfolio results retained unchanged",
-    "portfolio_config": "configs/four_portfolios.json",
-    "portfolio_ids": [
-      "daily_capped_max_sharpe",
-      "initial_capped_max_sharpe",
-      "uncapped_max_sharpe",
-      "equal_initial"
-    ],
-    "project_name": "Trend Following and Mean Reversion ETF Portfolios",
-    "selection_status": "retrospective; selected configurations and weights used examined historical OOS",
-    "strategy_config": "configs/selected_strategies.json",
-    "validation": {
-      "end": "2023-12-31",
-      "start": "2021-01-01"
-    }
+    "policy_config": "configs/final_cap_rebalancing.json",
+    "report_directory": "reports/etf_portfolios",
+    "strategies_config": "configs/selected_etf_strategies.json",
+    "universe_config": "configs/etf_universe.json"
   },
+  "symbols": [
+    "GDX",
+    "FXI",
+    "QQQ",
+    "UNG",
+    "FDN"
+  ],
+  "universe_size": 47,
   "verification": {
-    "PDF_pages_visually_inspected": 31,
-    "active_aggregate_command": "python scripts/verify_final_cap.py --report-dir reports/final_cap_rebalancing --config configs/final_cap_rebalancing.json",
-    "active_saved_performance_rows": 36,
-    "active_subset_tests_passed": 33,
-    "active_synthetic_tests_passed": 555,
-    "active_unique_control_rows": 15,
-    "full_synthetic_tests_passed": 194,
-    "independent_display_table_cells_verified": 1554,
-    "maximum_CAGR_portfolio_in_current_reports": false,
-    "new_cap_sources_ruff_passed": true,
-    "no_new_accounts_optimization_or_data_refresh": true,
-    "publication_guard_tests_passed": 41,
-    "report_builder_tests_passed": 47
+    "actual_daily_series_exported": false,
+    "portable_aggregate_command": "python scripts/verify_etf_publication.py --report-dir reports/etf_portfolios --config configs/final_cap_rebalancing.json",
+    "portable_publication_command": "python scripts/verify_publication.py",
+    "private_inputs_required": false,
+    "raster_figures": 3
   }
 }

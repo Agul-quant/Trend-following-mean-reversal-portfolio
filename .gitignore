@@ -1,4 +1,4 @@
-# Research inputs, account paths, market captures and local credentials stay private.
+# Local evidence, authenticated data, previous snapshots and credentials.
 .cache/
 private/
 data/
@@ -17,7 +17,7 @@ outputs/
 *.key
 *.log
 
-# Local Python/build/editor artifacts.
+# Runtime, editor and build artifacts.
 .venv/
 venv/
 __pycache__/
@@ -32,9 +32,42 @@ dist/
 .DS_Store
 .idea/
 .vscode/
-
-# Optional report renderer dependencies.
 node_modules/
 
-# Unpublished full three-frequency source; retain locally without publishing dropped cases.
-/reports/actual_cap_rebalancing/
+# Preserve earlier local snapshots without republishing their artifacts.
+/assets/
+/results/
+/final_reports/
+/package.json
+/reports/*
+!/reports/etf_portfolios/
+/configs/*
+!/configs/etf_universe.json
+!/configs/selected_etf_strategies.json
+!/configs/final_cap_rebalancing.json
+/docs/*
+!/docs/etf_data_sources.md
+!/docs/etf_methods.md
+/metadata/*
+!/metadata/project_manifest.json
+!/metadata/etf_portfolio_manifest.json
+/src/trend_portfolio/*
+!/src/trend_portfolio/__init__.py
+!/src/trend_portfolio/analytics.py
+!/src/trend_portfolio/cli.py
+!/src/trend_portfolio/cap_event_engine.py
+!/src/trend_portfolio/cap_rebalance.py
+!/src/trend_portfolio/cap_publication.py
+/scripts/*
+!/scripts/analyze_portfolios.py
+!/scripts/build_etf_reports.py
+!/scripts/verify_etf_publication.py
+!/scripts/verify_publication.py
+/tests/*
+!/tests/test_analytics.py
+!/tests/test_cli.py
+!/tests/test_cap_event_engine.py
+!/tests/test_cap_rebalance.py
+!/tests/test_cap_publication.py
+!/tests/test_publication_integrity.py
+!/tests/test_etf_documentation.py
