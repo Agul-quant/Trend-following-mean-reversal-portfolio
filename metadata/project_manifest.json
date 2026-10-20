@@ -67,7 +67,7 @@
     {
       "bytes": 7418,
       "path": "metadata/etf_portfolio_manifest.json",
-      "sha256": "86041ebc7957182e127295fb926ad00e078521144c55414f21ef2b10eddc0f8f"
+      "sha256": "819bbfb80d339b62135057d7aa150c82655cb47946dee9d315c077d8e43e862b"
     },
     {
       "bytes": 912,
@@ -90,9 +90,9 @@
       "sha256": "38b0cff28e329427b042ae81ff38705f9e750672ecb5390cc986e2357e393527"
     },
     {
-      "bytes": 210800,
+      "bytes": 203254,
       "path": "reports/etf_portfolios/development_daily_returns_baseline.png",
-      "sha256": "3f6f0e511a1b0db0194c92494ace09905c8b9ee0ff979ccc116094b098660bb3"
+      "sha256": "c6bab3c89576586598fe451b68dff069bba592cb55b071af160fe9de3c2458c0"
     },
     {
       "bytes": 5512,
@@ -102,7 +102,7 @@
     {
       "bytes": 10829,
       "path": "reports/etf_portfolios/figures_manifest.json",
-      "sha256": "c4cadf0b46e3b6d09352acb93b5f2e29a6a3cd923bba2adb6b19708723bba5b6"
+      "sha256": "7f0db9ca8deeb41fff21dc1a2aa5719d07f24c3335dbb64940604292a41160f4"
     },
     {
       "bytes": 326256,
@@ -110,9 +110,9 @@
       "sha256": "820708344ca925060e35ae7fe41e0bba76abcec622c3fb331ad3d1e3dd77782b"
     },
     {
-      "bytes": 201191,
+      "bytes": 193957,
       "path": "reports/etf_portfolios/historical_OOS_daily_returns_baseline.png",
-      "sha256": "ee77a29f380b83c0c7322942e3547911fddd108caa4775f3e68c0a38280e8813"
+      "sha256": "2b9deffcd1252bcb08f2271f5588896be9518df64fbb6d647f026790a90fe994"
     },
     {
       "bytes": 5520,
@@ -155,9 +155,9 @@
       "sha256": "f6428fabd0da050808f6c328f1752337869b7b68d33c5e4509f4dea8545f4349"
     },
     {
-      "bytes": 204049,
+      "bytes": 196712,
       "path": "reports/etf_portfolios/validation_daily_returns_baseline.png",
-      "sha256": "3a983200c202cca1dbe1faae3c09301806d13ca736d3c9be98c838d1e554e6f0"
+      "sha256": "50c7f86d61810a03267c09edaab40c1549339584f11e42373699dacbae132114"
     },
     {
       "bytes": 5500,
@@ -210,9 +210,9 @@
       "sha256": "3fbb506448c46d15c7a00ce718ac24d42a102f6897a731532633a5671a095f59"
     },
     {
-      "bytes": 14697,
+      "bytes": 14666,
       "path": "scripts/build_daily_return_figures.py",
-      "sha256": "9e6b71bdd41d6ae88d3a0cd09ccccae34898154efd1081322c2d27078fe7edc4"
+      "sha256": "265da6e7ffc65641866398b9c7d3c8e6c44995c826001c692c126c2b6f9c671f"
     },
     {
       "bytes": 1567,

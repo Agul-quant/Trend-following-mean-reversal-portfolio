@@ -294,7 +294,7 @@ def render_baseline(data, destination, limits):
         "Net simple total return per daily valuation interval (%)", fontsize=11, x=0.025
     )
     fig.suptitle(
-        "Daily net returns — not cumulative performance",
+        "Daily net returns",
         fontsize=16,
         fontweight="bold",
         y=0.975,

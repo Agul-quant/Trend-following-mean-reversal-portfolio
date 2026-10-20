@@ -46,7 +46,7 @@
           "2017-01-01",
           "2020-12-31"
         ],
-        "sha256": "3f6f0e511a1b0db0194c92494ace09905c8b9ee0ff979ccc116094b098660bb3",
+        "sha256": "c6bab3c89576586598fe451b68dff069bba592cb55b071af160fe9de3c2458c0",
         "stage": "development",
         "terminal_valuation_timestamp_utc": "2020-12-31T22:00:00+00:00",
         "unit": "percent net simple total daily return; not cash-excess",
@@ -89,7 +89,7 @@
           "2024-01-01",
           "2026-10-15"
         ],
-        "sha256": "ee77a29f380b83c0c7322942e3547911fddd108caa4775f3e68c0a38280e8813",
+        "sha256": "2b9deffcd1252bcb08f2271f5588896be9518df64fbb6d647f026790a90fe994",
         "stage": "historical_OOS",
         "terminal_valuation_timestamp_utc": "2026-10-15T21:00:00+00:00",
         "unit": "percent net simple total daily return; not cash-excess",
@@ -132,7 +132,7 @@
           "2021-01-01",
           "2023-12-31"
         ],
-        "sha256": "3a983200c202cca1dbe1faae3c09301806d13ca736d3c9be98c838d1e554e6f0",
+        "sha256": "50c7f86d61810a03267c09edaab40c1549339584f11e42373699dacbae132114",
         "stage": "validation",
         "terminal_valuation_timestamp_utc": "2023-12-29T22:00:00+00:00",
         "unit": "percent net simple total daily return; not cash-excess",
