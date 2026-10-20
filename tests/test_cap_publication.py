@@ -278,13 +278,13 @@ def test_combined_report_pairs_each_stage_table_and_figures(report):
         table = section.index("| Portfolio / control |")
         cash = section.index("| Matched cash |")
         wealth = section.index(f"]({stage}_baseline.png)")
-        daily = section.index(f"]({stage}_daily_returns_baseline.png)")
+        daily = section.index(f"]({stage}_daily_net_returns_baseline.png)")
         assert previous_end <= start < end
         assert table < cash < wealth < daily
         assert section.count("](") == 3  # Focused report, wealth figure, daily figure.
         assert all(
             f"]({other}_baseline.png)" not in section
-            and f"]({other}_daily_returns_baseline.png)" not in section
+            and f"]({other}_daily_net_returns_baseline.png)" not in section
             for other in STAGES
             if other != stage
         )
@@ -313,7 +313,7 @@ def test_focused_stage_report_exact_table_scope_and_paired_figures(report, stage
     assert text.count("| Matched cash |") == 1
     assert "\n".join(table_lines) in combined
     wealth = text.index(f"]({stage}_baseline.png)")
-    daily = text.index(f"]({stage}_daily_returns_baseline.png)")
+    daily = text.index(f"]({stage}_daily_net_returns_baseline.png)")
     assert text.index("| Matched cash |") < wealth < daily
     assert text.count("![") == 2
     assert f"../reproducibility/{stage}.csv" in text

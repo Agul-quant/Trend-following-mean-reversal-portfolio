@@ -430,7 +430,7 @@ def _stage_figures(stage, equal_rows, heading="####"):
             "",
             "Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.",
             "",
-            f"![{STAGE_LABELS[stage]}: daily net returns]({stage}_daily_returns_baseline.png)",
+            f"![{STAGE_LABELS[stage]}: daily net returns]({stage}_daily_net_returns_baseline.png)",
             "",
         ]
     return out

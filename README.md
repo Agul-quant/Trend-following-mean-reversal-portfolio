@@ -156,7 +156,7 @@ drawdown or cash-excess returns. All 700 observations per series are retained
 on the same vertical scale without smoothing, clipping or resampling. Returns
 include modeled cash interest; the first starts from initial stage capital.
 
-![Daily net returns: retrospective portfolio-selection sample, in-sample](reports/etf_portfolios/historical_OOS_daily_returns_baseline.png)
+![Daily net returns: retrospective portfolio-selection sample, in-sample](reports/etf_portfolios/historical_OOS_daily_net_returns_baseline.png)
 
 The full period reports pair each performance table with its equity/drawdown
 and daily-return plots:

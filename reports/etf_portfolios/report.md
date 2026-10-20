@@ -73,7 +73,7 @@ Four portfolios and cost-matched QQQ buy-and-hold, each starting from $1,000. Th
 
 Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.
 
-![Development-period portfolio backcast (retrospective): daily net returns](development_daily_returns_baseline.png)
+![Development-period portfolio backcast (retrospective): daily net returns](development_daily_net_returns_baseline.png)
 
 ### Validation-period portfolio backcast (retrospective) — 2021-01-01 to 2023-12-31
 
@@ -113,7 +113,7 @@ Four portfolios and cost-matched QQQ buy-and-hold, each starting from $1,000. Th
 
 Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.
 
-![Validation-period portfolio backcast (retrospective): daily net returns](validation_daily_returns_baseline.png)
+![Validation-period portfolio backcast (retrospective): daily net returns](validation_daily_net_returns_baseline.png)
 
 ### Retrospective portfolio-selection sample (in-sample) — 2024-01-01 to 2026-10-15
 
@@ -153,7 +153,7 @@ Four portfolios and cost-matched QQQ buy-and-hold, each starting from $1,000. Th
 
 Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.
 
-![Retrospective portfolio-selection sample (in-sample): daily net returns](historical_OOS_daily_returns_baseline.png)
+![Retrospective portfolio-selection sample (in-sample): daily net returns](historical_OOS_daily_net_returns_baseline.png)
 
 ## Baseline cap diagnostics
 

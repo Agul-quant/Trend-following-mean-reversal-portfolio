@@ -316,7 +316,7 @@ def render_baseline(data, destination, limits):
         linespacing=1.5,
     )
     fig.subplots_adjust(top=0.89, bottom=0.135, hspace=0.11, left=0.095, right=0.97)
-    filename = f"{data['stage']}_daily_returns_baseline.png"
+    filename = f"{data['stage']}_daily_net_returns_baseline.png"
     path = destination / filename
     fig.savefig(
         path, metadata={"Software": "Trend portfolio public daily-return renderer"}

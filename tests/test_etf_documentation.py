@@ -148,7 +148,7 @@ def test_daily_return_images_and_links_are_published_for_every_period():
         ("historical_OOS", 700),
     ):
         figure = daily["figures"][stage]
-        filename = f"{stage}_daily_returns_baseline.png"
+        filename = f"{stage}_daily_net_returns_baseline.png"
         assert figure["filename"] == filename
         assert figure["daily_observations"] == count
         assert figure["curves"] == names
@@ -240,7 +240,7 @@ def test_cash_clock_explanation_keeps_accrual_distinct_from_statistics():
         assert phrase in section
     readme = (ROOT / "README.md").read_text()
     assert readme.index("historical_OOS_baseline.png") < readme.index(
-        "historical_OOS_daily_returns_baseline.png"
+        "historical_OOS_daily_net_returns_baseline.png"
     )
-    assert "development_daily_returns_baseline.png" not in readme
-    assert "validation_daily_returns_baseline.png" not in readme
+    assert "development_daily_net_returns_baseline.png" not in readme
+    assert "validation_daily_net_returns_baseline.png" not in readme

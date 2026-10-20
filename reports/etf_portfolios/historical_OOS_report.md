@@ -46,7 +46,7 @@ Four portfolios and cost-matched QQQ buy-and-hold, each starting from $1,000. Th
 
 Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.
 
-![Retrospective portfolio-selection sample (in-sample): daily net returns](historical_OOS_daily_returns_baseline.png)
+![Retrospective portfolio-selection sample (in-sample): daily net returns](historical_OOS_daily_net_returns_baseline.png)
 
 ## Definitions, full-precision results and verification
 

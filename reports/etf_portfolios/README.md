@@ -59,7 +59,7 @@ are public.
 
 ![Development: equity and drawdown](development_baseline.png)
 
-![Development: daily net returns](development_daily_returns_baseline.png)
+![Development: daily net returns](development_daily_net_returns_baseline.png)
 
 ### Validation-period backcast: 2021–2023
 
@@ -67,7 +67,7 @@ are public.
 
 ![Validation: equity and drawdown](validation_baseline.png)
 
-![Validation: daily net returns](validation_daily_returns_baseline.png)
+![Validation: daily net returns](validation_daily_net_returns_baseline.png)
 
 ### Portfolio-selection sample: 2024–October 15, 2026 (in-sample)
 
@@ -75,7 +75,7 @@ are public.
 
 ![Portfolio-selection sample, in-sample: equity and drawdown](historical_OOS_baseline.png)
 
-![Portfolio-selection sample, in-sample: daily net returns](historical_OOS_daily_returns_baseline.png)
+![Portfolio-selection sample, in-sample: daily net returns](historical_OOS_daily_net_returns_baseline.png)
 
 ## Evidence boundary
 
