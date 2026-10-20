@@ -378,13 +378,107 @@ def equal_initial_rows(comparison):
     return lookup
 
 
-def markdown(report, comparison=None):
-    validate_report(report)
-    equal_rows = equal_initial_rows(comparison)
+def _stage_table(report, stage, equal_rows):
+    """Render saved stage values; this function performs no return arithmetic."""
     rows = {(r["stage"], r["frequency"], r["slippage_bps"]): r for r in report["rows"]}
     controls = {
         (r["stage"], r["control"], r["slippage_bps"]): r for r in report["controls"]
     }
+    out = [
+        "| Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for cost in COSTS:
+        for frequency in RETAINED_FREQUENCIES:
+            r = rows[(stage, frequency, cost)]
+            out.append(
+                f"| {LABELS[frequency]} | {cost} | {_number(r['cash_excess_sharpe'])} | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | {r['strategy_round_trips']} | {r['cap_executions']} / {r['paid_cap_orders']} | {_number(r['extra_cap_commission'] + r['extra_cap_slippage'], digits=4)} |"
+            )
+        if equal_rows:
+            r = equal_rows[(stage, cost)]
+            out.append(
+                f"| Equal weight; no rebalancing | {cost} | {_number(r['cash_excess_sharpe'])} | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | — | 0 / 0 | 0.0000 |"
+            )
+        r = controls[(stage, "QQQ_buy_and_hold", cost)]
+        out.append(
+            f"| QQQ buy-and-hold | {cost} | {_number(r['cash_excess_sharpe'])} | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | 1 | — | — |"
+        )
+    r = controls[(stage, "cash", None)]
+    out += [
+        f"| Matched cash | — | Undefined | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | 0 | — | — |",
+        "",
+    ]
+    return out
+
+
+def _stage_figures(stage, equal_rows, heading="####"):
+    out = [
+        f"{heading} Baseline equity and drawdown curves",
+        "",
+        (
+            "Four portfolios and cost-matched QQQ buy-and-hold, each starting from $1,000. The baseline is 1-bp commission plus 3-bp slippage each way."
+            if equal_rows
+            else "Three fitted-allocation models and cost-matched QQQ buy-and-hold, each starting from $1,000. The baseline is 1-bp commission plus 3-bp slippage each way."
+        ),
+        "",
+        f"![{STAGE_LABELS[stage]} baseline equity and drawdown]({stage}_baseline.png)",
+        "",
+    ]
+    if equal_rows:
+        out += [
+            f"{heading} Daily net return plots — baseline costs",
+            "",
+            "Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.",
+            "",
+            f"![{STAGE_LABELS[stage]}: daily net returns]({stage}_daily_returns_baseline.png)",
+            "",
+        ]
+    return out
+
+
+def stage_markdown(report, stage, comparison=None):
+    """Present one released stage, pairing its saved table and existing figures."""
+    validate_report(report)
+    require(stage in STAGES, "Unknown report stage")
+    equal_rows = equal_initial_rows(comparison)
+    start, end, observations = STAGES[stage]
+    out = [
+        f"# {STAGE_LABELS[stage]}",
+        "",
+        f"**Scored dates: {start}–{end} · {observations:,} daily observations.**",
+        "",
+        "The five unchanged strategy sleeves are **GDX, FXI, QQQ, UNG and FDN**. This period begins with an independent **$1,000**, flat holdings and empty orders/confirmation streaks; only causal feature history carries over. Fitted models retain the exact saved initial weights. " + ("The equal-weight comparator allocates 20% per sleeve once, with no rebalancing. " if equal_rows else "") + "No account, optimizer or performance statistic was rerun to produce this report.",
+        "",
+        "**Retrospective, not untouched portfolio OOS:** the final ETF identities, rules and fitted weights used examined 2024–2026 history. That period is the portfolio-selection / in-sample period; earlier development and validation portfolio backcasts also inherit hindsight selection. The separate frozen forward paper portfolio is unchanged.",
+        "",
+        "## All four cost scenarios",
+        "",
+        "Each paid ETF order incurs **1-bp commission plus the listed 1/3/10/25-bp one-way slippage, each way**. Cash is modeled at **3% nominal ACT/365 event-compounded**, not 3% APY or a guaranteed yield. Sharpe is cash-excess Sharpe, annualized by sqrt(252); CAGR uses actual elapsed ACT/365 time. Drawdown includes initial capital and uses daily marks. The original corporate-action, dividend-reinvestment and paid terminal-liquidation conventions are unchanged.",
+        "",
+        "Trips count completed strategy round trips including terminal exits, not partial correction orders. Equal-weight trips are not inferred from aggregate returns. Extra cap costs are direct correction-order costs; a correction can be an internal cash transfer without an ETF order.",
+        "",
+    ]
+    out += _stage_table(report, stage, equal_rows)
+    out += _stage_figures(stage, equal_rows, heading="##")
+    out += [
+        "## Definitions, full-precision results and verification",
+        "",
+        "- [Exact strategy definitions](../../configs/selected_etf_strategies.json) · [Saved fitted weights and policy](../../configs/final_cap_rebalancing.json) · [Methods](../../docs/etf_methods.md)",
+        "- [All-period report and audit context](report.md) · [Pinned aggregate JSON](report.json) · [Fitted performance CSV](performance.csv) · [Matched controls CSV](controls.csv)",
+        "- [Equal-weight and IID/HAC statistics](statistical_comparison.csv) · [Released derived daily returns](../reproducibility/README.md) · [This period's return CSV](../reproducibility/" + stage + ".csv)",
+        "",
+        "Raw ETF prices, fills and sleeve-level account paths remain private. Published daily aggregate returns permit independent summary-statistic verification, not a reconstruction of the private market-data-to-signal audit. IID/HAC inference and regression attribution are descriptive and not adjusted for portfolio selection.",
+        "",
+        "From the repository root: `PYTHONPATH=src python scripts/verify_etf_publication.py --report-dir reports/etf_portfolios --config configs/final_cap_rebalancing.json` and `PYTHONPATH=src python scripts/verify_daily_returns.py`.",
+        "",
+    ]
+    return "\n".join(out)
+
+
+def markdown(report, comparison=None):
+    validate_report(report)
+    equal_rows = equal_initial_rows(comparison)
+    rows = {(r["stage"], r["frequency"], r["slippage_bps"]): r for r in report["rows"]}
     out = [
         f"# {TITLE}",
         "",
@@ -435,29 +529,11 @@ def markdown(report, comparison=None):
         out += [
             f"### {STAGE_LABELS[stage]} — {start} to {end}",
             "",
-            "| Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |",
-            "|---|---:|---:|---:|---:|---:|---:|---:|",
         ]
-        for cost in COSTS:
-            for frequency in RETAINED_FREQUENCIES:
-                r = rows[(stage, frequency, cost)]
-                out.append(
-                    f"| {LABELS[frequency]} | {cost} | {_number(r['cash_excess_sharpe'])} | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | {r['strategy_round_trips']} | {r['cap_executions']} / {r['paid_cap_orders']} | {_number(r['extra_cap_commission'] + r['extra_cap_slippage'], digits=4)} |"
-                )
-            if equal_rows:
-                r = equal_rows[(stage, cost)]
-                out.append(
-                    f"| Equal weight; no rebalancing | {cost} | {_number(r['cash_excess_sharpe'])} | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | — | 0 / 0 | 0.0000 |"
-                )
-            r = controls[(stage, "QQQ_buy_and_hold", cost)]
-            out.append(
-                f"| QQQ buy-and-hold | {cost} | {_number(r['cash_excess_sharpe'])} | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | 1 | — | — |"
-            )
-        r = controls[(stage, "cash", None)]
-        out += [
-            f"| Matched cash | — | Undefined | {_number(r['cagr'], True, 2)} | {_number(r['max_drawdown'], True, 2)} | 0 | — | — |",
-            "",
-        ]
+        if equal_rows:
+            out += [f"[Focused period report]({stage}_report.md)", ""]
+        out += _stage_table(report, stage, equal_rows)
+        out += _stage_figures(stage, equal_rows)
     out += [
         "## Baseline cap diagnostics",
         "",
@@ -479,33 +555,6 @@ def markdown(report, comparison=None):
             )
     out += [
         "",
-        "## Baseline equity and drawdown curves",
-        "",
-        (
-            "Each panel restarts at $1,000 and compares four portfolios with cost-matched QQQ buy-and-hold. Equal-weight metrics come from the already published return release; its trip count is not inferred from aggregate returns. Raster images contain no embedded numerical daily series."
-            if equal_rows
-            else "Each panel restarts at $1,000 and compares the three fitted-allocation models with cost-matched QQQ buy-and-hold. Raster images contain no embedded numerical daily series."
-        ),
-        "",
-    ]
-    for stage in STAGES:
-        out += [
-            f"![{STAGE_LABELS[stage]} baseline equity and drawdown]({stage}_baseline.png)",
-            "",
-        ]
-    if equal_rows:
-        out += [
-            "## Daily net return plots — baseline costs",
-            "",
-            "Five separate panels show the four portfolios and QQQ buy-and-hold at 1-bp commission plus 3-bp slippage each way. Values are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; each stage is independent.",
-            "",
-        ]
-        for stage in STAGES:
-            out += [
-                f"![{STAGE_LABELS[stage]}: daily net returns]({stage}_daily_returns_baseline.png)",
-                "",
-            ]
-    out += [
         "## Audit and portable verification",
         "",
         "The completed financial audit checked disabled-rebalancing equivalence to all five original frozen sleeve paths and matched cash across all periods/costs, then independently checked chronological cash, corporate actions, inherited dividend reinvestment, signal fills, cap orders, self-financing transfers, post-cost caps and daily statistics. Those sources and completed results remain unchanged.",

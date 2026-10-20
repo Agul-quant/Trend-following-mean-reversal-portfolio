@@ -19,11 +19,13 @@ from trend_portfolio.cap_publication import (
     RETAINED_FREQUENCIES,
     RETAINED_SHA,
     SOURCE_SHA,
+    STAGES,
     csv_text,
     markdown,
     read_json,
     require,
     source_audit,
+    stage_markdown,
     validate_report,
 )
 
@@ -43,6 +45,19 @@ def verify(directory, config_path):
         "controls.csv": csv_text(report["controls"], CONTROL_KEYS),
         "report.md": markdown(report, comparison),
     }
+    stage_paths = {stage: directory / f"{stage}_report.md" for stage in STAGES}
+    has_stage_reports = any(path.exists() for path in stage_paths.values())
+    if has_stage_reports:
+        require(
+            all(path.is_file() for path in stage_paths.values()),
+            "Focused stage report set must contain all three periods",
+        )
+        expected.update(
+            {
+                path.name: stage_markdown(report, stage, comparison)
+                for stage, path in stage_paths.items()
+            }
+        )
     for name, text in expected.items():
         require(
             (directory / name).read_bytes() == text.encode("utf-8"),
@@ -61,6 +76,7 @@ def verify(directory, config_path):
         "retained_performance_rows": 36,
         "unchanged_control_rows": 15,
         "released_equal_weight_comparison_rows": 12 if comparison is not None else 0,
+        "focused_stage_reports": len(stage_paths) if has_stage_reports else 0,
         "private_market_or_account_inputs_read": False,
         "financial_audit_reproduced": False,
         "unpinned_recomputed_proof_accepted": False,

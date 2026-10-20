@@ -146,6 +146,42 @@ Observed daily/opening diagnostics do not certify every intraday tick.
   slippage, not the entire cost/return difference against the comparator.
   Later normal strategy trades may have different sizes after capital moves.
 
+### Calendar-time cash versus trading-day statistics
+
+The model's cash balance grows at each unique event as:
+
+```text
+cash_next = cash_now * (1 + 0.03 * elapsed_seconds / (365 * 86400))
+```
+
+**ACT/365 and 252 are not competing annualization denominators.** ACT/365
+converts real elapsed calendar time into an interest accrual fraction; 252
+annualizes statistics of the observed trading-session return series. Cash
+accrues over weekends and holidays even though no extra ETF return rows are
+inserted. A Friday-to-Monday portfolio return and its matched cash return
+cover the same elapsed interval. Sharpe subtracts that matched interval's cash
+return—not a constant `0.03/252` or `0.03/365` from every observation. CAGR
+uses actual elapsed ACT/365 years, not `n/252`, for both portfolios and controls.
+
+Calendar-day weighting is normal in cash-rate conventions; for example, the
+[New York Fed's SOFR methodology](https://www.newyorkfed.org/markets/reference-rates/additional-information-about-reference-rates)
+assigns weekend/holiday calendar-day weights to the preceding business-day
+rate. SOFR itself uses ACT/360: this study's fixed ACT/365 model is **not** a
+claim to reproduce SOFR or any particular deposit instrument. For the separate
+statistical convention, see [Sharpe's discussion of measurement periods and
+annualization](https://www-leland.stanford.edu/~wfsharpe/art/sr/SR.htm).
+
+The economic assumption remains material. **A fixed 3% is modeled, not an
+observed or guaranteed historical/future cash yield.** Reinvesting interest at
+every event also makes effective growth slightly event-frequency-dependent;
+fine intervals approach `exp(0.03)-1`, approximately **3.045% per 365 elapsed
+days**, rather than 3% APY. ACT/365 retains a 365-day denominator in leap years.
+Given the portfolio's substantial cash allocation, realism of the earned cash
+rate matters separately from clock consistency. Any alternative cash rate,
+actual-yield series or compounding convention requires a separately labeled
+experiment; neither saved performance nor the frozen forward model is changed
+by this explanation.
+
 ## Statistics and attribution
 
 Use aligned net daily simple returns `r[t]` and the matched cash path `cash[t]`:

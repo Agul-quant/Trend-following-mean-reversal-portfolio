@@ -11,11 +11,14 @@ import pytest
 
 from trend_portfolio.cap_publication import (
     COMPLETED_SOURCE_SHA,
+    COSTS,
     CONTROL_KEYS,
     CSV_KEYS,
     RETAINED_SHA,
     SOURCE_SCHEMA,
     SOURCE_SHA,
+    STAGES,
+    STAGE_LABELS,
     canonical_sha,
     csv_text,
     expected_config,
@@ -25,6 +28,7 @@ from trend_portfolio.cap_publication import (
     read_json,
     retained_payload,
     source_audit,
+    stage_markdown,
     validate_config,
     validate_report,
     write_outputs,
@@ -256,3 +260,90 @@ def test_equal_comparison_scope_cannot_silently_change(report, mutation):
     mutation(comparison)
     with pytest.raises(ValueError):
         markdown(report, comparison)
+
+
+def test_combined_report_pairs_each_stage_table_and_figures(report):
+    comparison = read_json(ROOT / "reports/etf_portfolios/statistical_comparison.json")
+    text = markdown(report, comparison)
+    headings = [f"### {STAGE_LABELS[stage]} —" for stage in STAGES]
+    previous_end = -1
+    for index, stage in enumerate(STAGES):
+        start = text.index(headings[index])
+        end = (
+            text.index(headings[index + 1])
+            if index + 1 < len(headings)
+            else text.index("## Baseline cap diagnostics")
+        )
+        section = text[start:end]
+        table = section.index("| Portfolio / control |")
+        cash = section.index("| Matched cash |")
+        wealth = section.index(f"]({stage}_baseline.png)")
+        daily = section.index(f"]({stage}_daily_returns_baseline.png)")
+        assert previous_end <= start < end
+        assert table < cash < wealth < daily
+        assert section.count("](") == 3  # Focused report, wealth figure, daily figure.
+        assert all(
+            f"]({other}_baseline.png)" not in section
+            and f"]({other}_daily_returns_baseline.png)" not in section
+            for other in STAGES
+            if other != stage
+        )
+        previous_end = end
+
+
+@pytest.mark.parametrize("stage", STAGES)
+def test_focused_stage_report_exact_table_scope_and_paired_figures(report, stage):
+    comparison = read_json(ROOT / "reports/etf_portfolios/statistical_comparison.json")
+    before = copy.deepcopy(report)
+    combined = markdown(report, comparison)
+    text = stage_markdown(report, stage, comparison)
+    assert text == (ROOT / f"reports/etf_portfolios/{stage}_report.md").read_text()
+    start, end, observations = STAGES[stage]
+    assert f"{start}–{end}" in text
+    assert f"{observations:,} daily observations" in text
+    table_lines = [line for line in text.splitlines() if line.startswith("|")]
+    assert len(table_lines) == 23  # Header + rule + 4 costs × 5 series + cash.
+    for cost in COSTS:
+        assert len([line for line in table_lines[2:] if line.split("|")[2].strip() == str(cost)]) == 5
+    for name in (
+        "Initial allocation; no rebalancing", "Equal weight; no rebalancing",
+        "Weekly corrections", "Monthly corrections", "QQQ buy-and-hold",
+    ):
+        assert text.count(f"| {name} |") == 4
+    assert text.count("| Matched cash |") == 1
+    assert "\n".join(table_lines) in combined
+    wealth = text.index(f"]({stage}_baseline.png)")
+    daily = text.index(f"]({stage}_daily_returns_baseline.png)")
+    assert text.index("| Matched cash |") < wealth < daily
+    assert text.count("![") == 2
+    assert f"../reproducibility/{stage}.csv" in text
+    assert "not adjusted for portfolio selection" in text
+    assert "configs/selected_etf_strategies.json" in text
+    assert report == before
+
+
+def test_focused_report_rejects_unknown_stage(report):
+    with pytest.raises(ValueError, match="Unknown report stage"):
+        stage_markdown(report, "not_a_stage")
+
+
+def test_verifier_requires_complete_and_literal_focused_stage_set(report, tmp_path):
+    spec = importlib.util.spec_from_file_location(
+        "verify_etf_publication", ROOT / "scripts/verify_etf_publication.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    directory = tmp_path / "public"
+    write_outputs(report, directory)
+    config = tmp_path / "config.json"
+    config.write_text(json.dumps(expected_config(report)))
+    assert module.verify(directory, config)["focused_stage_reports"] == 0
+    (directory / "development_report.md").write_text(stage_markdown(report, "development"))
+    with pytest.raises(ValueError, match="all three periods"):
+        module.verify(directory, config)
+    for stage in STAGES:
+        (directory / f"{stage}_report.md").write_text(stage_markdown(report, stage))
+    assert module.verify(directory, config)["focused_stage_reports"] == 3
+    (directory / "validation_report.md").write_text("changed")
+    with pytest.raises(ValueError, match="presentation changed: validation_report.md"):
+        module.verify(directory, config)

@@ -73,8 +73,10 @@ Those inputs are intentionally **not** distributed or required by the verifier.
 
 ## Daily-return plots
 
-The main [README](../../README.md) and [report index](../etf_portfolios/README.md)
-embed daily net return plots for all three periods at baseline costs. Each
+The main [README](../../README.md) shows the portfolio-selection period at
+baseline costs. The [report index](../etf_portfolios/README.md) and linked
+period reports retain all three periods, pairing daily returns with their
+corresponding performance tables and equity/drawdown plots. Each
 figure separates the four portfolios and QQQ buy-and-hold into five panels;
 values are net simple total returns in percent, **not cumulative returns,
 drawdown or cash-excess returns**. All daily observations are retained, with

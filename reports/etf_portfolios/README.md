@@ -39,29 +39,41 @@ ACT/365 event-compounded; taxes and additional market impact are not modeled.
 drift and overnight gaps remain possible. It measures whole sleeve capital
 including cash, not ETF exposure or risk contribution.
 
-## Baseline equity and drawdown
+## Period reports and paired baseline plots
 
-Every panel starts from **$1,000** and uses **1-bp commission plus 3-bp slippage
-each way**. The five curves are the fitted Initial allocation, Equal weight
-(no rebalancing), Weekly corrections, Monthly corrections and QQQ buy-and-hold. Derived aggregate daily returns are [public](../reproducibility/README.md);
-raw ETF inputs and sleeve-level paths remain private.
+Each period report includes all four cost scenarios and keeps that period's
+performance table, equity/drawdown plot and daily-return plot together. The
+baseline figures use **1-bp commission + 3-bp slippage each way**. Five series
+compare the fitted Initial allocation, Equal weight (no rebalancing), Weekly
+corrections, Monthly corrections and QQQ buy-and-hold.
 
-![Development: portfolio policies and QQQ](development_baseline.png)
+Daily-return panels show **net simple total returns (%)**, not cumulative
+wealth, drawdown or cash-excess returns. The common vertical scale retains
+all observations without smoothing, clipping or resampling. Underlying raw ETF
+inputs and sleeve paths stay private; [derived aggregate returns](../reproducibility/README.md)
+are public.
 
-![Validation: portfolio policies and QQQ](validation_baseline.png)
+### Development-period backcast: 2017–2020
 
-![Retrospective portfolio-selection sample (in-sample): portfolio policies and QQQ](historical_OOS_baseline.png)
+[Full development report](development_report.md).
 
-## Daily net return plots
+![Development: equity and drawdown](development_baseline.png)
 
-At the same baseline costs, five separate panels show the four portfolios and
-QQQ buy-and-hold. Values are **daily net simple total returns (%)**, not
-cumulative wealth, drawdown or cash-excess returns. The common vertical scale
-retains all observed moves; there is no smoothing, resampling or clipping.
+![Development: daily net returns](development_daily_returns_baseline.png)
 
-![Development-period backcast: daily net returns](development_daily_returns_baseline.png)
+### Validation-period backcast: 2021–2023
 
-![Validation-period backcast: daily net returns](validation_daily_returns_baseline.png)
+[Full validation report](validation_report.md).
+
+![Validation: equity and drawdown](validation_baseline.png)
+
+![Validation: daily net returns](validation_daily_returns_baseline.png)
+
+### Portfolio-selection sample: 2024–October 15, 2026 (in-sample)
+
+[Full portfolio-selection report](historical_OOS_report.md).
+
+![Portfolio-selection sample, in-sample: equity and drawdown](historical_OOS_baseline.png)
 
 ![Portfolio-selection sample, in-sample: daily net returns](historical_OOS_daily_returns_baseline.png)
 

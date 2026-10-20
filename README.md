@@ -130,35 +130,42 @@ Extra cap costs mean direct cap-order fees/slippage, not the difference in total
 portfolio returns or total costs versus the benchmark. Taxes and additional
 market impact are not modeled.
 
-Cash earns **3% nominal ACT/365 event-compounded**, not 3% APY. Cash-excess Sharpe
-is above the matched cash path, not above buy-and-hold; cash Sharpe is undefined.
+Cash earns **3% nominal ACT/365 event-compounded**, not 3% APY.
+Calendar-day cash accrual and the 252-observation Sharpe annualization serve
+different purposes: weekends accrue into the next daily return, and the cash
+reference uses exactly the same observation intervals. See the
+[cash-clock explanation](docs/etf_methods.md#calendar-time-cash-versus-trading-day-statistics).
+Cash-excess Sharpe is above the matched cash path, not above buy-and-hold; cash Sharpe is undefined.
 CAGR uses exact first-open-to-terminal elapsed time. Drawdown includes initial
 capital and daily valuations, not an intraday maximum.
 
+## Portfolio-selection sample — baseline plots
+
+**January 2024–October 15, 2026; retrospective and in-sample.** Both figures
+compare the four portfolios and QQQ buy-and-hold at **1-bp commission + 3-bp
+slippage each way**.
+
+### Equity and drawdown
+
 ![Four portfolio comparisons and QQQ buy-and-hold: retrospective portfolio-selection sample (in-sample) baseline equity and drawdown](reports/etf_portfolios/historical_OOS_baseline.png)
 
-## Daily return plots — baseline costs
+### Daily return plots — baseline costs
 
-These plots show **daily net simple returns (%)**, not equity growth or
-drawdown. Separate panels compare the four portfolios and QQQ buy-and-hold
-on the same vertical scale, using **1-bp commission + 3-bp slippage each way**.
-All daily observations are shown without smoothing, clipping or resampling.
-These are total returns including modeled cash interest, **not cash-excess
-returns**; the first observation starts from each stage's initial capital.
-
-### Development-period backcast: 2017–2020
-
-![Daily net returns: development-period retrospective portfolio backcast](reports/etf_portfolios/development_daily_returns_baseline.png)
-
-### Validation-period backcast: 2021–2023
-
-![Daily net returns: validation-period retrospective portfolio backcast](reports/etf_portfolios/validation_daily_returns_baseline.png)
-
-### Portfolio-selection sample: 2024–October 15, 2026 (in-sample)
+The panels show **daily net simple total returns (%)**, not cumulative growth,
+drawdown or cash-excess returns. All 700 observations per series are retained
+on the same vertical scale without smoothing, clipping or resampling. Returns
+include modeled cash interest; the first starts from initial stage capital.
 
 ![Daily net returns: retrospective portfolio-selection sample, in-sample](reports/etf_portfolios/historical_OOS_daily_returns_baseline.png)
 
-[Download the verified daily returns and reproduce the plots](reports/reproducibility/README.md).
+The full period reports pair each performance table with its equity/drawdown
+and daily-return plots:
+
+- [Development-period report: 2017–2020](reports/etf_portfolios/development_report.md).
+- [Validation-period report: 2021–2023](reports/etf_portfolios/validation_report.md).
+- [Portfolio-selection report: 2024–October 15, 2026 (in-sample)](reports/etf_portfolios/historical_OOS_report.md).
+
+[Download verified daily returns and reproduce the plots](reports/reproducibility/README.md).
 
 ## Verify and reproduce
 

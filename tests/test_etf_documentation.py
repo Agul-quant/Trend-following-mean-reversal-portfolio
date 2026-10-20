@@ -159,7 +159,15 @@ def test_daily_return_images_and_links_are_published_for_every_period():
                 (ROOT / "reports/etf_portfolios" / filename).read_bytes()
             ).hexdigest()
         )
-        assert filename in readme and filename in index and filename in report
+        assert filename in index and filename in report
+        if stage == "historical_OOS":
+            assert filename in readme
+        else:
+            assert filename not in readme
+        period_report = ROOT / "reports/etf_portfolios" / f"{stage}_report.md"
+        period_text = period_report.read_text()
+        assert filename in period_text and f"{stage}_baseline.png" in period_text
+        assert f"{stage}_report.md" in readme
 
 
 def test_daily_plot_loader_rejects_revised_csv_without_release_receipt(tmp_path):
@@ -212,3 +220,27 @@ def test_daily_plot_loader_rejects_nonfinite_values_even_with_refreshed_receipt(
     (folder / "manifest.json").write_text(json.dumps(release))
     with pytest.raises(ValueError, match="Nonfinite|invalid simple"):
         module.load_baseline(tmp_path, "development")
+
+
+def test_cash_clock_explanation_keeps_accrual_distinct_from_statistics():
+    methods = (ROOT / "docs/etf_methods.md").read_text()
+    section = methods.split("### Calendar-time cash versus trading-day statistics", 1)[
+        1
+    ].split("## Statistics and attribution", 1)[0]
+    for phrase in (
+        "elapsed_seconds",
+        "365 * 86400",
+        "252",
+        "weekends",
+        "same elapsed interval",
+        "3.045%",
+        "not an",
+        "frozen forward model is changed",
+    ):
+        assert phrase in section
+    readme = (ROOT / "README.md").read_text()
+    assert readme.index("historical_OOS_baseline.png") < readme.index(
+        "historical_OOS_daily_returns_baseline.png"
+    )
+    assert "development_daily_returns_baseline.png" not in readme
+    assert "validation_daily_returns_baseline.png" not in readme

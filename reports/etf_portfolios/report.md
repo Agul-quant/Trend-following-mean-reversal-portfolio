@@ -37,6 +37,8 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 
 ### Development-period portfolio backcast (retrospective) — 2017-01-01 to 2020-12-31
 
+[Focused period report](development_report.md)
+
 | Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Initial allocation; no rebalancing | 1 | 1.303 | 16.24% | -8.48% | 38 | 0 / 0 | 0.0000 |
@@ -61,7 +63,21 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 | QQQ buy-and-hold | 25 | 1.058 | 28.25% | -28.56% | 1 | — | — |
 | Matched cash | — | Undefined | 3.05% | 0.00% | 0 | — | — |
 
+#### Baseline equity and drawdown curves
+
+Four portfolios and cost-matched QQQ buy-and-hold, each starting from $1,000. The baseline is 1-bp commission plus 3-bp slippage each way.
+
+![Development-period portfolio backcast (retrospective) baseline equity and drawdown](development_baseline.png)
+
+#### Daily net return plots — baseline costs
+
+Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.
+
+![Development-period portfolio backcast (retrospective): daily net returns](development_daily_returns_baseline.png)
+
 ### Validation-period portfolio backcast (retrospective) — 2021-01-01 to 2023-12-31
+
+[Focused period report](validation_report.md)
 
 | Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -87,7 +103,21 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 | QQQ buy-and-hold | 25 | 0.381 | 9.68% | -35.12% | 1 | — | — |
 | Matched cash | — | Undefined | 3.05% | 0.00% | 0 | — | — |
 
+#### Baseline equity and drawdown curves
+
+Four portfolios and cost-matched QQQ buy-and-hold, each starting from $1,000. The baseline is 1-bp commission plus 3-bp slippage each way.
+
+![Validation-period portfolio backcast (retrospective) baseline equity and drawdown](validation_baseline.png)
+
+#### Daily net return plots — baseline costs
+
+Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.
+
+![Validation-period portfolio backcast (retrospective): daily net returns](validation_daily_returns_baseline.png)
+
 ### Retrospective portfolio-selection sample (in-sample) — 2024-01-01 to 2026-10-15
+
+[Focused period report](historical_OOS_report.md)
 
 | Portfolio / control | Slippage (bp) | Sharpe | CAGR | Max DD | Trips | Cap executions / ETF orders | Extra cap costs ($) |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -113,6 +143,18 @@ Trips are completed strategy round trips including paid terminal exits. Partial 
 | QQQ buy-and-hold | 25 | 0.988 | 23.73% | -22.77% | 1 | — | — |
 | Matched cash | — | Undefined | 3.05% | 0.00% | 0 | — | — |
 
+#### Baseline equity and drawdown curves
+
+Four portfolios and cost-matched QQQ buy-and-hold, each starting from $1,000. The baseline is 1-bp commission plus 3-bp slippage each way.
+
+![Retrospective portfolio-selection sample (in-sample) baseline equity and drawdown](historical_OOS_baseline.png)
+
+#### Daily net return plots — baseline costs
+
+Five separate panels show the four portfolios and QQQ buy-and-hold. These are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; the final return includes paid terminal liquidation.
+
+![Retrospective portfolio-selection sample (in-sample): daily net returns](historical_OOS_daily_returns_baseline.png)
+
 ## Baseline cap diagnostics
 
 These observations cover daily valuations and common eligible opens only. Opening breaches are measured after normal strategy orders and before a cap correction. They are not an every-tick risk test.
@@ -128,26 +170,6 @@ These observations cover daily valuations and common eligible opens only. Openin
 | Retrospective portfolio-selection sample (in-sample) | Initial allocation; no rebalancing | 134 | 38.56% | 1752 | 38.67% | — |
 | Retrospective portfolio-selection sample (in-sample) | Weekly corrections | 17 | 34.87% | 249 | 36.25% | 33.3333% |
 | Retrospective portfolio-selection sample (in-sample) | Monthly corrections | 56 | 37.26% | 743 | 37.37% | 33.3333% |
-
-## Baseline equity and drawdown curves
-
-Each panel restarts at $1,000 and compares four portfolios with cost-matched QQQ buy-and-hold. Equal-weight metrics come from the already published return release; its trip count is not inferred from aggregate returns. Raster images contain no embedded numerical daily series.
-
-![Development-period portfolio backcast (retrospective) baseline equity and drawdown](development_baseline.png)
-
-![Validation-period portfolio backcast (retrospective) baseline equity and drawdown](validation_baseline.png)
-
-![Retrospective portfolio-selection sample (in-sample) baseline equity and drawdown](historical_OOS_baseline.png)
-
-## Daily net return plots — baseline costs
-
-Five separate panels show the four portfolios and QQQ buy-and-hold at 1-bp commission plus 3-bp slippage each way. Values are daily net simple total returns in percent, not cumulative wealth, drawdown or cash-excess returns. All observations are retained on a common vertical scale without smoothing, clipping or resampling. The first return begins at initial stage capital; each stage is independent.
-
-![Development-period portfolio backcast (retrospective): daily net returns](development_daily_returns_baseline.png)
-
-![Validation-period portfolio backcast (retrospective): daily net returns](validation_daily_returns_baseline.png)
-
-![Retrospective portfolio-selection sample (in-sample): daily net returns](historical_OOS_daily_returns_baseline.png)
 
 ## Audit and portable verification
 
